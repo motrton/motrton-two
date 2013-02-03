@@ -63,7 +63,7 @@ function my_autocomplete() {
 
     wp_deregister_script('suggest');
     // Register our jQuery UI style and our custom javascript file  
-    wp_register_style('my-jquery-ui-css',get_template_directory_uri() . '/css/jquery-ui-1.10.0.custom.css',array('jquery-ui-datepicker-style'));
+    wp_register_style('my-jquery-ui-css',get_template_directory_uri() . '/css/jquery-ui-1.10.0.custom.css');
     wp_enqueue_style( 'my-jquery-ui-css' );  
 
     wp_register_script( 'my-jquery-ui-js', get_template_directory_uri() . '/js/jquery-ui-1.10.0.custom.js', array('jquery'),'0.1',true);

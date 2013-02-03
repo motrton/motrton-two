@@ -87,19 +87,6 @@ a:visited  { /* visited pseudo selector so IE6 applies text colour */
   }
 
 }
-// ul.sf-menu > li:last-of-type{
-//  float:right;
-// }
-
-
-.themenu{
-
-  font-size: 1.5em;
-   :first-child{
-     text-align: left;
-   }
-
-
 
 
 ul.sf-menu.sf-navbar{
@@ -107,7 +94,6 @@ ul.sf-menu.sf-navbar{
 
 }
 
-}
 
 .sf-navbar{
     padding-bottom: 0px;
@@ -115,32 +101,85 @@ ul.sf-menu.sf-navbar{
 }
 
 
+
+/*****************************
+JQERY UI OVERWRITE
+******************************/
+
+//SEARCHFORM.PHP
 .ui-widget{
-
-
   form#searchform{
     input.ui-autocomplete-input{
-         width:inherit;
-        height:inherit;
-    }
-    input.search-query{
-      @topright: 5;
-      @bottomright: 5;
-      @bottomleft: 5;
-      @topleft: 5;
-
-      .e_border-radius(@topright, @bottomright, @bottomleft, @topleft);
+      width:inherit;
+      height:inherit;
+      font-family: @sansFontFamily;
+      font-weight: 300;
+      font-size: 0.9em;
+          }
+    input:focus{
+      background-color: @grayLighter;
     }
   }
+} /*end widget*/
 
+//This is the structure JQUI creates
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all{
+// width:100px;
+  li.ui-menu-item{
+  // width: 100px;
+    a.ui-corner-all{
+      font-family: @sansFontFamily;
+      font-weight: 300;
+      font-size: 0.9em;
+    }
+    a.ui-corner-all:hover{
+    .e_border-radius(0,0,0,0);
+    
+    }
+  }
 }
 
-.ui-helper-hidden-accessible{
+/**
+ * RESET some JQUI stuff to get rid of the 
+ * background image that gets included in the jqui css
+ */
+.ui-widget-content,
+.ui-widget-header,
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active ,
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight,
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+  background:@white !important;
+}
+
+
+
+// This is for blind people
+// Damn it it pushes around the listitem
+// This should be some how ther. But how?
+span.ui-helper-hidden-accessible{
   visibility: hidden;
   display:none;
 }
-form:focus,input:focus {
-border-color:@linkColor !important;
+// form:focus,input:focus {
+// border-color:@linkColor !important;
 
-}
-
+// }
