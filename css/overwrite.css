@@ -86,6 +86,10 @@ ul.sf-menu li li {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+.ui-helper-hidden-accessible {
+  visibility: hidden;
+  display: none;
+}
 form:focus,
 input:focus {
   border-color: #5aa332 !important;
