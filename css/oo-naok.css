@@ -116,12 +116,15 @@ body .sf-navbar {
   -moz-box-shadow: inset 0px 1px 0px 0px #e94d1d;
   -webkit-box-shadow: inset 0px 1px 0px 0px #e94d1d;
   box-shadow: inset 0px 1px 0px 0px #e94d1d;
-  height: 3.5em;
+  height: 2.8em;
+}
+body .sf-navbar li ul.children {
+  top: 45px;
 }
 body .sf-navbar a {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #8d1a1e;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -133,7 +136,7 @@ body .sf-navbar a:visited {
 }
 body .sf-navbar a:hover {
   color: #ffffff;
-  text-shadow: -1px 0px 1px #8d1a1e;
+  text-shadow: 0px 1px 0px #8d1a1e;
   background: #b81714;
   -moz-box-shadow: inset 0px 1px 0px 0px #e94d1d;
   -webkit-box-shadow: inset 0px 1px 0px 0px #e94d1d;
@@ -149,14 +152,15 @@ body .sf-navbar ul li {
   -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
   -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
   box-shadow: inset 0px 1px 0px 0px #98c230;
+  height: 3.3em;
 }
 body .sf-navbar ul li a {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #348d43;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 600;
   text-transform: capitalize;
-  letter-spacing: 0px;
+  letter-spacing: 1px;
   text-decoration: none;
 }
 body .sf-navbar ul li a,
@@ -166,7 +170,7 @@ body .sf-navbar ul li a:visited {
 body .sf-navbar ul li a:hover {
   color: #ffffff;
   background: #348d43;
-  -moz-box-shadow: inset 0px 1px 0px 0px #e94d1d;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #e94d1d;
-  box-shadow: inset 0px 1px 0px 0px #e94d1d;
+  -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
+  box-shadow: inset 0px 1px 0px 0px #98c230;
 }
