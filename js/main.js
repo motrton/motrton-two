@@ -76,13 +76,7 @@ if (width >=480) {
  */
 function linkIcons ($) {
 
-// if($('a').attr('title')==='link'){
-// $('a[title="link"]').append(' <i class="icon-hand-right"></i>');
-// selct all in container main
-// $('#main').find('a').append(' <i class="icon-hand-right"></i>');
-// the linked attribute gets appended to the content via
-// a filter
- $('.linked').find('a').prepend('<i class="icon-hand-right"></i> ');
+ $('.entry-content').find('a').prepend('<i class="icon-hand-right"></i> ');
     // }
 }
 
@@ -118,26 +112,11 @@ $('li.current_page_item').addClass('open');
 
 $('li.dropdown > a.dropdown-toggle').click(
     function(){
-        var a_href = $(this).attr('href');
-        window.location = a_href;
-        }
-    );
-}
-
-// var text = $('li.dropdown > a.dropdown-toggle').each(
-//     function (index) {
-//         var a_href = $(this).attr('href');
-//         var a_text = $(this).text();
-
-//         $(this).text('');
-//         $(this).parent().prepend(a_text);
-//         }
-//     );
-
-
-// $('.dropdown-menu').removeClass('children');
-// $('ul.dropdown-menu > li').removeClass();
-//
+            var a_href = $(this).attr('href');
+            window.location = a_href;
+            }
+        );
+    }
 }
 
 function helper ($) {
