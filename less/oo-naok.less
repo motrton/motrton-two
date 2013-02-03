@@ -1,6 +1,8 @@
-//geht los
-// oo-naok.less
-// here and only here you can edit files oo
+// main.less
+// here you can fiddle with code
+
+@import url('elements.less');
+
 
 @blue:#08618f;
 @90grey:#3c3c3b;
@@ -11,6 +13,7 @@
 @redlight:#e94d1d;
 @redmid:#e11714;
 @reddark:#b81714;
+@redshadow:#8d1a1e;
 @chamois:#ecdfcb;
 @white:#ffffff;
 @black:#000000;
@@ -18,7 +21,6 @@
 
 
 body{
-
 font-family: 'Source Sans Pro', sans-serif;
 
 
@@ -29,11 +31,31 @@ h1{
 	font-weight: 600;
 	line-height: 1.2;
 }
+h1#title{
+	color: @blue;
+	font-size: 5em;
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -2px;
+}
+h1#header{
+	color: @blue;
+	font-size: 3.5em;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -1px;
+}
 h2{
 	color: @blue;
 	font-size: 1.4em;
 	font-weight: 600;
 	line-height: 1.5em;
+}
+h2#marginalia{
+	color: @greenmid;
+	font-size: 1.3em;
+	font-weight: 600;
+	line-height: 1.7em;
 }
 h3{
 	color: @blue;
@@ -72,4 +94,60 @@ p{
 }
 
 
+
+.sf-navbar {
+	.e_gradient (@redmid, @reddark, @redmid); 
+	-moz-box-shadow: inset 0px 1px 0px 0px @redlight;
+	-webkit-box-shadow: inset 0px 1px 0px 0px @redlight;
+	box-shadow: inset 0px 1px 0px 0px @redlight;
+	height:			3.5em;
 }
+.sf-navbar a {
+		color: @chamois;
+		text-shadow: 0px 1px 0px @redshadow;
+		font-size: 1.3em;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		text-decoration: none;		
+		}
+.sf-navbar a, .sf-navbar a:visited {
+	color:			@chamois;
+}		
+.sf-navbar a:hover {
+		color: @white;
+		text-shadow: -1px 0px 1px @redshadow;
+		background: @reddark;
+		-moz-box-shadow: inset 0px 1px 0px 0px @redlight;
+	    -webkit-box-shadow: inset 0px 1px 0px 0px @redlight;
+	    box-shadow: inset 0px 1px 0px 0px @redlight;
+}
+
+.sf-navbar ul li {
+	.e_gradient (@greenmid, @greendark, @greenmid); 
+		-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
+	    -webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
+	    box-shadow: inset 0px 1px 0px 0px @greenlight;
+}	
+.sf-navbar ul li a {
+		color: @chamois;
+		text-shadow: 0px 1px 0px @greendark;
+		font-size: 1.4em;
+		font-weight: 600;
+		text-transform: capitalize;
+		letter-spacing: 0px;
+		text-decoration: none;		
+		}
+.sf-navbar ul li a, .sf-navbar ul li a:visited {
+	color:			@chamois;
+}		
+.sf-navbar ul li a:hover {
+		color: @white;
+		background: @greendark;
+		-moz-box-shadow: inset 0px 1px 0px 0px @redlight;
+	    -webkit-box-shadow: inset 0px 1px 0px 0px @redlight;
+	    box-shadow: inset 0px 1px 0px 0px @redlight;
+}
+
+}
+

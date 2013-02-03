@@ -1,3 +1,11 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    https://github.com/dmitryf
+    More info at: http://lesselements.com
+    License: This work is dedicated to the public domain and is free for all uses, commercial or otherwise. No form of credit required.
+  ---------------------------------------------------*/
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -7,11 +15,31 @@ body h1 {
   font-weight: 600;
   line-height: 1.2;
 }
+body h1#title {
+  color: #08618f;
+  font-size: 5em;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+body h1#header {
+  color: #08618f;
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
 body h2 {
   color: #08618f;
   font-size: 1.4em;
   font-weight: 600;
   line-height: 1.5em;
+}
+body h2#marginalia {
+  color: #5aa332;
+  font-size: 1.3em;
+  font-weight: 600;
+  line-height: 1.7em;
 }
 body h3 {
   color: #08618f;
@@ -77,4 +105,68 @@ body p .bold {
 }
 body p .italic {
   font-style: italic;
+}
+body .sf-navbar {
+  background: #e11714;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b81714), color-stop(1, #e11714));
+  background: -ms-linear-gradient(bottom, #b81714, #e11714);
+  background: -moz-linear-gradient(center bottom, #b81714 0%, #e11714 100%);
+  background: -o-linear-gradient(#e11714, #b81714);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e11714', endColorstr='#b81714', GradientType=0);
+  -moz-box-shadow: inset 0px 1px 0px 0px #e94d1d;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #e94d1d;
+  box-shadow: inset 0px 1px 0px 0px #e94d1d;
+  height: 3.5em;
+}
+body .sf-navbar a {
+  color: #ecdfcb;
+  text-shadow: 0px 1px 0px #8d1a1e;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+body .sf-navbar a,
+body .sf-navbar a:visited {
+  color: #ecdfcb;
+}
+body .sf-navbar a:hover {
+  color: #ffffff;
+  text-shadow: -1px 0px 1px #8d1a1e;
+  background: #b81714;
+  -moz-box-shadow: inset 0px 1px 0px 0px #e94d1d;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #e94d1d;
+  box-shadow: inset 0px 1px 0px 0px #e94d1d;
+}
+body .sf-navbar ul li {
+  background: #5aa332;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #348d43), color-stop(1, #5aa332));
+  background: -ms-linear-gradient(bottom, #348d43, #5aa332);
+  background: -moz-linear-gradient(center bottom, #348d43 0%, #5aa332 100%);
+  background: -o-linear-gradient(#5aa332, #348d43);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5aa332', endColorstr='#348d43', GradientType=0);
+  -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
+  box-shadow: inset 0px 1px 0px 0px #98c230;
+}
+body .sf-navbar ul li a {
+  color: #ecdfcb;
+  text-shadow: 0px 1px 0px #348d43;
+  font-size: 1.4em;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  text-decoration: none;
+}
+body .sf-navbar ul li a,
+body .sf-navbar ul li a:visited {
+  color: #ecdfcb;
+}
+body .sf-navbar ul li a:hover {
+  color: #ffffff;
+  background: #348d43;
+  -moz-box-shadow: inset 0px 1px 0px 0px #e94d1d;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #e94d1d;
+  box-shadow: inset 0px 1px 0px 0px #e94d1d;
 }
