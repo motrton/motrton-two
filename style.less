@@ -1,0 +1,131 @@
+/*
+Theme Name: motrton two
+Theme URI: https://github.com/motrton
+Description: A  theme built for motrton.
+Author: Fabian Morón Zirfas
+Author URI: http://fabiantheblind.info
+Version: 1.0
+Tags: responsive, white,
+
+License: MIT
+
+*/
+
+@import 'less/normalize.less';
+@import 'less/grid.less';
+@import 'less/variables.less';
+@import 'less/animate.less';
+@import 'less/elements.less';
+@import 'less/custom-mixins.less';
+
+
+// This is semantic.gs variables
+// 
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+@total-width: 100%;
+
+
+// .container{
+//     .column(@columns);
+// }
+
+header { .column(@columns); }
+section {
+    .column(8);
+    .push(1);
+         }
+// article { .column(9); }
+aside {
+    .column(3);
+}
+footer{
+    .column(8);
+    .push(1);
+}
+
+@media screen and (max-width: 960px) {
+    // .container{.column(12);}
+    section { .column(12); }
+    aside { .column(12); }
+}
+/*************************************/
+//END SEMANTIC GRID
+/*************************************/
+
+
+body{
+    background-image :url('img/pw_maze_white.png');
+    width:100%;
+    // font-size: 1.1em;
+    padding-bottom: 40px;
+
+}
+header{
+    width: 100%;
+    margin-left: 0px;
+}
+
+img{
+    width:100%;
+    height:auto;
+  .animated; // Initiate animation library
+ .fadeInUp;
+}
+
+h1,h2,h3,h4,h5,h6,{
+  color:@headlineColor;
+  .letterPressShadow(@headlineColor);
+}
+
+ /************************************************************
+ *************************HEADER******************************
+ ************************************************************/
+
+.thetopnav{
+  // width:100;
+}
+
+h1#blogname{
+  width:100%;
+  text-align: center;
+  font-size: 4em;
+}
+/** LETTER PRESS START **/
+.depth {
+    display: block;
+    color: black;
+    /*font: bold 5em serif;*/
+    position: relative;
+}
+.depth:before, .depth:after {
+    content: attr(title);
+    color: rgba(255,255,255,.1);
+    position: absolute;
+}
+.depth:before { top: 1px; left: 1px }
+.depth:after  { top: 2px; left: 2px }
+/** LETTER PRESS END **/
+
+
+#desktop-search{
+ position:absolute;
+ float:right !important;
+ top:3px ;
+   right:50px;
+}
+
+textarea#comment{
+  width:100%;
+}
+
+ /************************************************************
+ *************************FOOTER******************************
+ ************************************************************/
+
+
+.foot{
+    font-size: 70%;
+}
+

@@ -1,0 +1,92 @@
+/**
+ * My personal mixins
+ */
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    https://github.com/dmitryf
+    More info at: http://lesselements.com
+    License: This work is dedicated to the public domain and is free for all uses, commercial or otherwise. No form of credit required.
+  ---------------------------------------------------*/
+/*
+This is where im working ;ftb
+ */
+/**
+ * overwrite superfish
+ */
+ul.sf-menu {
+  background-color: #000000;
+  margin-bottom: 0px;
+  width: 100%;
+}
+ul.sf-menu a {
+  color: #ffffff;
+}
+ul.sf-menu a:visited {
+  /* visited pseudo selector so IE6 applies text colour */
+
+  color: #ffffff;
+}
+ul.sf-menu li {
+  display: inline;
+  position: relative;
+  text-shadow: 0px -1px 0px #000000;
+  text-shadow: 0px 1px 0px #bc3137;
+}
+ul.sf-menu li ul.children {
+  width: auto;
+  text-align: center;
+  font-size: 80%;
+  display: inline;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  white-space: nowrap;
+  background-color: green;
+}
+ul.sf-menu li li {
+  display: inline;
+}
+.themenu {
+  font-size: 1.5em;
+}
+.themenu :first-child {
+  text-align: left;
+}
+.themenu ul.sf-menu.sf-navbar {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.sf-navbar {
+  padding-bottom: 0px;
+}
+.ui-widget form#searchform input.ui-autocomplete-input {
+  width: inherit;
+  height: inherit;
+}
+.ui-widget form#searchform input.search-query {
+  -webkit-border-top-right-radius: 5;
+  -webkit-border-bottom-right-radius: 5;
+  -webkit-border-bottom-left-radius: 5;
+  -webkit-border-top-left-radius: 5;
+  -moz-border-radius-topright: 5;
+  -moz-border-radius-bottomright: 5;
+  -moz-border-radius-bottomleft: 5;
+  -moz-border-radius-topleft: 5;
+  border-top-right-radius: 5;
+  border-bottom-right-radius: 5;
+  border-bottom-left-radius: 5;
+  border-top-left-radius: 5;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+form:focus,
+input:focus {
+  border-color: #5aa332 !important;
+}

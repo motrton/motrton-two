@@ -1,0 +1,142 @@
+
+// Copyright (c)  2012 
+// Fabian "fabiantheblind" Morón Zirfas  
+// Permission is hereby granted, free of charge, to any 
+// person obtaining a copy of this software and associated
+// documentation files (the "Software"), to deal in the Software
+// without restriction, including without limitation the rights 
+// to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to  permit persons to 
+// whom the Software is furnished to do so, subject to 
+// the following conditions:  
+// The above copyright notice and this permission notice
+// shall be included in all copies or substantial portions of the Software.  
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+// OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF  CONTRACT,
+// TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTIO
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+
+// see also http://www.opensource.org/licenses/mit-license.php
+
+// we need to seprate this from the style so we load first bootstrap
+// with the style and than the superfish stuff and than we overwrite
+// 
+@import 'variables.less';
+@import 'custom-mixins.less';
+@import 'elements.less';
+
+//------------------------------------------------------------------------------
+//FROM HERE ON ITS STYLE CSS before got included
+//
+// @import url('../bootstrap/less/custom-bs-variables.less');
+// @import url('custom-mixins.less');
+// @import url('elements.less');
+
+
+/*
+This is where im working ;ftb
+ */
+/**
+ * overwrite superfish
+ */
+
+ul.sf-menu {
+background-color: @black;
+// .e_gradient( #ef0007,  #a20004,  #fc000a);
+margin-bottom: 0px;
+
+ a {
+
+ color:      @white;
+}
+a:visited  { /* visited pseudo selector so IE6 applies text colour */
+  color:      @white;
+
+}
+
+
+
+  width: 100%;
+  // this controls the menu top width
+  li{
+    display:inline;
+    position:relative;
+  @topcolor:#000000;
+ @bottomcolor:#bc3137; 
+   .letterPressShadowControlled (@topcolor, @bottomcolor);
+
+   ul.children{
+    width:auto;
+     text-align: center;
+     font-size: 80%;
+      display:inline;
+    position:absolute;
+    top:35px;
+    left:0;
+    white-space:nowrap;
+    background-color: green;
+   }
+   li{
+         display:inline;
+
+   }
+
+  }
+
+}
+// ul.sf-menu > li:last-of-type{
+//  float:right;
+// }
+
+
+.themenu{
+
+  font-size: 1.5em;
+   :first-child{
+     text-align: left;
+   }
+
+
+
+
+ul.sf-menu.sf-navbar{
+  .e_rounded(0px);
+
+}
+
+}
+
+.sf-navbar{
+    padding-bottom: 0px;
+
+}
+
+
+.ui-widget{
+
+
+  form#searchform{
+    input.ui-autocomplete-input{
+         width:inherit;
+        height:inherit;
+    }
+    input.search-query{
+      @topright: 5;
+      @bottomright: 5;
+      @bottomleft: 5;
+      @topleft: 5;
+
+      .e_border-radius(@topright, @bottomright, @bottomleft, @topleft);
+    }
+  }
+
+}
+
+form:focus,input:focus {
+border-color:@linkColor !important;
+
+}
+
