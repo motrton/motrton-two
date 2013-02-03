@@ -19,7 +19,7 @@
 <?php wp_enqueue_script("jquery"); ?>
 <?php wp_head(); ?>
 </head>
-<body class="animated fadeIn">
+<body>
 <header>
     <!-- START DESKTOP NAV -->
 <nav class="thetopnav" id="topbar">
