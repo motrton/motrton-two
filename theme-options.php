@@ -104,8 +104,15 @@ function theme_options_do_page() {
 						<label class="description" for="motrton-two_options[registerpage]"><?php _e( '', 'motrton-two' ); ?></label>
 					</td>
 				</tr>
+<!-- carousel -->
+				<tr valign="top"><th scope="row"><?php _e( 'Page IDs for carousel', 'motrton-two' ); ?></th>
+					<td>
+						<input id="motrton-two_options[carouselpages]" class="regular-text" type="text" name="motrton-two_options[carouselpages]" value="<?php esc_attr_e( $options['carouselpages'] ); ?>" />
+						<label class="description" for="motrton-two_options[carouselpages]"><?php _e( '', 'motrton-two' ); ?></label>
+					</td>
+				</tr>
 
-				
+<!-- search terms -->
 				<tr valign="top"><th scope="row"><?php _e( 'Own Search Terms', 'motrton-two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[searchterms]" class="regular-text" type="text" name="motrton-two_options[searchterms]" value="<?php esc_attr_e( $options['searchterms'] ); ?>" />
