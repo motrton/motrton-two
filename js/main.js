@@ -149,7 +149,7 @@ $('div#debuginfo').append('<br>' + res);
 jQuery(document).ready(function($){
 superfish($);
 linkIcons($);
-
+// $('body').jKit();
 
 // var se_ajax_url = "<?php echo admin_url('admin-ajax.php'); ?>";
 // $('input#s').suggest(se_ajax_url + '?action=se_lookup');

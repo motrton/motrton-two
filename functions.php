@@ -19,6 +19,8 @@ if( !is_admin() ){
 add_action('wp_enqueue_scripts','superfish_script_with_jquery');
 
 add_action('wp_enqueue_scripts','combobox_with_jqueryui');
+
+add_action('wp_enqueue_scripts','jkit_script_with_jquery');
 // 
 // add main JS
 // 
@@ -34,7 +36,7 @@ add_action('init', 'my_styles');
 
 
 // custom filter around content to get the link icon
-add_filter( 'the_content', 'mytheme_content_ad' );
+// add_filter( 'the_content', 'mytheme_content_ad' );
 // add my personal debugger
 add_action('wp_footer', 'show_template');
 }
@@ -134,6 +136,15 @@ wp_register_script( 'hoverintent-script', get_template_directory_uri() . '/js/ho
 wp_enqueue_script( 'hoverintent-script' );
 wp_register_script( 'superfish-script', get_template_directory_uri() . '/js/superfish.js', array( 'jquery' ) );
 wp_enqueue_script( 'superfish-script' );
+}
+
+/**
+ * This adds the jkit
+ *
+ */
+function jkit_script_with_jquery(){
+wp_register_script( 'jkit', get_template_directory_uri() . '/js/jquery.jkit.1.1.15.min.js', array( 'jquery' ) );
+wp_enqueue_script( 'jkit' );
 
 }
 /**
@@ -161,9 +172,11 @@ function my_styles() {
     wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css' );
     wp_register_style( 'overwrite', get_template_directory_uri() . '/css/overwrite.css');
     wp_register_style( 'oo-naok-style', get_template_directory_uri() . '/css/oo-naok.css',array('overwrite'));
-
-
     wp_register_style( 'combobox', get_template_directory_uri() . '/css/combobox.css');
+     // if ( is_page('page-carousel') ) {
+        wp_register_style( 'jkit', get_template_directory_uri() . '/css/jkit.css');
+     // }
+
 
 if( !is_admin() ){
     wp_enqueue_style( 'superfish' );
@@ -172,7 +185,7 @@ if( !is_admin() ){
     wp_enqueue_style( 'overwrite' );
     wp_enqueue_style( 'oo-naok-style' );
     wp_enqueue_style( 'combobox' );
-    // wp_enqueue_style( 'bs-responsive' );
+     wp_enqueue_style( 'jkit' );
     }
 }
 
