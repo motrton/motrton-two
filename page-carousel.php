@@ -56,13 +56,13 @@ jQuery(document).ready(function($){
     
     for($j = 0; $j < count($page_ids); $j++){
     $post = get_page($page_ids[$j]);
-    $title = apply_filters('post_title', $post->post_title);
+    // $title = apply_filters('post_title', $post->post_title);
     $content = apply_filters('the_content', $post->post_content);
 
     
     // echo "<!-- This is ID ".$page_ids[$j] ." -->";
     echo "<div id=\"carousel-item-" . $j ."\">";
-    echo "<h2>" .$title . "</h2>";
+    // echo "<h2>" .$title . "</h2>";
     echo $content;
     echo "</div>";
 
