@@ -18,6 +18,10 @@ License: MIT
 @import 'less/elements.less';
 @import 'less/custom-mixins.less';
 
+/******************************
+THE SEMANTIC GRID
+http://semantic.gs/
+*******************************/
 
 // This is semantic.gs variables
 // 
@@ -27,15 +31,14 @@ License: MIT
 @total-width: 100%;
 
 
-// .container{
-//     .column(@columns);
-// }
 
-header { .column(@columns); }
+header {
+  .column(@columns);
+}
 section {
     .column(8);
     .push(1);
-         }
+}
 section#page{
     .column(8);
     .push(2);
@@ -48,15 +51,17 @@ footer{
     .column(8);
     .push(1);
 }
-
+/**********************************************/
+// Media queries for sematic grid
+// 
 @media screen and (max-width: 960px) {
     // .container{.column(12);}
     section { .column(12); }
     aside { .column(12); }
 }
-/*************************************/
-//BASICS
-/*************************************/
+/************************************
+// BASICS OVERALL!
+*************************************/
 
 
 body{
@@ -91,7 +96,9 @@ h1,h2,h3,h4,h5,h6,{
   // width:100;
 }
 
+#topbar{
 
+}
 
 
 #site-title{
@@ -110,18 +117,15 @@ img#logo{
     height:100px;
     width:100px;
     vertical-align: middle;
-  text-align: center;
+    text-align: center;
 }
 
 }
-
-
 }
 /** LETTER PRESS START **/
 .depth {
     display: block;
     color: black;
-    /*font: bold 5em serif;*/
     position: relative;
 }
 .depth:before, .depth:after {
@@ -134,13 +138,21 @@ img#logo{
 /** LETTER PRESS END **/
 
 
-#desktop-search{
- position:absolute;
- float:right !important;
- top:3px ;
-   right:50px;
+li#desktop-search{
+  list-style-type: none;
+  position:absolute;
+  float:right !important;
+  top:5px ;
+  right:50px;
 }
 
+/************************************************************
+*************************PAGE.PHP****************************
+************************************************************/
+
+/************************************************************
+*************************SINGLE.PHP**************************
+************************************************************/
 
 /************************************************************
 *************************CONTENT.PHP*************************
@@ -166,3 +178,10 @@ textarea#comment{
     // font-size: 70%;
 }
 
+/************************************************************
+*************************DEBUGGING***************************
+************************************************************/
+
+#debuginfo{
+  .column(12);
+}

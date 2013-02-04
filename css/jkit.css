@@ -1,0 +1,4 @@
+a.jkit-carousel-prev,a.jkit-carousel-next{width:40px;background:#eee;border:1px #999 solid;color:#333;padding:4px;cursor:pointer;cursor:hand;margin-top:10px;text-align:center;user-select:none;}
+a.jkit-carousel-prev:hover,a.jkit-carousel-next:hover{background:#fff;border:1px #666 solid;color:#000;}
+a.jkit-carousel-prev{float:left;}
+a.jkit-carousel-next{float:right;}

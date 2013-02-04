@@ -9,12 +9,9 @@
     More info at: http://lesselements.com
     License: This work is dedicated to the public domain and is free for all uses, commercial or otherwise. No form of credit required.
   ---------------------------------------------------*/
-/*
-This is where im working ;ftb
- */
-/**
- * overwrite superfish
- */
+/*********************************
+ * OVERWRITE SUPERFISH
+ **********************************/
 ul.sf-menu {
   background-color: #000000;
   margin-bottom: 0px;
@@ -48,13 +45,7 @@ ul.sf-menu li ul.children {
 ul.sf-menu li li {
   display: inline;
 }
-.themenu {
-  font-size: 1.5em;
-}
-.themenu :first-child {
-  text-align: left;
-}
-.themenu ul.sf-menu.sf-navbar {
+ul.sf-menu.sf-navbar {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -65,28 +56,108 @@ ul.sf-menu li li {
 .sf-navbar {
   padding-bottom: 0px;
 }
+/*****************************
+JQERY UI OVERWRITE
+******************************/
+/*****************************
+//IN SEARCHFORM.PHP
+******************************/
 .ui-widget form#searchform input.ui-autocomplete-input {
   width: inherit;
   height: inherit;
-}
-.ui-widget form#searchform input.search-query {
-  -webkit-border-top-right-radius: 5;
-  -webkit-border-bottom-right-radius: 5;
-  -webkit-border-bottom-left-radius: 5;
-  -webkit-border-top-left-radius: 5;
-  -moz-border-radius-topright: 5;
-  -moz-border-radius-bottomright: 5;
-  -moz-border-radius-bottomleft: 5;
-  -moz-border-radius-topleft: 5;
-  border-top-right-radius: 5;
-  border-bottom-right-radius: 5;
-  border-bottom-left-radius: 5;
-  border-top-left-radius: 5;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-form:focus,
-input:focus {
-  border-color: #5aa332 !important;
+.ui-widget form#searchform input:focus {
+  background-color: #eeeeee;
 }
+/*end widget*/
+/*****************************
+//END OF SEARCHFORM.PHP
+******************************/
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all li.ui-menu-item a.ui-corner-all {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+}
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all li.ui-menu-item a.ui-corner-all:hover {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/**
+ * RESET some JQUI stuff to get rid of the 
+ * background image that gets included in the jqui css
+ */
+.ui-widget-content,
+.ui-widget-header,
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight,
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+  background: #ffffff !important;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+span.ui-helper-hidden-accessible {
+  visibility: hidden;
+  display: none;
+}
+/*****************************
+// END OF JQUI OVERWRITE
+******************************/
