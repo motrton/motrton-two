@@ -93,19 +93,21 @@ p{
 
 }
 
-
-
 .sf-navbar {
 	.e_gradient (@redmid, @reddark, @redmid); 
 	-moz-box-shadow: inset 0px 1px 0px 0px @redlight;
 	-webkit-box-shadow: inset 0px 1px 0px 0px @redlight;
 	box-shadow: inset 0px 1px 0px 0px @redlight;
-	height:			3.5em;
+	height:			2.8em;
 }
+.sf-navbar li ul.children {
+		top: 45px;
+	}
+
 .sf-navbar a {
 		color: @chamois;
 		text-shadow: 0px 1px 0px @redshadow;
-		font-size: 1.3em;
+		font-size: 1.1em;
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 3px;
@@ -116,7 +118,7 @@ p{
 }		
 .sf-navbar a:hover {
 		color: @white;
-		text-shadow: -1px 0px 1px @redshadow;
+		text-shadow: 0px 1px 0px @redshadow;
 		background: @reddark;
 		-moz-box-shadow: inset 0px 1px 0px 0px @redlight;
 	    -webkit-box-shadow: inset 0px 1px 0px 0px @redlight;
@@ -128,14 +130,15 @@ p{
 		-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	    -webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	    box-shadow: inset 0px 1px 0px 0px @greenlight;
+	    height: 3.3em;
 }	
 .sf-navbar ul li a {
 		color: @chamois;
 		text-shadow: 0px 1px 0px @greendark;
-		font-size: 1.4em;
+		font-size: 1.3em;
 		font-weight: 600;
 		text-transform: capitalize;
-		letter-spacing: 0px;
+		letter-spacing: 1px;
 		text-decoration: none;		
 		}
 .sf-navbar ul li a, .sf-navbar ul li a:visited {
@@ -144,9 +147,9 @@ p{
 .sf-navbar ul li a:hover {
 		color: @white;
 		background: @greendark;
-		-moz-box-shadow: inset 0px 1px 0px 0px @redlight;
-	    -webkit-box-shadow: inset 0px 1px 0px 0px @redlight;
-	    box-shadow: inset 0px 1px 0px 0px @redlight;
+		-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
+	    -webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
+	    box-shadow: inset 0px 1px 0px 0px @greenlight;
 }
 
 }
