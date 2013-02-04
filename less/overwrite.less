@@ -47,30 +47,24 @@ a:visited  { /* visited pseudo selector so IE6 applies text colour */
 
 }
 
-
-
   width: 100%;
   // this controls the menu top width
   li{
-    display:inline;
+    // display:inline;
     position:relative;
   @topcolor:#000000;
  @bottomcolor:#bc3137; 
    .letterPressShadowControlled (@topcolor, @bottomcolor);
 
    ul.children{
-    width:auto;
-     text-align: center;
-     font-size: 80%;
-      display:inline;
+   
     position:absolute;
-    top:35px;
+    
     left:0;
     white-space:nowrap;
-    background-color: green;
    }
    li{
-         display:inline;
+    width:auto;
 
    }
 
@@ -101,10 +95,10 @@ JQERY UI OVERWRITE
     input.ui-autocomplete-input{
       width:inherit;
       height:inherit;
-      font-family: @sansFontFamily;
-      font-weight: 300;
-      font-size: 0.9em;
-     .e_border-radius(5px,5px,5px,5px);
+      // font-family: @sansFontFamily;
+      // font-weight: 300;
+      // font-size: 0.9em;
+     // .e_border-radius(5px,5px,5px,5px);
 
           }
     input:focus{
@@ -123,12 +117,12 @@ ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all{
   li.ui-menu-item{
   // width: 100px;
     a.ui-corner-all{
-      font-family: @sansFontFamily;
-      font-weight: 300;
-      font-size: 0.9em;
+      // font-family: @sansFontFamily;
+      // font-weight: 300;
+      // font-size: 0.9em;
     }
     a.ui-corner-all:hover{
-    .e_border-radius(0,0,0,0);
+    // .e_border-radius(0,0,0,0);
     
     }
   }
