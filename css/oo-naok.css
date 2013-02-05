@@ -8,6 +8,10 @@
   ---------------------------------------------------*/
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  /* --- styles.less overwrite --- */
+
+  /* --- styles.less overwrite ENDE --- */
+
   /*****************************
 //IN SEARCHFORM.PHP
 ******************************/
@@ -40,13 +44,6 @@ body h1#title {
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -2px;
-}
-body h1#header {
-  color: #08618f;
-  font-size: 3.5em;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -1px;
 }
 body h2 {
   color: #08618f;
@@ -124,6 +121,25 @@ body p .bold {
 }
 body p .italic {
   font-style: italic;
+}
+body #site-title span#blogname {
+  color: #08618f;
+  line-height: 1.2;
+  margin-left: 0px;
+  height: 4em;
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: 700;
+  vertical-align: middle;
+  letter-spacing: -1px;
+}
+body #site-title span#blogname img#logo {
+  height: 100px;
+  width: 100px;
+  padding-right: 0.2em;
+  vertical-align: middle;
+  text-align: center;
 }
 body .sf-navbar {
   background: #e11714;

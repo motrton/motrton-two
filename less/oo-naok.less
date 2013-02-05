@@ -38,13 +38,6 @@ h1#title{
 	line-height: 1.1;
 	letter-spacing: -2px;
 }
-h1#header{
-	color: @blue;
-	font-size: 3.5em;
-	font-weight: 700;
-	line-height: 1.2;
-	letter-spacing: -1px;
-}
 h2{
 	color: @blue;
 	font-size: 1.4em;
@@ -92,6 +85,40 @@ p{
 		}
 
 }
+
+/* --- styles.less overwrite --- */
+
+#site-title{
+  // .row(12);
+@titleHeight:4em;
+span#blogname{
+  
+	color: @blue;
+	line-height: 1.2;
+  	margin-left: 0px;
+  	height:@titleHeight;
+  	width:100%;
+  	text-align: center;
+  	font-size: 3.5em;
+  	font-weight: 700;
+  	vertical-align: middle;
+  	letter-spacing: -1px;
+
+img#logo{
+    height:100px;
+    width:100px;
+    padding-right:0.2em;
+    vertical-align: middle;
+    text-align: center;
+}
+}
+}
+
+
+
+/* --- styles.less overwrite ENDE --- */
+
+
 
 .sf-navbar {
 	.e_gradient (@redmid, @reddark, @redmid); 
