@@ -21,39 +21,9 @@
 
 // see also http://www.opensource.org/licenses/mit-license.php
 
-// function autocomplete ($) {
-
-// // This would be jQuery autocomplete
-// // searchterms
-// var searchtermstring = $('#searchterms').text();
-
-// // var searchterms = $.parseJSON("'" + searchtermstring + "'");
-// // var terms = searchterms.list;
-
-// // var availableTags = ["Batman", "Spiderman", "Hulk"];
-
-// var terms = searchtermstring.split(',');
-// terms.pop();
-//  $( "input#s" ).autocomplete({
-//      source: terms,
-//      minLength: 0,
-//      autoFocus: true,
-//      delay: 10
-
-// });
-
-// $("div#debuginfo").append("<p>Preset searchterms added with js: -->" + terms + " as "+ terms.constructor.name+ "</p>");
-
-// }
 
 
-// function suggestions ($) {
-//     var acs_action = 'myprefix_autocompletesearch';
-//     // var res =  $.getJSON(MyAcSearch.url+'?callback=?&action='+acs_action);
 
-//    $('input#s').suggest("<?php echo get_bloginfo('wpurl'); ?>/wp-admin/admin-ajax.php?callback=?&action=" +acs_action, {multiple:false});
-
-// }
 
 /**
 * using superfish plugin
@@ -94,30 +64,30 @@ function linkIcons ($) {
 // }
 //
 // make the dropdown phone only
-function mobileDropdown ($) {
+// function mobileDropdown ($) {
 
 
-if($('.navbar, .navbar-fixed-top, .visible-phone').css('display') !== 'none !important'){
-$('.nav').children('li').addClass('dropdown');
-$('ul.nav > li.dropdown').children('a').addClass('dropdown-toggle');
-$('.dropdown-toggle').attr('data-toggle','dropdown');
-$('a.dropdown-toggle').append(' <b class="caret"></b>');
-$('li.dropdown > ul.children').addClass('dropdown-menu');
+// if($('.navbar, .navbar-fixed-top, .visible-phone').css('display') !== 'none !important'){
+// $('.nav').children('li').addClass('dropdown');
+// $('ul.nav > li.dropdown').children('a').addClass('dropdown-toggle');
+// $('.dropdown-toggle').attr('data-toggle','dropdown');
+// $('a.dropdown-toggle').append(' <b class="caret"></b>');
+// $('li.dropdown > ul.children').addClass('dropdown-menu');
 
-// remove the caret on the blog tab
-$('ul.nav > li').last().children('a').children('b').removeClass('caret');
+// // remove the caret on the blog tab
+// $('ul.nav > li').last().children('a').children('b').removeClass('caret');
 
-// we have to open the current item
-$('li.current_page_item').addClass('open');
+// // we have to open the current item
+// $('li.current_page_item').addClass('open');
 
-$('li.dropdown > a.dropdown-toggle').click(
-    function(){
-            var a_href = $(this).attr('href');
-            window.location = a_href;
-            }
-        );
-    }
-}
+// $('li.dropdown > a.dropdown-toggle').click(
+//     function(){
+//             var a_href = $(this).attr('href');
+//             window.location = a_href;
+//             }
+//         );
+//     }
+// }
 
 function helper ($) {
 // get previous url
@@ -149,49 +119,20 @@ $('div#debuginfo').append('<br>' + res);
 jQuery(document).ready(function($){
 superfish($);
 linkIcons($);
-// $('body').jKit();
+$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('#scrolltop').fadeIn();
+    } else {
+        $('#scrolltop').fadeOut();
+    }
+});
 
-// var se_ajax_url = "<?php echo admin_url('admin-ajax.php'); ?>";
-// $('input#s').suggest(se_ajax_url + '?action=se_lookup');
+$("a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
 
-// $('div#debuginfo').append(se_ajax_url + '?action=se_lookup');
-
-// suggestions($);
-//
-// var haystack = ["ActionScript", "AppleScript", "Asp", "BASIC"];
-// ajaxurl + "?action=search", { delay: 500, minchars: 2}
-
-// $('input#s').suggest("<?php echo get_bloginfo('wpurl'); ?>/wp-admin/admin-ajax.php?action=search", {
-//   suggestionColor   : '#cccccc',
-//   moreIndicatorClass: 'suggest-more',
-//   moreIndicatorText : '&hellip;'
-//  });
-
-
-
-
-// This would be jQuery autocomplete
-// searchterms
-// var searchtermstring = $('#searchterms').text();
-
-// // var searchterms = $.parseJSON("'" + searchtermstring + "'");
-// // var terms = searchterms.list;
-
-// // var availableTags = ["Batman", "Spiderman", "Hulk"];
-
-// var terms = searchtermstring.split(',');
-// terms.pop();
-//  $( "input#s" ).autocomplete({
-//      source: terms,
-//      minLength: 0,
-//      autoFocus: true,
-//      delay: 10
-
-// });
-
-// $("div#debuginfo").append("<p>Preset searchterms added with js: -->" + terms + " as "+ terms.constructor.name+ "</p>");
-// // autocomplete($);
 // // depthLetterpress($);
-mobileDropdown($);
+// mobileDropdown($);
 helper($);
 });

@@ -368,6 +368,9 @@ body:after {
 body:after {
   clear: both;
 }
+/**
+ * OO NAOK COLORS
+ */
 @charset "UTF-8";
 /*
 
@@ -3865,7 +3868,7 @@ footer {
 body {
   background-image: url('img/pw_maze_white.png');
   width: 100%;
-  padding-bottom: 40px;
+  position: relative;
 }
 header {
   width: 100%;

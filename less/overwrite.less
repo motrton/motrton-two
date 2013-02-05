@@ -26,8 +26,11 @@
 @import 'variables.less';
 @import 'custom-mixins.less';
 @import 'elements.less';
-
+@import 'animate.less';
 //------------------------------------------------------------------------------
+
+
+
 
 /*********************************
  * OVERWRITE SUPERFISH
@@ -80,7 +83,33 @@ ul.sf-menu.sf-navbar{
 
 }
 
+/*****************************
+Scroll to top button
+******************************/
 
+#scrolltop{
+    background-color: @greendark;
+    position: fixed;
+    right: 75px;
+    bottom:0px;
+    @ptop:5px;
+    @pright:5px;
+    @pbottom:5px;
+    @pleft:5px;
+    padding:@ptop  @pright @pbottom @pleft;
+     // background: #000;
+    // color: #fff;
+    // bottom: 0;
+    display: none;
+ i:hover{
+  .animated; // Initiate animation library
+  .pulse; // Initiate bounce effect
+  }
+  a{
+    text-decoration: none;
+    color:white;
+  }
+}
 
 /*****************************
 JQERY UI OVERWRITE
