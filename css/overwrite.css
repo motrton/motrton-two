@@ -3444,22 +3444,15 @@ body {
  * OVERWRITE SUPERFISH
  **********************************/
 ul.sf-menu {
-  background-color: #000000;
   margin-bottom: 0px;
   width: 100%;
-}
-ul.sf-menu a {
-  color: #ffffff;
 }
 ul.sf-menu a:visited {
   /* visited pseudo selector so IE6 applies text colour */
 
-  color: #ffffff;
 }
 ul.sf-menu li {
   position: relative;
-  text-shadow: 0px -1px 0px #000000;
-  text-shadow: 0px 1px 0px #bc3137;
 }
 ul.sf-menu li ul.children {
   position: absolute;
@@ -3468,14 +3461,6 @@ ul.sf-menu li ul.children {
 }
 ul.sf-menu li li {
   width: auto;
-}
-ul.sf-menu.sf-navbar {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
 }
 .sf-navbar {
   padding-bottom: 0px;
@@ -3507,7 +3492,7 @@ Scroll to top button
 }
 #scrolltop a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 /*****************************
 JQERY UI OVERWRITE
@@ -3518,9 +3503,6 @@ JQERY UI OVERWRITE
 .ui-widget form#searchform input.ui-autocomplete-input {
   width: inherit;
   height: inherit;
-}
-.ui-widget form#searchform input:focus {
-  background-color: #eeeeee;
 }
 /*end widget*/
 /*****************************
