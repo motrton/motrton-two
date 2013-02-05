@@ -8,6 +8,25 @@
   ---------------------------------------------------*/
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  /*****************************
+//IN SEARCHFORM.PHP
+******************************/
+
+  /*end widget*/
+
+  /*****************************
+//END OF SEARCHFORM.PHP
+******************************/
+
+  /**
+ * RESET some JQUI stuff to get rid of the 
+ * background image that gets included in the jqui css
+ */
+
+  /*****************************
+// END OF JQUI OVERWRITE
+******************************/
+
 }
 body h1 {
   color: #08618f;
@@ -152,12 +171,12 @@ body .sf-navbar ul li {
   -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
   -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
   box-shadow: inset 0px 1px 0px 0px #98c230;
-  height: 3.3em;
+  height: 3em;
 }
 body .sf-navbar ul li a {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #348d43;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 1px;
@@ -173,4 +192,104 @@ body .sf-navbar ul li a:hover {
   -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
   -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
   box-shadow: inset 0px 1px 0px 0px #98c230;
+}
+body .ui-widget input,
+body .ui-widget select,
+body .ui-widget textarea,
+body .ui-widget button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #b9ac98;
+  padding-left: 0.7em;
+}
+body .ui-widget form#searchform input.ui-autocomplete-input {
+  width: 110px;
+  height: 27px;
+  margin-top: 0.1em;
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -webkit-border-top-left-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  -moz-border-radius-topleft: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+body .ui-widget form#searchform input.s {
+  color: #b9ac98;
+}
+body .ui-widget form#searchform input:focus {
+  background-color: #ecdfcb;
+}
+body input,
+body input[type="password"],
+body input[type="search"],
+body isindex {
+  -webkit-appearance: textfield;
+  padding: 1px;
+  background-color: #ecdfcb;
+  border: 1px solid #b81714;
+  border-image: initial;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+  cursor: auto;
+}
+body ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all li.ui-menu-item a.ui-corner-all {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #b9ac98;
+}
+body .ui-widget-content,
+body .ui-widget-header,
+body .ui-state-default,
+body .ui-widget-content .ui-state-default,
+body .ui-widget-header .ui-state-default,
+body .ui-state-hover,
+body .ui-widget-content .ui-state-hover,
+body .ui-widget-header .ui-state-hover,
+body .ui-state-focus,
+body .ui-widget-content .ui-state-focus,
+body .ui-widget-header .ui-state-focus,
+body .ui-state-active,
+body .ui-widget-content .ui-state-active,
+body .ui-widget-header .ui-state-active,
+body .ui-state-highlight,
+body .ui-widget-content .ui-state-highlight,
+body .ui-widget-header .ui-state-highlight,
+body .ui-state-error,
+body .ui-widget-content .ui-state-error,
+body .ui-widget-header .ui-state-error {
+  background: #ecdfcb !important;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #b9ac98;
+  padding-left: 0.7em;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+body span.ui-helper-hidden-accessible {
+  visibility: hidden;
+  display: none;
 }

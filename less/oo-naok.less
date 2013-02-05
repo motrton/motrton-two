@@ -130,12 +130,12 @@ p{
 		-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	    -webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	    box-shadow: inset 0px 1px 0px 0px @greenlight;
-	    height: 3.3em;
+	    height: 3em;
 }	
 .sf-navbar ul li a {
 		color: @chamois;
 		text-shadow: 0px 1px 0px @greendark;
-		font-size: 1.3em;
+		font-size: 1.1em;
 		font-weight: 600;
 		text-transform: capitalize;
 		letter-spacing: 1px;
@@ -151,6 +151,120 @@ p{
 	    -webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	    box-shadow: inset 0px 1px 0px 0px @greenlight;
 }
+/*****************************
+//IN SEARCHFORM.PHP
+******************************/
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+			font-family: 'Source Sans Pro', sans-serif;
+	    	font-size: 0.8em;
+	    	font-weight: 600;
+	    	color: (@chamois - #333); 
+	    	padding-left: 0.7em;
 
+}
+
+.ui-widget{
+  form#searchform{
+    input.ui-autocomplete-input{
+      width: 110px;
+      height: 27px;
+      margin-top: 0.1em;
+     .e_border-radius(15px,15px,15px,15px);
+          }
+    input.s{
+    	color: (@chamois - #333);
+    }
+    input:focus{
+      background-color: @chamois;
+    }
+  }
+} 
+
+input, input[type="password"], input[type="search"], isindex {
+-webkit-appearance: textfield;
+padding: 1px;
+background-color: @chamois;
+border: 1px solid @reddark;
+border-image: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+}
+
+/*end widget*/
+
+/*****************************
+//END OF SEARCHFORM.PHP
+******************************/
+
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all{
+// width:100px;
+  li.ui-menu-item{
+  // width: 100px;
+    a.ui-corner-all {
+    	font-size: 1.1em;
+      	font-weight: 600;
+      	color: (@chamois - #333);
+
+    }
+    a.ui-corner-all:hover {
+
+    
+    }
+  }
+
+}
+/**
+ * RESET some JQUI stuff to get rid of the 
+ * background image that gets included in the jqui css
+ */
+.ui-widget-content,
+.ui-widget-header,
+/* Interaction states
+
+----------------------------------*/
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight,
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+  	background:@chamois !important;
+
+  	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 0.8em;
+	font-weight: 600;
+	color:(@chamois - #333); 
+	padding-left: 0.7em;
+  .e_border-radius(0,0,0,0);
+}
+
+
+
+// This is for blind people
+// Damn it it pushes around the listitem
+// This should be some how ther. But how?
+span.ui-helper-hidden-accessible{
+  visibility: hidden;
+  display:none;
+}
+/*****************************
+// END OF JQUI OVERWRITE
+******************************/
 }
 
