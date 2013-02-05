@@ -25,7 +25,8 @@
 <nav class="thetopnav" id="topbar">
 <ul class="sf-menu sf-navbar" id="desktop-navbar">
 <!-- wp_list_pages start -->
-<li class="page-item" style="padding-right:100px;"><a href="#">EN|DE</a></li>
+<li class="page-item" style="padding-right:100px;"><a href="#">EN|DE</a>
+</li>
         <?php
         
         $options = get_option('motrton-two_options');
@@ -56,11 +57,15 @@ http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
 -->
 </ul>
 
- <li id="desktop-search"> 
+<ul id="desktop-search">
+<li><i id="revealsearch" class=" icon-search"></i></li>
+ <li id="searchfield"> 
 <?php 
   get_search_form();
  ?>
 </li>
+</ul>
+
 </nav>
 <div id="site-title">
 <span id="blogname" class="depth animated fadeIn">

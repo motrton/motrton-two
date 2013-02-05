@@ -3824,8 +3824,6 @@ h4,
 h5,
 h6 {
   color: #333e34;
-  text-shadow: 0px -1px 0.5px #000000;
-  text-shadow: 0px 1px 0.5px #ffffff;
 }
 body {
   background-image: url('img/pw_maze_white.png');
@@ -3970,12 +3968,19 @@ footer {
   left: 2px;
 }
 /** LETTER PRESS END **/
-li#desktop-search {
+ul#desktop-search {
   list-style-type: none;
   position: absolute;
-  float: right !important;
-  top: 5px ;
+  float: right;
+  top: -10px;
   right: 50px;
+}
+ul#desktop-search li i {
+  color: #ffffff;
+  font-size: 2em;
+}
+ul#desktop-search li#searchfield {
+  display: none;
 }
 /************************************************************
 *************************PAGE.PHP****************************

@@ -38,7 +38,7 @@ http://semantic.gs/
 
 h1,h2,h3,h4,h5,h6,{
   color:@headlineColor;
-  .letterPressShadow(@headlineColor);
+  // .letterPressShadow(@headlineColor);
 }
 
 body{
@@ -169,12 +169,25 @@ img#logo{
 /** LETTER PRESS END **/
 
 
-li#desktop-search{
+ul#desktop-search{
   list-style-type: none;
   position:absolute;
-  float:right !important;
-  top:5px ;
-  right:50px;
+  float:right;
+  // top:5px ;
+  // right:50px;
+     top:-10px ;
+      right:50px;
+  li{
+
+    i{
+      color:@white;
+      font-size: 2em;
+    }
+
+  }
+  li#searchfield{
+   display:none;
+  }
 }
 
 /************************************************************
