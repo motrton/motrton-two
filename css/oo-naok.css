@@ -6,6 +6,9 @@
     More info at: http://lesselements.com
     License: This work is dedicated to the public domain and is free for all uses, commercial or otherwise. No form of credit required.
   ---------------------------------------------------*/
+/**
+ * OO NAOK COLORS
+ */
 body {
   font-family: 'Source Sans Pro', sans-serif;
   /* --- styles.less overwrite --- */
@@ -38,6 +41,27 @@ body h1 {
   font-weight: 600;
   line-height: 1.2;
 }
+body .widget-title {
+  color: #08618f;
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+body ul,
+body menu,
+body dir {
+  list-style-type: none;
+}
+body .widget-title ul li {
+  color: #5aa332;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.7em;
+}
+body .widget-title ul li a:link {
+  color: #5aa332;
+  text-decoration: none;
+}
 body h1#title {
   color: #08618f;
   font-size: 5em;
@@ -51,11 +75,15 @@ body h2 {
   font-weight: 600;
   line-height: 1.5em;
 }
-body h2#marginalia {
+body #recentcomments {
   color: #5aa332;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 600;
   line-height: 1.7em;
+}
+body #recentcomments a:link {
+  color: #5aa332;
+  text-decoration: none;
 }
 body h3 {
   color: #08618f;
@@ -91,7 +119,7 @@ body h4 a:hover {
 }
 body p {
   color: #3c3c3b;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 300;
   line-height: 1.5em;
 }
@@ -115,11 +143,11 @@ body p a:hover {
   text-decoration: none;
   font-weight: 400;
 }
-body p .bold {
+body p strong {
   font-weight: 400;
   color: #000000;
 }
-body p .italic {
+body p em {
   font-style: italic;
 }
 body #site-title span#blogname {
@@ -140,6 +168,26 @@ body #site-title span#blogname img#logo {
   padding-right: 0.2em;
   vertical-align: middle;
   text-align: center;
+}
+body ul#desktop-search {
+  list-style-type: none;
+  position: absolute;
+  float: right;
+  top: -10px;
+  right: 50px;
+}
+body ul#desktop-search li {
+  float: right;
+}
+body ul#desktop-search li i {
+  float: right;
+  color: #ecdfcb;
+  font-size: 1.6em;
+  text-align: right;
+  margin-top: 0.1em;
+}
+body ul#desktop-search li#searchfield {
+  display: none;
 }
 body .sf-navbar {
   background: #e11714;
@@ -216,7 +264,7 @@ body .ui-widget button {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.8em;
   font-weight: 600;
-  color: #b9ac98;
+  color: #a89b87;
   padding-left: 0.7em;
 }
 body .ui-widget form#searchform input.ui-autocomplete-input {
@@ -238,9 +286,6 @@ body .ui-widget form#searchform input.ui-autocomplete-input {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-}
-body .ui-widget form#searchform input.s {
-  color: #b9ac98;
 }
 body .ui-widget form#searchform input:focus {
   background-color: #ecdfcb;

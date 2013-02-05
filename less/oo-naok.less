@@ -2,6 +2,7 @@
 // here you can fiddle with code
 
 @import url('elements.less');
+@import url('variables.less');
 
 
 @blue:#08618f;
@@ -31,6 +32,26 @@ h1{
 	font-weight: 600;
 	line-height: 1.2;
 }
+.widget-title {
+	color: @blue;
+	font-size: 1.4em;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+ul, menu, dir {
+list-style-type: none;
+}
+.widget-title ul li {
+	color: @greenmid;
+	font-size: 1.1em;
+	font-weight: 600;
+	line-height: 1.7em;
+	a:link { 
+		color: @greenmid; text-decoration:none; 
+	}
+	}
+
+
 h1#title{
 	color: @blue;
 	font-size: 5em;
@@ -44,11 +65,13 @@ h2{
 	font-weight: 600;
 	line-height: 1.5em;
 }
-h2#marginalia{
+#recentcomments{
 	color: @greenmid;
-	font-size: 1.3em;
+	font-size: 1.1em;
 	font-weight: 600;
 	line-height: 1.7em;
+	a:link { color: @greenmid; text-decoration:none; }
+
 }
 h3{
 	color: @blue;
@@ -69,18 +92,18 @@ h4{
 }
 p{
 	color: @90grey;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	font-weight: 300;
 	line-height: 1.5em;
 	a:link {color:@greenmid; text-decoration:none; font-weight: 400}
 	a:visited {color:@greenlight; text-decoration:none; font-weight: 400}
 	a:active {color:@greendark; text-decoration:none; font-weight: 400}
 	a:hover {color:@greendark; text-decoration:none; font-weight: 400}
-	.bold{
+	strong{
 		font-weight: 400;
 		color: @black;
 		}
-	.italic{
+	em{
 		font-style: italic;
 		}
 
@@ -114,7 +137,32 @@ img#logo{
 }
 }
 
+ul#desktop-search{
+  list-style-type: none;
+  position:absolute;
+  float:right;
+  // top:5px ;
+  // right:50px;
+     top:-10px ;
+      right:50px;
+  li{
+      float:right;
+    i{
+      float:right;
+      color:@chamois;
+      font-size: 1.6em;
+      text-align: right;
+      margin-top: 0.1em;
 
+    }
+}
+  li#searchfield{
+   display:none;
+
+   // background-color: @white;
+  }
+
+}
 
 /* --- styles.less overwrite ENDE --- */
 
@@ -185,7 +233,7 @@ img#logo{
 			font-family: 'Source Sans Pro', sans-serif;
 	    	font-size: 0.8em;
 	    	font-weight: 600;
-	    	color: (@chamois - #333); 
+	    	color: (@chamois - #444); 
 	    	padding-left: 0.7em;
 
 }
@@ -198,9 +246,6 @@ img#logo{
       margin-top: 0.1em;
      .e_border-radius(15px,15px,15px,15px);
           }
-    input.s{
-    	color: (@chamois - #333);
-    }
     input:focus{
       background-color: @chamois;
     }
@@ -216,6 +261,7 @@ border-image: initial;
 -webkit-rtl-ordering: logical;
 -webkit-user-select: text;
 cursor: auto;
+
 }
 
 /*end widget*/
