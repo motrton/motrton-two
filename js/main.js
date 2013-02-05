@@ -126,8 +126,23 @@ $(window).scroll(function() {
         $('#scrolltop').fadeOut();
     }
 });
+
+//http://docs.jquery.com/UI/Effects/toggle
+//effect String
+// The effect to be used. Possible values:
+// 'blind', 'clip', 'drop', 'explode', 'fold', 'puff', 'slide', 'scale', 'size', 'pulsate'.
+
+// options Hash Optional
+// A object/hash including specific options for the effect.
+
+// speed String, Number Optional
+// A string representing one of the predefined speeds ("slow" or "fast")
+// or the number of milliseconds to run the animation (e.g. 1000).
+// callback
+// Function Optional
+//
 $('i#revealsearch').click(function(){
-    $('li#searchfield').toggle('slow');
+    $('li#searchfield').toggle('slide', {direction: 'right'}, 500);
 });
 
 $("a[href='#top']").click(function() {
@@ -135,6 +150,7 @@ $("a[href='#top']").click(function() {
   return false;
 });
 
+// $('ul#desktop-search>li').last().css('background-color', 'red');
 // // depthLetterpress($);
 // mobileDropdown($);
 helper($);

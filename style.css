@@ -3967,7 +3967,11 @@ ul#desktop-search {
   top: -10px;
   right: 50px;
 }
+ul#desktop-search li {
+  float: right;
+}
 ul#desktop-search li i {
+  float: right;
   color: #ffffff;
   font-size: 2em;
   text-align: right;
