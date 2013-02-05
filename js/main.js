@@ -127,7 +127,7 @@ $(window).scroll(function() {
     }
 });
 $('i#revealsearch').click(function(){
-    $('li#searchfield').toggle();
+    $('li#searchfield').toggle('slow');
 });
 
 $("a[href='#top']").click(function() {

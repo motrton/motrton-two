@@ -3817,14 +3817,6 @@ http://semantic.gs/
 /************************************
 // BASICS OVERALL!
 *************************************/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #333e34;
-}
 body {
   background-image: url('img/pw_maze_white.png');
   width: 100%;
@@ -3978,6 +3970,7 @@ ul#desktop-search {
 ul#desktop-search li i {
   color: #ffffff;
   font-size: 2em;
+  text-align: right;
 }
 ul#desktop-search li#searchfield {
   display: none;
