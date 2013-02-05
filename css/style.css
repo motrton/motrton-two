@@ -3814,13 +3814,35 @@ body {
 THE SEMANTIC GRID
 http://semantic.gs/
 *******************************/
+/************************************
+// BASICS OVERALL!
+*************************************/
+header {
+  width: 100%;
+  margin-left: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333e34;
+  text-shadow: 0px -1px 0.5px #000000;
+  text-shadow: 0px 1px 0.5px #ffffff;
+}
+body {
+  background-image: url('img/pw_maze_white.png');
+  width: 100%;
+  position: relative;
+}
 header {
   display: inline;
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
 }
-section {
+section#post {
   display: inline;
   float: left;
   width: 64.58333333333334%;
@@ -3833,6 +3855,23 @@ section#page {
   width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
   margin-left: 17.708333333333332%;
+}
+.rows {
+  display: inline;
+  float: left;
+  width: 64.58333333333334%;
+  margin: 0 1.0416666666666665%;
+  background-color: green;
+}
+.rows article.rowitem .thumb {
+  float: left;
+}
+.rows article.rowitem .thumb img.thumbnail {
+  width: 100px ;
+  height: 100px;
+}
+.rows article.rowitem .post-excerpt {
+  width: 100%;
 }
 aside {
   display: inline;
@@ -3861,44 +3900,6 @@ footer {
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
-}
-/************************************
-// BASICS OVERALL!
-*************************************/
-body {
-  background-image: url('img/pw_maze_white.png');
-  width: 100%;
-  position: relative;
-}
-header {
-  width: 100%;
-  margin-left: 0px;
-}
-img {
-  width: 100%;
-  height: auto;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInUp;
-  -moz-animation-name: fadeInUp;
-  -o-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #333e34;
-  text-shadow: 0px -1px 0.5px #000000;
-  text-shadow: 0px 1px 0.5px #ffffff;
 }
 /************************************************************
 *************************HEADER.PHP**************************

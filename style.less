@@ -30,12 +30,43 @@ http://semantic.gs/
 @columns: 12;
 @total-width: 100%;
 
+/************************************
+// BASICS OVERALL!
+*************************************/
 
+
+
+h1,h2,h3,h4,h5,h6,{
+  color:@headlineColor;
+  .letterPressShadow(@headlineColor);
+}
+
+body{
+    background-image :url('img/pw_maze_white.png');
+    width:100%;
+    position:relative;
+    // font-size: 1.1em;
+    // padding-bottom: 40px;
+
+}
+
+img{
+    // width:100%;
+    // height:auto;
+  .animated; // Initiate animation library
+ .fadeInUp;
+}
+
+/************************************
+// GRIDS!
+*************************************/
 
 header {
   .column(@columns);
+      width: 100%;
+    margin-left: 0px;
 }
-section {
+section#post {
     .column(8);
     .push(1);
 }
@@ -43,7 +74,34 @@ section#page{
     .column(8);
     .push(2);
 }
-// article { .column(9); }
+
+.rows{
+    .column(8);
+    .push(1);
+    // background-color: green;
+    article.rowitem{
+
+        .thumb{
+            float:left;
+
+        img.thumbnail{
+          width:100px;
+          height:100px;
+          padding: 20px;
+          .pulse;
+          }
+          // margin-right: @gutter-width*2;
+
+        }
+        .post-excerpt{
+        
+             width:100%;
+        
+        }
+    }
+}
+
+
 aside {
     .column(3);
 }
@@ -58,35 +116,7 @@ footer{
     // .container{.column(12);}
     section { .column(12); }
     aside { .column(12); }
-}
-/************************************
-// BASICS OVERALL!
-*************************************/
-
-
-body{
-    background-image :url('img/pw_maze_white.png');
-    width:100%;
-    position:relative;
-    // font-size: 1.1em;
-    // padding-bottom: 40px;
-
-}
-header{
-    width: 100%;
-    margin-left: 0px;
-}
-
-img{
-    width:100%;
-    height:auto;
-  .animated; // Initiate animation library
- .fadeInUp;
-}
-
-h1,h2,h3,h4,h5,h6,{
-  color:@headlineColor;
-  .letterPressShadow(@headlineColor);
+    .rows{.column(12);}
 }
 
 /************************************************************

@@ -368,6 +368,9 @@ body:after {
 body:after {
   clear: both;
 }
+/**
+ * OO NAOK COLORS
+ */
 @charset "UTF-8";
 /*
 
@@ -3811,13 +3814,50 @@ body {
 THE SEMANTIC GRID
 http://semantic.gs/
 *******************************/
+/************************************
+// BASICS OVERALL!
+*************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333e34;
+  text-shadow: 0px -1px 0.5px #000000;
+  text-shadow: 0px 1px 0.5px #ffffff;
+}
+body {
+  background-image: url('img/pw_maze_white.png');
+  width: 100%;
+  position: relative;
+}
+img {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+/************************************
+// GRIDS!
+*************************************/
 header {
   display: inline;
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
+  width: 100%;
+  margin-left: 0px;
 }
-section {
+section#post {
   display: inline;
   float: left;
   width: 64.58333333333334%;
@@ -3830,6 +3870,28 @@ section#page {
   width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
   margin-left: 17.708333333333332%;
+}
+.rows {
+  display: inline;
+  float: left;
+  width: 64.58333333333334%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
+}
+.rows article.rowitem .thumb {
+  float: left;
+}
+.rows article.rowitem .thumb img.thumbnail {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -o-animation-name: pulse;
+  animation-name: pulse;
+}
+.rows article.rowitem .post-excerpt {
+  width: 100%;
 }
 aside {
   display: inline;
@@ -3858,44 +3920,12 @@ footer {
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
-}
-/************************************
-// BASICS OVERALL!
-*************************************/
-body {
-  background-image: url('img/pw_maze_white.png');
-  width: 100%;
-  padding-bottom: 40px;
-}
-header {
-  width: 100%;
-  margin-left: 0px;
-}
-img {
-  width: 100%;
-  height: auto;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInUp;
-  -moz-animation-name: fadeInUp;
-  -o-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #333e34;
-  text-shadow: 0px -1px 0.5px #000000;
-  text-shadow: 0px 1px 0.5px #ffffff;
+  .rows {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
 }
 /************************************************************
 *************************HEADER.PHP**************************
@@ -3965,3 +3995,12 @@ textarea#comment {
 /************************************************************
 *************************FOOTER.PHP**************************
 ************************************************************/
+/************************************************************
+*************************DEBUGGING***************************
+************************************************************/
+#debuginfo {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+}
