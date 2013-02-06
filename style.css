@@ -3838,6 +3838,10 @@ img {
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
+img.avatar {
+  width: 100px;
+  height: 100px;
+}
 /************************************
 // GRIDS!
 *************************************/
@@ -3857,6 +3861,13 @@ section#post {
   margin-left: 9.374999999999998%;
 }
 section#page {
+  display: inline;
+  float: left;
+  width: 64.58333333333334%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 17.708333333333332%;
+}
+section#author-page {
   display: inline;
   float: left;
   width: 64.58333333333334%;
@@ -3907,6 +3918,18 @@ footer {
     margin: 0 1.0416666666666665%;
   }
   section#page {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  section#author-page {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  section#post {
     display: inline;
     float: left;
     width: 97.91666666666666%;

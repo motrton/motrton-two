@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+<!-- This is HEADER.PHP -->
 <head>
 <meta charset="utf-8">
 <title> <?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?> </title>
@@ -73,3 +74,4 @@ http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
 </div>
 
 </header>
+<!-- END HEADER.PHP -->

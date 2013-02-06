@@ -83,8 +83,9 @@ if (width >=480) {
  * ADDING <i> to every link in specific container
  */
 function linkIcons ($) {
-
- $('.entry-content').find('a').prepend('<i class="icon-hand-right"></i> ');
+// thanks to
+// http://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
+ $('.entry-content').find('a:not(:has(>img))').prepend('<i class="icon-hand-right"></i> ');
     // }
 }
 

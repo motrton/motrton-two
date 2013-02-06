@@ -6,7 +6,7 @@
  * @since motrton-two 1.0
  */
 ?>
-<!-- this is content.php -->
+<!-- this is CONTENT.PHP -->
  <article class="entry-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <h2 class="entry-title"><?php the_title(); ?></h2>
         <div class="entry-content"><?php the_content()?><br>
@@ -19,3 +19,4 @@
      ?>
         </div>
 </article>
+<!-- END CONTENT.PHP -->

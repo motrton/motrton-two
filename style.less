@@ -57,6 +57,10 @@ img{
  .fadeInUp;
 }
 
+img.avatar{
+  width:100px;
+  height:100px;
+}
 /************************************
 // GRIDS!
 *************************************/
@@ -72,6 +76,10 @@ section#post {
 }
 section#page{
     .column(8);
+    .push(2);
+}
+section#author-page{
+      .column(8);
     .push(2);
 }
 
@@ -116,6 +124,9 @@ footer{
     // .container{.column(12);}
     section { .column(12); }
     section#page{.column(12);}
+    section#author-page{.column(12);}
+    section#post{.column(12);}
+
     aside { .column(12); }
     .rows{.column(12);}
     footer{.column(12);}
