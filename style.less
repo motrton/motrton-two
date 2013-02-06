@@ -51,8 +51,8 @@ body{
 }
 
 img{
-    // width:100%;
-    // height:auto;
+    width:100%;
+    height:auto;
   .animated; // Initiate animation library
  .fadeInUp;
 }
@@ -133,17 +133,19 @@ footer{
 
 
 #site-title{
-  // .row(12);
-@titleHeight:3em;
-span#blogname{
+@titleHeight:4em;
   .column(12);
+span#blogname{
+  line-height: 1.2;
   margin-left: 0px;
   height:@titleHeight;
   width:100%;
   text-align: center;
-  font-size: 2em;
+  font-size: 3.5em;
   font-weight: 700;
   vertical-align: middle;
+  letter-spacing: -1px;
+
 img#logo{
     height:100px;
     width:100px;
@@ -156,12 +158,12 @@ img#logo{
 /** LETTER PRESS START **/
 .depth {
     display: block;
-    color: black;
+    color: @blue;
     position: relative;
 }
 .depth:before, .depth:after {
     content: attr(title);
-    color: rgba(255,255,255,.1);
+    color: rgba(255,255,255,1);
     position: absolute;
 }
 .depth:before { top: 1px; left: 1px }
