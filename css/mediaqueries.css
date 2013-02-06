@@ -1,6 +1,6 @@
 /* Smartphones (portrait and landscape) ----------- */
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   /* Styles */
   ul.sf-menu {
     height: auto;
