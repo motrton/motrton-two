@@ -3822,7 +3822,7 @@ body {
   width: 100%;
   position: relative;
 }
-img {
+.container img {
   width: 100%;
   height: auto;
   -webkit-animation-duration: 1s;
