@@ -3906,6 +3906,12 @@ footer {
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
+  section#page {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
   aside {
     display: inline;
     float: left;
@@ -3913,6 +3919,12 @@ footer {
     margin: 0 1.0416666666666665%;
   }
   .rows {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  footer {
     display: inline;
     float: left;
     width: 97.91666666666666%;
