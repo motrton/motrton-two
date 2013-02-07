@@ -1,4 +1,10 @@
 <?php 
+/**
+ * motrton-two functions and definitions
+ *
+ * @package motrton-two
+ * @since motrton-two 0.1
+ */
 
 require_once ( get_template_directory() . '/theme-options.php' );
 
@@ -46,6 +52,13 @@ add_action('after_setup_theme', 'my_theme_setup');
 function my_theme_setup(){
     load_theme_textdomain('motrton-two', get_template_directory_uri() . '/lang');
 }
+add_filter('excerpt_more', 'new_excerpt_more');
+
+function new_excerpt_more($more) {
+       global $post;
+    return '<br><a href="'. get_permalink($post->ID) . '"><i class="icon-hand-right"></i> ' . __('Weiterlesen','motrton_two') .'&hellip;</a>';
+}
+
 
 //Making jQuery
 // unused
@@ -314,5 +327,60 @@ function show_template() {
 }
 }
 
+if ( ! function_exists( 'motrton_two_comment' ) ) :
+/**
+ * Template for comments and pingbacks.
+ *
+ * Used as a callback by wp_list_comments() for displaying the comments.
+ *
+ * @since motrton-two 1.0
+ */
+function motrton_two_comment( $comment, $args, $depth ) {
+    $GLOBALS['comment'] = $comment;
+    switch ( $comment->comment_type ) :
+        case 'pingback' :
+        case 'trackback' :
+    ?>
+    <li class="post pingback">
+        <p><?php _e( 'Pingback:', 'motrton_two' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'motrton_two' ), ' ' ); ?></p>
+    <?php
+            break;
+        default :
+    ?>
+    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+        <article id="comment-<?php comment_ID(); ?>" class="comment">
+            <footer>
+                <div class="comment-author vcard">
+                    <?php echo get_avatar( $comment, 40 ); ?>
+                    <?php printf( __( '%s <span class="says">says:</span>', 'motrton_two' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+                </div><!-- .comment-author .vcard -->
+                <?php if ( $comment->comment_approved == '0' ) : ?>
+                    <em><?php _e( 'Your comment is awaiting moderation.', 'motrton_two' ); ?></em>
+                    <br />
+                <?php endif; ?>
+
+                <div class="comment-meta commentmetadata">
+                    <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>">
+                    <?php
+                        /* translators: 1: date, 2: time */
+                        printf( __( '%1$s at %2$s', 'motrton_two' ), get_comment_date(), get_comment_time() ); ?>
+                    </time></a>
+                    <?php edit_comment_link( __( '(Edit)', 'motrton_two' ), ' ' );
+                    ?>
+                </div><!-- .comment-meta .commentmetadata -->
+            </footer>
+
+            <div class="comment-content"><?php comment_text(); ?></div>
+
+            <div class="reply">
+                <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+            </div><!-- .reply -->
+        </article><!-- #comment-## -->
+
+    <?php
+            break;
+    endswitch;
+}
+endif; // ends check for motrton_two_comment()
 
  ?>

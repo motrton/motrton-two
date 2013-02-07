@@ -371,6 +371,10 @@ body:after {
 /**
  * OO NAOK COLORS
  */
+/******************************
+THE SEMANTIC GRID
+http://semantic.gs/
+*******************************/
 @charset "UTF-8";
 /*
 
@@ -3860,6 +3864,13 @@ section#post {
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
+section#carousel {
+  display: inline;
+  float: left;
+  width: 81.25%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
+}
 section#page {
   display: inline;
   float: left;
@@ -3908,6 +3919,13 @@ footer {
   width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
+}
+div#scrolltop-grid {
+  display: inline;
+  float: left;
+  width: 6.25%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 92.70833333333333%;
 }
 /**********************************************/
 @media screen and (max-width: 960px) {
@@ -4003,10 +4021,7 @@ footer {
 /** LETTER PRESS END **/
 ul#desktop-search {
   list-style-type: none;
-  position: absolute;
   float: right;
-  top: -10px;
-  right: 50px;
 }
 ul#desktop-search li {
   float: right;
@@ -4038,6 +4053,34 @@ textarea#comment {
 /************************************************************
 *************************FOOTER.PHP**************************
 ************************************************************/
+/*****************************
+Scroll to top button
+******************************/
+#scrolltop-grid #scrolltop {
+  background-color: #348d43;
+  position: fixed;
+  bottom: 0px;
+  padding: 5px 5px 10px 5px;
+  display: none;
+}
+#scrolltop-grid #scrolltop a {
+  text-decoration: none;
+  color: #ecdfcb;
+}
+#scrolltop-grid #scrolltop:hover {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -o-animation-name: pulse;
+  animation-name: pulse;
+}
 /************************************************************
 *************************DEBUGGING***************************
 ************************************************************/

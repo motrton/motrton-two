@@ -1,6 +1,10 @@
 /**
  * OO NAOK COLORS
  */
+/******************************
+THE SEMANTIC GRID
+http://semantic.gs/
+*******************************/
 /**
  * My personal mixins
  */
@@ -3464,35 +3468,6 @@ ul.sf-menu li li {
 }
 .sf-navbar {
   padding-bottom: 0px;
-}
-/*****************************
-Scroll to top button
-******************************/
-#scrolltop {
-  background-color: #348d43;
-  position: fixed;
-  right: 75px;
-  bottom: 0px;
-  padding: 5px 5px 5px 5px;
-  display: none;
-}
-#scrolltop i:hover {
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -o-animation-name: pulse;
-  animation-name: pulse;
-}
-#scrolltop a {
-  text-decoration: none;
-  color: #ffffff;
 }
 /*****************************
 JQERY UI OVERWRITE
