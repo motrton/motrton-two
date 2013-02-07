@@ -136,12 +136,12 @@ var res = "<?php echo get_bloginfo('wpurl'); ?>/wp-admin/admin-ajax.php?action=s
 $('div#debuginfo').append('<br>' + res);
 }
 
-function scrolltop_pos ($) {
-  var position = $('aside').position();
-  $('#scrolltop, #desktop-search').css('right',position.right);
-    $('#scrolltop').css('left',position.right -100);
+// function scrolltop_pos ($) {
+  // var position = $('aside').position();
+  // $('#scrolltop').css('right',position.right);
+  //   $('#scrolltop').css('left',position.right -100);
 
-}
+// }
 
 // jQuery(function($) {
 //     $( ".combobox" ).combobox();
@@ -156,11 +156,11 @@ jQuery(window).resize(mediaqueries($));
 jQuery(document).ready(function($){
 superfish($);
 linkIcons($);
-scrolltop_pos($);
+// scrolltop_pos($);
 
 $(window).resize(function() {
         superfish($);
-        scrolltop_pos($);
+        // scrolltop_pos($);
     });
 
 
