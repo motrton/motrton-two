@@ -3444,6 +3444,19 @@ body {
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+a:link {
+  color: #5aa332;
+}
+a:visited {
+  color: #98c230;
+}
+a:hover {
+  color: #348d43;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
 /*.depth {
 	color: (@blue - #222);
 	height: 3em;
@@ -3454,10 +3467,10 @@ body {
 	position: relative;
 }
 .depth:before, .depth:after {
-    content: attr(title);
-    color: @blue;
+	content: attr(title);
+	color: @blue;
 	display: block;
-    //position: absolute;
+	//position: absolute;
 }
 .depth:before { 
 	top: 1px;
@@ -3497,8 +3510,7 @@ h2 {
 h3 {
   font-size: 1.4em;
   font-weight: 600;
-  line-height: 0em;
-  padding-top: 1.5em;
+  line-height: 1.5em;
 }
 p {
   color: #3c3c3b;
@@ -3510,19 +3522,6 @@ p a {
   text-decoration: none;
   font-weight: 400;
   cursor: auto;
-}
-p a:link {
-  color: #5aa332;
-}
-p a:visited {
-  color: #98c230;
-}
-p a:hover {
-  color: #348d43;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
 }
 p strong {
   font-weight: 400;
@@ -3544,10 +3543,14 @@ code {
   text-align: left;
   padding: 0px;
 }
+.widget-area a:link {
+  color: #5aa332;
+}
+.widget-area a:visited {
+  color: #98c230;
+}
 .widget-area a:hover {
   color: #348d43;
-  text-decoration: none;
-  font-weight: 600;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -3560,15 +3563,6 @@ footer a {
   line-height: 1.7em;
   text-decoration: none;
   cursor: auto;
-}
-footer a:hover {
-  color: #348d43;
-  text-decoration: none;
-  font-weight: 600;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
 }
 ul#desktop-search {
   list-style-type: none;
@@ -3590,7 +3584,6 @@ ul#desktop-search li i {
 ul#desktop-search li#searchfield {
   display: none;
 }
-/* --- styles.less overwrite ENDE --- */
 .sf-navbar {
   background: #e11714;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b81714), color-stop(1, #e11714));
@@ -3659,9 +3652,6 @@ ul#desktop-search li#searchfield {
   -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
   box-shadow: inset 0px 1px 0px 0px #98c230;
 }
-/*****************************
-//IN SEARCHFORM.PHP
-******************************/
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
@@ -3695,23 +3685,6 @@ ul#desktop-search li#searchfield {
 .ui-widget form#searchform input:focus {
   background-color: #ecdfcb;
 }
-input,
-input[type="password"],
-input[type="search"],
-isindex {
-  -webkit-appearance: textfield;
-  padding: 1px;
-  background-color: #ecdfcb;
-  border: 1px solid #b81714;
-  border-image: initial;
-  -webkit-rtl-ordering: logical;
-  -webkit-user-select: text;
-  cursor: auto;
-}
-/*end widget*/
-/*****************************
-//END OF SEARCHFORM.PHP
-******************************/
 ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all li.ui-menu-item a.ui-corner-all {
   font-size: 1.1em;
   font-weight: 600;
