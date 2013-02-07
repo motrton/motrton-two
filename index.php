@@ -41,10 +41,8 @@
 
         </div>
         <div class="post-excerpt">
-         <p><?php the_excerpt()?>
-        <a href= "<?php the_permalink(); ?>" ><?php _e('Mehr?','motrton-two')?></a>
-
-         </p>
+         <?php the_excerpt()?>
+        <!-- <p><a href= "<?php the_permalink(); ?>" ><?php _e('Mehr?','motrton-two')?></a></p> -->
 
          <br>
         </div>

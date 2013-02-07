@@ -14,11 +14,11 @@
                 $registerlink = get_page_link(220);
 
                 if ( is_user_logged_in() ) {
-                    echo ' <a href="' . $dashboardlink . '"> Dashboard <i class="icon-wrench"></i></a> | <a href="' . $logoutlink . '">Ausloggen <i class="icon-signout"></i></a>' ; 
+                    echo ' <a href="' . $dashboardlink . '"> Dashboard <i class="icon-wrench"></i></a><span class="olios-extra-special-white-space">&emsp;&emsp;</span><a href="' . $logoutlink . '">Ausloggen <i class="icon-signout"></i></a>' ; 
                  }else{
-                    echo ' | <a href="' . $loginlink . '"> Einloggen <i class="icon-signin"></i></a>';
+                    echo '<span class="olios-extra-special-white-space">&emsp;&emsp;</span><a href="' . $loginlink . '"> Einloggen <i class="icon-signin"></i></a>';
                     if(get_option('users_can_register')) { 
-                    echo '| <a href="' . $registerlink . '"> Registrieren <i class="icon-user"></i></a>'; 
+                    echo '<span class="olios-extra-special-white-space">&emsp;&emsp;</span><a href="' . $registerlink . '"> Registrieren <i class="icon-user"></i></a>'; 
                     }
                  }
                  ?>

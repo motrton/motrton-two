@@ -46,6 +46,13 @@ add_action('after_setup_theme', 'my_theme_setup');
 function my_theme_setup(){
     load_theme_textdomain('motrton-two', get_template_directory_uri() . '/lang');
 }
+add_filter('excerpt_more', 'new_excerpt_more');
+
+function new_excerpt_more($more) {
+       global $post;
+    return '<br><a href="'. get_permalink($post->ID) . '"><i class="icon-hand-right"></i> ' . __('Weiterlesen...','motrton_two') .'</a>';
+}
+
 
 //Making jQuery
 // unused
