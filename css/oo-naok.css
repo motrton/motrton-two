@@ -164,6 +164,23 @@ body p strong {
 body p em {
   font-style: italic;
 }
+body footer a {
+  color: #5aa332;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.7em;
+  text-decoration: none;
+  cursor: auto;
+}
+body footer a:hover {
+  color: #348d43;
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
 body #site-title span#blogname {
   color: #08618f;
   line-height: 1.2;
