@@ -3,8 +3,8 @@
 <footer>
                 <?php
                 $options = get_option('motrton-two_options');
-                $impressumpage = '<a href="' . get_permalink( $options['impressumpage'] ) .'">Impressum</a> |';
-                $contactpage = ' <a href="'. get_permalink( $options['contactpage'] ) . '">Kontakt</a> |';
+                $impressumpage = '<a href="' . get_permalink( $options['impressumpage'] ) .'">Impressum</a> <span class="olios-extra-special-white-space">&emsp;&emsp;</span>';
+                $contactpage = ' <a href="'. get_permalink( $options['contactpage'] ) . '">Kontakt</a> <span class="olios-extra-special-white-space">&emsp;&emsp;</span>';
                 $newsletterpage = '<a href="' . get_permalink( $options['newsletterpage'] ) . '">Newsletter</a> &nbsp;&nbsp;&nbsp;';
                 echo $impressumpage . $contactpage . $newsletterpage;
 
