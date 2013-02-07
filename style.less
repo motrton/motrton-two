@@ -73,6 +73,18 @@ header {
       width: 100%;
     margin-left: 0px;
 }
+
+#site-title{
+
+div#blogname{
+  .column(8);
+  .push(2);
+  }
+img#logo{
+   .column(2);
+  .push(5);
+}
+}
 section#post {
     .column(8);
     .push(1);
@@ -94,27 +106,6 @@ section#author-page{
 .rows{
     .column(8);
     .push(1);
-    // background-color: green;
-    article.rowitem{
-
-        .thumb{
-            float:left;
-
-        img.thumbnail{
-          width:100px;
-          height:100px;
-          padding: 20px;
-          .pulse;
-          }
-          // margin-right: @gutter-width*2;
-
-        }
-        .post-excerpt{
-        
-             width:100%;
-        
-        }
-    }
 }
 
 
@@ -160,41 +151,38 @@ div#scrolltop-grid{
 
 
 #site-title{
-@titleHeight:4em;
-  .column(12);
-span#blogname{
-  line-height: 1.2;
-  margin-left: 0px;
-  height:@titleHeight;
-  width:100%;
-  text-align: center;
+
+div#blogname{
+
   font-size: 3.5em;
   font-weight: 700;
   vertical-align: middle;
   letter-spacing: -1px;
 
+}
 img#logo{
+
     height:100px;
     width:100px;
     vertical-align: middle;
     text-align: center;
-}
-
-}
+  }
 }
 /** LETTER PRESS START **/
 .depth {
     display: block;
+      margin:0 auto;
     color: @blue;
     position: relative;
 }
 .depth:before, .depth:after {
     content: attr(title);
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,.1);
     position: absolute;
 }
 .depth:before { top: 1px; left: 1px }
 .depth:after  { top: 2px; left: 2px }
+
 /** LETTER PRESS END **/
 
 
@@ -224,6 +212,31 @@ ul#desktop-search{
 }
 
 /************************************************************
+*************************INDEX.PHP***************************
+************************************************************/
+.rows{
+    article.rowitem{
+        .thumb{
+            float:left;
+        img.thumbnail{
+          width:100px;
+          height:100px;
+          padding: 20px;
+          .pulse;
+          }
+
+        }
+        .post-excerpt{
+      
+             width:100%;
+        
+        }
+    }
+}
+
+
+
+/************************************************************
 *************************PAGE.PHP****************************
 ************************************************************/
 
@@ -231,12 +244,23 @@ ul#desktop-search{
 *************************SINGLE.PHP**************************
 ************************************************************/
 
+nav.nav-single{
+  background-color: red;
+  span.nav-previous{
+
+  }
+span.nav-next{
+
+}
+}
+
+
 /************************************************************
 *************************CONTENT.PHP*************************
 ************************************************************/
 
-
-
+span.post-title{}
+span.post-author-link{}
 /************************************************************
 *************************COMMENTS****************************
 ************************************************************/
@@ -245,6 +269,39 @@ ul#desktop-search{
 textarea#comment{
   width:100%;
 }
+
+
+// COMMENTS IN FUNCTIONS.PHP
+.post{}
+.pingback{}
+article.comment{}
+.comment-sourround{}
+.comment-content{}
+.comment-author{}
+.vcard{}
+span.says{}
+.fn{}
+.comment-meta{}
+.commentmetadata{}
+.reply{}
+
+// COMMENTS.PHP
+#comments{}
+.comments-area{}
+h2.comments-title{}
+
+#comment-nav-above{}
+.site-navigation{}
+.comment-navigation{}
+
+ol.commentlist{}
+.comment-nav-below{}
+h1.assistive-text{}
+p.nocomments{}
+
+// COMMENTS IN TEMPLATE-TAGS.PHP
+
+
 
 /************************************************************
 *************************FOOTER.PHP**************************

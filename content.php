@@ -8,7 +8,7 @@
 ?>
 <!-- this is CONTENT.PHP -->
  <article class="entry-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <h2 class="entry-title"><?php the_title(); ?></h2>
+        <h2 class="entry-title"><span class="post-title">"<?php the_title(); ?>"</span> <span class="post-author-link"><?php _e('von','motrton_two'); ?> <?php the_author_posts_link(); ?></span></h2>
         <div class="entry-content"><?php the_content()?><br>
           <?php 
   if ( is_user_logged_in() ) {

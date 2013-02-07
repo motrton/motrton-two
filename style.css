@@ -3857,6 +3857,20 @@ header {
   width: 100%;
   margin-left: 0px;
 }
+#site-title div#blogname {
+  display: inline;
+  float: left;
+  width: 64.58333333333334%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 17.708333333333332%;
+}
+#site-title img#logo {
+  display: inline;
+  float: left;
+  width: 14.583333333333334%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 42.708333333333336%;
+}
 section#post {
   display: inline;
   float: left;
@@ -3891,21 +3905,6 @@ section#author-page {
   width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
-}
-.rows article.rowitem .thumb {
-  float: left;
-}
-.rows article.rowitem .thumb img.thumbnail {
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -o-animation-name: pulse;
-  animation-name: pulse;
-}
-.rows article.rowitem .post-excerpt {
-  width: 100%;
 }
 aside {
   display: inline;
@@ -3975,24 +3974,13 @@ div#scrolltop-grid {
 /************************************************************
 *************************HEADER.PHP**************************
 ************************************************************/
-#site-title {
-  display: inline;
-  float: left;
-  width: 97.91666666666666%;
-  margin: 0 1.0416666666666665%;
-}
-#site-title span#blogname {
-  line-height: 1.2;
-  margin-left: 0px;
-  height: 4em;
-  width: 100%;
-  text-align: center;
+#site-title div#blogname {
   font-size: 3.5em;
   font-weight: 700;
   vertical-align: middle;
   letter-spacing: -1px;
 }
-#site-title span#blogname img#logo {
+#site-title img#logo {
   height: 100px;
   width: 100px;
   vertical-align: middle;
@@ -4001,13 +3989,14 @@ div#scrolltop-grid {
 /** LETTER PRESS START **/
 .depth {
   display: block;
+  margin: 0 auto;
   color: #08618f;
   position: relative;
 }
 .depth:before,
 .depth:after {
   content: attr(title);
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.1);
   position: absolute;
 }
 .depth:before {
@@ -4036,11 +4025,32 @@ ul#desktop-search li#searchfield {
   display: none;
 }
 /************************************************************
+*************************INDEX.PHP***************************
+************************************************************/
+.rows article.rowitem .thumb {
+  float: left;
+}
+.rows article.rowitem .thumb img.thumbnail {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -o-animation-name: pulse;
+  animation-name: pulse;
+}
+.rows article.rowitem .post-excerpt {
+  width: 100%;
+}
+/************************************************************
 *************************PAGE.PHP****************************
 ************************************************************/
 /************************************************************
 *************************SINGLE.PHP**************************
 ************************************************************/
+nav.nav-single {
+  background-color: red;
+}
 /************************************************************
 *************************CONTENT.PHP*************************
 ************************************************************/
