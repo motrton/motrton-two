@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<!-- this is PAGE.PHP -->
 <div class="container">
 <section id="page">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -10,6 +11,6 @@
     </p>
     <?php endif; ?>
 </section>
-
 </div>
+<!-- END PAGE.PHP -->
 <?php get_footer(); ?>

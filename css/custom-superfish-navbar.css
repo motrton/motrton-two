@@ -43,9 +43,6 @@ ul.sf-navbar ul li.sfHover ul {
 ul.sf-navbar .current ul ul {
   top: -999em;
 }
-.sf-navbar li li.current > a {
-  font-weight: bold;
-}
 /*** point all arrows down ***/
 /* point right for anchors in subs */
 .sf-navbar ul .sf-sub-indicator {

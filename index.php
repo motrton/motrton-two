@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<!-- this is INDEX.PHP -->
 <div class="container">
 <section id="indexed">
     <div class="rows">
@@ -61,4 +62,5 @@
 <?php get_sidebar(); ?>
 </aside>
 </div>
+<!-- END INDEX.PHP -->
 <?php get_footer(); ?>

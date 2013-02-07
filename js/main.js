@@ -24,6 +24,42 @@
 
 
 
+function mediaqueries($){
+  var ww = $(window).width();
+  var sz1 = 480;/* Landscape phones and down*/
+  var sz2 = 768; /* Landscape phone to portrait tablet */
+  var sz3 = 1024; /*Portrait tablet to landscape and desktop*/
+  var sz4 = 1600; /* Large desktop*/
+  
+  if(ww < sz1 ){
+    /* Landscape phones and down*/
+    // $("#getSize1").removeClass().addClass("row-fluid");
+    // $("#getSize2").removeClass().addClass("span11");
+
+  }else if(ww > sz1 && ww <  sz2){
+    /* Landscape phone to portrait tablet */
+    // $("#getSize1").removeClass().addClass("row-fluid");
+    // $("#getSize2").removeClass().addClass("span11");
+
+  }else if(ww > sz2 && ww < sz3 ){
+    /*Portrait tablet to landscape*/
+    // $("#getSize1").removeClass().addClass("row");
+    // $("#getSize2").removeClass().addClass("span11 offset1");
+
+  }else if(ww > sz3 && ww < sz4 ){
+
+    /* tablet landscape to desktop*/
+    // $("#getSize1").removeClass().addClass("row");
+    //  $("#getSize2").removeClass().addClass("span8");
+
+  }else if(ww > sz4){
+     /* Large desktop*/
+    // $("#getSize1").removeClass().addClass("row");
+    // $("#getSize2").removeClass().addClass("span8");
+
+  }
+    
+  }
 
 /**
 * using superfish plugin
@@ -37,6 +73,8 @@ if (width >=480) {
          autoArrows: false,// disable generation of arrow mark-up
         dropShadows: false// disable drop shadows
     });
+}else{
+
 }
 
 }
@@ -45,8 +83,9 @@ if (width >=480) {
  * ADDING <i> to every link in specific container
  */
 function linkIcons ($) {
-
- $('.entry-content').find('a').prepend('<i class="icon-hand-right"></i> ');
+// thanks to
+// http://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
+ $('.entry-content').find('a:not(:has(>img))').prepend('<i class="icon-hand-right"></i> ');
     // }
 }
 
@@ -99,15 +138,6 @@ $('div#debuginfo').append('<br>' + res);
 
 
 
-/**
- * This calls all the functions
- * superfish($);
- * linkIcons($);
- * autocomplete($);
- * mobileDropdown($);
- * helper($)
- */
-
 // jQuery(function($) {
 //     $( ".combobox" ).combobox();
 //     $( ".toggle" ).click(function() {
@@ -115,10 +145,18 @@ $('div#debuginfo').append('<br>' + res);
 //     });
 //  });
 
+jQuery(window).resize(mediaqueries($));
+
 
 jQuery(document).ready(function($){
 superfish($);
 linkIcons($);
+
+$(window).resize(function() {
+        superfish($);
+    });
+
+
 $(window).scroll(function() {
     if ($(this).scrollTop()) {
         $('#scrolltop').fadeIn();
