@@ -8,6 +8,7 @@
 
 require_once ( get_template_directory() . '/theme-options.php' );
 
+// require( get_template_directory() . '/inc/template-tags.php' );
 
 /**
  * ADD THE SCRIPTS
@@ -35,10 +36,6 @@ add_action('wp_enqueue_scripts','call_main_js');
  * ADD THE CSS
  */
 add_action('init', 'my_styles');
-
-// register sidebar
-// add_action( 'widgets_init', 'my_register_sidebars' );
-// add_action( 'widgets_init', 'motrton_two_widgets_init' );
 
 
 // custom filter around content to get the link icon
@@ -213,51 +210,15 @@ if( !is_admin() ){
 
 
 /**
- * [my_register_sidebars description]
- * [type] [description]
- */
-// function my_register_sidebars() {
-
-// if ( function_exists('register_sidebar') ) {
-// register_sidebar(array(
-// 'name' => 'primary',
-// 'before_widget' => '<li id="%1$s" class="widget %2$s">',
-// 'after_widget' => '</li>',
-// 'before_title' => '<h2 class="widgettitle">',
-// 'after_title' => '</h2>',
-// ));
-// }
-// }
-
-// function motrton_two_widgets_init() {
-// 	register_sidebar( array(
-// 		'name' => 'basic sidebar',
-// 		'id' => 'sidebar1',
-// 		'before_widget' => '',
-// 		'after_widget' => '',
-// 		'before_title' => '<h3 class="widget-title">',
-// 		'after_title' => '</h3>',
-// 	) );
-// }
-
-// http://sivel.net/2009/03/adding-additional-links-to-the-output-from-wp_list_pages/
-// add_filter('wp_list_pages', 'add_blog_link');
-// function add_blog_link($output) {
-//         $homeurl = get_bloginfo('url');
-//         $output .= '<li><a href="'. $homeurl .'">Blog</a></li>';
-//         return $output;
-// }
-
-/**
  * Registers our main widget area and the front page widget areas.
  *
- * @since Twenty Twelve 1.0
+ * @since motrton-two 1.0
  */
-function twentytwelve_widgets_init() {
+function motrton_two_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'twentytwelve' ),
+		'name' => __( 'Main Sidebar', 'motrton_two' ),
 		'id' => 'sidebar-1',
-		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'twentytwelve' ),
+		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'motrton_two' ),
 		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		// 'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -265,9 +226,9 @@ function twentytwelve_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'First Front Page Widget Area', 'twentytwelve' ),
+		'name' => __( 'First Front Page Widget Area', 'motrton_two' ),
 		'id' => 'sidebar-2',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'twentytwelve' ),
+		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
 		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		// 'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -275,16 +236,19 @@ function twentytwelve_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Second Front Page Widget Area', 'twentytwelve' ),
+		'name' => __( 'Second Front Page Widget Area', 'motrton_two' ),
 		'id' => 'sidebar-3',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'twentytwelve' ),
+		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
 		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		// 'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'twentytwelve_widgets_init' );
+add_action( 'widgets_init', 'motrton_two_widgets_init' );
+
+
+
 //Filter content to add specific div around it
 // needed to filter only contents posts
 /**
@@ -298,13 +262,6 @@ function mytheme_content_ad( $content ) {
     $filteredcontent = $prefix . $content .$suffix;
     return $filteredcontent;
 }
-
-
-// Add ID and CLASS attributes to the first <ul> occurence in wp_page_menu
-// function add_menuclass($ulclass) {
-// return preg_replace('/<ul>/', '<ul class="sf-menu sf-navbar">', $ulclass, 1);
-// }
-// add_filter('wp_page_menu','add_menuclass');
 
 
 // DEVELOPMENT TOOL
@@ -336,11 +293,14 @@ if ( ! function_exists( 'motrton_two_comment' ) ) :
  * @since motrton-two 1.0
  */
 function motrton_two_comment( $comment, $args, $depth ) {
+    
+    echo "<!-- THIS IS FUNTIONS.PHP COMMNENTS CALLBACK -->";
     $GLOBALS['comment'] = $comment;
     switch ( $comment->comment_type ) :
         case 'pingback' :
         case 'trackback' :
     ?>
+
     <li class="post pingback">
         <p><?php _e( 'Pingback:', 'motrton_two' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Editieren)', 'motrton_two' ), ' ' ); ?></p>
     <?php
@@ -378,7 +338,8 @@ function motrton_two_comment( $comment, $args, $depth ) {
         </article><!-- #comment-## -->
 
     <?php
-            break;
+        echo "<!-- END FUNTIONS.PHP COMMNENTS CALLBACK -->";
+        break;
     endswitch;
 }
 endif; // ends check for motrton_two_comment()

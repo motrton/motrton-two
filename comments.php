@@ -22,8 +22,8 @@
         return;
 ?>
 
+    <!-- THIS IS COMMENTS.PHP -->
     <div id="comments" class="comments-area">
-
     <?php // You can start editing here -- including this comment! ?>
 
     <?php if ( have_comments() ) : ?>
@@ -36,8 +36,8 @@
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
         <nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
-            <h1 class="assistive-text"><?php _e( 'Comment navigation', 'motrton_two' ); ?></h1>
-            <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'motrton_two' ) ); ?></div>
+            <h1 class="assistive-text"><?php _e( 'Kommentar Navigation', 'motrton_two' ); ?></h1>
+            <div class="nav-previous"><?php previous_comments_link( __( '&larr; &Auml;ltere Kommentare', 'motrton_two' ) ); ?></div>
             <div class="nav-next"><?php next_comments_link( __( 'Neuere Kommentare &rarr;', 'motrton_two' ) ); ?></div>
         </nav><!-- #comment-nav-before .site-navigation .comment-navigation -->
         <?php endif; // check for comment navigation ?>
@@ -71,6 +71,19 @@
         <p class="nocomments"><?php _e( 'Kommentieren ist deaktiviert.', 'motrton_two' ); ?></p>
     <?php endif; ?>
 
-    <?php comment_form(); ?>
+    <?php
+    // Looky here
+    // http://ottopress.com/2010/wordpress-3-0-theme-tip-the-comment-form/
+    // 
+    
+    $comment_args = array('
+        title_reply'=>"<i class=\"icon-comment\"></i>" . __('antworten','motrton_two'),
+        'title_reply_to'       => __( 'antwort an %s','motrton_two' ),
+    'cancel_reply_link'    => __( 'Cancel reply','motrton_two' ),
+    'label_submit'         => __( 'Post Comment','motrton_two' )
+        );
+    comment_form($comment_args);
+    ?>
 
 </div><!-- #comments .comments-area -->
+    <!-- END COMMENTS.PHP  -->
