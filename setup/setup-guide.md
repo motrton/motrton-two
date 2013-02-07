@@ -24,10 +24,10 @@ PLUGINS:
 
 
 THEME OPTIONS:  
-Page IDs to exclude from menu: 163,220,239
-Page ID for Impressum: 163
-Page ID for Contact: 14
-Page ID for Newsletter: 17
-Page ID for Register: 220 *DEPRECATED!*
+Page IDs to exclude from menu: 163,220,239  
+Page ID for Impressum: 163  
+Page ID for Contact: 14  
+Page ID for Newsletter: 17  
+Page ID for Register: 220 *DEPRECATED!*  
 
 Own Search Terms: Bing, Bang, Boom, Wow, fabiantheblind, olala,Naok,PDXIII
