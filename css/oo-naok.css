@@ -35,6 +35,21 @@ body {
 ******************************/
 
 }
+body .entry-content ol li {
+  color: #3c3c3b;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+body .entry-content ul li {
+  color: #3c3c3b;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+body code {
+  font-family: 'Source Code Pro', sans-serif;
+}
 body h1 {
   color: #08618f;
   font-size: 2.1em;
@@ -47,20 +62,25 @@ body .widget-title {
   font-weight: 600;
   line-height: 1.5em;
 }
-body ul,
-body menu,
-body dir {
-  list-style-type: none;
+body .recentcomments {
+  color: #5aa332;
 }
-body .widget-title ul li {
+body .widget-area a:-webkit-any-link {
   color: #5aa332;
   font-size: 1.1em;
   font-weight: 600;
   line-height: 1.7em;
-}
-body .widget-title ul li a:link {
-  color: #5aa332;
   text-decoration: none;
+  cursor: auto;
+}
+body .widget-area a:hover {
+  color: #348d43;
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 body h1#title {
   color: #08618f;
@@ -74,16 +94,6 @@ body h2 {
   font-size: 1.4em;
   font-weight: 600;
   line-height: 1.5em;
-}
-body #recentcomments {
-  color: #5aa332;
-  font-size: 1.1em;
-  font-weight: 600;
-  line-height: 1.7em;
-}
-body #recentcomments a:link {
-  color: #5aa332;
-  text-decoration: none;
 }
 body h3 {
   color: #08618f;
@@ -142,6 +152,10 @@ body p a:hover {
   color: #348d43;
   text-decoration: none;
   font-weight: 400;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 body p strong {
   font-weight: 400;

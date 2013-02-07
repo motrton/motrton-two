@@ -20,11 +20,26 @@
 @black:#000000;
 
 
-
 body{
 font-family: 'Source Sans Pro', sans-serif;
 
+.entry-content ol li {
+	color: @90grey;
+	font-size: 1.3em;
+	font-weight: 300;
+	line-height: 1.5em;
+}
+.entry-content ul li {
+	color: @90grey;
+	font-size: 1.3em;
+	font-weight: 300;
+	line-height: 1.5em;
+}
 
+
+code{
+	font-family: 'Source Code Pro', sans-serif;
+}
 
 h1{
 	color: @blue;
@@ -32,26 +47,33 @@ h1{
 	font-weight: 600;
 	line-height: 1.2;
 }
+
 .widget-title {
 	color: @blue;
 	font-size: 1.4em;
 	font-weight: 600;
 	line-height: 1.5em;
 }
-ul, menu, dir {
-list-style-type: none;
+.recentcomments {
+	color: @greenmid;
 }
-.widget-title ul li {
+
+.widget-area {
+	a:-webkit-any-link {
 	color: @greenmid;
 	font-size: 1.1em;
 	font-weight: 600;
 	line-height: 1.7em;
-	a:link { 
-		color: @greenmid; text-decoration:none; 
-	}
-	}
-
-
+	text-decoration: none;
+	cursor: auto;
+}
+}
+.widget-area a:hover {
+	color:@greendark; 
+	text-decoration:none; 
+	font-weight: 600; 
+	.e_transition(@duration:0.2s, @ease:ease-out)
+}
 h1#title{
 	color: @blue;
 	font-size: 5em;
@@ -64,14 +86,6 @@ h2{
 	font-size: 1.4em;
 	font-weight: 600;
 	line-height: 1.5em;
-}
-#recentcomments{
-	color: @greenmid;
-	font-size: 1.1em;
-	font-weight: 600;
-	line-height: 1.7em;
-	a:link { color: @greenmid; text-decoration:none; }
-
 }
 h3{
 	color: @blue;
@@ -98,7 +112,7 @@ p{
 	a:link {color:@greenmid; text-decoration:none; font-weight: 400}
 	a:visited {color:@greenlight; text-decoration:none; font-weight: 400}
 	a:active {color:@greendark; text-decoration:none; font-weight: 400}
-	a:hover {color:@greendark; text-decoration:none; font-weight: 400}
+	a:hover {color:@greendark; text-decoration:none; font-weight: 400; .e_transition(@duration:0.2s, @ease:ease-out)}
 	strong{
 		font-weight: 400;
 		color: @black;
@@ -106,7 +120,6 @@ p{
 	em{
 		font-style: italic;
 		}
-
 }
 
 /* --- styles.less overwrite --- */
