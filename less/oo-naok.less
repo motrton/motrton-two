@@ -3,6 +3,8 @@
 
 @import url('elements.less');
 @import url('variables.less');
+@import url('animate.less');
+
 
 body{
 font-family: 'Source Sans Pro', sans-serif;
@@ -65,8 +67,9 @@ h2 {
 
 h3 {
 	font-size: 1.4em;
-	font-weight: 300;
-	line-height: 1.5em;
+	font-weight: 600;
+	line-height: 0em;
+	padding-top: 1.5em;
 }
 
 p {
@@ -102,38 +105,22 @@ p {
 	font-family: 'Source Code Pro', sans-serif;
 }
 
-
-
-.widget-title {
-	color: @blue;
-	font-size: 1.4em;
-	font-weight: 600;
-	line-height: 1.5em;
-}
-
-/*li.recentcomments {
+.widget-area {
+	a, li, ul {
 	color: @greenmid;
-	font-size: 1.1em;
-	a {
-		font-size: 1.1em;
+	font-weight: 600;
+	text-decoration: none;
+	list-style-type: none;
+	list-style-type: none;
+	text-align: left;
+	padding: 0px;
 	}
 }
-
-.widget-area {
-	a:-webkit-any-link {
-	color: @greenmid;
-	font-size: inherit;
-	font-weight: 600;
-	line-height: 1.7em;
-	text-decoration: none;
-	cursor: auto;
-}
-}*/
 .widget-area a:hover {
 	color:@greendark; 
 	text-decoration:none; 
 	font-weight: 600; 
-	.e_transition(@duration:0.2s, @ease:ease-out);
+	.e_transition(0.2s, ease-out);
 }
 
 footer a {
