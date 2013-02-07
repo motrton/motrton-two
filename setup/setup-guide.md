@@ -3,23 +3,24 @@ LOAD WP XML:
 wordpress-naok-settings.2013-01-16.xml  
 
 PLUGINS:  
-- akismet  
-- bigcontact  
-- custom-post-template  
-- daves-wordpress-live-search  
-- gallery-plugin  
-- hello.php  
-- hide-toolbar-plugin  
-- index.php  
-- multiple-galleries  
-- relevanssi  
-- subscribe2  
-- subscribe2-widget  
-- video-list-manager  
-- wordpress-importer  
-- wp-biographia  
-- wp-search-suggest  
-- wysija-newsletters  
+* = Maybe not  
+! = Important  
+
+- akismet!  
+- bigcontact!  
+- custom-post-template*  
+- daves-wordpress-live-search*  
+- gallery-plugin*  
+- hide-toolbar-plugin!  
+- multiple-galleries!  
+- relevanssi*  
+- subscribe2!  
+- subscribe2-widget*  
+- video-list-manager!  
+- wordpress-importer!  
+- wp-biographia!  
+- wp-search-suggest*  
+- wysija-newsletters!  
 
 
 THEME OPTIONS:  
