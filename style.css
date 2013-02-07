@@ -3818,11 +3818,13 @@ http://semantic.gs/
 // BASICS OVERALL!
 *************************************/
 body {
-  background-image: url('img/pw_maze_white.png');
+  background-image: url('img/handmadepaper.png');
   width: 100%;
   position: relative;
 }
-img {
+.container img {
+  width: 100%;
+  height: auto;
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
   -o-animation-duration: 1s;
@@ -3835,6 +3837,10 @@ img {
   -moz-animation-name: fadeInUp;
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
+img.avatar {
+  width: 100px;
+  height: 100px;
 }
 /************************************
 // GRIDS!
@@ -3855,6 +3861,13 @@ section#post {
   margin-left: 9.374999999999998%;
 }
 section#page {
+  display: inline;
+  float: left;
+  width: 64.58333333333334%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 17.708333333333332%;
+}
+section#author-page {
   display: inline;
   float: left;
   width: 64.58333333333334%;
@@ -3904,6 +3917,24 @@ footer {
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
+  section#page {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  section#author-page {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  section#post {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
   aside {
     display: inline;
     float: left;
@@ -3916,22 +3947,32 @@ footer {
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
+  footer {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
 }
 /************************************************************
 *************************HEADER.PHP**************************
 ************************************************************/
-#site-title span#blogname {
+#site-title {
   display: inline;
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
+}
+#site-title span#blogname {
+  line-height: 1.2;
   margin-left: 0px;
-  height: 3em;
+  height: 4em;
   width: 100%;
   text-align: center;
-  font-size: 2em;
+  font-size: 3.5em;
   font-weight: 700;
   vertical-align: middle;
+  letter-spacing: -1px;
 }
 #site-title span#blogname img#logo {
   height: 100px;
@@ -3942,13 +3983,13 @@ footer {
 /** LETTER PRESS START **/
 .depth {
   display: block;
-  color: black;
+  color: #08618f;
   position: relative;
 }
 .depth:before,
 .depth:after {
   content: attr(title);
-  color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
   position: absolute;
 }
 .depth:before {

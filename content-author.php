@@ -1,15 +1,20 @@
 <?php
 /**
- * The template used for displaying page content in page-carousel.php
+ * The template used for displaying page content in author.php
  *
  * @package motrton-two
  * @since motrton-two 1.0
  */
 ?>
-<!-- this is CONTENT-CAROUSEL.PHP -->
+<!-- this is CONTENT.PHP -->
  <article class="entry-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <!-- <h2 class="entry-title"><?php the_title(); ?></h2> -->
-        <div class="entry-content"><?php the_content()?><br>
+
+        <li>
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
+            <?php the_title(); ?></a>,
+            <?php the_time(get_option('date_format')); ?> in <?php the_category(', ');?>
+        </li>
+
           <?php 
   if ( is_user_logged_in() ) {
 
@@ -17,6 +22,6 @@
      echo '<p><a href="' . get_edit_post_link() . '" > '. __('Seite editieren','motrton-one') . ' <i class="icon-edit"></i></a></p>';
   }
      ?>
-        </div>
+        
 </article>
-<!-- END CONTENT-CAROUSEL.PHP -->
+<!-- END CONTENT.PHP -->

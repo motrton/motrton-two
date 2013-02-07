@@ -1,4 +1,5 @@
 <?php wp_footer(); ?>
+<!-- this is FOOTER.PHP -->
 <footer>
                 <?php
                 $options = get_option('motrton-two_options');
@@ -25,4 +26,5 @@
 </footer>
 <div id="scrolltop"><a href="#top"><i class="icon-circle-arrow-up"></i></a></div>
 </body>
+<!-- END FOOTER.PHP -->
 </html>

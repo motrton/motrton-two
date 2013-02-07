@@ -3,7 +3,7 @@
 Template Name: Karussell
 */
 ?>
-
+<!-- this is PAGE-CAROUSEL.PHP -->
 <?php
 
 // get options strings into aray of integer.
@@ -72,4 +72,5 @@ jQuery(document).ready(function($){
 </section>
 
 </div>
+<!-- END PAGE-CAROUSEL.PHP -->
 <?php get_footer(); ?>

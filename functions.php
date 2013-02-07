@@ -176,6 +176,7 @@ function my_styles() {
      // if ( is_page('page-carousel') ) {
         // wp_register_style( 'jkit', get_template_directory_uri() . '/css/jkit.css');
      // }
+    wp_register_style( 'mediaqueries', get_template_directory_uri() . '/css/mediaqueries.css',array('overwrite','oo-naok-style'));
 
 
 if( !is_admin() ){
@@ -185,6 +186,8 @@ if( !is_admin() ){
     wp_enqueue_style( 'overwrite' );
     wp_enqueue_style( 'oo-naok-style' );
     wp_enqueue_style( 'combobox' );
+    wp_enqueue_style( 'mediaqueries' );
+
      // wp_enqueue_style( 'jkit' );
     }
 }
