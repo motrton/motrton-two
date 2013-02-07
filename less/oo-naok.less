@@ -4,25 +4,36 @@
 @import url('elements.less');
 @import url('variables.less');
 
-
-@blue:#08618f;
-@90grey:#3c3c3b;
-@35grey:#a6a6a6;
-@greenlight:#98c230;
-@greenmid:#5aa332;
-@greendark:#348d43;
-@redlight:#e94d1d;
-@redmid:#e11714;
-@reddark:#b81714;
-@redshadow:#8d1a1e;
-@chamois:#ecdfcb;
-@white:#ffffff;
-@black:#000000;
-
-
 body{
 font-family: 'Source Sans Pro', sans-serif;
+}
 
+
+/*.depth {
+	color: (@blue - #222);
+	height: 3em;
+	font-size: 3.5em;
+	font-weight: 700;
+	letter-spacing: -1px;
+	display: block;
+	position: relative;
+}
+.depth:before, .depth:after {
+    content: attr(title);
+    color: @blue;
+	display: block;
+    //position: absolute;
+}
+.depth:before { 
+	top: 1px;
+	left: 1px;
+}
+.depth:after { 
+	top: 2px;
+	left: 2px;
+}*/
+
+// --- Liste Aufzaehlungen Nummern und Bullet 
 .entry-content ol li {
 	color: @90grey;
 	font-size: 1.3em;
@@ -36,17 +47,62 @@ font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.5em;
 }
 
+h1, h2, h3, {
+	color: @blue;
+}
 
-code{
+h1 {
+	font-size: 2.1em;
+	font-weight: 600;
+	line-height: 1.2em;
+}
+
+h2 {
+	font-size: 1.4em;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+
+h3 {
+	font-size: 1.4em;
+	font-weight: 300;
+	line-height: 1.5em;
+}
+
+p {
+	color: @90grey;
+	font-size: 1.3em;
+	font-weight: 300;
+	line-height: 1.5em;
+	a {
+		text-decoration: none; 
+		font-weight: 400;
+		cursor: auto;
+	}
+	a:link {
+		color: @greenmid; 
+	}
+	a:visited {
+		color: @greenlight; 
+	}
+	a:hover {
+		color: @greendark; 
+		.e_transition(0.2s, ease-out);
+	}
+	strong {
+		font-weight: 400;
+		color: @black;
+		}
+	em {
+		font-style: italic;
+		}
+}
+
+	code{
 	font-family: 'Source Code Pro', sans-serif;
 }
 
-h1{
-	color: @blue;
-	font-size: 2.1em;
-	font-weight: 600;
-	line-height: 1.2;
-}
+
 
 .widget-title {
 	color: @blue;
@@ -54,73 +110,32 @@ h1{
 	font-weight: 600;
 	line-height: 1.5em;
 }
-.recentcomments {
+
+/*li.recentcomments {
 	color: @greenmid;
+	font-size: 1.1em;
+	a {
+		font-size: 1.1em;
+	}
 }
 
 .widget-area {
 	a:-webkit-any-link {
 	color: @greenmid;
-	font-size: 1.1em;
+	font-size: inherit;
 	font-weight: 600;
 	line-height: 1.7em;
 	text-decoration: none;
 	cursor: auto;
 }
-}
+}*/
 .widget-area a:hover {
 	color:@greendark; 
 	text-decoration:none; 
 	font-weight: 600; 
-	.e_transition(@duration:0.2s, @ease:ease-out)
+	.e_transition(@duration:0.2s, @ease:ease-out);
 }
-h1#title{
-	color: @blue;
-	font-size: 5em;
-	font-weight: 700;
-	line-height: 1.1;
-	letter-spacing: -2px;
-}
-h2{
-	color: @blue;
-	font-size: 1.4em;
-	font-weight: 600;
-	line-height: 1.5em;
-}
-h3{
-	color: @blue;
-	font-size: 1.4em;
-	font-weight: 300;
-	line-height: 1.5em;
-}
-h4{
-	color: @blue;
-	font-size: 1.1em;
-	font-weight: 700;
-	line-height: 1.5em;
-	a:link {color:@greenmid; text-decoration:none; font-weight: 700}
-	a:visited {color:@greenlight; text-decoration:none; font-weight: 700}
-	a:active {color:@greendark; text-decoration:none; font-weight: 700}
-	a:hover {color:@greendark; text-decoration:none; font-weight: 700}
 
-}
-p{
-	color: @90grey;
-	font-size: 1.3em;
-	font-weight: 300;
-	line-height: 1.5em;
-	a:link {color:@greenmid; text-decoration:none; font-weight: 400}
-	a:visited {color:@greenlight; text-decoration:none; font-weight: 400}
-	a:active {color:@greendark; text-decoration:none; font-weight: 400}
-	a:hover {color:@greendark; text-decoration:none; font-weight: 400; .e_transition(@duration:0.2s, @ease:ease-out)}
-	strong{
-		font-weight: 400;
-		color: @black;
-		}
-	em{
-		font-style: italic;
-		}
-}
 footer a {
 	color: @greenmid;
 	font-size: 1.1em;
@@ -133,59 +148,33 @@ footer a:hover {
 	color:@greendark; 
 	text-decoration:none; 
 	font-weight: 600; 
-	.e_transition(@duration:0.2s, @ease:ease-out)
+	.e_transition(0.2s, ease-out);
 }
 
 
-/* --- styles.less overwrite --- */
 
-#site-title{
-  // .row(12);
-@titleHeight:4em;
-span#blogname{
-  
-	color: @blue;
-	line-height: 1.2;
-  	margin-left: 0px;
-  	height:@titleHeight;
-  	width:100%;
-  	text-align: center;
-  	font-size: 3.5em;
-  	font-weight: 700;
-  	vertical-align: middle;
-  	letter-spacing: -1px;
 
-img#logo{
-    height:100px;
-    width:100px;
-    padding-right:0.2em;
-    vertical-align: middle;
-    text-align: center;
-}
-}
-}
-
-ul#desktop-search{
+ul#desktop-search {
   list-style-type: none;
-  position:absolute;
-  float:right;
+  position: absolute;
+  float: right;
   // top:5px ;
   // right:50px;
-     top:-10px ;
-      right:50px;
-  li{
-      float:right;
-    i{
-      float:right;
-      color:@chamois;
-      font-size: 1.6em;
-      text-align: right;
-      margin-top: 0.1em;
+	 top: -10px ;
+	  right: 50px;
+  li {
+	  float: right;
+	i {
+	  float: right;
+	  color: @chamois;
+	  font-size: 1.6em;
+	  text-align: right;
+	  margin-top: 0.1em;
 
-    }
+	}
 }
-  li#searchfield{
-   display:none;
+  li#searchfield {
+   display: none;
 
    // background-color: @white;
   }
@@ -224,16 +213,16 @@ ul#desktop-search{
 		text-shadow: 0px 1px 0px @redshadow;
 		background: @reddark;
 		-moz-box-shadow: inset 0px 1px 0px 0px @redlight;
-	    -webkit-box-shadow: inset 0px 1px 0px 0px @redlight;
-	    box-shadow: inset 0px 1px 0px 0px @redlight;
+		-webkit-box-shadow: inset 0px 1px 0px 0px @redlight;
+		box-shadow: inset 0px 1px 0px 0px @redlight;
 }
 
 .sf-navbar ul li {
 	.e_gradient (@greenmid, @greendark, @greenmid); 
 		-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
-	    -webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
-	    box-shadow: inset 0px 1px 0px 0px @greenlight;
-	    height: 3em;
+		-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
+		box-shadow: inset 0px 1px 0px 0px @greenlight;
+		height: 3em;
 }	
 .sf-navbar ul li a {
 		color: @chamois;
@@ -251,32 +240,32 @@ ul#desktop-search{
 		color: @white;
 		background: @greendark;
 		-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
-	    -webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
-	    box-shadow: inset 0px 1px 0px 0px @greenlight;
+		-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
+		box-shadow: inset 0px 1px 0px 0px @greenlight;
 }
 /*****************************
 //IN SEARCHFORM.PHP
 ******************************/
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
 			font-family: 'Source Sans Pro', sans-serif;
-	    	font-size: 0.8em;
-	    	font-weight: 600;
-	    	color: (@chamois - #444); 
-	    	padding-left: 0.7em;
+			font-size: 0.8em;
+			font-weight: 600;
+			color: (@chamois - #444); 
+			padding-left: 0.7em;
 
 }
 
 .ui-widget{
   form#searchform{
-    input.ui-autocomplete-input{
-      width: 110px;
-      height: 27px;
-      margin-top: 0.1em;
-     .e_border-radius(15px,15px,15px,15px);
-          }
-    input:focus{
-      background-color: @chamois;
-    }
+	input.ui-autocomplete-input{
+	  width: 110px;
+	  height: 27px;
+	  margin-top: 0.1em;
+	 .e_border-radius(15px,15px,15px,15px);
+		  }
+	input:focus{
+	  background-color: @chamois;
+	}
   }
 } 
 
@@ -298,20 +287,20 @@ cursor: auto;
 //END OF SEARCHFORM.PHP
 ******************************/
 
-ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all{
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
 // width:100px;
-  li.ui-menu-item{
+  li.ui-menu-item {
   // width: 100px;
-    a.ui-corner-all {
-    	font-size: 1.1em;
-      	font-weight: 600;
-      	color: (@chamois - #333);
+	a.ui-corner-all {
+		font-size: 1.1em;
+		font-weight: 600;
+		color: (@chamois - #333);
 
-    }
-    a.ui-corner-all:hover {
+	}
+	a.ui-corner-all:hover {
 
-    
-    }
+	
+	}
   }
 
 }
@@ -345,12 +334,12 @@ ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all{
 .ui-state-error,
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error {
-  	background:@chamois !important;
+	background:@chamois !important;
 
-  	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 0.8em;
 	font-weight: 600;
-	color:(@chamois - #333); 
+	color: (@chamois - #333); 
 	padding-left: 0.7em;
   .e_border-radius(0,0,0,0);
 }
@@ -360,11 +349,10 @@ ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all{
 // This is for blind people
 // Damn it it pushes around the listitem
 // This should be some how ther. But how?
-span.ui-helper-hidden-accessible{
+span.ui-helper-hidden-accessible {
   visibility: hidden;
-  display:none;
+  display: none;
 }
 /*****************************
 // END OF JQUI OVERWRITE
 ******************************/
-}

@@ -15,168 +15,121 @@ http://semantic.gs/
 *******************************/
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  /* --- styles.less overwrite --- */
-
-  /* --- styles.less overwrite ENDE --- */
-
-  /*****************************
-//IN SEARCHFORM.PHP
-******************************/
-
-  /*end widget*/
-
-  /*****************************
-//END OF SEARCHFORM.PHP
-******************************/
-
-  /**
- * RESET some JQUI stuff to get rid of the 
- * background image that gets included in the jqui css
- */
-
-  /*****************************
-// END OF JQUI OVERWRITE
-******************************/
-
 }
-body .entry-content ol li {
+/*.depth {
+	color: (@blue - #222);
+	height: 3em;
+	font-size: 3.5em;
+	font-weight: 700;
+	letter-spacing: -1px;
+	display: block;
+	position: relative;
+}
+.depth:before, .depth:after {
+    content: attr(title);
+    color: @blue;
+	display: block;
+    //position: absolute;
+}
+.depth:before { 
+	top: 1px;
+	left: 1px;
+}
+.depth:after { 
+	top: 2px;
+	left: 2px;
+}*/
+.entry-content ol li {
   color: #3c3c3b;
   font-size: 1.3em;
   font-weight: 300;
   line-height: 1.5em;
 }
-body .entry-content ul li {
+.entry-content ul li {
   color: #3c3c3b;
   font-size: 1.3em;
   font-weight: 300;
   line-height: 1.5em;
 }
-body code {
-  font-family: 'Source Code Pro', sans-serif;
-}
-body h1 {
+h1,
+h2,
+h3 {
   color: #08618f;
+}
+h1 {
   font-size: 2.1em;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.2em;
 }
-body .widget-title {
-  color: #08618f;
+h2 {
   font-size: 1.4em;
   font-weight: 600;
   line-height: 1.5em;
 }
-body .recentcomments {
-  color: #5aa332;
-}
-body .widget-area a:-webkit-any-link {
-  color: #5aa332;
-  font-size: 1.1em;
-  font-weight: 600;
-  line-height: 1.7em;
-  text-decoration: none;
-  cursor: auto;
-}
-body .widget-area a:hover {
-  color: #348d43;
-  text-decoration: none;
-  font-weight: 600;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-body h1#title {
-  color: #08618f;
-  font-size: 5em;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -2px;
-}
-body h2 {
-  color: #08618f;
-  font-size: 1.4em;
-  font-weight: 600;
-  line-height: 1.5em;
-}
-body h3 {
-  color: #08618f;
+h3 {
   font-size: 1.4em;
   font-weight: 300;
   line-height: 1.5em;
 }
-body h4 {
-  color: #08618f;
-  font-size: 1.1em;
-  font-weight: 700;
-  line-height: 1.5em;
-}
-body h4 a:link {
-  color: #5aa332;
-  text-decoration: none;
-  font-weight: 700;
-}
-body h4 a:visited {
-  color: #98c230;
-  text-decoration: none;
-  font-weight: 700;
-}
-body h4 a:active {
-  color: #348d43;
-  text-decoration: none;
-  font-weight: 700;
-}
-body h4 a:hover {
-  color: #348d43;
-  text-decoration: none;
-  font-weight: 700;
-}
-body p {
+p {
   color: #3c3c3b;
   font-size: 1.3em;
   font-weight: 300;
   line-height: 1.5em;
 }
-body p a:link {
+p a {
+  text-decoration: none;
+  font-weight: 400;
+  cursor: auto;
+}
+p a:link {
   color: #5aa332;
-  text-decoration: none;
-  font-weight: 400;
 }
-body p a:visited {
+p a:visited {
   color: #98c230;
-  text-decoration: none;
-  font-weight: 400;
 }
-body p a:active {
+p a:hover {
   color: #348d43;
-  text-decoration: none;
-  font-weight: 400;
-}
-body p a:hover {
-  color: #348d43;
-  text-decoration: none;
-  font-weight: 400;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-body p strong {
+p strong {
   font-weight: 400;
   color: #000000;
 }
-body p em {
+p em {
   font-style: italic;
 }
-body footer a {
-  color: #5aa332;
-  font-size: 1.1em;
-  font-weight: 600;
-  line-height: 1.7em;
-  text-decoration: none;
-  cursor: auto;
+code {
+  font-family: 'Source Code Pro', sans-serif;
 }
-body footer a:hover {
+.widget-title {
+  color: #08618f;
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+/*li.recentcomments {
+	color: @greenmid;
+	font-size: 1.1em;
+	a {
+		font-size: 1.1em;
+	}
+}
+
+.widget-area {
+	a:-webkit-any-link {
+	color: @greenmid;
+	font-size: inherit;
+	font-weight: 600;
+	line-height: 1.7em;
+	text-decoration: none;
+	cursor: auto;
+}
+}*/
+.widget-area a:hover {
   color: #348d43;
   text-decoration: none;
   font-weight: 600;
@@ -185,46 +138,45 @@ body footer a:hover {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-body #site-title span#blogname {
-  color: #08618f;
-  line-height: 1.2;
-  margin-left: 0px;
-  height: 4em;
-  width: 100%;
-  text-align: center;
-  font-size: 3.5em;
-  font-weight: 700;
-  vertical-align: middle;
-  letter-spacing: -1px;
+footer a {
+  color: #5aa332;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.7em;
+  text-decoration: none;
+  cursor: auto;
 }
-body #site-title span#blogname img#logo {
-  height: 100px;
-  width: 100px;
-  padding-right: 0.2em;
-  vertical-align: middle;
-  text-align: center;
+footer a:hover {
+  color: #348d43;
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
-body ul#desktop-search {
+ul#desktop-search {
   list-style-type: none;
   position: absolute;
   float: right;
   top: -10px;
   right: 50px;
 }
-body ul#desktop-search li {
+ul#desktop-search li {
   float: right;
 }
-body ul#desktop-search li i {
+ul#desktop-search li i {
   float: right;
   color: #ecdfcb;
   font-size: 1.6em;
   text-align: right;
   margin-top: 0.1em;
 }
-body ul#desktop-search li#searchfield {
+ul#desktop-search li#searchfield {
   display: none;
 }
-body .sf-navbar {
+/* --- styles.less overwrite ENDE --- */
+.sf-navbar {
   background: #e11714;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b81714), color-stop(1, #e11714));
   background: -ms-linear-gradient(bottom, #b81714, #e11714);
@@ -236,10 +188,10 @@ body .sf-navbar {
   box-shadow: inset 0px 1px 0px 0px #e94d1d;
   height: 2.8em;
 }
-body .sf-navbar li ul.children {
+.sf-navbar li ul.children {
   top: 45px;
 }
-body .sf-navbar a {
+.sf-navbar a {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #8d1a1e;
   font-size: 1.1em;
@@ -248,11 +200,11 @@ body .sf-navbar a {
   letter-spacing: 3px;
   text-decoration: none;
 }
-body .sf-navbar a,
-body .sf-navbar a:visited {
+.sf-navbar a,
+.sf-navbar a:visited {
   color: #ecdfcb;
 }
-body .sf-navbar a:hover {
+.sf-navbar a:hover {
   color: #ffffff;
   text-shadow: 0px 1px 0px #8d1a1e;
   background: #b81714;
@@ -260,7 +212,7 @@ body .sf-navbar a:hover {
   -webkit-box-shadow: inset 0px 1px 0px 0px #e94d1d;
   box-shadow: inset 0px 1px 0px 0px #e94d1d;
 }
-body .sf-navbar ul li {
+.sf-navbar ul li {
   background: #5aa332;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #348d43), color-stop(1, #5aa332));
   background: -ms-linear-gradient(bottom, #348d43, #5aa332);
@@ -272,7 +224,7 @@ body .sf-navbar ul li {
   box-shadow: inset 0px 1px 0px 0px #98c230;
   height: 3em;
 }
-body .sf-navbar ul li a {
+.sf-navbar ul li a {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #348d43;
   font-size: 1.1em;
@@ -281,28 +233,31 @@ body .sf-navbar ul li a {
   letter-spacing: 1px;
   text-decoration: none;
 }
-body .sf-navbar ul li a,
-body .sf-navbar ul li a:visited {
+.sf-navbar ul li a,
+.sf-navbar ul li a:visited {
   color: #ecdfcb;
 }
-body .sf-navbar ul li a:hover {
+.sf-navbar ul li a:hover {
   color: #ffffff;
   background: #348d43;
   -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
   -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
   box-shadow: inset 0px 1px 0px 0px #98c230;
 }
-body .ui-widget input,
-body .ui-widget select,
-body .ui-widget textarea,
-body .ui-widget button {
+/*****************************
+//IN SEARCHFORM.PHP
+******************************/
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.8em;
   font-weight: 600;
   color: #a89b87;
   padding-left: 0.7em;
 }
-body .ui-widget form#searchform input.ui-autocomplete-input {
+.ui-widget form#searchform input.ui-autocomplete-input {
   width: 110px;
   height: 27px;
   margin-top: 0.1em;
@@ -322,13 +277,13 @@ body .ui-widget form#searchform input.ui-autocomplete-input {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-body .ui-widget form#searchform input:focus {
+.ui-widget form#searchform input:focus {
   background-color: #ecdfcb;
 }
-body input,
-body input[type="password"],
-body input[type="search"],
-body isindex {
+input,
+input[type="password"],
+input[type="search"],
+isindex {
   -webkit-appearance: textfield;
   padding: 1px;
   background-color: #ecdfcb;
@@ -338,31 +293,39 @@ body isindex {
   -webkit-user-select: text;
   cursor: auto;
 }
-body ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all li.ui-menu-item a.ui-corner-all {
+/*end widget*/
+/*****************************
+//END OF SEARCHFORM.PHP
+******************************/
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all li.ui-menu-item a.ui-corner-all {
   font-size: 1.1em;
   font-weight: 600;
   color: #b9ac98;
 }
-body .ui-widget-content,
-body .ui-widget-header,
-body .ui-state-default,
-body .ui-widget-content .ui-state-default,
-body .ui-widget-header .ui-state-default,
-body .ui-state-hover,
-body .ui-widget-content .ui-state-hover,
-body .ui-widget-header .ui-state-hover,
-body .ui-state-focus,
-body .ui-widget-content .ui-state-focus,
-body .ui-widget-header .ui-state-focus,
-body .ui-state-active,
-body .ui-widget-content .ui-state-active,
-body .ui-widget-header .ui-state-active,
-body .ui-state-highlight,
-body .ui-widget-content .ui-state-highlight,
-body .ui-widget-header .ui-state-highlight,
-body .ui-state-error,
-body .ui-widget-content .ui-state-error,
-body .ui-widget-header .ui-state-error {
+/**
+ * RESET some JQUI stuff to get rid of the 
+ * background image that gets included in the jqui css
+ */
+.ui-widget-content,
+.ui-widget-header,
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight,
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
   background: #ecdfcb !important;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.8em;
@@ -385,7 +348,10 @@ body .ui-widget-header .ui-state-error {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-body span.ui-helper-hidden-accessible {
+span.ui-helper-hidden-accessible {
   visibility: hidden;
   display: none;
 }
+/*****************************
+// END OF JQUI OVERWRITE
+******************************/
