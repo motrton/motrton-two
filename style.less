@@ -23,12 +23,12 @@ THE SEMANTIC GRID
 http://semantic.gs/
 *******************************/
 
-// This is semantic.gs variables
+// This is semantic.gs variables take a look into variables.less
 // 
-@column-width: 60;
-@gutter-width: 20;
-@columns: 12;
-@total-width: 100%;
+// @column-width: 60;
+// @gutter-width: 20;
+// @columns: 12;
+// @total-width: 100%;
 
 /************************************
 // BASICS OVERALL!
@@ -77,6 +77,11 @@ section#post {
     .column(8);
     .push(1);
 }
+
+section#carousel{
+  .column(10);
+  .push(1);
+}
 section#page{
     .column(8);
     .push(2);
@@ -119,6 +124,12 @@ aside {
 footer{
     .column(8);
     .push(1);
+}
+
+div#scrolltop-grid{
+.column(1);
+.push(11);
+// float:right;
 }
 /**********************************************/
 // Media queries for sematic grid
@@ -189,12 +200,12 @@ img#logo{
 
 ul#desktop-search{
   list-style-type: none;
-  position:absolute;
+  // position:absolute;
   float:right;
   // top:5px ;
   // right:50px;
-     top:-10px ;
-      right:50px;
+     // top:-10px ;
+      // right:50px;
   li{
       float:right;
     i{
@@ -242,6 +253,44 @@ textarea#comment{
 
 .foot{
     // font-size: 70%;
+}
+
+/*****************************
+Scroll to top button
+******************************/
+
+#scrolltop-grid{
+
+// .column(1);
+// .push(11);
+// float:right;
+#scrolltop{
+    background-color: @greendark;
+    position: fixed;
+
+    bottom:0px;
+    @ptop:5px;
+    @pright:5px;
+    @pbottom:10px;
+    @pleft:5px;
+    padding:@ptop @pright @pbottom @pleft;
+     // background: #000;
+    // color: #fff;
+    // bottom: 0;
+    display: none;
+ // i:hover{
+ //  .animated; // Initiate animation library
+ //  .pulse; // Initiate bounce effect
+ //  }
+  a{
+    text-decoration: none;
+    color:@chamois;
+  }
+}
+#scrolltop:hover{
+    .animated; // Initiate animation library
+  .pulse; // Initiate bounce effect
+}
 }
 
 /************************************************************

@@ -24,7 +24,9 @@
                  ?>
 
 </footer>
-<div id="scrolltop"><a href="#top"><i class="icon-circle-arrow-up"></i></a></div>
+
+<div id="scrolltop-grid"><div id="scrolltop"><a href="#top"><i class="icon-circle-arrow-up"></i></a></div>
+</div>
 </body>
 <!-- END FOOTER.PHP -->
 </html>

@@ -37,8 +37,9 @@ jQuery(document).ready(function($){
 })();
 });
  </script>
+<section id="carousel">
 <div class="container">
-<section id="page">
+
     <!-- This is the carousel part -->
 <!-- <div class="carousel" data-jkit="[carousel]"> -->
 <!-- http://stackoverflow.com/questions/8965651/cycle-through-divs -->
@@ -55,14 +56,15 @@ jQuery(document).ready(function($){
     
     echo "<!-- This is ID ".$page_ids[$j] ." -->";
     echo "<div id=\"carousel-item-" . $j ."\">";
-    echo "<h2>" .$title . "</h2>";
+    // echo "<h2>" .$title . "</h2>";
     echo $content;
     echo "</div>";
 
     }
     ?>
 </div>
-
+</section>
+<section id="page">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
    <!-- include content.php -->
    <?php get_template_part( 'content','carousel'); ?>
