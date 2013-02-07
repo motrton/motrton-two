@@ -16,6 +16,29 @@ http://semantic.gs/
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+/*.depth {
+	color: (@blue - #222);
+	height: 3em;
+	font-size: 3.5em;
+	font-weight: 700;
+	letter-spacing: -1px;
+	display: block;
+	position: relative;
+}
+.depth:before, .depth:after {
+    content: attr(title);
+    color: @blue;
+	display: block;
+    //position: absolute;
+}
+.depth:before { 
+	top: 1px;
+	left: 1px;
+}
+.depth:after { 
+	top: 2px;
+	left: 2px;
+}*/
 .entry-content ol li {
   color: #3c3c3b;
   font-size: 1.3em;
@@ -28,14 +51,59 @@ body {
   font-weight: 300;
   line-height: 1.5em;
 }
-code {
-  font-family: 'Source Code Pro', sans-serif;
+h1,
+h2,
+h3 {
+  color: #08618f;
 }
 h1 {
-  color: #08618f;
   font-size: 2.1em;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.2em;
+}
+h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+h3 {
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+p {
+  color: #3c3c3b;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+p a {
+  text-decoration: none;
+  font-weight: 400;
+  cursor: auto;
+}
+p a:link {
+  color: #5aa332;
+}
+p a:visited {
+  color: #98c230;
+}
+p a:hover {
+  color: #348d43;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+p strong {
+  font-weight: 400;
+  color: #000000;
+}
+p em {
+  font-style: italic;
+}
+code {
+  font-family: 'Source Code Pro', sans-serif;
 }
 .widget-title {
   color: #08618f;
@@ -70,88 +138,6 @@ h1 {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-h1#title {
-  color: #08618f;
-  font-size: 5em;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -2px;
-}
-h2 {
-  color: #08618f;
-  font-size: 1.4em;
-  font-weight: 600;
-  line-height: 1.5em;
-}
-h3 {
-  color: #08618f;
-  font-size: 1.4em;
-  font-weight: 300;
-  line-height: 1.5em;
-}
-h4 {
-  color: #08618f;
-  font-size: 1.1em;
-  font-weight: 700;
-  line-height: 1.5em;
-}
-h4 a:link {
-  color: #5aa332;
-  text-decoration: none;
-  font-weight: 700;
-}
-h4 a:visited {
-  color: #98c230;
-  text-decoration: none;
-  font-weight: 700;
-}
-h4 a:active {
-  color: #348d43;
-  text-decoration: none;
-  font-weight: 700;
-}
-h4 a:hover {
-  color: #348d43;
-  text-decoration: none;
-  font-weight: 700;
-}
-p {
-  color: #3c3c3b;
-  font-size: 1.3em;
-  font-weight: 300;
-  line-height: 1.5em;
-}
-p a:link {
-  color: #5aa332;
-  text-decoration: none;
-  font-weight: 400;
-}
-p a:visited {
-  color: #98c230;
-  text-decoration: none;
-  font-weight: 400;
-}
-p a:active {
-  color: #348d43;
-  text-decoration: none;
-  font-weight: 400;
-}
-p a:hover {
-  color: #348d43;
-  text-decoration: none;
-  font-weight: 400;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-p strong {
-  font-weight: 400;
-  color: #000000;
-}
-p em {
-  font-style: italic;
-}
 footer a {
   color: #5aa332;
   font-size: 1.1em;
@@ -168,26 +154,6 @@ footer a:hover {
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-}
-/* --- styles.less overwrite --- */
-#site-title span#blogname {
-  color: #08618f;
-  line-height: 1.2;
-  margin-left: 0px;
-  height: 4em;
-  width: 100%;
-  text-align: center;
-  font-size: 3.5em;
-  font-weight: 700;
-  vertical-align: middle;
-  letter-spacing: -1px;
-}
-#site-title span#blogname img#logo {
-  height: 100px;
-  width: 100px;
-  padding-right: 0.2em;
-  vertical-align: middle;
-  text-align: center;
 }
 ul#desktop-search {
   list-style-type: none;
