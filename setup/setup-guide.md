@@ -3,7 +3,7 @@ LOAD WP XML:
 wordpress-naok-settings.2013-01-16.xml  
 
 PLUGINS:  
-* = Maybe not  
+\* = Maybe not  
 ! = Important  
 
 - akismet!  
