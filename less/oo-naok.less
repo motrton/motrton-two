@@ -24,7 +24,149 @@
 body{
 font-family: 'Source Sans Pro', sans-serif;
 
-header{
+
+
+h1{
+	color: @blue;
+	font-size: 2.1em;
+	font-weight: 600;
+	line-height: 1.2;
+}
+.widget-title {
+	color: @blue;
+	font-size: 1.4em;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+ul, menu, dir {
+list-style-type: none;
+}
+.widget-title ul li {
+	color: @greenmid;
+	font-size: 1.1em;
+	font-weight: 600;
+	line-height: 1.7em;
+	a:link { 
+		color: @greenmid; text-decoration:none; 
+	}
+	}
+
+
+h1#title{
+	color: @blue;
+	font-size: 5em;
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -2px;
+}
+h2{
+	color: @blue;
+	font-size: 1.4em;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+#recentcomments{
+	color: @greenmid;
+	font-size: 1.1em;
+	font-weight: 600;
+	line-height: 1.7em;
+	a:link { color: @greenmid; text-decoration:none; }
+
+}
+h3{
+	color: @blue;
+	font-size: 1.4em;
+	font-weight: 300;
+	line-height: 1.5em;
+}
+h4{
+	color: @blue;
+	font-size: 1.1em;
+	font-weight: 700;
+	line-height: 1.5em;
+	a:link {color:@greenmid; text-decoration:none; font-weight: 700}
+	a:visited {color:@greenlight; text-decoration:none; font-weight: 700}
+	a:active {color:@greendark; text-decoration:none; font-weight: 700}
+	a:hover {color:@greendark; text-decoration:none; font-weight: 700}
+
+}
+p{
+	color: @90grey;
+	font-size: 1.3em;
+	font-weight: 300;
+	line-height: 1.5em;
+	a:link {color:@greenmid; text-decoration:none; font-weight: 400}
+	a:visited {color:@greenlight; text-decoration:none; font-weight: 400}
+	a:active {color:@greendark; text-decoration:none; font-weight: 400}
+	a:hover {color:@greendark; text-decoration:none; font-weight: 400}
+	strong{
+		font-weight: 400;
+		color: @black;
+		}
+	em{
+		font-style: italic;
+		}
+
+}
+
+/* --- styles.less overwrite --- */
+
+#site-title{
+  // .row(12);
+@titleHeight:4em;
+span#blogname{
+  
+	color: @blue;
+	line-height: 1.2;
+  	margin-left: 0px;
+  	height:@titleHeight;
+  	width:100%;
+  	text-align: center;
+  	font-size: 3.5em;
+  	font-weight: 700;
+  	vertical-align: middle;
+  	letter-spacing: -1px;
+
+img#logo{
+    height:100px;
+    width:100px;
+    padding-right:0.2em;
+    vertical-align: middle;
+    text-align: center;
+}
+}
+}
+
+ul#desktop-search{
+  list-style-type: none;
+  position:absolute;
+  float:right;
+  // top:5px ;
+  // right:50px;
+     top:-10px ;
+      right:50px;
+  li{
+      float:right;
+    i{
+      float:right;
+      color:@chamois;
+      font-size: 1.6em;
+      text-align: right;
+      margin-top: 0.1em;
+
+    }
+}
+  li#searchfield{
+   display:none;
+
+   // background-color: @white;
+  }
+
+}
+
+/* --- styles.less overwrite ENDE --- */
+
+
 
 .sf-navbar {
 	.e_gradient (@redmid, @reddark, @redmid); 
@@ -84,81 +226,6 @@ header{
 	    -webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	    box-shadow: inset 0px 1px 0px 0px @greenlight;
 }
-
-
-/* --- styles.less overwrite --- */
-
-#site-title{
-@titleHeight:4em;
-span#blogname{
-  
-	//color: @blue;
-	line-height: 1.2;
-  	margin-left: 0px;
-  	height:@titleHeight;
-  	width:100%;
-  	text-align: center;
-  	font-size: 5em;
-  	font-weight: 700;
-  	vertical-align: middle;
-  	letter-spacing: -1px;
-	display: block;
-    color: #004275;
-    //position: relative;
-}
-span#blogname:before, span#blogname:after{
-    content: attr(title);
-    color: @blue;
-    position: absolute;
-}
-
-span#blogname:before { top: 1px; left: 1px }
-span#blogname:after  { top: 2px; left: 2px }
-
-}
-
-img#logo{
-    height:100px;
-    width:100px;
-    padding-right:0.2em;
-    vertical-align: middle;
-    text-align: center;
-
-}
-
-
-
-ul#desktop-search{
-  list-style-type: none;
-  position:absolute;
-  float:right;
-  // top:5px ;
-  // right:50px;
-     top:-10px ;
-      right:50px;
-  li{
-      float:right;
-    i{
-      float:right;
-      color:@chamois;
-      font-size: 1.6em;
-      text-align: right;
-      margin-top: 0.1em;
-
-    }
-}
-  li#searchfield{
-   display:none;
-
-   // background-color: @white;
-  }
-
-}
-
-/* --- styles.less overwrite ENDE --- */
-
-
-
 /*****************************
 //IN SEARCHFORM.PHP
 ******************************/
@@ -272,91 +339,4 @@ span.ui-helper-hidden-accessible{
 /*****************************
 // END OF JQUI OVERWRITE
 ******************************/
-
-
-} //header end --------
-
-h1{
-	color: @blue;
-	font-size: 2.1em;
-	font-weight: 600;
-	line-height: 1.2;
 }
-.widget-title {
-	color: @blue;
-	font-size: 1.4em;
-	font-weight: 600;
-	line-height: 1.5em;
-}
-ul, menu, dir {
-list-style-type: none;
-	a {
-	color: @greenmid;
-	text-decoration: none;
-	cursor: auto;
-	font-size: 1.1em;
-	font-weight: 600;
-	line-height: 1.7em;
-}
-}
-
-h1#title{
-	color: @blue;
-	font-size: 5em;
-	font-weight: 700;
-	line-height: 1.1;
-	letter-spacing: -2px;
-}
-h2{
-	color: @blue;
-	font-size: 1.4em;
-	font-weight: 600;
-	line-height: 1.5em;
-}
-#recentcomments{
-	color: @greenmid;
-	//font-size: 1.1em;
-	font-weight: 600;
-	line-height: 1.7em;
-	a:link { color: @greenmid; text-decoration:none; }
-
-}
-h3{
-	color: @blue;
-	font-size: 1.4em;
-	font-weight: 300;
-	line-height: 1.5em;
-}
-h4{
-	color: @blue;
-	font-size: 1.1em;
-	font-weight: 700;
-	line-height: 1.5em;
-	a:link {color:@greenmid; text-decoration:none; font-weight: 700}
-	a:visited {color:@greenlight; text-decoration:none; font-weight: 700}
-	a:active {color:@greendark; text-decoration:none; font-weight: 700}
-	a:hover {color:@greendark; text-decoration:none; font-weight: 700}
-
-}
-p{
-	color: @90grey;
-	font-size: 1.3em;
-	font-weight: 300;
-	line-height: 1.5em;
-	a:link {color:@greenmid; text-decoration:none; font-weight: 400}
-	a:visited {color:@greenlight; text-decoration:none; font-weight: 400}
-	a:active {color:@greendark; text-decoration:none; font-weight: 400}
-	a:hover {color:@greendark; text-decoration:none; font-weight: 400}
-	strong{
-		font-weight: 400;
-		color: @black;
-		}
-	em{
-		font-style: italic;
-		}
-
-}
-
-
-}
-
