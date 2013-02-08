@@ -17,4 +17,4 @@
         </span>
     </span>
 </div>
-<!-- <div id="letterpress-line"></div> -->
+<div id="letterpress-line"></div>

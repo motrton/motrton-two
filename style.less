@@ -34,19 +34,11 @@ http://semantic.gs/
 // BASICS OVERALL!
 *************************************/
 
-
-
-h1,h2,h3,h4,h5,h6,{
-  // color:@headlineColor;
-  // .letterPressShadow(@headlineColor);
-}
-
 body{
     background-image :url('img/handmadepaper.png');
     width:100%;
     position:relative;
-    // font-size: 1.1em;
-    // padding-bottom: 40px;
+    padding-bottom: 40px;
 
 }
 
@@ -54,9 +46,9 @@ body{
   img{
     width:100%;
     height:auto;
-  .animated; // Initiate animation library
- .fadeInUp;
-}
+    .animated; // Initiate animation library
+    .fadeInUp;
+  }
 }
 
 
@@ -70,8 +62,8 @@ img.avatar{
 
 header {
   .column(@columns);
-      width: 100%;
-    margin-left: 0px;
+  width: 100%;
+  margin-left: 0px;
 }
 
 #site-title{
@@ -249,14 +241,15 @@ span#blogname{
 /** LETTERPRESSED LINE START**/
 
 #letterpress-line{
-  // .column(12);
+  .column(12);
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
     margin: 0;
-    padding-left: 5px;
-
+    margin-left: 15px;
 }
 /** LETTERPRESSED LINE END **/
+
+
 ul#desktop-search{
   list-style-type: none;
   // position:absolute;
@@ -316,16 +309,28 @@ ul#desktop-search{
 *************************SINGLE.PHP**************************
 ************************************************************/
 
-nav.nav-single{
-  background-color: red;
-  span.nav-previous{
 
+article.entry-content{
+
+}
+
+/************************************************************
+*********************NAV-SINGLE.PHP**************************
+************************************************************/
+
+nav.nav-single{
+
+padding-bottom: 2em;
+  span.nav-previous{
+   float:left;
+   // text-align: left;
   }
 span.nav-next{
+float:right;
+// text-align: right;
+}
 
 }
-}
-
 
 /************************************************************
 *************************CONTENT.PHP*************************
@@ -357,6 +362,12 @@ span.says{}
 .commentmetadata{}
 .reply{}
 
+li.comment{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  
+}
+
 // COMMENTS.PHP
 #comments{}
 .comments-area{}
@@ -371,7 +382,61 @@ ol.commentlist{}
 h1.assistive-text{}
 p.nocomments{}
 
-// COMMENTS IN TEMPLATE-TAGS.PHP
+// COMMENTS FORM
+// 
+/* Wrapper div for the entire comment form. */
+div#respond { }
+
+/* Reply title. */
+h3#reply-title { }
+
+/* Cancel comment link. */
+h3#reply-title small { }
+
+/* The comment form. */
+form#commentform { }
+
+/* Comment author field. */
+p.comment-form-author { }
+p.coment-form-author label { }
+p.comment-form-author input#author { }
+
+/* Comment email field. */
+p.comment-form-email { }
+p.comment-form-email label { }
+p.comment-form-email input#email { }
+
+/* Comment URL field. */
+p.comment-form-url { }
+p.comment-form-url label { }
+p.comment-form-url input#url { }
+
+/* Required (*) text. */
+span.required { }
+
+/* Comment form text. */
+p.comment-form-comment { }
+p.comment-form-comment label { }
+p.comment-form-comment textarea#comment { }
+
+/* Must log in paragraph. */
+p.must-log-in { }
+
+/* Logged in paragraph. */
+p.logged-in-as { }
+
+/* Comment notes paragraph. */
+p.comment-notes { }
+
+/* Allowed tags paragraph. */
+p.form-allowed-tags { }
+p.form-allowed-tags code { }
+
+/* Paragraph that wraps the submit button and hidden comment ID fields. */
+p.form-submit { }
+
+/* Submit button. */
+input#submit { }
 
 
 
@@ -381,7 +446,7 @@ p.nocomments{}
 
 
 .foot{
-    // font-size: 70%;
+ 
 }
 
 /*****************************

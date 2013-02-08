@@ -1,5 +1,6 @@
 <?php wp_footer(); ?>
 <!-- this is FOOTER.PHP -->
+<div id="letterpress-line"></div>
 <footer>
                 <?php
                 $options = get_option('motrton-two_options');

@@ -78,10 +78,13 @@
     // 
     
     $comment_args = array('
-        title_reply'=>"<i class=\"icon-comment\"></i>" . __('antworten','motrton_two'),
-        'title_reply_to'       => __( 'antwort an %s','motrton_two' ),
-    'cancel_reply_link'    => __( 'Cancel reply','motrton_two' ),
-    'label_submit'         => __( 'Post Comment','motrton_two' )
+        title_reply'       => __('antworten','motrton_two'),
+        'title_reply_to'   => __( 'antwort an %s','motrton_two' ),
+    'cancel_reply_link'    => __( 'Antwort verwerfen','motrton_two' ),
+    'label_submit'         => __( 'Kommentar abschicken','motrton_two' ),
+    'comment_notes_after'  => __('','motrton_two'),
+    'comment_notes_before' => "<span id=\"comment-notes-before\">" . __('Deine E-Mail-Adresse wird nicht veröffentlicht. Erforderliche Felder sind mit * markiert','motrton_two') ."</span>"
+
         );
     comment_form($comment_args);
     ?>
