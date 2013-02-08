@@ -33,7 +33,7 @@
               // echo "</div>"; // close span2 image-container-inner-home
               //}
             }else{
-            $logourl = get_template_directory_uri() . "/img/logo.png";
+            $logourl = get_template_directory_uri() . "/img/logo_swblr.png";
           echo  "<img class=\"thumbnail\" src=\"". $logourl ."\" alt=\"\">";
 ;
           }

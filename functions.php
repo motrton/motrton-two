@@ -2,7 +2,8 @@
 /**
  * motrton-two functions and definitions
  *
- * @package motrton-two
+ * @package WordPress
+ * @subpackage motrton-two
  * @since motrton-two 0.1
  */
 
@@ -221,8 +222,8 @@ function motrton_two_widgets_init() {
 		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'motrton_two' ),
 		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		// 'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
 	) );
 
 	register_sidebar( array(

@@ -6,9 +6,10 @@
  * and the comment form. The actual display of comments is
  * handled by a callback to motrton_two_comment() which is
  * located in the functions.php file.
- *
- * @package motrton-two
- * @since motrton-two 1.0
+ * 
+ * @package WordPress
+ * @subpackage motrton-two
+ * @since motrton-two 0.1
  */
 ?>
 

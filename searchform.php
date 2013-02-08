@@ -1,4 +1,3 @@
-
 <?php
 /**
  * The template for displaying search forms in motrton-one (stolen from Twenty Eleven)
