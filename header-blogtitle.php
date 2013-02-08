@@ -8,6 +8,13 @@
  */
 ?>
 <div id="site-title">
-<div id="blogtitle"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="" id="logo"><span id="blogname" class="depth animated fadeIn" title="<?php bloginfo('name') ?>">
-<?php bloginfo('name') ?></span></div>
+    <span id="blogtitle-img">
+    </span>
+
+    <span id="blogtitle">
+        <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="" id="logo">
+        <span id="blogname" class="depth animated fadeIn" title="<?php bloginfo('name') ?>"><?php bloginfo('name') ?>
+        </span>
+    </span>
 </div>
+<!-- <div id="letterpress-line"></div> -->

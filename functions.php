@@ -25,6 +25,8 @@ if( !is_admin() ){
 // add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
 //superfish scripts js
 add_action('wp_enqueue_scripts','superfish_script_with_jquery');
+add_action('wp_enqueue_scripts','fittext_script_with_jquery');
+
 
 add_action('wp_enqueue_scripts','combobox_with_jqueryui');
 
@@ -148,6 +150,17 @@ wp_enqueue_script( 'hoverintent-script' );
 wp_register_script( 'superfish-script', get_template_directory_uri() . '/js/superfish.js', array( 'jquery' ) );
 wp_enqueue_script( 'superfish-script' );
 }
+
+/**
+ * This adds the fittext script and the hoverintent to create the menu
+ *
+ */
+function fittext_script_with_jquery(){
+
+wp_register_script( 'fittext-script', get_template_directory_uri() . '/js/jquery.fittext.js', array( 'jquery' ) );
+wp_enqueue_script( 'fittext-script' );
+}
+
 
 /**
  * This adds the jkit
