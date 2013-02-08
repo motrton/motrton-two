@@ -5,6 +5,8 @@
  * If no active widgets in sidebar, let's hide it completely.
  *
  * @package WordPress
+ * @subpackage motrton-two
+ * @since motrton-two 0.1
  */
 ?>
 <!-- this is SIDEBAR.PHP -->

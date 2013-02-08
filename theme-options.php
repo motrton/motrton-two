@@ -1,4 +1,10 @@
 <?php
+/**
+ * @package WordPress
+ * @subpackage motrton-two
+ * @since motrton-two 0.1
+ */
+
 // based on this tutorial
 // http://www.webdesignerdepot.com/2012/02/creating-a-custom-wordpress-theme-options-page/
 add_action( 'admin_init', 'theme_options_init' );
@@ -39,7 +45,7 @@ function theme_options_do_page() {
 		<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
 		<div class="updated fade"><p><strong><?php _e( 'Options saved', 'motrton-two' ); ?></strong></p></div>
 		<?php endif; ?>
-		<h3>Achtung! Nur editieren wenn du weisst was du tust. ;)</h3>
+		<h3><?php __("Achtung! Nur editieren wenn du weisst was du tust. ;)","motrton_two") ?></h3>
 		<form method="post" action="options.php">
 			<?php settings_fields( 'motrton-two_options' ); ?>
 			<?php $options = get_option( 'motrton-two_options' ); ?>
@@ -51,10 +57,10 @@ function theme_options_do_page() {
 				 * A sample checkbox option
 				 */
 				?>
-			 	<tr valign="top"><th scope="row"><?php _e( 'Add Debug info to pages?', 'motrton-two' ); ?></th>
+			 	<tr valign="top"><th scope="row"><?php _e( 'Debug Info anzeigen?', 'motrton-two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[debugger]" name="motrton-two_options[debugger]" type="checkbox" value="1" <?php checked( '1', $options['debugger'] ); ?> />
-						<label class="description" for="motrton-two_options[debugger]"><?php _e( '', 'motrton-two' ); ?></label>
+						<label class="description" for="motrton-two_options[debugger]"><?php _e( '', 'motrton_two' ); ?></label>
 					</td>
 				</tr> 
 
@@ -63,7 +69,7 @@ function theme_options_do_page() {
 				 * A sample text input option
 				 */
 				?>
-				<tr valign="top"><th scope="row"><?php _e( 'Page IDs to exclude from menu', 'motrton-two' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Seiten IDs zum Ausschluss aus dem Menü', 'motrton_two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[excludepages]" class="regular-text" type="text" name="motrton-two_options[excludepages]" value="<?php esc_attr_e( $options['excludepages'] ); ?>" />
 						<label class="description" for="motrton-two_options[excludepages]"><?php _e( '', 'motrton-two' ); ?></label>
@@ -71,58 +77,58 @@ function theme_options_do_page() {
 				</tr>
 
 
-				<tr valign="top"><th scope="row"><?php _e( 'Page ID for Impressum', 'motrton-two' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Seiten ID Impressum', 'motrton-two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[impressumpage]" class="regular-text" type="text" name="motrton-two_options[impressumpage]" value="<?php esc_attr_e( $options['impressumpage'] ); ?>" />
-						<label class="description" for="motrton-two_options[impressumpage]"><?php _e( '', 'motrton-two' ); ?></label>
+						<label class="description" for="motrton-two_options[impressumpage]"><?php _e( '', 'motrton_two' ); ?></label>
 					</td>
 				</tr>
 
 
 
-				<tr valign="top"><th scope="row"><?php _e( 'Page ID for Contact', 'motrton-two' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Seiten ID Kontakt', 'motrton-two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[contactpage]" class="regular-text" type="text" name="motrton-two_options[contactpage]" value="<?php esc_attr_e( $options['contactpage'] ); ?>" />
-						<label class="description" for="motrton-two_options[contactpage]"><?php _e( '', 'motrton-two' ); ?></label>
+						<label class="description" for="motrton-two_options[contactpage]"><?php _e( '', 'motrton_two' ); ?></label>
 					</td>
 				</tr>
 
 
 
-				<tr valign="top"><th scope="row"><?php _e( 'Page ID for Newsletter', 'motrton-two' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Seiten ID Newsletter', 'motrton-two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[newsletterpage]" class="regular-text" type="text" name="motrton-two_options[newsletterpage]" value="<?php esc_attr_e( $options['newsletterpage'] ); ?>" />
-						<label class="description" for="motrton-two_options[newsletterpage]"><?php _e( '', 'motrton-two' ); ?></label>
+						<label class="description" for="motrton-two_options[newsletterpage]"><?php _e( '', 'motrton_two' ); ?></label>
 					</td>
 				</tr>
 
 
 
-				<tr valign="top"><th scope="row"><?php _e( 'Page ID for Register', 'motrton-two' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Seiten ID  Registrieren *DEPRECTADED', 'motrton-two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[registerpage]" class="regular-text" type="text" name="motrton-two_options[registerpage]" value="<?php esc_attr_e( $options['registerpage'] ); ?>" />
-						<label class="description" for="motrton-two_options[registerpage]"><?php _e( '', 'motrton-two' ); ?></label>
+						<label class="description" for="motrton-two_options[registerpage]"><?php _e( '', 'motrton_two' ); ?></label>
 					</td>
 				</tr>
 <!-- carousel -->
-				<tr valign="top"><th scope="row"><?php _e( 'Page IDs for carousel', 'motrton-two' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Seiten IDs für Karusell Seiten-Template', 'motrton-two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[carouselpages]" class="regular-text" type="text" name="motrton-two_options[carouselpages]" value="<?php esc_attr_e( $options['carouselpages'] ); ?>" />
-						<label class="description" for="motrton-two_options[carouselpages]"><?php _e( '', 'motrton-two' ); ?></label>
+						<label class="description" for="motrton-two_options[carouselpages]"><?php _e( '', 'motrton_two' ); ?></label>
 					</td>
 				</tr>
 
 <!-- search terms -->
-				<tr valign="top"><th scope="row"><?php _e( 'Own Search Terms', 'motrton-two' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Eigene Suchbegriffe die in der Suche immer angezeigt werden', 'motrton-two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[searchterms]" class="regular-text" type="text" name="motrton-two_options[searchterms]" value="<?php esc_attr_e( $options['searchterms'] ); ?>" />
-						<label class="description" for="motrton-two_options[searchterms]"><?php _e( '', 'motrton-two' ); ?></label>
+						<label class="description" for="motrton-two_options[searchterms]"><?php _e( '', 'motrton_two' ); ?></label>
 					</td>
 				</tr>
 			</table>
 
 			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'motrton-two' ); ?>" />
+				<input type="submit" class="button-primary" value="<?php _e( 'Speichern', 'motrton-two' ); ?>" />
 			</p>
 		</form>
 	</div>

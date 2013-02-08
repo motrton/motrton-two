@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php get_template_part( 'header','blogtitle'); ?>
+
 <!-- this is PAGE.PHP -->
 <div class="container">
 <section id="page">

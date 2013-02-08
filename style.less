@@ -4,7 +4,7 @@ Theme URI: https://github.com/motrton
 Description: A  theme built for motrton.
 Author: Fabian Morón Zirfas
 Author URI: http://fabiantheblind.info
-Version: 1.0
+Version: 0.1
 Tags: responsive, white,
 
 License: MIT
@@ -76,14 +76,17 @@ header {
 
 #site-title{
 
-div#blogname{
-  .column(8);
+#blogtitle{
+    .column(8);
   .push(2);
+  // #blogname{
+
+  // }
+  // img#logo{
+  // //  .column(2);
+  // // .push(5);
+  // }
   }
-img#logo{
-   .column(2);
-  .push(5);
-}
 }
 section#post {
     .column(8);
@@ -91,8 +94,8 @@ section#post {
 }
 
 section#carousel{
-  .column(10);
-  .push(1);
+  .column(8);
+  .push(2);
 }
 section#page{
     .column(8);
@@ -149,24 +152,28 @@ div#scrolltop-grid{
 
 }
 
-
+@letterpress_pad:15px;
 #site-title{
 
-div#blogname{
-
+#blogtitle{
+#blogname{
   font-size: 3.5em;
   font-weight: 700;
-  vertical-align: middle;
+  vertical-align: text-bottom;
   letter-spacing: -1px;
+  float:right;
+  padding-top: @letterpress_pad;
 
 }
 img#logo{
-
+    float:left;
     height:100px;
     width:100px;
     vertical-align: middle;
     text-align: center;
   }
+}
+
 }
 /** LETTER PRESS START **/
 .depth {
@@ -179,6 +186,7 @@ img#logo{
     content: attr(title);
     color: rgba(255,255,255,.1);
     position: absolute;
+    padding-top: @letterpress_pad;
 }
 .depth:before { top: 1px; left: 1px }
 .depth:after  { top: 2px; left: 2px }
@@ -216,6 +224,7 @@ ul#desktop-search{
 ************************************************************/
 .rows{
     article.rowitem{
+      margin-bottom: 1.5em;
         .thumb{
             float:left;
         img.thumbnail{
