@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_template_part( 'header','blogtitle'); ?>
 <!-- this is INDEX.PHP -->
 <div class="container">
 <section id="indexed">

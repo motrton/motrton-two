@@ -69,12 +69,4 @@ http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
 </ul>
 </nav>
 </header>
-
-<!-- <div id="site-title">
-    <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="" id="logo">
-<div id="blogname" class="depth animated fadeIn" title="<?php bloginfo('name') ?>">
-<?php bloginfo('name') ?></div>
-</div> -->
-
-
 <!-- END HEADER.PHP -->
