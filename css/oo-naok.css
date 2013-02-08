@@ -3458,8 +3458,22 @@ a:hover {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-#site-title div#blogname {
-  font-size: 2.9em;
+#site-title #blogtitle img#logo {
+  padding-top: 30px;
+}
+#site-title #blogtitle span#blogname {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-size: 3em;
+}
+.depth:before,
+.depth:after {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+#letterpress-line {
+  margin-top: 0.9em;
+  margin-bottom: 3em;
 }
 .depth {
   color: #003f6d;
@@ -3480,7 +3494,8 @@ a:hover {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   color: #08618f;
 }
 h1 {
@@ -3524,12 +3539,16 @@ p em {
 code {
   font-family: 'Source Code Pro', sans-serif;
 }
-.widget-area a,
-.widget-area li,
-.widget-area ul {
-  color: #5aa332;
-  line-height: 180%;
+h5.widget-title {
+  font-size: 1.75em;
   font-weight: 600;
+}
+.widget-area a,
+.widget-area ul,
+.widget-area li {
+  line-height: 175%;
+  font-weight: 600;
+  color: #5aa332;
   text-decoration: none;
   list-style-type: none;
   text-align: left;
@@ -3576,6 +3595,16 @@ ul#desktop-search li i {
 ul#desktop-search li#searchfield {
   display: none;
 }
+.sf-menu {
+  line-height: 0.7em;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+  top: 2.2em;
+  /* match top ul list item height */
+
+  line-height: 0.7em;
+}
 .sf-navbar {
   background: #e11714;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b81714), color-stop(1, #e11714));
@@ -3586,15 +3615,12 @@ ul#desktop-search li#searchfield {
   -moz-box-shadow: inset 0px 1px 0px 0px #e94d1d;
   -webkit-box-shadow: inset 0px 1px 0px 0px #e94d1d;
   box-shadow: inset 0px 1px 0px 0px #e94d1d;
-  height: 2.8em;
-}
-.sf-navbar li ul.children {
-  top: 45px;
+  height: 2.2em;
+  padding-bottom: 0em;
 }
 .sf-navbar a {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #8d1a1e;
-  font-size: 1.1em;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -3622,12 +3648,11 @@ ul#desktop-search li#searchfield {
   -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
   -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
   box-shadow: inset 0px 1px 0px 0px #98c230;
-  height: 3em;
+  height: 2.2em;
 }
 .sf-navbar ul li a {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #348d43;
-  font-size: 1.1em;
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 1px;
