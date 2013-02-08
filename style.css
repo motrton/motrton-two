@@ -3825,6 +3825,7 @@ body {
   background-image: url('img/handmadepaper.png');
   width: 100%;
   position: relative;
+  padding-bottom: 40px;
 }
 .container img {
   width: 100%;
@@ -4037,10 +4038,14 @@ div#scrolltop-grid {
 /** LETTER PRESS BLOGTITLE END **/
 /** LETTERPRESSED LINE START**/
 #letterpress-line {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.9);
   margin: 0;
-  padding-left: 5px;
+  margin-left: 15px;
 }
 /** LETTERPRESSED LINE END **/
 ul#desktop-search {
@@ -4086,8 +4091,17 @@ ul#desktop-search li#searchfield {
 /************************************************************
 *************************SINGLE.PHP**************************
 ************************************************************/
+/************************************************************
+*********************NAV-SINGLE.PHP**************************
+************************************************************/
 nav.nav-single {
-  background-color: red;
+  padding-bottom: 2em;
+}
+nav.nav-single span.nav-previous {
+  float: left;
+}
+nav.nav-single span.nav-next {
+  float: right;
 }
 /************************************************************
 *************************CONTENT.PHP*************************
@@ -4098,6 +4112,25 @@ nav.nav-single {
 textarea#comment {
   width: 100%;
 }
+li.comment {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+/* Wrapper div for the entire comment form. */
+/* Reply title. */
+/* Cancel comment link. */
+/* The comment form. */
+/* Comment author field. */
+/* Comment email field. */
+/* Comment URL field. */
+/* Required (*) text. */
+/* Comment form text. */
+/* Must log in paragraph. */
+/* Logged in paragraph. */
+/* Comment notes paragraph. */
+/* Allowed tags paragraph. */
+/* Paragraph that wraps the submit button and hidden comment ID fields. */
+/* Submit button. */
 /************************************************************
 *************************FOOTER.PHP**************************
 ************************************************************/

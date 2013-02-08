@@ -27,7 +27,6 @@ if( !is_admin() ){
 add_action('wp_enqueue_scripts','superfish_script_with_jquery');
 add_action('wp_enqueue_scripts','fittext_script_with_jquery');
 
-
 add_action('wp_enqueue_scripts','combobox_with_jqueryui');
 
 // add_action('wp_enqueue_scripts','jkit_script_with_jquery');
@@ -298,6 +297,27 @@ function show_template() {
 }
 }
 
+
+
+/********************************************
+ * COMMETNS FILTER
+ ********************************************/
+// function before_comments($form){
+//     return "<table>" . $form . "</table>";
+// }
+// add_filter('comment_form','before_comments');
+
+// function my_fields($fields) {
+// $fields['author'] = '<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required=\'true\' /></p>';
+// return $fields;
+// }
+// add_filter('comment_form_default_fields','my_fields');
+
+
+
+/********************************************
+ * COMMETNS CALLBACK
+ ********************************************/
 if ( ! function_exists( 'motrton_two_comment' ) ) :
 /**
  * Template for comments and pingbacks.
@@ -329,7 +349,7 @@ function motrton_two_comment( $comment, $args, $depth ) {
                     <?php printf( __( '%s <span class="says">says:</span>', 'motrton_two' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
                 </div><!-- .comment-author .vcard -->
                 <?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em><?php _e( 'Your comment is awaiting moderation.', 'motrton_two' ); ?></em>
+                    <em><?php _e( 'Dein Kommentar wartet auf Moderation.', 'motrton_two' ); ?></em>
                     <br />
                 <?php endif; ?>
 
