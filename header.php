@@ -62,9 +62,7 @@ http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
 <ul id="desktop-search">
 <li><i id="revealsearch" class=" icon-search"></i></li>
  <li id="searchfield"> 
-<?php 
-  get_search_form();
- ?>
+<?php get_search_form(); ?>
 </li>
 </ul>
 </nav>
