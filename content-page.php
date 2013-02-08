@@ -2,8 +2,9 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package motrton-two
- * @since motrton-two 1.0
+ * @package WordPress
+ * @subpackage motrton-two
+ * @since motrton-two 0.1
  */
 ?>
 <!-- This is CONTENT-PAGE.PHP -->

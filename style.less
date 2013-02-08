@@ -4,7 +4,7 @@ Theme URI: https://github.com/motrton
 Description: A  theme built for motrton.
 Author: Fabian Morón Zirfas
 Author URI: http://fabiantheblind.info
-Version: 1.0
+Version: 0.1
 Tags: responsive, white,
 
 License: MIT
@@ -75,15 +75,26 @@ header {
 }
 
 #site-title{
+.column(10);
+ .push(1);
 
-div#blogname{
-  .column(8);
-  .push(2);
-  }
-img#logo{
-   .column(2);
-  .push(5);
-}
+
+// #blogtitle-img{
+  // .column(2);
+  // .push(1);
+// }
+// #blogtitle-text{
+
+    // .column(8);
+  // .push(2);
+  // #blogname{
+
+  // }
+  // img#logo{
+  // //  .column(2);
+  // // .push(5);
+  // }
+  // }
 }
 section#post {
     .column(8);
@@ -91,8 +102,8 @@ section#post {
 }
 
 section#carousel{
-  .column(10);
-  .push(1);
+  .column(8);
+  .push(2);
 }
 section#page{
     .column(8);
@@ -102,6 +113,17 @@ section#author-page{
       .column(8);
     .push(2);
 }
+
+// section#two-column{
+  div#column-img{
+    .column(3);
+    .push(1);
+  }
+  article#column-content{
+    .column(7);
+    // .push(1);
+  }
+// }
 
 .rows{
     .column(8);
@@ -135,6 +157,21 @@ div#scrolltop-grid{
     aside { .column(12); }
     .rows{.column(12);}
     footer{.column(12);}
+    #site-title{.column(12);}
+    div#column-img{ .column(12); }
+    article#column-content{ .column(12); }
+//      #blogtitle-img{
+      
+//       display:none;
+//       visibility: hidden;
+//     }
+//  #blogtitle-text{
+//   .column(12);
+//   text-align: center;
+
+//   .depth:before { top: 1px; left:   1px }
+// .depth:after  { top: 2px; left:   2px }
+//  }
 }
 
 /************************************************************
@@ -142,50 +179,84 @@ div#scrolltop-grid{
 ************************************************************/
 
 .thetopnav{
-  // width:100;
+
 }
 
 #topbar{
 
 }
 
-
+@letterpress_pad:15px;
+@logowidth:100px;
+@letterpres_img_off :@logowidth;
+@img_margin_right: @logowidth;
+@letterprss_off: @letterpres_img_off + @img_margin_right ;
 #site-title{
 
-div#blogname{
 
-  font-size: 3.5em;
-  font-weight: 700;
-  vertical-align: middle;
-  letter-spacing: -1px;
+#blogtitle-img{
 
 }
-img#logo{
 
-    height:100px;
-    width:100px;
+#blogtitle{
+     img#logo{
+    float:left;
+    height:@logowidth;
+    width:@logowidth;
     vertical-align: middle;
     text-align: center;
+    // margin-right: @logowidth;
+    // display: inline-block;
   }
+span#blogname{
+// width:100%;
+  font-size: 3.5em;
+  font-weight: 700;
+  vertical-align: text-bottom;
+
+  letter-spacing: -1px;
+  padding-top: @letterpress_pad;
+
 }
-/** LETTER PRESS START **/
+
+}
+
+}
+/** LETTER PRESS BLOGTITLE START **/
 .depth {
     display: block;
       margin:0 auto;
     color: @blue;
     position: relative;
+    // white-space: nowrap;
+
+
+
 }
 .depth:before, .depth:after {
     content: attr(title);
     color: rgba(255,255,255,.1);
     position: absolute;
+    padding-top: @letterpress_pad;
+
+
 }
-.depth:before { top: 1px; left: 1px }
-.depth:after  { top: 2px; left: 2px }
+.depth:before { top: 1px; left: @logowidth + 1px }
+.depth:after  { top: 2px; left: @logowidth + 2px }
 
-/** LETTER PRESS END **/
+/** LETTER PRESS BLOGTITLE END **/
 
+/** LETTERPRESSED LINE START**/
 
+#letterpress-line{
+  // .column(12);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding-left: 5px;
+
+}
+/** LETTERPRESSED LINE END **/
 ul#desktop-search{
   list-style-type: none;
   // position:absolute;
@@ -216,6 +287,7 @@ ul#desktop-search{
 ************************************************************/
 .rows{
     article.rowitem{
+      margin-bottom: 1.5em;
         .thumb{
             float:left;
         img.thumbnail{

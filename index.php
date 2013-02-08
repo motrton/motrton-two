@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_template_part( 'header','blogtitle'); ?>
 <!-- this is INDEX.PHP -->
 <div class="container">
 <section id="indexed">
@@ -33,7 +34,7 @@
               // echo "</div>"; // close span2 image-container-inner-home
               //}
             }else{
-            $logourl = get_template_directory_uri() . "/img/logo.png";
+            $logourl = get_template_directory_uri() . "/img/logo_swblr.png";
           echo  "<img class=\"thumbnail\" src=\"". $logourl ."\" alt=\"\">";
 ;
           }

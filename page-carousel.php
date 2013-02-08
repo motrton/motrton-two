@@ -1,8 +1,13 @@
 <?php
-/*
-Template Name: Karussell
+/**
+ * Template Name: Karussell
+ * 
+ * @package WordPress
+ * @subpackage motrton-two
+ * @since motrton-two 0.1
 */
 ?>
+
 <!-- this is PAGE-CAROUSEL.PHP -->
 <?php
 
@@ -21,6 +26,8 @@ $page_ids =  array();
 ?>
 
 <?php get_header(); ?>
+<?php get_template_part( 'header','blogtitle'); ?>
+
 <script type="text/javascript">
 jQuery(document).ready(function($){
 
@@ -62,7 +69,7 @@ jQuery(document).ready(function($){
 
     }
     ?>
-</div>
+</div> <!-- end carousel -->
 </section>
 <section id="page">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

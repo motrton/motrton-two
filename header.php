@@ -62,18 +62,9 @@ http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
 <ul id="desktop-search">
 <li><i id="revealsearch" class=" icon-search"></i></li>
  <li id="searchfield"> 
-<?php 
-  get_search_form();
- ?>
+<?php get_search_form(); ?>
 </li>
 </ul>
-
 </nav>
-<div id="site-title">
-    <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="" id="logo">
-<div id="blogname" class="depth animated fadeIn" title="<?php bloginfo('name') ?>">
-<?php bloginfo('name') ?></div>
-</div>
-
 </header>
 <!-- END HEADER.PHP -->

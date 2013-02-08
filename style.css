@@ -4,7 +4,7 @@ Theme URI: https://github.com/motrton
 Description: A  theme built for motrton.
 Author: Fabian Morón Zirfas
 Author URI: http://fabiantheblind.info
-Version: 1.0
+Version: 0.1
 Tags: responsive, white,
 
 License: MIT
@@ -3857,19 +3857,12 @@ header {
   width: 100%;
   margin-left: 0px;
 }
-#site-title div#blogname {
+#site-title {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 81.25%;
   margin: 0 1.0416666666666665%;
-  margin-left: 17.708333333333332%;
-}
-#site-title img#logo {
-  display: inline;
-  float: left;
-  width: 14.583333333333334%;
-  margin: 0 1.0416666666666665%;
-  margin-left: 42.708333333333336%;
+  margin-left: 9.374999999999998%;
 }
 section#post {
   display: inline;
@@ -3881,9 +3874,9 @@ section#post {
 section#carousel {
   display: inline;
   float: left;
-  width: 81.25%;
+  width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
+  margin-left: 17.708333333333332%;
 }
 section#page {
   display: inline;
@@ -3898,6 +3891,19 @@ section#author-page {
   width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
   margin-left: 17.708333333333332%;
+}
+div#column-img {
+  display: inline;
+  float: left;
+  width: 22.916666666666664%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
+}
+article#column-content {
+  display: inline;
+  float: left;
+  width: 56.25%;
+  margin: 0 1.0416666666666665%;
 }
 .rows {
   display: inline;
@@ -3970,23 +3976,43 @@ div#scrolltop-grid {
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
+  #site-title {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  div#column-img {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  article#column-content {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
 }
 /************************************************************
 *************************HEADER.PHP**************************
 ************************************************************/
-#site-title div#blogname {
-  font-size: 3.5em;
-  font-weight: 700;
-  vertical-align: middle;
-  letter-spacing: -1px;
-}
-#site-title img#logo {
+#site-title #blogtitle img#logo {
+  float: left;
   height: 100px;
   width: 100px;
   vertical-align: middle;
   text-align: center;
 }
-/** LETTER PRESS START **/
+#site-title #blogtitle span#blogname {
+  font-size: 3.5em;
+  font-weight: 700;
+  vertical-align: text-bottom;
+  letter-spacing: -1px;
+  padding-top: 15px;
+}
+/** LETTER PRESS BLOGTITLE START **/
 .depth {
   display: block;
   margin: 0 auto;
@@ -3998,16 +4024,25 @@ div#scrolltop-grid {
   content: attr(title);
   color: rgba(255, 255, 255, 0.1);
   position: absolute;
+  padding-top: 15px;
 }
 .depth:before {
   top: 1px;
-  left: 1px;
+  left: 101px;
 }
 .depth:after {
   top: 2px;
-  left: 2px;
+  left: 102px;
 }
-/** LETTER PRESS END **/
+/** LETTER PRESS BLOGTITLE END **/
+/** LETTERPRESSED LINE START**/
+#letterpress-line {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding-left: 5px;
+}
+/** LETTERPRESSED LINE END **/
 ul#desktop-search {
   list-style-type: none;
   float: right;
@@ -4027,6 +4062,9 @@ ul#desktop-search li#searchfield {
 /************************************************************
 *************************INDEX.PHP***************************
 ************************************************************/
+.rows article.rowitem {
+  margin-bottom: 1.5em;
+}
 .rows article.rowitem .thumb {
   float: left;
 }

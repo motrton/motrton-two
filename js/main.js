@@ -158,6 +158,8 @@ superfish($);
 linkIcons($);
 // scrolltop_pos($);
 
+// $("span#blogname").fitText(1.2);
+
 $(window).resize(function() {
         superfish($);
         // scrolltop_pos($);
