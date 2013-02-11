@@ -300,6 +300,23 @@ function show_template() {
 }
 }
 
+/********************************************
+ * the_author_posts_link FILTER / OVERWRITE
+ ********************************************/
+
+function override_author_posts_link($deprecated = '') {
+        if ( !empty( $deprecated ) )
+                _deprecated_argument( __FUNCTION__, '2.1' );
+       global $authordata;
+        $link = sprintf(
+                '<a href="%1$s" rel="author" title="%2$s"><i class="icon-user"></i> %3$s</a>',
+                get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
+                esc_attr( sprintf( __( 'Posts by %s' ), get_the_author() ) ),
+                get_the_author()
+        );
+        echo apply_filters( 'override_author_posts_link', $link );
+}
+add_filter('the_author_posts_link', 'override_author_posts_link');
 
 
 /********************************************
@@ -377,7 +394,7 @@ function motrton_two_comment( $comment, $args, $depth ) {
             <div class="comment-sourround">
                 <span class="comment-author vcard">
                     <?php echo get_avatar( $comment, 40 ); ?>
-                    <?php printf( __( '%s <span class="says">sagt:</span>', 'motrton_two' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+                    <?php printf( __( '%s <span class="says">sagt am</span> ', 'motrton_two' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
                 </span><!-- .comment-author .vcard -->
                 <?php if ( $comment->comment_approved == '0' ) : ?>
                     <em><?php _e( 'Dein Kommentar wartet auf Moderation.', 'motrton_two' ); ?></em>
@@ -388,9 +405,9 @@ function motrton_two_comment( $comment, $args, $depth ) {
                     <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>">
                     <?php
                         /* translators: 1: date, 2: time */
-                        printf( __( '%1$s at %2$s', 'motrton_two' ), get_comment_date(), get_comment_time() ); ?>
-                    </time></a>
-                    <?php edit_comment_link( '<i class="icon-wrench"></i>' .__( '(Editieren)', 'motrton_two' ), ' ' );
+                        printf( __( '%1$s um %2$s', 'motrton_two' ), get_comment_date(), get_comment_time() ); ?>
+                    </time></a><span class="olios-extra-special-white-space">&emsp;&emsp;</span>
+                    <?php edit_comment_link( '<i class="icon-edit"></i>' .__( '(Editieren)', 'motrton_two' ), ' ' );
                     ?>
                 </span><!-- .comment-meta .commentmetadata -->
             </div class="comment-sourround">

@@ -85,7 +85,7 @@ function superfish ($) {
 function linkIcons ($) {
 // thanks to
 // http://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
- $('.entry-content').find('a:not(:has(>img))').prepend('<i class="icon-hand-right"></i> ');
+ $('.entry-content').find('a:not(:has(>img, i))').prepend('<i class="icon-hand-right"></i> ');
     // }
 }
 
