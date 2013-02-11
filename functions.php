@@ -320,7 +320,7 @@ function motrton_two_comment_placeholders( $fields ){
          * See http://codex.wordpress.org/Function_Reference/_x
          */
             . _x(
-                'First and last name or a nick name',
+                'Vor- und Nachname oder Pseudonym',
                 'comment form placeholder',
                 'motrton_two'
                 )

@@ -4015,7 +4015,6 @@ ul#desktop-navbar li#en-de {
 #site-title #blogtitle span#blogname {
   font-size: 3.5em;
   font-weight: 700;
-  vertical-align: text-bottom;
   letter-spacing: -1px;
   padding-top: 15px;
 }
@@ -4127,6 +4126,12 @@ nav.nav-single span.nav-previous {
 }
 nav.nav-single span.nav-next {
   float: right;
+}
+/************************************************************
+*************************sidebar widget**********************
+************************************************************/
+h5.widget-title {
+  margin-bottom: 0em;
 }
 /************************************************************
 *************************CONTENT.PHP*************************
