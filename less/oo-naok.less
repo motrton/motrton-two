@@ -22,10 +22,28 @@ a:hover {
 	.e_transition(0.2s, ease-out);
 }
 
+@letterpress_pad: 60px;
+
 #site-title {
-	div#blogname {
-	font-size: 2.9em;
+	#blogtitle {
+		img#logo {
+			padding-top: 30px;
+		}
+		span#blogname {
+			padding-top: @letterpress_pad;
+			padding-bottom: @letterpress_pad;
+  			font-size: 3em;
+		}
 	}
+}
+.depth:before, .depth:after {
+	padding-top: @letterpress_pad;
+	padding-bottom: @letterpress_pad;
+}
+
+#letterpress-line {
+	margin-top: 0.9em;
+	margin-bottom: 3em;
 }
 
 // --- Letterpress
@@ -48,7 +66,7 @@ a:hover {
 	line-height: 1.5em;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
 	color: @blue;
 }
 
@@ -100,17 +118,21 @@ code {
 }
 
 // -- Sidebar
-.widget-area {
-	a, li, ul {
-	color: @greenmid;
-	//font-size: 1.2em;
-	line-height: 180%;
+h5.widget-title {
+	font-size: 1.75em;
 	font-weight: 600;
-	text-decoration: none;
-	list-style-type: none;
-	list-style-type: none;
-	text-align: left;
-	padding: 0px;
+}
+
+.widget-area {
+	a, ul, li {
+		line-height: 175%;
+		font-weight: 600;
+		color: @greenmid;
+		text-decoration: none;
+		list-style-type: none;
+		list-style-type: none;
+		text-align: left;
+		padding: 0px;
 	}
 	a:link {
 		color: @greenmid;
@@ -123,7 +145,6 @@ code {
 		.e_transition(0.2s, ease-out);
 	}
 }
-
 
 footer a {
 	color: @greenmid;
@@ -157,21 +178,28 @@ ul#desktop-search {
 }
 
 // --- Navi
+.sf-menu {
+	line-height: 0.7em;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	top:			2.2em; /* match top ul list item height */
+	line-height: 0.7em;
+}
+
+
 .sf-navbar {
 	.e_gradient (@redmid, @reddark, @redmid);
 	-moz-box-shadow: inset 0px 1px 0px 0px @redlight;
 	-webkit-box-shadow: inset 0px 1px 0px 0px @redlight;
 	box-shadow: inset 0px 1px 0px 0px @redlight;
-	height: 2.8em;
-}
-.sf-navbar li ul.children {
-	top: 45px;
+	height: 2.2em;
+	padding-bottom: 0em;
 }
 
 .sf-navbar a {
 	color: @chamois;
 	text-shadow: 0px 1px 0px @redshadow;
-	font-size: 1.1em;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -194,12 +222,11 @@ ul#desktop-search {
 	-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	box-shadow: inset 0px 1px 0px 0px @greenlight;
-	height: 3em;
+	height: 2.2em;
 }	
 .sf-navbar ul li a {
 	color: @chamois;
 	text-shadow: 0px 1px 0px @greendark;
-	font-size: 1.1em;
 	font-weight: 600;
 	text-transform: capitalize;
 	letter-spacing: 1px;
