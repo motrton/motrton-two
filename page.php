@@ -6,7 +6,7 @@
 <section id="page">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
    <!-- include content.php -->
-   <?php get_template_part( 'content'); ?>
+   <?php get_template_part( 'content','page'); ?>
     <?php endwhile; else: ?>
     <p>
     <?php __('Leider gibt es keine Seite.','motrton_two'); ?>

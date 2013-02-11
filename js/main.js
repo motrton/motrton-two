@@ -65,17 +65,17 @@ function mediaqueries($){
 * using superfish plugin
 */
 function superfish ($) {
-var width = $(window).width();
-if (width >=480) {
+// var width = $(window).width();
+// if (width >=480) {
     $("ul.sf-menu,menu").superfish({
          // pathClass: 'current_page_parent',
          pathLevels: 2,
          autoArrows: false,// disable generation of arrow mark-up
         dropShadows: false// disable drop shadows
     });
-}else{
+// }else{
 
-}
+// }
 
 }
 

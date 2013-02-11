@@ -4004,7 +4004,6 @@ div#scrolltop-grid {
 ************************************************************/
 ul#desktop-navbar li#en-de {
   margin-left: 100px;
-  padding-right: 100px;
 }
 #site-title #blogtitle img#logo {
   float: left;
@@ -4075,20 +4074,20 @@ ul#desktop-search li#searchfield {
 *********************SEARCHFROM.PHP**************************
 ************************************************************/
 ::-webkit-input-placeholder {
-  color: #3c3c3b;
+  color: red;
 }
 :-moz-placeholder {
   /* Firefox 18- */
 
-  color: #3c3c3b;
+  color: red;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
 
-  color: #3c3c3b;
+  color: red;
 }
 :-ms-input-placeholder {
-  color: #3c3c3b;
+  color: red;
 }
 /************************************************************
 *************************INDEX.PHP***************************
