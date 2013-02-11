@@ -27,7 +27,7 @@
 <nav class="thetopnav" id="topbar">
 <ul class="sf-menu sf-navbar" id="desktop-navbar">
 <!-- wp_list_pages start -->
-<li class="page-item" style="padding-right:100px;"><a href="#">EN|DE</a>
+<li class="page-item" id="en-de" ><a href="#">EN|DE</a>
 </li>
         <?php
         

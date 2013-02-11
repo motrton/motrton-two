@@ -51,6 +51,7 @@ body{
   }
 }
 
+a{text-decoration: none;}
 
 img.avatar{
   width:100px;
@@ -170,6 +171,14 @@ div#scrolltop-grid{
 *************************HEADER.PHP**************************
 ************************************************************/
 
+ul#desktop-navbar{
+  li#en-de{
+    margin-left: 100px;
+    padding-right:100px;
+  }
+}
+
+
 .thetopnav{
 
 }
@@ -274,6 +283,26 @@ ul#desktop-search{
    // background-color: @white;
   }
 }
+/************************************************************
+*********************SEARCHFROM.PHP**************************
+************************************************************/
+
+// Placehoder text styling
+::-webkit-input-placeholder {
+   color: @90grey;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: @90grey;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: @90grey;  
+}
+
+:-ms-input-placeholder {  
+   color: @90grey;  
+}
 
 /************************************************************
 *************************INDEX.PHP***************************
@@ -282,6 +311,8 @@ ul#desktop-search{
     article.rowitem{
       margin-bottom: 1.5em;
         .thumb{
+
+
             float:left;
         img.thumbnail{
           width:100px;
@@ -351,11 +382,27 @@ textarea#comment{
 // COMMENTS IN FUNCTIONS.PHP
 .post{}
 .pingback{}
-article.comment{}
+article.comment{
+  .comment-sourround{
+// float:left;
+  display:inline;
+  }
+  .comment-content{
+    // clear:both;
+  }
+
+}
+
 .comment-sourround{}
 .comment-content{}
 .comment-author{}
-.vcard{}
+.vcard{
+  img{
+    width:40px;
+    height:40px;
+    .e_rounded(5px);
+  }
+}
 span.says{}
 .fn{}
 .comment-meta{}
@@ -377,13 +424,28 @@ h2.comments-title{}
 .site-navigation{}
 .comment-navigation{}
 
-ol.commentlist{}
+ol.commentlist{
+  li.comment{
+    border-bottom: 1px solid;
+  }
+}
 .comment-nav-below{}
 h1.assistive-text{}
 p.nocomments{}
 
 // COMMENTS FORM
-// 
+//
+/* comment form mixin for the std fields */
+.labelInputFit(){
+  // overflow: hidden;
+  position: relative;
+  width: 100%;
+  label { width:30%;}
+  input {
+    float:right;
+    width:60%;
+  }
+}
 /* Wrapper div for the entire comment form. */
 div#respond { }
 
@@ -394,30 +456,42 @@ h3#reply-title { }
 h3#reply-title small { }
 
 /* The comment form. */
-form#commentform { }
+form#commentform {width:100%;}
 
 /* Comment author field. */
-p.comment-form-author { }
-p.coment-form-author label { }
-p.comment-form-author input#author { }
+p.comment-form-author {
+  .labelInputFit;
+  label {}
+  input#author {}
+}
+
 
 /* Comment email field. */
-p.comment-form-email { }
-p.comment-form-email label { }
-p.comment-form-email input#email { }
+p.comment-form-email {
+  .labelInputFit;
+  label {}
+  input#email {}
+  }
+p.comment-form-email > label {}
+p.comment-form-email > input#email {}
 
 /* Comment URL field. */
-p.comment-form-url { }
-p.comment-form-url label { }
-p.comment-form-url input#url { }
+p.comment-form-url {
+  .labelInputFit;
+  label {}
+  input#url {}
+}
+
+p.comment-form-url > label {}
+p.comment-form-url > input#url {}
 
 /* Required (*) text. */
 span.required { }
 
 /* Comment form text. */
 p.comment-form-comment { }
-p.comment-form-comment label { }
-p.comment-form-comment textarea#comment { }
+p.comment-form-comment > label {}
+p.comment-form-comment > textarea#comment { }
 
 /* Must log in paragraph. */
 p.must-log-in { }
