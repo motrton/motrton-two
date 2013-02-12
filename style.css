@@ -4042,7 +4042,7 @@ ul#desktop-navbar li#en-de {
 }
 /** LETTER PRESS BLOGTITLE END **/
 /** LETTERPRESSED LINE START**/
-#letterpress-line {
+.letterpress-line {
   display: inline;
   float: left;
   width: 97.91666666666666%;
