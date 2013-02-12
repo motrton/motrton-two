@@ -3585,19 +3585,21 @@ h5 {
 }
 h1 {
   font-size: 1.75em;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   line-height: 120%;
+  letter-spacing: -1px;
 }
 h2 {
   font-size: 1.25em;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   line-height: 150%;
+  font-weight: normal;
 }
 h3 {
   font-size: 1.25em;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   line-height: 150%;
 }
@@ -3630,14 +3632,14 @@ code {
 }
 h5.widget-title {
   font-size: 1.75em;
-  font-family: 'SourceSansProBold', sans-serif;
-  font-size-adjust: 0.0;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
 }
 .widget-area a,
 .widget-area ul,
 .widget-area li {
   line-height: 175%;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   color: #5aa332;
   text-decoration: none;
@@ -3661,7 +3663,7 @@ h5.widget-title {
 footer a {
   color: #5aa332;
   font-size: 1.1em;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   line-height: 1.7em;
   text-decoration: none;
@@ -3692,7 +3694,7 @@ ul#desktop-search li#searchfield {
 }
 /*li.page-item {
 	a {
-		font-family: 'SourceSansProBold', sans-serif;
+		font-family: 'SourceSansProSemibold', sans-serif;
 		font-size-adjust: 0.0;
 	}
 }*/
@@ -3719,7 +3721,7 @@ ul#desktop-search li#searchfield {
 .sf-navbar a {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #8d1a1e;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -3752,7 +3754,7 @@ ul#desktop-search li#searchfield {
 .sf-navbar ul li a {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #348d43;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   text-transform: capitalize;
   letter-spacing: 1px;
@@ -3775,7 +3777,7 @@ ul#desktop-search li#searchfield {
 .ui-widget button {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.8em;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   color: #a89b87;
   padding-left: 0.7em;
@@ -3783,7 +3785,7 @@ ul#desktop-search li#searchfield {
 .ui-widget form#searchform {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.8em;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   color: #b9ac98;
   padding-left: 0.7em;
@@ -3825,7 +3827,7 @@ isindex {
 }
 ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all li.ui-menu-item a.ui-corner-all {
   font-size: 1.1em;
-  font-family: 'SourceSansProBold', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   color: #b9ac98;
 }
