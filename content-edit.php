@@ -1,4 +1,3 @@
-
 <?php
 /**
  * The template used for displaying edit links content-{SLUG}.php

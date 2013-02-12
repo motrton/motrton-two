@@ -4093,6 +4093,7 @@ ul#desktop-search li#searchfield {
 ************************************************************/
 .rows article.rowitem {
   margin-bottom: 1.5em;
+  min-height: 150px;
 }
 .rows article.rowitem .thumb {
   float: left;
