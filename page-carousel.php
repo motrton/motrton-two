@@ -69,7 +69,9 @@ jQuery(document).ready(function($){
 </div> <!-- end container -->
 </div> <!-- end carousel -->
 </section>
-<section id="page">
+
+<div class="container">
+    <section id="page">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
    <!-- include content.php -->
    <?php get_template_part( 'content','carousel'); ?>
@@ -77,6 +79,6 @@ jQuery(document).ready(function($){
     <p><?php    __('Leider gibt es keine Seite.','motrton_two'); ?> </p>
     <?php  endif; ?>
 </section>
-
+</div>
 <!-- END PAGE-CAROUSEL.PHP -->
 <?php get_footer(); ?>

@@ -7,7 +7,9 @@
  * @since motrton-two 0.1
  */
 ?>
-<div id="site-title">
+
+<div class="container">
+    <div id="site-title">
     <span id="blogtitle-img">
     </span>
 
@@ -16,5 +18,4 @@
         <span id="blogname" class="depth animated fadeIn" title="<?php bloginfo('name') ?>"><?php bloginfo('name') ?>
         </span>
     </span>
-</div>
-<div class="letterpress-line"></div>
+</div></div>

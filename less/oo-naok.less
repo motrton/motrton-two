@@ -1,15 +1,15 @@
 // main.less
 // here you can fiddle with code
-
+@import url('fonts.less'); // HUHU I am new
 @import url('elements.less');
 @import url('variables.less');
 @import url('animate.less');
 
 
-body{
+/*body{
 font-family: 'Source Sans Pro', sans-serif;
-font-size: 101%;
-}
+font-size: 100%;
+}*/
 
 a:link {
 	color: @greenmid;
@@ -41,7 +41,7 @@ a:hover {
 	padding-bottom: @letterpress_pad;
 }
 
-#letterpress-line {
+.letterpress-line {
 	margin-top: 0.9em;
 	margin-bottom: 3em;
 }
@@ -56,13 +56,13 @@ a:hover {
 .entry-content ol li {
 	color: @90grey;
 	font-size: 1.25em;
-	font-weight: 300;
+	font-family: 'SourceSansProLight', sans-serif;
 	line-height: 1.5em;
 }
 .entry-content ul li {
 	color: @90grey;
 	font-size: 1.25em;
-	font-weight: 300;
+	font-family: 'SourceSansProLight', sans-serif;
 	line-height: 1.5em;
 }
 
@@ -72,43 +72,47 @@ h1, h2, h3, h4, h5 {
 
 h1 {
 	font-size: 1.75em;
-	font-weight: 600;
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size-adjust: 0.0;
 	line-height: 120%;
 }
 
 h2 {
 	font-size: 1.25em;
-	font-weight: 600;
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size-adjust: 0.0;
 	line-height: 150%;
 }
 
 h3 {
 	font-size: 1.25em;
-	font-weight: 600;
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size-adjust: 0.0;
 	line-height: 150%;
 }
 
 h4 {
 	font-size: 1.25em;
-	font-weight: 300;
+	font-family: 'SourceSansProLight', sans-serif;
 	line-height: 150%;
 }
 
 p {
 	color: @90grey;
+	font-family: 'SourceSansProLight', sans-serif;
 	font-size: 1.25em;
-	font-weight: 300;
 	line-height: 150%;
 	a {
 		text-decoration: none;
-		font-weight: 400;
+		font-family: 'SourceSansProRegular', sans-serif;
 		cursor: auto;
 	}
 	strong {
-		font-weight: 400;
+		font-family: 'SourceSansProRegular', sans-serif;
 		color: @black;
 	}
 	em {
+		font-family: 'SourceSansProLightItalic', sans-serif;
 		font-style: italic;
 	}
 }
@@ -120,13 +124,15 @@ code {
 // -- Sidebar
 h5.widget-title {
 	font-size: 1.75em;
-	font-weight: 600;
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size-adjust: 0.0;
 }
 
 .widget-area {
 	a, ul, li {
 		line-height: 175%;
-		font-weight: 600;
+		font-family: 'SourceSansProBold', sans-serif;
+		font-size-adjust: 0.0;
 		color: @greenmid;
 		text-decoration: none;
 		list-style-type: none;
@@ -149,7 +155,8 @@ h5.widget-title {
 footer a {
 	color: @greenmid;
 	font-size: 1.1em;
-	font-weight: 600;
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size-adjust: 0.0;
 	line-height: 1.7em;
 	text-decoration: none;
 	cursor: auto;
@@ -179,8 +186,16 @@ ul#desktop-search {
 
 // --- Navi
 .sf-menu {
-	line-height: 0.7em;
+	line-height: 0.6em;
 }
+
+/*li.page-item {
+	a {
+		font-family: 'SourceSansProBold', sans-serif;
+		font-size-adjust: 0.0;
+	}
+}*/
+
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
 	top:			2.2em; /* match top ul list item height */
@@ -200,7 +215,8 @@ ul#desktop-search {
 .sf-navbar a {
 	color: @chamois;
 	text-shadow: 0px 1px 0px @redshadow;
-	font-weight: 600;
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size-adjust: 0.0;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	text-decoration: none;		
@@ -227,7 +243,8 @@ ul#desktop-search {
 .sf-navbar ul li a {
 	color: @chamois;
 	text-shadow: 0px 1px 0px @greendark;
-	font-weight: 600;
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size-adjust: 0.0;
 	text-transform: capitalize;
 	letter-spacing: 1px;
 	text-decoration: none;		
@@ -247,7 +264,8 @@ ul#desktop-search {
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 0.8em;
-	font-weight: 600;
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size-adjust: 0.0;
 	color: (@chamois - #444);
 	padding-left: 0.7em;
 }
@@ -256,7 +274,8 @@ ul#desktop-search {
 	form#searchform{
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 0.8em;
-		font-weight: 600;
+		font-family: 'SourceSansProBold', sans-serif;
+		font-size-adjust: 0.0;
 		color: (@chamois - #333); 
 		padding-left: 0.7em;
 	input.ui-autocomplete-input{
@@ -287,7 +306,8 @@ ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
 	li.ui-menu-item {
 		a.ui-corner-all {
 		font-size: 1.1em;
-		font-weight: 600;
+		font-family: 'SourceSansProBold', sans-serif;
+		font-size-adjust: 0.0;
 		color: (@chamois - #333);
 		}
 		a.ui-corner-all:hover {
