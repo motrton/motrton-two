@@ -7,10 +7,7 @@
  * @since motrton-two 0.1
 */
 ?>
-
-<!-- this is PAGE-CAROUSEL.PHP -->
 <?php
-
 // get options strings into aray of integer.
 $options = get_option('motrton-two_options');
   //  echo $options['carouselpages'];
@@ -24,10 +21,9 @@ $page_ids =  array();
     }
 // echo count($page_ids) .  "\n";
 ?>
-
 <?php get_header(); ?>
 <?php get_template_part( 'header','blogtitle'); ?>
-
+<!-- this is PAGE-CAROUSEL.PHP -->
 <script type="text/javascript">
 jQuery(document).ready(function($){
 
@@ -43,7 +39,8 @@ jQuery(document).ready(function($){
                            //   and reset to 0 when it equals divs.length
 })();
 });
- </script>
+</script>
+
 <section id="carousel">
 <div class="container">
 
@@ -69,6 +66,7 @@ jQuery(document).ready(function($){
 
     }
     ?>
+</div> <!-- end container -->
 </div> <!-- end carousel -->
 </section>
 <section id="page">
@@ -80,6 +78,5 @@ jQuery(document).ready(function($){
     <?php  endif; ?>
 </section>
 
-</div>
 <!-- END PAGE-CAROUSEL.PHP -->
 <?php get_footer(); ?>

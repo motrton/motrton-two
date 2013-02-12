@@ -308,13 +308,15 @@ function override_author_posts_link($deprecated = '') {
         if ( !empty( $deprecated ) )
                 _deprecated_argument( __FUNCTION__, '2.1' );
        global $authordata;
-        $link = sprintf(
-                '<a href="%1$s" rel="author" title="%2$s"><i class="icon-user"></i> %3$s</a>',
-                get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
-                esc_attr( sprintf( __( 'Posts by %s' ), get_the_author() ) ),
-                get_the_author()
-        );
-        echo apply_filters( 'override_author_posts_link', $link );
+        $link = get_author_posts_url( $authordata->ID,$authordata->user_nicename );    
+        // $link = sprintf(
+        //         '<a href="%1$s" rel="author" title="%2$s"><i class="icon-user"></i> %3$s</a>',
+        //         get_author_posts_url( $authordata->ID,$authordata->user_nicename ),
+        //             esc_attr( sprintf( __( 'Posts by %s' ),get_the_author() ) ),
+        //             get_the_author()
+        //             );
+
+        return apply_filters( 'override_author_posts_link', $link );
 }
 add_filter('the_author_posts_link', 'override_author_posts_link');
 
