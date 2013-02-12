@@ -3843,6 +3843,9 @@ body {
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
+a {
+  text-decoration: none;
+}
 img.avatar {
   width: 100px;
   height: 100px;
@@ -3999,6 +4002,9 @@ div#scrolltop-grid {
 /************************************************************
 *************************HEADER.PHP**************************
 ************************************************************/
+ul#desktop-navbar li#en-de {
+  margin-left: 100px;
+}
 #site-title #blogtitle img#logo {
   float: left;
   height: 100px;
@@ -4009,7 +4015,6 @@ div#scrolltop-grid {
 #site-title #blogtitle span#blogname {
   font-size: 3.5em;
   font-weight: 700;
-  vertical-align: text-bottom;
   letter-spacing: -1px;
   padding-top: 15px;
 }
@@ -4037,7 +4042,7 @@ div#scrolltop-grid {
 }
 /** LETTER PRESS BLOGTITLE END **/
 /** LETTERPRESSED LINE START**/
-#letterpress-line {
+.letterpress-line {
   display: inline;
   float: left;
   width: 97.91666666666666%;
@@ -4063,6 +4068,25 @@ ul#desktop-search li i {
 }
 ul#desktop-search li#searchfield {
   display: none;
+}
+/************************************************************
+*********************SEARCHFROM.PHP**************************
+************************************************************/
+::-webkit-input-placeholder {
+  color: red;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+
+  color: red;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+
+  color: red;
+}
+:-ms-input-placeholder {
+  color: red;
 }
 /************************************************************
 *************************INDEX.PHP***************************
@@ -4104,6 +4128,12 @@ nav.nav-single span.nav-next {
   float: right;
 }
 /************************************************************
+*************************sidebar widget**********************
+************************************************************/
+h5.widget-title {
+  margin-bottom: 0em;
+}
+/************************************************************
 *************************CONTENT.PHP*************************
 ************************************************************/
 /************************************************************
@@ -4112,17 +4142,70 @@ nav.nav-single span.nav-next {
 textarea#comment {
   width: 100%;
 }
+article.comment .comment-sourround {
+  display: inline;
+}
+.vcard img {
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
 li.comment {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+ol.commentlist li.comment {
+  border-bottom: 1px solid;
+}
+/* comment form mixin for the std fields */
 /* Wrapper div for the entire comment form. */
 /* Reply title. */
 /* Cancel comment link. */
 /* The comment form. */
+form#commentform {
+  width: 100%;
+}
 /* Comment author field. */
+p.comment-form-author {
+  position: relative;
+  width: 100%;
+}
+p.comment-form-author label {
+  width: 30%;
+}
+p.comment-form-author input {
+  float: right;
+  width: 60%;
+}
 /* Comment email field. */
+p.comment-form-email {
+  position: relative;
+  width: 100%;
+}
+p.comment-form-email label {
+  width: 30%;
+}
+p.comment-form-email input {
+  float: right;
+  width: 60%;
+}
 /* Comment URL field. */
+p.comment-form-url {
+  position: relative;
+  width: 100%;
+}
+p.comment-form-url label {
+  width: 30%;
+}
+p.comment-form-url input {
+  float: right;
+  width: 60%;
+}
 /* Required (*) text. */
 /* Comment form text. */
 /* Must log in paragraph. */

@@ -65,17 +65,17 @@ function mediaqueries($){
 * using superfish plugin
 */
 function superfish ($) {
-var width = $(window).width();
-if (width >=480) {
+// var width = $(window).width();
+// if (width >=480) {
     $("ul.sf-menu,menu").superfish({
          // pathClass: 'current_page_parent',
          pathLevels: 2,
          autoArrows: false,// disable generation of arrow mark-up
         dropShadows: false// disable drop shadows
     });
-}else{
+// }else{
 
-}
+// }
 
 }
 
@@ -85,7 +85,7 @@ if (width >=480) {
 function linkIcons ($) {
 // thanks to
 // http://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
- $('.entry-content').find('a:not(:has(>img))').prepend('<i class="icon-hand-right"></i> ');
+ $('.entry-content').find('a:not(:has(>img, i))').prepend('<i class="icon-hand-right"></i> ');
     // }
 }
 

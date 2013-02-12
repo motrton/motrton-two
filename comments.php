@@ -72,20 +72,22 @@
         <p class="nocomments"><?php _e( 'Kommentieren ist deaktiviert.', 'motrton_two' ); ?></p>
     <?php endif; ?>
 
+    <h3> <i class="icon-comment"></i>  <?php comment_form_title(__('Hinterlasse eine Antworten','motrton_two'), __('Antwort an %s','motrton_two')); ?></h3>
+
     <?php
     // Looky here
     // http://ottopress.com/2010/wordpress-3-0-theme-tip-the-comment-form/
     // 
     
-    $comment_args = array('
-        title_reply'       => __('antworten','motrton_two'),
-        'title_reply_to'   => __( 'antwort an %s','motrton_two' ),
+    $comment_args = array(
+        'title_reply'       => '',
+        'title_reply_to'   => '',
     'cancel_reply_link'    => __( 'Antwort verwerfen','motrton_two' ),
     'label_submit'         => __( 'Kommentar abschicken','motrton_two' ),
-    'comment_notes_after'  => __('','motrton_two'),
-    'comment_notes_before' => "<span id=\"comment-notes-before\">" . __('Deine E-Mail-Adresse wird nicht veröffentlicht. Erforderliche Felder sind mit * markiert','motrton_two') ."</span>"
-
-        );
+    // 'comment_notes_after'  => __('','motrton_two'),
+    // 'comment_field' => '<div><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"  placeholder="your comment"></textarea></div>',
+    'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Du bist eingeloggt als <a href="%1$s">%2$s</a>. Willst du dich <a href="%3$s" title="Log out of this account"> ausloggen?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
+    'comment_notes_before' => "<span id=\"comment-notes-before\">" . __('Deine E-Mail-Adresse wird nicht veröffentlicht. Erforderliche Felder sind mit * markiert','motrton_two') ."</span>");
     comment_form($comment_args);
     ?>
 

@@ -11,7 +11,7 @@
 <meta name="author" content=""> -->
 <!-- Le styles -->
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
+<link type="text/css" href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet'>
 <link rel="stylesheet"  href="<?php bloginfo('stylesheet_url');?>" >
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -27,7 +27,7 @@
 <nav class="thetopnav" id="topbar">
 <ul class="sf-menu sf-navbar" id="desktop-navbar">
 <!-- wp_list_pages start -->
-<li class="page-item" style="padding-right:100px;"><a href="#">EN|DE</a>
+<li class="page-item" id="en-de" ><a href="#">EN|DE</a>
 </li>
         <?php
         

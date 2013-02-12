@@ -44,6 +44,9 @@ add_action('init', 'my_styles');
 // add_filter( 'the_content', 'mytheme_content_ad' );
 // add my personal debugger
 add_action('wp_footer', 'show_template');
+
+//add placeholder text to comment forms
+add_filter('comment_form_default_fields','motrton_two_comment_placeholders');
 }
 add_action( 'init', 'my_autocomplete' );
 
@@ -297,22 +300,69 @@ function show_template() {
 }
 }
 
+/********************************************
+ * the_author_posts_link FILTER / OVERWRITE
+ ********************************************/
+
+function override_author_posts_link($deprecated = '') {
+        if ( !empty( $deprecated ) )
+                _deprecated_argument( __FUNCTION__, '2.1' );
+       global $authordata;
+        $link = get_author_posts_url( $authordata->ID,$authordata->user_nicename );    
+        // $link = sprintf(
+        //         '<a href="%1$s" rel="author" title="%2$s"><i class="icon-user"></i> %3$s</a>',
+        //         get_author_posts_url( $authordata->ID,$authordata->user_nicename ),
+        //             esc_attr( sprintf( __( 'Posts by %s' ),get_the_author() ) ),
+        //             get_the_author()
+        //             );
+
+        return apply_filters( 'override_author_posts_link', $link );
+}
+add_filter('the_author_posts_link', 'override_author_posts_link');
 
 
 /********************************************
  * COMMETNS FILTER
  ********************************************/
-// function before_comments($form){
-//     return "<table>" . $form . "</table>";
-// }
-// add_filter('comment_form','before_comments');
 
-// function my_fields($fields) {
-// $fields['author'] = '<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required=\'true\' /></p>';
-// return $fields;
-// }
-// add_filter('comment_form_default_fields','my_fields');
+/**
+ * @param  array $fields
+ * @return array
+ */
 
+function motrton_two_comment_placeholders( $fields ){
+    $fields['author'] = str_replace(
+        '<input',
+        '<input placeholder="'
+        /* Replace 'theme_text_domain' with your theme’s text domain.
+         * I use _x() here to make your translators life easier. :)
+         * See http://codex.wordpress.org/Function_Reference/_x
+         */
+            . _x(
+                'Vor- und Nachname oder Pseudonym',
+                'comment form placeholder',
+                'motrton_two'
+                )
+            . '"',
+        $fields['author']
+    );
+    $fields['email'] = str_replace(
+        '<input id="email" name="email" type="text"',
+        /* We use a proper type attribute to make use of the browser’s
+         * validation, and to get the matching keyboard on smartphones.
+         */
+        '<input type="email" placeholder="contact@example.com"  id="email" name="email"',
+        $fields['email']
+    );
+    $fields['url'] = str_replace(
+        '<input id="url" name="url" type="text"',
+        // Again: a better 'type' attribute value.
+        '<input placeholder="http://example.com" id="url" name="url" type="url"',
+        $fields['url']
+    );
+
+    return $fields;
+}
 
 
 /********************************************
@@ -344,30 +394,36 @@ function motrton_two_comment( $comment, $args, $depth ) {
     <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
         <article id="comment-<?php comment_ID(); ?>" class="comment">
             <div class="comment-sourround">
-                <div class="comment-author vcard">
+                <span class="comment-author vcard">
                     <?php echo get_avatar( $comment, 40 ); ?>
-                    <?php printf( __( '%s <span class="says">says:</span>', 'motrton_two' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
-                </div><!-- .comment-author .vcard -->
+                    <?php printf( __( '%s <span class="says">sagt am</span> ', 'motrton_two' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+                </span><!-- .comment-author .vcard -->
                 <?php if ( $comment->comment_approved == '0' ) : ?>
                     <em><?php _e( 'Dein Kommentar wartet auf Moderation.', 'motrton_two' ); ?></em>
                     <br />
                 <?php endif; ?>
 
-                <div class="comment-meta commentmetadata">
+                <span class="comment-meta commentmetadata">
                     <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>">
                     <?php
                         /* translators: 1: date, 2: time */
-                        printf( __( '%1$s at %2$s', 'motrton_two' ), get_comment_date(), get_comment_time() ); ?>
-                    </time></a>
-                    <?php edit_comment_link( __( '(Editieren)', 'motrton_two' ), ' ' );
+                        printf( __( '%1$s um %2$s', 'motrton_two' ), get_comment_date(), get_comment_time() ); ?>
+                    </time></a><span class="olios-extra-special-white-space">&emsp;&emsp;</span>
+                    <?php edit_comment_link( '<i class="icon-edit"></i>' .__( '(Editieren)', 'motrton_two' ), ' ' );
                     ?>
-                </div><!-- .comment-meta .commentmetadata -->
+                </span><!-- .comment-meta .commentmetadata -->
             </div class="comment-sourround">
 
             <div class="comment-content"><?php comment_text(); ?></div>
 
             <div class="reply">
-                <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+                <?php comment_reply_link( array_merge( $args,
+                array( 'depth' => $depth,
+                'max_depth' => $args['max_depth'],
+                'reply_text' => '<i class="icon-comment"></i>'. __('antworten','motrton_two')
+                // 'before' => ,
+                // 'after' => '</i>'
+                ) ) ); ?>
             </div><!-- .reply -->
         </article><!-- #comment-## -->
 

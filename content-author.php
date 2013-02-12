@@ -15,14 +15,6 @@
             <?php the_title(); ?></a>,
             <?php the_time(get_option('date_format')); ?> in <?php the_category(', ');?>
         </li>
-
-          <?php 
-  if ( is_user_logged_in() ) {
-
-    // edit_post_link('Seite editieren', '<p>', ' <i class="icon-edit"></i></p>');
-     echo '<p><a href="' . get_edit_post_link() . '" > '. __('Seite editieren','motrton-one') . ' <i class="icon-edit"></i></a></p>';
-  }
-     ?>
-        
+        <?php get_template_part( 'content','edit'); ?>
 </article>
 <!-- END CONTENT.PHP -->
