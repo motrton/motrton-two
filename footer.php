@@ -1,7 +1,6 @@
 <?php wp_footer(); ?>
 <!-- this is FOOTER.PHP -->
-<div class="letterpress-line"></div>
-<footer>
+<div class="container"><footer>
                 <?php
                 $options = get_option('motrton-two_options');
                 $impressumpage = '<a href="' . get_permalink( $options['impressumpage'] ) .'">Impressum</a> <span class="olios-extra-special-white-space">&emsp;&emsp;</span>';
@@ -24,7 +23,7 @@
                  }
                  ?>
 
-</footer>
+</footer></div>
 
 <div id="scrolltop-grid"><div id="scrolltop"><a href="#top"><i class="icon-circle-arrow-up"></i></a></div>
 </div>
