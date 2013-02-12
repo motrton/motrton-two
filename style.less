@@ -42,7 +42,10 @@ body{
 
 }
 
+
 .container{
+  width:960px;
+  margin:0 auto;
   img{
     width:100%;
     height:auto;
@@ -68,26 +71,10 @@ header {
 }
 
 #site-title{
+
 .column(10);
  .push(1);
 
-
-// #blogtitle-img{
-  // .column(2);
-  // .push(1);
-// }
-// #blogtitle-text{
-
-    // .column(8);
-  // .push(2);
-  // #blogname{
-
-  // }
-  // img#logo{
-  // //  .column(2);
-  // // .push(5);
-  // }
-  // }
 }
 section#post {
     .column(8);
@@ -99,8 +86,8 @@ section#carousel{
   .push(2);
 }
 section#page{
-    .column(8);
-    .push(2);
+    .column(10);
+    .push(1);
 }
 section#author-page{
       .column(8);
@@ -141,14 +128,17 @@ div#scrolltop-grid{
 // Media queries for sematic grid
 // 
 @media screen and (max-width: 960px) {
-    // .container{.column(12);}
+    .container{.column(12);}
     section { .column(12); }
     section#page{.column(12);}
     section#author-page{.column(12);}
     section#post{.column(12);}
 
     aside { .column(12); }
-    .rows{.column(12);}
+    .rows{
+      width:100%;
+      .column(12);
+    }
     footer{.column(12);}
     #site-title{.column(12);}
     div#column-img{ .column(12); }
@@ -307,8 +297,10 @@ ul#desktop-search{
 *************************INDEX.PHP***************************
 ************************************************************/
 .rows{
+  // width:100%;
     article.rowitem{
       margin-bottom: 1.5em;
+      min-height: 150px;
         .thumb{
 
 
@@ -323,7 +315,7 @@ ul#desktop-search{
         }
         .post-excerpt{
       
-             width:100%;
+             // width:100%;
         
         }
     }
@@ -365,6 +357,7 @@ float:right;
 /************************************************************
 *************************sidebar widget**********************
 ************************************************************/
+
 
 h5.widget-title{
   margin-bottom: 0em;

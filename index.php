@@ -6,7 +6,7 @@
     <div class="rows">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article class="rowitem">
-        <h2><?php the_title(); ?></h2>
+        <h2><a href="<?php the_permalink(); ?> "><i class="icon-hand-right"></i> <?php the_title_attribute(); ?></a></h2>
         <div class="thumb">
         <?php 
             /**
@@ -43,8 +43,6 @@
         </div>
         <div class="post-excerpt">
          <?php the_excerpt()?>
-        <!-- <p><a href= "<?php the_permalink(); ?>" ><?php _e('Mehr?','motrton-two')?></a></p> -->
-
          <br>
         </div>
     </article>

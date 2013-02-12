@@ -3912,6 +3912,10 @@ body {
   position: relative;
   padding-bottom: 40px;
 }
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
 .container img {
   width: 100%;
   height: auto;
@@ -3970,9 +3974,9 @@ section#carousel {
 section#page {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 81.25%;
   margin: 0 1.0416666666666665%;
-  margin-left: 17.708333333333332%;
+  margin-left: 9.374999999999998%;
 }
 section#author-page {
   display: inline;
@@ -4023,6 +4027,12 @@ div#scrolltop-grid {
 }
 /**********************************************/
 @media screen and (max-width: 960px) {
+  .container {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
   section {
     display: inline;
     float: left;
@@ -4054,6 +4064,7 @@ div#scrolltop-grid {
     margin: 0 1.0416666666666665%;
   }
   .rows {
+    width: 100%;
     display: inline;
     float: left;
     width: 97.91666666666666%;
@@ -4178,6 +4189,7 @@ ul#desktop-search li#searchfield {
 ************************************************************/
 .rows article.rowitem {
   margin-bottom: 1.5em;
+  min-height: 150px;
 }
 .rows article.rowitem .thumb {
   float: left;
@@ -4190,9 +4202,6 @@ ul#desktop-search li#searchfield {
   -moz-animation-name: pulse;
   -o-animation-name: pulse;
   animation-name: pulse;
-}
-.rows article.rowitem .post-excerpt {
-  width: 100%;
 }
 /************************************************************
 *************************PAGE.PHP****************************
