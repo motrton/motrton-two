@@ -22,7 +22,17 @@ and (max-width : 768px){
   width:100%;
   margin: 0 auto;
 }
+
+.sf-menu li {
+  text-align: left;
+  float:      left;
+  position:   static;
+  display:inherit;
+  // *display:inline; /*IE7*/
+  // *zoom:1; /*IE7*/
+  }
 ul.sf-menu{
+
     height:auto;
     li{
         ul.children{
@@ -56,9 +66,9 @@ ul.sf-menu{
 }
 ul#desktop-navbar{
   li#en-de{
+      text-align: left;
     margin-left: 0px;
     margin-right: 0px;
-    // padding-right:100px;
   }
 }
 /**

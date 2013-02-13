@@ -39,6 +39,7 @@
 
 ul.sf-menu {
 margin-bottom: 0px;
+
  a {
 }
 a:visited  { /* visited pseudo selector so IE6 applies text colour */
@@ -58,6 +59,25 @@ a:visited  { /* visited pseudo selector so IE6 applies text colour */
 ul.sf-menu.sf-navbar{
 }
 .sf-navbar{
+}
+
+div#topbar{
+  text-align: center;
+  ul.sf-menu{
+    li.page-item{
+      text-align: center;
+
+    }
+  }
+}
+
+.sf-menu li {
+  float:      none;
+  position:   relative;
+  display:inline-block;
+  *display:inline; /*IE7*/
+  *zoom:1; /*IE7*/
+
 }
 
 /*****************************

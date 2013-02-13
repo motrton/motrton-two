@@ -29,7 +29,7 @@ echo "<link rel=\"stylesheet\" href=\"" . $templateurl ."/css/biographia.css\" t
 <body>
 <header>
     <!-- START DESKTOP NAV -->
-<nav class="thetopnav" id="topbar">
+<div class="thetopnav" id="topbar">
 <ul class="sf-menu sf-navbar" id="desktop-navbar">
 <!-- wp_list_pages start -->
 <li class="page-item" id="en-de" ><a href="#">EN|DE</a>
@@ -70,7 +70,7 @@ http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
 <?php get_search_form(); ?>
 </li>
 </ul>
-</nav>
+</div>
 </header>
 <div id="wrapper">
 <!-- END HEADER.PHP -->
