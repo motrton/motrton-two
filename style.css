@@ -453,6 +453,9 @@ body:after {
 body:after {
   clear: both;
 }
+/********************
+ * STICKY FOOTER HEIGHT
+ */
 /**
  * OO NAOK COLORS
  */
@@ -3906,11 +3909,17 @@ http://semantic.gs/
 /************************************
 // BASICS OVERALL!
 *************************************/
+html,
+body {
+  height: 100%;
+}
 body {
   background-image: url('img/handmadepaper.png');
   width: 100%;
   position: relative;
-  padding-bottom: 40px;
+}
+#wrapper {
+  min-height: 100%;
 }
 .container {
   width: 960px;
@@ -3931,6 +3940,26 @@ body {
   -moz-animation-name: fadeInUp;
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
+footer {
+  position: relative;
+  margin-top: -50px;
+  /* negative value of footer height */
+
+  height: 50px;
+  clear: both;
+}
+/*Opera Fix*/
+body:before {
+  /* thanks to Maleika (Kohoutec)*/
+
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+  /* thank you Erik J - negate effect of float*/
+
 }
 a {
   text-decoration: none;
@@ -3977,6 +4006,7 @@ section#post {
   float: left;
   width: 56.25%;
   margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
 }
 section#carousel {
   display: inline;
@@ -4015,7 +4045,7 @@ article#column-content {
 .rows {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 56.25%;
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
@@ -4024,13 +4054,13 @@ aside {
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
 }
 footer {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
 }
 div#scrolltop-grid {
   display: inline;
@@ -4188,12 +4218,6 @@ ul#desktop-navbar li#en-de {
   top: 2px;
   left: 2px;
 }
-#site-title #blogtitle span#blogname {
-  font-family: 'SourceSansProBold', sans-serif;
-  font-size: 3.5em;
-  letter-spacing: -1px;
-  padding-top: 15px;
-}
 /** LETTERPRESSED LINE START**/
 .letterpress-line {
   display: inline;
@@ -4225,21 +4249,13 @@ ul#desktop-search li#searchfield {
 /************************************************************
 *********************SEARCHFROM.PHP**************************
 ************************************************************/
-::-webkit-input-placeholder {
-  color: red;
-}
 :-moz-placeholder {
   /* Firefox 18- */
 
-  color: red;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
 
-  color: red;
-}
-:-ms-input-placeholder {
-  color: red;
 }
 /************************************************************
 *************************INDEX.PHP***************************
@@ -4371,6 +4387,12 @@ p.comment-form-url input {
 /************************************************************
 *************************FOOTER.PHP**************************
 ************************************************************/
+footer {
+  background-color: #348d43;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
 /*****************************
 Scroll to top button
 ******************************/

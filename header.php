@@ -21,6 +21,10 @@
 <![endif]-->
 <?php wp_enqueue_script("jquery"); ?>
 <?php wp_head(); ?>
+<?php
+$templateurl = get_template_directory_uri();
+echo "<link rel=\"stylesheet\" href=\"" . $templateurl ."/css/biographia.css\" type=\"text/css\" />";
+ ?>
 </head>
 <body>
 <header>
@@ -68,4 +72,5 @@ http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
 </ul>
 </nav>
 </header>
+<div id="wrapper">
 <!-- END HEADER.PHP -->

@@ -33,28 +33,50 @@ http://semantic.gs/
 /************************************
 // BASICS OVERALL!
 *************************************/
+// sticky footer done with this
+// http://www.cssstickyfooter.com/html-code.html
+html, body {
+height: 100%; // sticky-footer!
+}
 
 body{
     background-image :url('img/handmadepaper.png');
     width:100%;
     position:relative;
-    padding-bottom: 40px;
 
 }
 
+#wrapper{
+  min-height: 100%; // sticky-footer!
+}
 
 .container{
   width:960px;
   margin:0 auto;
-
+  
   img{
     width:100%;
     height:auto;
-    // margin: 0 auto;
     .animated; // Initiate animation library
     .fadeInUp;
   }
 }
+
+footer{
+  position: relative; // sticky-footer!
+  margin-top: -@footerheight; /* negative value of footer height */
+  height: @footerheight; // sticky-footer!
+  clear:both; // sticky-footer!
+}
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
 
 a{text-decoration: none;}
 
@@ -90,9 +112,9 @@ section#blog-head{
 }
 }
 
-
 section#post {
     .column(7);
+    .push(1);
 }
 
 section#carousel{
@@ -118,16 +140,15 @@ section#author-page{
 
 
 .rows{
-    .column(8);
+    .column(7);
     .push(1);
 }
 aside {
     .column(3);
-    // .pull(1);
+    .push(1);
 }
 footer{
-    .column(8);
-    .push(1);
+    .column(@columns);
 }
 
 div#scrolltop-grid{
@@ -240,40 +261,6 @@ ul#desktop-navbar{
 /** LETTER PRESS BLOGTITLE END **/
 }
 
-
-
-#site-title{
-
-
-
-
-#blogtitle-img{
-
-}
-
-#blogtitle{
-  //    img#logo{
-  //   float:left;
-  //   height:@logowidth;
-  //   width:@logowidth;
-  //   vertical-align: middle;
-  //   text-align: center;
-  // }
-span#blogname{
-  
-  font-family: 'SourceSansProBold', sans-serif;
-  font-size: 3.5em;
-
-
-  letter-spacing: -1px;
-  padding-top: @letterpress_pad;
-
-}
-
-}
-}
-
-
 /** LETTERPRESSED LINE START**/
 
 .letterpress-line{
@@ -308,19 +295,19 @@ ul#desktop-search{
 
 // Placehoder text styling
 ::-webkit-input-placeholder {
-   color: red;
+   // color: red;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: red;  
+   // color: red;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: red;  
+   // color: red;
 }
 
-:-ms-input-placeholder {  
-   color: red;  
+:-ms-input-placeholder {
+   // color: red;
 }
 
 /************************************************************
@@ -545,10 +532,16 @@ input#submit { }
 /************************************************************
 *************************FOOTER.PHP**************************
 ************************************************************/
-.foot{
- 
-}
 
+
+
+footer{
+  background-color: @greendark;
+  width:100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  
+}
 /*****************************
 Scroll to top button
 ******************************/
@@ -575,6 +568,7 @@ Scroll to top button
   .pulse; // Initiate bounce effect
 }
 }
+
 
 /************************************************************
 *************************DEBUGGING***************************
