@@ -41,8 +41,8 @@ jQuery(document).ready(function($){
 });
 </script>
 
-<section id="carousel">
 <div class="container">
+<section id="carousel">
 
     <!-- This is the carousel part -->
 <!-- <div class="carousel" data-jkit="[carousel]"> -->
@@ -59,16 +59,16 @@ jQuery(document).ready(function($){
 
     
     echo "<!-- This is ID ".$page_ids[$j] ." -->";
-    echo "<div id=\"carousel-item-" . $j ."\">";
+    echo "<div class=\"carousel-item\" id=\"carousel-item-" . $j ."\">";
     // echo "<h2>" .$title . "</h2>";
     echo $content;
     echo "</div>";
 
     }
     ?>
-</div> <!-- end container -->
 </div> <!-- end carousel -->
 </section>
+</div> <!-- end container -->
 
 <div class="container">
     <section id="page">

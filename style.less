@@ -33,19 +33,27 @@ http://semantic.gs/
 /************************************
 // BASICS OVERALL!
 *************************************/
+// sticky footer done with this
+// http://www.cssstickyfooter.com/html-code.html
+html, body {
+height: 100%; // sticky-footer!
+}
 
 body{
     background-image :url('img/handmadepaper.png');
     width:100%;
     position:relative;
-    padding-bottom: 40px;
 
 }
 
+#wrapper{
+  min-height: 100%; // sticky-footer!
+}
 
 .container{
   width:960px;
   margin:0 auto;
+  
   img{
     width:100%;
     height:auto;
@@ -54,12 +62,35 @@ body{
   }
 }
 
+footer{
+  position: relative; // sticky-footer!
+  margin-top: -@footerheight; /* negative value of footer height */
+  height: @footerheight; // sticky-footer!
+  clear:both; // sticky-footer!
+}
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
+
 a{text-decoration: none;}
 
 img.avatar{
   width:100px;
   height:100px;
 }
+
+p a img {
+  max-width: 80% !important;
+  height: auto;
+}
+
+
 /************************************
 // GRIDS!
 *************************************/
@@ -70,14 +101,19 @@ header {
   margin-left: 0px;
 }
 
-#site-title{
-
-.column(10);
- .push(1);
-
+section#blog-head{
+  .column(12);
+  // new title
+  #blog-logo{
+    .column(2);
+  }
+  #blog-title{
+    .column(10);
 }
+}
+
 section#post {
-    .column(8);
+    .column(7);
     .push(1);
 }
 
@@ -94,36 +130,34 @@ section#author-page{
     .push(2);
 }
 
-// section#two-column{
   div#column-img{
     .column(3);
     .push(1);
   }
   article#column-content{
     .column(7);
-    // .push(1);
   }
-// }
+
 
 .rows{
-    .column(8);
+    .column(7);
     .push(1);
 }
-
-
 aside {
     .column(3);
+    .push(1);
 }
 footer{
-    .column(8);
-    .push(1);
+    .column(@columns);
 }
 
 div#scrolltop-grid{
 .column(1);
 .push(11);
-// float:right;
 }
+
+
+
 /**********************************************/
 // Media queries for sematic grid
 // 
@@ -133,28 +167,28 @@ div#scrolltop-grid{
     section#page{.column(12);}
     section#author-page{.column(12);}
     section#post{.column(12);}
+section#blog-head{
+  .column(12);
+  #blog-logo{
+    .column(12);
+    display:block;
+        img{
+          display: block;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
 
-    aside { .column(12); }
-    .rows{
-      width:100%;
-      .column(12);
-    }
+  }
+  #blog-title{
+    .column(12);
+}
+}
+    aside { .column(12);}
+    .rows{.column(12);}
     footer{.column(12);}
     #site-title{.column(12);}
     div#column-img{ .column(12); }
-    article#column-content{ .column(12); }
-//      #blogtitle-img{
-      
-//       display:none;
-//       visibility: hidden;
-//     }
-//  #blogtitle-text{
-//   .column(12);
-//   text-align: center;
-
-//   .depth:before { top: 1px; left:   1px }
-// .depth:after  { top: 2px; left:   2px }
-//  }
+    article#column-content{ .column(12);}
 }
 
 /************************************************************
@@ -164,7 +198,6 @@ div#scrolltop-grid{
 ul#desktop-navbar{
   li#en-de{
     margin-left: 100px;
-    // padding-right:100px;
   }
 }
 
@@ -177,64 +210,56 @@ ul#desktop-navbar{
 
 }
 
+
+/************************************************************
+******************HEADER-BLOGTITLE.PHP***********************
+************************************************************/
+
 @letterpress_pad:15px;
 @logowidth:100px;
 @letterpres_img_off :@logowidth;
 @img_margin_right: @logowidth;
 @letterprss_off: @letterpres_img_off + @img_margin_right ;
-#site-title{
 
-
-#blogtitle-img{
-
+// new title
+#blog-logo{
+     height:@logowidth;
+      width:@logowidth;
+      img{
+         height:@logowidth !important;
+      width:@logowidth !important;
+      }
 }
 
-#blogtitle{
-     img#logo{
-    float:left;
-    height:@logowidth;
-    width:@logowidth;
-    vertical-align: middle;
-    text-align: center;
-    // margin-right: @logowidth;
-    // display: inline-block;
-  }
-span#blogname{
-  
+#blog-title{
+  h1{
+    .clearfix;
   font-family: 'SourceSansProBold', sans-serif;
-// width:100%;
-  font-size: 3.5em;
-  // font-weight: 700;
-  // vertical-align: text-bottom;
-
+  font-size: 3.0em;
   letter-spacing: -1px;
-  padding-top: @letterpress_pad;
+  // padding-top: @letterpress_pad;
+  }
 
-}
-
-}
-
-}
 /** LETTER PRESS BLOGTITLE START **/
 .depth {
     display: block;
-      margin:0 auto;
     color: @blue;
     position: relative;
-    // white-space: nowrap;
+
+
 }
 .depth:before, .depth:after {
     content: attr(title);
     color: rgba(255,255,255,.1);
     position: absolute;
-    padding-top: @letterpress_pad;
 
 
 }
-.depth:before { top: 1px; left: @logowidth + 1px }
-.depth:after  { top: 2px; left: @logowidth + 2px }
+.depth:before { top: 1px; left:  1px }
+.depth:after  { top: 2px; left:  2px }
 
 /** LETTER PRESS BLOGTITLE END **/
+}
 
 /** LETTERPRESSED LINE START**/
 
@@ -250,12 +275,7 @@ span#blogname{
 
 ul#desktop-search{
   list-style-type: none;
-  // position:absolute;
   float:right;
-  // top:5px ;
-  // right:50px;
-     // top:-10px ;
-      // right:50px;
   li{
       float:right;
     i{
@@ -263,13 +283,10 @@ ul#desktop-search{
       color:@white;
       font-size: 2em;
       text-align: right;
-
     }
-   // background-color: transparent!important;
   }
   li#searchfield{
    display:none;
-   // background-color: @white;
   }
 }
 /************************************************************
@@ -278,19 +295,19 @@ ul#desktop-search{
 
 // Placehoder text styling
 ::-webkit-input-placeholder {
-   color: red;
+   // color: red;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: red;  
+   // color: red;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: red;  
+   // color: red;
 }
 
-:-ms-input-placeholder {  
-   color: red;  
+:-ms-input-placeholder {
+   // color: red;
 }
 
 /************************************************************
@@ -302,8 +319,6 @@ ul#desktop-search{
       margin-bottom: 1.5em;
       min-height: 150px;
         .thumb{
-
-
             float:left;
         img.thumbnail{
           width:100px;
@@ -311,12 +326,8 @@ ul#desktop-search{
           padding: 20px;
           .pulse;
           }
-
         }
         .post-excerpt{
-      
-             // width:100%;
-        
         }
     }
 }
@@ -326,6 +337,11 @@ ul#desktop-search{
 /************************************************************
 *************************PAGE.PHP****************************
 ************************************************************/
+
+/************************************************************
+********************PAGE-CAROUSEL.PHP************************
+************************************************************/
+
 
 /************************************************************
 *************************SINGLE.PHP**************************
@@ -345,11 +361,9 @@ nav.nav-single{
 padding-bottom: 2em;
   span.nav-previous{
    float:left;
-   // text-align: left;
   }
 span.nav-next{
 float:right;
-// text-align: right;
 }
 
 }
@@ -520,19 +534,19 @@ input#submit { }
 ************************************************************/
 
 
-.foot{
- 
-}
 
+footer{
+  background-color: @greendark;
+  width:100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  
+}
 /*****************************
 Scroll to top button
 ******************************/
 
 #scrolltop-grid{
-
-// .column(1);
-// .push(11);
-// float:right;
 #scrolltop{
     background-color: @greendark;
     position: fixed;
@@ -543,14 +557,7 @@ Scroll to top button
     @pbottom:10px;
     @pleft:5px;
     padding:@ptop @pright @pbottom @pleft;
-     // background: #000;
-    // color: #fff;
-    // bottom: 0;
     display: none;
- // i:hover{
- //  .animated; // Initiate animation library
- //  .pulse; // Initiate bounce effect
- //  }
   a{
     text-decoration: none;
     color:@chamois;
@@ -562,10 +569,7 @@ Scroll to top button
 }
 }
 
+
 /************************************************************
 *************************DEBUGGING***************************
 ************************************************************/
-
-#debuginfo{
-  .column(12);
-}

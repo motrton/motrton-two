@@ -204,7 +204,6 @@ function my_styles() {
      // }
     wp_register_style( 'mediaqueries', get_template_directory_uri() . '/css/mediaqueries.css',array('overwrite','oo-naok-style'));
 
-
 if( !is_admin() ){
     wp_enqueue_style( 'superfish' );
     wp_enqueue_style( 'superfish-navbar' );

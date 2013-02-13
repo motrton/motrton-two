@@ -2,7 +2,7 @@
 <?php get_template_part( 'header','blogtitle'); ?>
 <!-- this is INDEX.PHP -->
 <div class="container">
-<section id="indexed">
+<!-- <section id="indexed"> -->
     <div class="rows">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article class="rowitem">
@@ -53,7 +53,7 @@
     </p>
     <?php endif; ?>
     </div>
-</section>
+<!-- </section> -->
 
 <aside>
 <?php get_sidebar(); ?>

@@ -453,6 +453,9 @@ body:after {
 body:after {
   clear: both;
 }
+/********************
+ * STICKY FOOTER HEIGHT
+ */
 /**
  * OO NAOK COLORS
  */
@@ -3906,11 +3909,17 @@ http://semantic.gs/
 /************************************
 // BASICS OVERALL!
 *************************************/
+html,
+body {
+  height: 100%;
+}
 body {
   background-image: url('img/handmadepaper.png');
   width: 100%;
   position: relative;
-  padding-bottom: 40px;
+}
+#wrapper {
+  min-height: 100%;
 }
 .container {
   width: 960px;
@@ -3932,12 +3941,36 @@ body {
   -o-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
+footer {
+  position: relative;
+  margin-top: -50px;
+  /* negative value of footer height */
+
+  height: 50px;
+  clear: both;
+}
+/*Opera Fix*/
+body:before {
+  /* thanks to Maleika (Kohoutec)*/
+
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+  /* thank you Erik J - negate effect of float*/
+
+}
 a {
   text-decoration: none;
 }
 img.avatar {
   width: 100px;
   height: 100px;
+}
+p a img {
+  max-width: 80% !important;
+  height: auto;
 }
 /************************************
 // GRIDS!
@@ -3950,17 +3983,28 @@ header {
   width: 100%;
   margin-left: 0px;
 }
-#site-title {
+section#blog-head {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+}
+section#blog-head #blog-logo {
+  display: inline;
+  float: left;
+  width: 14.583333333333334%;
+  margin: 0 1.0416666666666665%;
+}
+section#blog-head #blog-title {
   display: inline;
   float: left;
   width: 81.25%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
 }
 section#post {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 56.25%;
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
@@ -4001,7 +4045,7 @@ article#column-content {
 .rows {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 56.25%;
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
@@ -4010,13 +4054,13 @@ aside {
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
 }
 footer {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
 }
 div#scrolltop-grid {
   display: inline;
@@ -4057,6 +4101,30 @@ div#scrolltop-grid {
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
+  section#blog-head {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  section#blog-head #blog-logo {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+    display: block;
+  }
+  section#blog-head #blog-logo img {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  section#blog-head #blog-title {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
   aside {
     display: inline;
     float: left;
@@ -4064,7 +4132,6 @@ div#scrolltop-grid {
     margin: 0 1.0416666666666665%;
   }
   .rows {
-    width: 100%;
     display: inline;
     float: left;
     width: 97.91666666666666%;
@@ -4101,42 +4168,56 @@ div#scrolltop-grid {
 ul#desktop-navbar li#en-de {
   margin-left: 100px;
 }
-#site-title #blogtitle img#logo {
-  float: left;
+/************************************************************
+******************HEADER-BLOGTITLE.PHP***********************
+************************************************************/
+#blog-logo {
   height: 100px;
   width: 100px;
-  vertical-align: middle;
-  text-align: center;
 }
-#site-title #blogtitle span#blogname {
+#blog-logo img {
+  height: 100px !important;
+  width: 100px !important;
+}
+#blog-title {
+  /** LETTER PRESS BLOGTITLE START **/
+
+  /** LETTER PRESS BLOGTITLE END **/
+
+}
+#blog-title h1 {
+  *zoom: 1;
   font-family: 'SourceSansProBold', sans-serif;
-  font-size: 3.5em;
+  font-size: 3.0em;
   letter-spacing: -1px;
-  padding-top: 15px;
 }
-/** LETTER PRESS BLOGTITLE START **/
-.depth {
+#blog-title h1:before,
+#blog-title h1:after {
+  content: "";
+  display: table;
+}
+#blog-title h1:after {
+  clear: both;
+}
+#blog-title .depth {
   display: block;
-  margin: 0 auto;
   color: #08618f;
   position: relative;
 }
-.depth:before,
-.depth:after {
+#blog-title .depth:before,
+#blog-title .depth:after {
   content: attr(title);
   color: rgba(255, 255, 255, 0.1);
   position: absolute;
-  padding-top: 15px;
 }
-.depth:before {
+#blog-title .depth:before {
   top: 1px;
-  left: 101px;
+  left: 1px;
 }
-.depth:after {
+#blog-title .depth:after {
   top: 2px;
-  left: 102px;
+  left: 2px;
 }
-/** LETTER PRESS BLOGTITLE END **/
 /** LETTERPRESSED LINE START**/
 .letterpress-line {
   display: inline;
@@ -4168,21 +4249,13 @@ ul#desktop-search li#searchfield {
 /************************************************************
 *********************SEARCHFROM.PHP**************************
 ************************************************************/
-::-webkit-input-placeholder {
-  color: red;
-}
 :-moz-placeholder {
   /* Firefox 18- */
 
-  color: red;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
 
-  color: red;
-}
-:-ms-input-placeholder {
-  color: red;
 }
 /************************************************************
 *************************INDEX.PHP***************************
@@ -4205,6 +4278,9 @@ ul#desktop-search li#searchfield {
 }
 /************************************************************
 *************************PAGE.PHP****************************
+************************************************************/
+/************************************************************
+********************PAGE-CAROUSEL.PHP************************
 ************************************************************/
 /************************************************************
 *************************SINGLE.PHP**************************
@@ -4311,6 +4387,12 @@ p.comment-form-url input {
 /************************************************************
 *************************FOOTER.PHP**************************
 ************************************************************/
+footer {
+  background-color: #348d43;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
 /*****************************
 Scroll to top button
 ******************************/
@@ -4342,9 +4424,3 @@ Scroll to top button
 /************************************************************
 *************************DEBUGGING***************************
 ************************************************************/
-#debuginfo {
-  display: inline;
-  float: left;
-  width: 97.91666666666666%;
-  margin: 0 1.0416666666666665%;
-}
