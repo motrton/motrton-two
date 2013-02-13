@@ -3968,10 +3968,6 @@ img.avatar {
   width: 100px;
   height: 100px;
 }
-p a img {
-  max-width: 80% !important;
-  height: auto;
-}
 /************************************
 // GRIDS!
 *************************************/
@@ -4011,9 +4007,9 @@ section#post {
 section#carousel {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 81.25%;
   margin: 0 1.0416666666666665%;
-  margin-left: 17.708333333333332%;
+  margin-left: 9.374999999999998%;
 }
 section#page {
   display: inline;
@@ -4166,6 +4162,25 @@ div#scrolltop-grid {
 *************************HEADER.PHP**************************
 ************************************************************/
 /************************************************************
+************************HEADER-NAV.PHP***********************
+************************************************************/
+ul#desktop-search {
+  list-style-type: none;
+  float: right;
+}
+ul#desktop-search li {
+  float: right;
+}
+ul#desktop-search li i {
+  float: right;
+  color: #ffffff;
+  font-size: 2em;
+  text-align: right;
+}
+ul#desktop-search li#searchfield {
+  display: none;
+}
+/************************************************************
 ******************HEADER-BLOGTITLE.PHP***********************
 ************************************************************/
 #blog-logo {
@@ -4206,6 +4221,9 @@ div#scrolltop-grid {
   top: 2px;
   left: 2px;
 }
+/************************************************************
+************SNIPPET-LETTERPRESSLINE.PHP**********************
+************************************************************/
 /** LETTERPRESSED LINE START**/
 .letterpress-line {
   display: inline;
@@ -4218,22 +4236,6 @@ div#scrolltop-grid {
   margin-left: 15px;
 }
 /** LETTERPRESSED LINE END **/
-ul#desktop-search {
-  list-style-type: none;
-  float: right;
-}
-ul#desktop-search li {
-  float: right;
-}
-ul#desktop-search li i {
-  float: right;
-  color: #ffffff;
-  font-size: 2em;
-  text-align: right;
-}
-ul#desktop-search li#searchfield {
-  display: none;
-}
 /************************************************************
 *********************SEARCHFROM.PHP**************************
 ************************************************************/

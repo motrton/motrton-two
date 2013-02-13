@@ -84,10 +84,10 @@ img.avatar{
   height:100px;
 }
 
-p a img {
-  max-width: 80% !important;
-  height: auto;
-}
+// p a img {
+//   max-width: 80% !important;
+//   height: auto;
+// }
 
 
 /************************************
@@ -117,8 +117,8 @@ section#post {
 }
 
 section#carousel{
-  .column(8);
-  .push(2);
+  .column(10);
+  .push(1);
 }
 section#page{
     .column(8);
@@ -208,7 +208,26 @@ ul#desktop-navbar{
 #topbar{
 
 }
+/************************************************************
+************************HEADER-NAV.PHP***********************
+************************************************************/
 
+ul#desktop-search{
+  list-style-type: none;
+  float:right;
+  li{
+      float:right;
+    i{
+      float:right;
+      color:@white;
+      font-size: 2em;
+      text-align: right;
+    }
+  }
+  li#searchfield{
+   display:none;
+  }
+}
 
 /************************************************************
 ******************HEADER-BLOGTITLE.PHP***********************
@@ -260,6 +279,10 @@ ul#desktop-navbar{
 /** LETTER PRESS BLOGTITLE END **/
 }
 
+/************************************************************
+************SNIPPET-LETTERPRESSLINE.PHP**********************
+************************************************************/
+
 /** LETTERPRESSED LINE START**/
 
 .letterpress-line{
@@ -271,23 +294,6 @@ ul#desktop-navbar{
 }
 /** LETTERPRESSED LINE END **/
 
-
-ul#desktop-search{
-  list-style-type: none;
-  float:right;
-  li{
-      float:right;
-    i{
-      float:right;
-      color:@white;
-      font-size: 2em;
-      text-align: right;
-    }
-  }
-  li#searchfield{
-   display:none;
-  }
-}
 /************************************************************
 *********************SEARCHFROM.PHP**************************
 ************************************************************/
