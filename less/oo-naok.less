@@ -6,11 +6,6 @@
 @import url('animate.less');
 
 
-/*body{
-font-family: 'Source Sans Pro', sans-serif;
-font-size: 100%;
-}*/
-
 a:link {
 	color: @greenmid;
 }
@@ -164,39 +159,10 @@ footer a {
 	cursor: auto;
 }
 
-// --- Lupe
-ul#desktop-search {
-	list-style-type: none;
-	position: absolute;
-	float: right;
-	top: -10px ;
-	right: 50px;
-	li {
-		float: right;
-	i {
-		float: right;
-		color: @chamois;
-		font-size: 1.6em;
-		text-align: right;
-		margin-top: 0.1em;
-	}
-	}
-	li#searchfield {
-		display: none;
-  	}
-}
-
 // --- Navi
 .sf-menu {
 	line-height: 0.6em;
 }
-
-/*li.page-item {
-	a {
-		font-family: 'SourceSansProSemibold', sans-serif;
-		font-size-adjust: 0.0;
-	}
-}*/
 
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
@@ -262,21 +228,46 @@ ul#desktop-search {
 	box-shadow: inset 0px 1px 0px 0px @greenlight;
 }
 
+#desktop-search {
+	right: 5em;
+}
+
+/*/ --- Lupe
+ul#desktop-search {
+	list-style-type: none;
+	position: absolute;
+	float: right;
+	top: -10px ;
+	right: 50px;
+	li {
+		float: right;
+	i {
+		float: right;
+		color: @chamois;
+		font-size: 1.4em;
+		text-align: right;
+		margin-top: 0em;
+	}
+	}
+	li#searchfield {
+		display: none;
+  	}
+}*/
+
+
 // --- Searchform 1. Instanz
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 0.8em;
-	font-family: 'SourceSansProSemibold', sans-serif;
+/*.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+	font-size: 0.6em;
+	font-family: 'SourceSansProBold', sans-serif;
 	font-size-adjust: 0.0;
 	color: (@chamois - #444);
 	padding-left: 0.7em;
-}
+}*/
 
-.ui-widget{
+/*.ui-widget{
 	form#searchform{
-		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 0.8em;
-		font-family: 'SourceSansProSemibold', sans-serif;
+		font-family: 'SourceSansProBold', sans-serif;
 		font-size-adjust: 0.0;
 		color: (@chamois - #333); 
 		padding-left: 0.7em;
@@ -315,7 +306,5 @@ ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
 		a.ui-corner-all:hover {
 		}
   	}
-}
-
-
+}*/
 
