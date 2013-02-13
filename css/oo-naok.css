@@ -3543,26 +3543,9 @@ a:hover {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-#site-title #blogtitle img#logo {
-  padding-top: 30px;
-}
-#site-title #blogtitle span#blogname {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  font-size: 3em;
-}
-.depth:before,
-.depth:after {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 .letterpress-line {
   margin-top: 0.9em;
   margin-bottom: 3em;
-}
-.depth {
-  color: #003f6d;
-  letter-spacing: -1px;
 }
 .entry-content ol li {
   color: #3c3c3b;
