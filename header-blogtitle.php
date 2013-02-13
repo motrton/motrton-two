@@ -19,3 +19,4 @@
     </div>
     </section>
 </div>
+<?php get_template_part( 'snippets','letterpressline'); ?>

@@ -4018,9 +4018,9 @@ section#carousel {
 section#page {
   display: inline;
   float: left;
-  width: 81.25%;
+  width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
+  margin-left: 17.708333333333332%;
 }
 section#author-page {
   display: inline;
@@ -4183,18 +4183,9 @@ div#scrolltop-grid {
 
 }
 #blog-title h1 {
-  *zoom: 1;
   font-family: 'SourceSansProBold', sans-serif;
   font-size: 3.0em;
   letter-spacing: -1px;
-}
-#blog-title h1:before,
-#blog-title h1:after {
-  content: "";
-  display: table;
-}
-#blog-title h1:after {
-  clear: both;
 }
 #blog-title .depth {
   display: block;
