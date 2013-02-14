@@ -4389,6 +4389,7 @@ footer {
   width: 100%;
   margin-left: 0px;
   margin-right: 0px;
+  text-align: center;
 }
 /*****************************
 Scroll to top button
@@ -4397,7 +4398,7 @@ Scroll to top button
   background-color: #348d43;
   position: fixed;
   bottom: 0px;
-  padding: 5px 5px 10px 5px;
+  padding: 5px 5px 20px 5px;
   display: none;
 }
 #scrolltop-grid #scrolltop a {

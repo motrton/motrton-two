@@ -34,21 +34,23 @@
         </div>
        
         <!-- content -->
+    
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article id="column-content" class="entry-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <h2 class="entry-title"><span class="post-title">"<?php the_title(); ?>"</span> </h2>
-  <?php
 
+  <?php
     $content = get_the_content();
     $postOutput = preg_replace(array('{<a[^>]*><img[^>]+.}','{></a>}'),'', $content);
+    // echo '<p>';
     echo $postOutput;
+    // echo '</p>';
   ?>
+
 </article>
   <?php endwhile; else: ?>
     <?php _e('Sorry, this page does not exist.'); ?>
   <?php endif; ?>
-
-
 
 
 </section>

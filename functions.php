@@ -240,25 +240,25 @@ function motrton_two_widgets_init() {
 		'after_title' => '</h5>',
 	) );
 
-	register_sidebar( array(
-		'name' => __( 'First Front Page Widget Area', 'motrton_two' ),
-		'id' => 'sidebar-2',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
-		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		// 'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
+	// register_sidebar( array(
+	// 	'name' => __( 'First Blog Index Page Widget Area', 'motrton_two' ),
+	// 	'id' => 'sidebar-2',
+	// 	'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
+	// 	// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	// 	// 'after_widget' => '</aside>',
+	// 	'before_title' => '<h3 class="widget-title">',
+	// 	'after_title' => '</h3>',
+	// ) );
 
-	register_sidebar( array(
-		'name' => __( 'Second Front Page Widget Area', 'motrton_two' ),
-		'id' => 'sidebar-3',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
-		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		// 'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
+	// register_sidebar( array(
+	// 	'name' => __( 'Second Blog Index Page Widget Area', 'motrton_two' ),
+	// 	'id' => 'sidebar-3',
+	// 	'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
+	// 	// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	// 	// 'after_widget' => '</aside>',
+	// 	'before_title' => '<h3 class="widget-title">',
+	// 	'after_title' => '</h3>',
+	// ) );
 }
 add_action( 'widgets_init', 'motrton_two_widgets_init' );
 
@@ -278,6 +278,15 @@ function mytheme_content_ad( $content ) {
     return $filteredcontent;
 }
 
+
+// add_filter('the_content', 'strip_images',2);
+// function strip_images($content){
+//     if (is_page( 'twocolumn' )){
+//    return '<p>' . preg_replace('/<img[^>]+./','',$content) . '</p>';
+//     }else{
+//         return $content;
+//     }
+// }
 
 // DEVELOPMENT TOOL
 // For debugging - show template file

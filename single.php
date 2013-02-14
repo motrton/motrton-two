@@ -8,7 +8,6 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
    <!-- include content.php -->
     <?php get_template_part( 'content'); ?>
-
     <?php get_template_part( 'nav','single'); ?>
     <?php get_template_part( 'snippets','letterpresslinefluid'); ?>
 
