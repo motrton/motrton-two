@@ -46,7 +46,8 @@
          <br>
         </div>
     </article>
-    <br>
+    <?php get_template_part( 'snippets','letterpresslinefluid'); ?>
+
     <?php endwhile; else: ?>
     <p>
     <?php __('Leider gibt es keinen Post.'); ?>

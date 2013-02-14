@@ -4165,6 +4165,8 @@ div#scrolltop-grid {
 ************************HEADER-NAV.PHP***********************
 ************************************************************/
 ul#desktop-search {
+  position: absolute;
+  top: -10px;
   list-style-type: none;
   float: right;
 }
@@ -4174,7 +4176,7 @@ ul#desktop-search li {
 ul#desktop-search li i {
   float: right;
   color: #ffffff;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: right;
 }
 ul#desktop-search li#searchfield {
@@ -4230,6 +4232,11 @@ ul#desktop-search li#searchfield {
   float: left;
   width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+.letterpress-line-fluid {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.9);
   margin: 0;
@@ -4314,12 +4321,13 @@ article.comment .comment-sourround {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+.reply {
+  text-align: right;
+  padding-bottom: 1em;
+}
 li.comment {
   padding-top: 1em;
   padding-bottom: 1em;
-}
-ol.commentlist li.comment {
-  border-bottom: 1px solid;
 }
 /* comment form mixin for the std fields */
 /* Wrapper div for the entire comment form. */

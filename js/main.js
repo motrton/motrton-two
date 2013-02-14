@@ -156,13 +156,10 @@ jQuery(window).resize(mediaqueries($));
 jQuery(document).ready(function($){
 superfish($);
 linkIcons($);
-// scrolltop_pos($);
 
-// $("span#blogname").fitText(1.2);
 
 $(window).resize(function() {
         superfish($);
-        // scrolltop_pos($);
     });
 
 
@@ -174,6 +171,7 @@ $(window).scroll(function() {
     }
 });
 
+$('label > span.required').replaceWith('<span class="required"><i class="icon-asterisk"></i></span>');
 //http://docs.jquery.com/UI/Effects/toggle
 //effect String
 // The effect to be used. Possible values:
@@ -196,6 +194,7 @@ $("a[href='#top']").click(function() {
   $("html, body").animate({ scrollTop: 0 }, "slow");
   return false;
 });
+
 
 // $('ul#desktop-search>li').last().css('background-color', 'red');
 // // depthLetterpress($);

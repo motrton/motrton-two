@@ -219,6 +219,8 @@ ul#desktop-navbar{
 ************************************************************/
 
 ul#desktop-search{
+  position:absolute;
+  top:-10px;
   list-style-type: none;
   float:right;
   li{
@@ -226,7 +228,7 @@ ul#desktop-search{
     i{
       float:right;
       color:@white;
-      font-size: 2em;
+      font-size: 1.5em;
       text-align: right;
     }
   }
@@ -293,6 +295,12 @@ ul#desktop-search{
 
 .letterpress-line{
   .column(12);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+.letterpress-line-fluid{
+  // .column(12);
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
     margin: 0;
@@ -432,7 +440,10 @@ span.says{}
 .fn{}
 .comment-meta{}
 .commentmetadata{}
-.reply{}
+.reply{
+  text-align: right;
+  padding-bottom: 1em;
+}
 
 li.comment{
   padding-top: 1em;
@@ -451,7 +462,7 @@ h2.comments-title{}
 
 ol.commentlist{
   li.comment{
-    border-bottom: 1px solid;
+    // border-bottom: 1px solid;
   }
 }
 .comment-nav-below{}

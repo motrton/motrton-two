@@ -46,7 +46,7 @@ add_action('init', 'my_styles');
 add_action('wp_footer', 'show_template');
 
 //add placeholder text to comment forms
-// add_filter('comment_form_default_fields','motrton_two_comment_placeholders');
+add_filter('comment_form_default_fields','motrton_two_comment_placeholders');
 }
 add_action( 'init', 'my_autocomplete' );
 
@@ -345,6 +345,7 @@ function motrton_two_comment_placeholders( $fields ){
             . '"',
         $fields['author']
     );
+
     $fields['email'] = str_replace(
         '<input id="email" name="email" type="text"',
         /* We use a proper type attribute to make use of the browser’s
@@ -411,7 +412,7 @@ function motrton_two_comment( $comment, $args, $depth ) {
                     <?php edit_comment_link( '<i class="icon-edit"></i>' .__( '(Editieren)', 'motrton_two' ), ' ' );
                     ?>
                 </span><!-- .comment-meta .commentmetadata -->
-            </div class="comment-sourround">
+            </div> <!-- close class="comment-sourround" -->
 
             <div class="comment-content"><?php comment_text(); ?></div>
 
@@ -425,6 +426,7 @@ function motrton_two_comment( $comment, $args, $depth ) {
                 ) ) ); ?>
             </div><!-- .reply -->
         </article><!-- #comment-## -->
+            <?php get_template_part( 'snippets','letterpresslinefluid'); ?>
 
     <?php
         echo "<!-- END FUNTIONS.PHP COMMNENTS CALLBACK -->";

@@ -7,5 +7,5 @@
  * @since motrton-two 0.1
  */
 ?>
-<div class="letterpress-line">
+<div class="letterpress-line-fluid">
 </div>
