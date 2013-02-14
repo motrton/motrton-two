@@ -20,7 +20,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     echo get_avatar( $userid, $size, $default, $alt );
 
     ?> 
-    <h2><?php _e('Über','motrton_two') ?> : <?php echo $curauth->nickname; ?></h2>
+    <h2><?php _e('&Uuml;ber','motrton_two') ?> : <?php echo $curauth->nickname; ?></h2>
     <!-- Check for description -->
     <?php if ( ($curauth->user_description ) !='' ) { ?>
     <p>

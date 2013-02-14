@@ -69,7 +69,7 @@ function theme_options_do_page() {
 				 * A sample text input option
 				 */
 				?>
-				<tr valign="top"><th scope="row"><?php _e( 'Seiten IDs zum Ausschluss aus dem Menü', 'motrton_two' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Seiten IDs zum Ausschluss aus dem Men&uuml;', 'motrton_two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[excludepages]" class="regular-text" type="text" name="motrton-two_options[excludepages]" value="<?php esc_attr_e( $options['excludepages'] ); ?>" />
 						<label class="description" for="motrton-two_options[excludepages]"><?php _e( '', 'motrton-two' ); ?></label>
@@ -111,7 +111,7 @@ function theme_options_do_page() {
 					</td>
 				</tr>
 <!-- carousel -->
-				<tr valign="top"><th scope="row"><?php _e( 'Seiten IDs für Karusell Seiten-Template', 'motrton-two' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Seiten IDs f&uuml;r Karusell Seiten-Template', 'motrton-two' ); ?></th>
 					<td>
 						<input id="motrton-two_options[carouselpages]" class="regular-text" type="text" name="motrton-two_options[carouselpages]" value="<?php esc_attr_e( $options['carouselpages'] ); ?>" />
 						<label class="description" for="motrton-two_options[carouselpages]"><?php _e( '', 'motrton_two' ); ?></label>

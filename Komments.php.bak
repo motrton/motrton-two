@@ -22,6 +22,7 @@
     if ( post_password_required() )
         return;
 ?>
+
     <!-- THIS IS COMMENTS.PHP -->
     <div id="comments" class="comments-area">
     <?php // You can start editing here -- including this comment! ?>
@@ -91,7 +92,7 @@
     // 'comment_notes_after'  => __('','motrton_two'),
     // 'comment_field' => '<div><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"  placeholder="your comment"></textarea></div>',
     'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Du bist eingeloggt als <a href="%1$s">%2$s</a>. Willst du dich <a href="%3$s" title="Log out of this account"> ausloggen?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>',
-    'comment_notes_before' => "<span id=\"comment-notes-before\">" . __('Deine E-Mail-Adresse wird nicht ver&ouml;ffentlicht. Erforderliche Felder sind mit * markiert','motrton_two') ."</span>");
+    'comment_notes_before' => "<span id=\"comment-notes-before\">" . __('Deine E-Mail-Adresse wird nicht veröffentlicht. Erforderliche Felder sind mit * markiert','motrton_two') ."</span>");
     comment_form($comment_args);
     ?>
 
