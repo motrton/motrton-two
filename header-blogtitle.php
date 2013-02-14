@@ -12,7 +12,7 @@
     <!-- lets try this gaine -->
     <section id="blog-head">
       <div id="blog-logo">
-    <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="" id="blog-logo">
+    <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="" id="logo">
     </div>
     <div id="blog-title">
      <h1 id="blogname" class="depth animated fadeIn" title="<?php bloginfo('name') ?>"><?php bloginfo('name') ?></h1>
