@@ -47,13 +47,16 @@ add_action('wp_footer', 'show_template');
 
 //add placeholder text to comment forms
 add_filter('comment_form_default_fields','motrton_two_comment_placeholders');
-}
 add_action( 'init', 'my_autocomplete' );
 
+}
+
 add_action('after_setup_theme', 'my_theme_setup');
+
 function my_theme_setup(){
     load_theme_textdomain('motrton-two', get_template_directory_uri() . '/lang');
 }
+
 add_filter('excerpt_more', 'new_excerpt_more');
 
 function new_excerpt_more($more) {
