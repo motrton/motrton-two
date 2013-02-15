@@ -150,7 +150,7 @@ $('div#debuginfo').append('<br>' + res);
 //     });
 //  });
 
-jQuery(window).resize(mediaqueries($));
+// jQuery(window).resize(mediaqueries($));
 
 
 jQuery(document).ready(function($){
