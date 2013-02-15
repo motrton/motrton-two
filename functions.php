@@ -47,7 +47,7 @@ add_action('wp_footer', 'show_template');
 
 //add placeholder text to comment forms
 add_filter('comment_form_default_fields','motrton_two_comment_placeholders');
-add_action( 'init', 'my_autocomplete' );
+// add_action( 'init', 'my_autocomplete' );
 
 }
 
