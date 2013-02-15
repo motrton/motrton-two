@@ -40,11 +40,26 @@
         <h2 class="entry-title"><span class="post-title">"<?php the_title(); ?>"</span> </h2>
 
   <?php
-    $content = get_the_content();
-    $postOutput = preg_replace(array('{<a[^>]*><img[^>]+.}','{></a>}'),'', $content);
-    // echo '<p>';
-    echo $postOutput;
+
+    $dom = new DOMDocument;
+    $dom->loadHTML(get_the_content());
+    $xpath = new DOMXPath($dom);
+    $nodes = $xpath->query('//img|//a[img]'); 
+foreach($nodes as $node) {
+    $node->parentNode->removeChild($node);
+    }
+    $no_image_content = $dom->saveHTML();
+    $no_image_content = apply_filters('the_content', $no_image_content);
+    $no_image_content = str_replace(']]>', ']]&gt;', $no_image_content);
+    echo $no_image_content;
+
+    // $content = get_the_content();
+    // $postOutput = preg_replace(array('{<a[^>]*><img[^>]+.}','{></a>}'),'', $content);
+    // // echo '<p>';
+    // echo $postOutput;
     // echo '</p>';
+    // 
+    // 
   ?>
 
 </article>
