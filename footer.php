@@ -1,6 +1,7 @@
 </div> <!-- close wreppaer in header.php -->
 <?php wp_footer(); ?>
 <!-- this is FOOTER.PHP -->
+<?php get_template_part( 'snippets','letterpressline'); ?>
 
     <footer>
                 <?php

@@ -4,7 +4,9 @@
 <div class="container">
 <!-- <section id="indexed"> -->
     <div class="rows">
+      <?php $post_counter = 0; ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <?php $post_counter++; ?>
     <article class="rowitem">
         <h2><a href="<?php the_permalink(); ?> "><i class="icon-hand-right"></i> <?php the_title_attribute(); ?></a></h2>
         <div class="thumb">
@@ -46,7 +48,9 @@
          <br>
         </div>
     </article>
-    <br>
+    <?php if( $post_counter != count( $posts ) ): ?>
+    <?php get_template_part( 'snippets','letterpresslinefluid'); ?>
+        <?php endif; ?>
     <?php endwhile; else: ?>
     <p>
     <?php __('Leider gibt es keinen Post.'); ?>

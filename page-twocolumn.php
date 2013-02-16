@@ -34,21 +34,38 @@
         </div>
        
         <!-- content -->
+    
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article id="column-content" class="entry-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <h2 class="entry-title"><span class="post-title">"<?php the_title(); ?>"</span> </h2>
+
   <?php
 
-    $content = get_the_content();
-    $postOutput = preg_replace(array('{<a[^>]*><img[^>]+.}','{></a>}'),'', $content);
-    echo $postOutput;
+    $dom = new DOMDocument;
+    $dom->loadHTML(get_the_content());
+    $xpath = new DOMXPath($dom);
+    $nodes = $xpath->query('//img|//a[img]'); 
+foreach($nodes as $node) {
+    $node->parentNode->removeChild($node);
+    }
+    $no_image_content = $dom->saveHTML();
+    $no_image_content = apply_filters('the_content', $no_image_content);
+    $no_image_content = str_replace(']]>', ']]&gt;', $no_image_content);
+    echo $no_image_content;
+
+    // $content = get_the_content();
+    // $postOutput = preg_replace(array('{<a[^>]*><img[^>]+.}','{></a>}'),'', $content);
+    // // echo '<p>';
+    // echo $postOutput;
+    // echo '</p>';
+    // 
+    // 
   ?>
+
 </article>
   <?php endwhile; else: ?>
     <?php _e('Sorry, this page does not exist.'); ?>
   <?php endif; ?>
-
-
 
 
 </section>

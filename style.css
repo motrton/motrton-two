@@ -3968,10 +3968,6 @@ img.avatar {
   width: 100px;
   height: 100px;
 }
-p a img {
-  max-width: 80% !important;
-  height: auto;
-}
 /************************************
 // GRIDS!
 *************************************/
@@ -4011,16 +4007,16 @@ section#post {
 section#carousel {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 81.25%;
   margin: 0 1.0416666666666665%;
-  margin-left: 17.708333333333332%;
+  margin-left: 9.374999999999998%;
 }
 section#page {
   display: inline;
   float: left;
-  width: 81.25%;
+  width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
+  margin-left: 17.708333333333332%;
 }
 section#author-page {
   display: inline;
@@ -4166,6 +4162,27 @@ div#scrolltop-grid {
 *************************HEADER.PHP**************************
 ************************************************************/
 /************************************************************
+************************HEADER-NAV.PHP***********************
+************************************************************/
+ul#desktop-search {
+  position: absolute;
+  top: -10px;
+  list-style-type: none;
+  float: right;
+}
+ul#desktop-search li {
+  float: right;
+}
+ul#desktop-search li i {
+  float: right;
+  color: #ffffff;
+  font-size: 1.5em;
+  text-align: right;
+}
+ul#desktop-search li#searchfield {
+  display: none;
+}
+/************************************************************
 ******************HEADER-BLOGTITLE.PHP***********************
 ************************************************************/
 #blog-logo {
@@ -4183,18 +4200,9 @@ div#scrolltop-grid {
 
 }
 #blog-title h1 {
-  *zoom: 1;
   font-family: 'SourceSansProBold', sans-serif;
   font-size: 3.0em;
   letter-spacing: -1px;
-}
-#blog-title h1:before,
-#blog-title h1:after {
-  content: "";
-  display: table;
-}
-#blog-title h1:after {
-  clear: both;
 }
 #blog-title .depth {
   display: block;
@@ -4215,6 +4223,9 @@ div#scrolltop-grid {
   top: 2px;
   left: 2px;
 }
+/************************************************************
+************SNIPPET-LETTERPRESSLINE.PHP**********************
+************************************************************/
 /** LETTERPRESSED LINE START**/
 .letterpress-line {
   display: inline;
@@ -4224,25 +4235,13 @@ div#scrolltop-grid {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.9);
   margin: 0;
-  margin-left: 15px;
+}
+.letterpress-line-fluid {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  margin: 0;
 }
 /** LETTERPRESSED LINE END **/
-ul#desktop-search {
-  list-style-type: none;
-  float: right;
-}
-ul#desktop-search li {
-  float: right;
-}
-ul#desktop-search li i {
-  float: right;
-  color: #ffffff;
-  font-size: 2em;
-  text-align: right;
-}
-ul#desktop-search li#searchfield {
-  display: none;
-}
 /************************************************************
 *********************SEARCHFROM.PHP**************************
 ************************************************************/
@@ -4322,12 +4321,13 @@ article.comment .comment-sourround {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+.reply {
+  text-align: right;
+  padding-bottom: 1em;
+}
 li.comment {
   padding-top: 1em;
   padding-bottom: 1em;
-}
-ol.commentlist li.comment {
-  border-bottom: 1px solid;
 }
 /* comment form mixin for the std fields */
 /* Wrapper div for the entire comment form. */
@@ -4389,6 +4389,7 @@ footer {
   width: 100%;
   margin-left: 0px;
   margin-right: 0px;
+  text-align: center;
 }
 /*****************************
 Scroll to top button
@@ -4397,7 +4398,7 @@ Scroll to top button
   background-color: #348d43;
   position: fixed;
   bottom: 0px;
-  padding: 5px 5px 10px 5px;
+  padding: 5px 5px 20px 5px;
   display: none;
 }
 #scrolltop-grid #scrolltop a {

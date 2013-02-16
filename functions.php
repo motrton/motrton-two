@@ -25,7 +25,7 @@ if( !is_admin() ){
 // add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
 //superfish scripts js
 add_action('wp_enqueue_scripts','superfish_script_with_jquery');
-add_action('wp_enqueue_scripts','fittext_script_with_jquery');
+// add_action('wp_enqueue_scripts','fittext_script_with_jquery');
 
 add_action('wp_enqueue_scripts','combobox_with_jqueryui');
 
@@ -47,13 +47,16 @@ add_action('wp_footer', 'show_template');
 
 //add placeholder text to comment forms
 add_filter('comment_form_default_fields','motrton_two_comment_placeholders');
+// add_action( 'init', 'my_autocomplete' );
+
 }
-add_action( 'init', 'my_autocomplete' );
 
 add_action('after_setup_theme', 'my_theme_setup');
+
 function my_theme_setup(){
     load_theme_textdomain('motrton-two', get_template_directory_uri() . '/lang');
 }
+
 add_filter('excerpt_more', 'new_excerpt_more');
 
 function new_excerpt_more($more) {
@@ -148,8 +151,9 @@ function my_autocomplete_suggestions(){
  */
 function superfish_script_with_jquery(){
 wp_register_script( 'hoverintent-script', get_template_directory_uri() . '/js/hoverIntent.js', array( 'jquery' ) );
-wp_enqueue_script( 'hoverintent-script' );
+
 wp_register_script( 'superfish-script', get_template_directory_uri() . '/js/superfish.js', array( 'jquery' ) );
+wp_enqueue_script( 'hoverintent-script' );
 wp_enqueue_script( 'superfish-script' );
 }
 
@@ -240,25 +244,25 @@ function motrton_two_widgets_init() {
 		'after_title' => '</h5>',
 	) );
 
-	register_sidebar( array(
-		'name' => __( 'First Front Page Widget Area', 'motrton_two' ),
-		'id' => 'sidebar-2',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
-		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		// 'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
+	// register_sidebar( array(
+	// 	'name' => __( 'First Blog Index Page Widget Area', 'motrton_two' ),
+	// 	'id' => 'sidebar-2',
+	// 	'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
+	// 	// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	// 	// 'after_widget' => '</aside>',
+	// 	'before_title' => '<h3 class="widget-title">',
+	// 	'after_title' => '</h3>',
+	// ) );
 
-	register_sidebar( array(
-		'name' => __( 'Second Front Page Widget Area', 'motrton_two' ),
-		'id' => 'sidebar-3',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
-		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		// 'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
+	// register_sidebar( array(
+	// 	'name' => __( 'Second Blog Index Page Widget Area', 'motrton_two' ),
+	// 	'id' => 'sidebar-3',
+	// 	'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'motrton_two' ),
+	// 	// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	// 	// 'after_widget' => '</aside>',
+	// 	'before_title' => '<h3 class="widget-title">',
+	// 	'after_title' => '</h3>',
+	// ) );
 }
 add_action( 'widgets_init', 'motrton_two_widgets_init' );
 
@@ -278,6 +282,15 @@ function mytheme_content_ad( $content ) {
     return $filteredcontent;
 }
 
+
+// add_filter('the_content', 'strip_images',2);
+// function strip_images($content){
+//     if (is_page( 'twocolumn' )){
+//    return '<p>' . preg_replace('/<img[^>]+./','',$content) . '</p>';
+//     }else{
+//         return $content;
+//     }
+// }
 
 // DEVELOPMENT TOOL
 // For debugging - show template file
@@ -345,6 +358,7 @@ function motrton_two_comment_placeholders( $fields ){
             . '"',
         $fields['author']
     );
+
     $fields['email'] = str_replace(
         '<input id="email" name="email" type="text"',
         /* We use a proper type attribute to make use of the browser’s
@@ -411,7 +425,7 @@ function motrton_two_comment( $comment, $args, $depth ) {
                     <?php edit_comment_link( '<i class="icon-edit"></i>' .__( '(Editieren)', 'motrton_two' ), ' ' );
                     ?>
                 </span><!-- .comment-meta .commentmetadata -->
-            </div class="comment-sourround">
+            </div> <!-- close class="comment-sourround" -->
 
             <div class="comment-content"><?php comment_text(); ?></div>
 
@@ -425,6 +439,7 @@ function motrton_two_comment( $comment, $args, $depth ) {
                 ) ) ); ?>
             </div><!-- .reply -->
         </article><!-- #comment-## -->
+            <?php get_template_part( 'snippets','letterpresslinefluid'); ?>
 
     <?php
         echo "<!-- END FUNTIONS.PHP COMMNENTS CALLBACK -->";
@@ -432,5 +447,4 @@ function motrton_two_comment( $comment, $args, $depth ) {
     endswitch;
 }
 endif; // ends check for motrton_two_comment()
-
- ?>
+?>

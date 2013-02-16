@@ -28,49 +28,8 @@ echo "<link rel=\"stylesheet\" href=\"" . $templateurl ."/css/biographia.css\" t
 </head>
 <body>
 <header>
-    <!-- START DESKTOP NAV -->
-<div class="thetopnav" id="topbar">
-<ul class="sf-menu sf-navbar" id="desktop-navbar">
-<!-- wp_list_pages start -->
-<li class="page-item" id="en-de" ><a href="#">EN|DE</a>
-</li>
-        <?php
-        
-        $options = get_option('motrton-two_options');
+<?php get_template_part( 'header','nav'); ?>
 
-$args = array(
-    'depth'        => 0,
-    'show_date'    => '',
-    'date_format'  => get_option('date_format'),
-    'child_of'     => 0,
-    'exclude'      =>  $options['excludepages'],
-    'include'      => '',
-    'title_li'     => __(''),
-    'echo'         => 1,
-    'authors'      => '',
-    'sort_column'  => 'menu_order, post_title',
-    'link_before'  => '',
-    'link_after'   => '',
-    'walker'       => '',
-    'post_type'    => 'page',
-    'post_status'  => 'publish' 
-);
- wp_list_pages( $args );
-?>
-<!--
-Searchform
-found here:
-http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
--->
-</ul>
-
-<ul id="desktop-search">
-<li><i id="revealsearch" class=" icon-search"></i></li>
- <li id="searchfield"> 
-<?php get_search_form(); ?>
-</li>
-</ul>
-</div>
 </header>
 <div id="wrapper">
 <!-- END HEADER.PHP -->

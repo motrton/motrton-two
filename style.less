@@ -10,6 +10,12 @@ Tags: responsive, white,
 License: MIT
 
 */
+
+// youre reading source code?
+// thats awsome!
+// Feel free to ask me anything on the social networks
+// look for @fabiantheblind
+
 @import 'less/fonts.less';
 @import 'less/normalize.less';
 @import 'less/grid.less';
@@ -53,7 +59,6 @@ body{
 .container{
   width:960px;
   margin:0 auto;
-  
   img{
     width:100%;
     height:auto;
@@ -85,10 +90,10 @@ img.avatar{
   height:100px;
 }
 
-p a img {
-  max-width: 80% !important;
-  height: auto;
-}
+// p a img {
+//   max-width: 80% !important;
+//   height: auto;
+// }
 
 
 /************************************
@@ -118,12 +123,12 @@ section#post {
 }
 
 section#carousel{
-  .column(8);
-  .push(2);
+  .column(10);
+  .push(1);
 }
 section#page{
-    .column(10);
-    .push(1);
+    .column(8);
+    .push(2);
 }
 section#author-page{
       .column(8);
@@ -209,7 +214,28 @@ ul#desktop-navbar{
 #topbar{
 
 }
+/************************************************************
+************************HEADER-NAV.PHP***********************
+************************************************************/
 
+ul#desktop-search{
+  position:absolute;
+  top:-10px;
+  list-style-type: none;
+  float:right;
+  li{
+      float:right;
+    i{
+      float:right;
+      color:@white;
+      font-size: 1.5em;
+      text-align: right;
+    }
+  }
+  li#searchfield{
+   display:none;
+  }
+}
 
 /************************************************************
 ******************HEADER-BLOGTITLE.PHP***********************
@@ -233,7 +259,7 @@ ul#desktop-navbar{
 
 #blog-title{
   h1{
-    .clearfix;
+    // .clearfix;
   font-family: 'SourceSansProBold', sans-serif;
   font-size: 3.0em;
   letter-spacing: -1px;
@@ -261,6 +287,10 @@ ul#desktop-navbar{
 /** LETTER PRESS BLOGTITLE END **/
 }
 
+/************************************************************
+************SNIPPET-LETTERPRESSLINE.PHP**********************
+************************************************************/
+
 /** LETTERPRESSED LINE START**/
 
 .letterpress-line{
@@ -268,27 +298,15 @@ ul#desktop-navbar{
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
     margin: 0;
-    margin-left: 15px;
+}
+.letterpress-line-fluid{
+  // .column(12);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    margin: 0;
 }
 /** LETTERPRESSED LINE END **/
 
-
-ul#desktop-search{
-  list-style-type: none;
-  float:right;
-  li{
-      float:right;
-    i{
-      float:right;
-      color:@white;
-      font-size: 2em;
-      text-align: right;
-    }
-  }
-  li#searchfield{
-   display:none;
-  }
-}
 /************************************************************
 *********************SEARCHFROM.PHP**************************
 ************************************************************/
@@ -422,7 +440,10 @@ span.says{}
 .fn{}
 .comment-meta{}
 .commentmetadata{}
-.reply{}
+.reply{
+  text-align: right;
+  padding-bottom: 1em;
+}
 
 li.comment{
   padding-top: 1em;
@@ -441,7 +462,7 @@ h2.comments-title{}
 
 ol.commentlist{
   li.comment{
-    border-bottom: 1px solid;
+    // border-bottom: 1px solid;
   }
 }
 .comment-nav-below{}
@@ -534,13 +555,12 @@ input#submit { }
 ************************************************************/
 
 
-
 footer{
   background-color: @greendark;
   width:100%;
   margin-left: 0px;
   margin-right: 0px;
-  
+  text-align: center;
 }
 /*****************************
 Scroll to top button
@@ -554,7 +574,7 @@ Scroll to top button
     bottom:0px;
     @ptop:5px;
     @pright:5px;
-    @pbottom:10px;
+    @pbottom:20px;
     @pleft:5px;
     padding:@ptop @pright @pbottom @pleft;
     display: none;
