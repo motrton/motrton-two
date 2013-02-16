@@ -3529,13 +3529,13 @@ body {
   -o-animation-duration: 0.75s;
   animation-duration: 0.75s;
 }
-a:link {
+.container a:link {
   color: #5aa332;
 }
-a:visited {
+.container a:visited {
   color: #98c230;
 }
-a:hover {
+.container a:hover {
   color: #348d43;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -3656,14 +3656,70 @@ h5.widget-title {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+#scrolltop-grid #scrolltop {
+  height: 40px;
+  background-color: #5aa332;
+  padding: 0px 13px 0px 13px;
+  background: #5aa332;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #348d43), color-stop(1, #5aa332));
+  background: -ms-linear-gradient(bottom, #348d43, #5aa332);
+  background: -moz-linear-gradient(center bottom, #348d43 0%, #5aa332 100%);
+  background: -o-linear-gradient(#5aa332, #348d43);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5aa332', endColorstr='#348d43', GradientType=0);
+  -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
+  box-shadow: inset 0px 1px 0px 0px #98c230;
+}
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-size: 1.2em;
+  padding-top: 0.5em;
+}
 footer a {
-  color: #5aa332;
-  font-size: 1.1em;
+  color: #ecdfcb;
+  font-size: 1em;
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
-  line-height: 1.7em;
+  line-height: 2.5em;
+  vertical-align: bottom;
   text-decoration: none;
   cursor: auto;
+}
+footer a a:link {
+  color: #ecdfcb;
+}
+footer a a:visited {
+  color: #ecdfcb;
+}
+footer a a:hover {
+  color: #ecdfcb;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.icon-signin {
+  vertical-align: top;
+  padding-top: 0.6em;
+}
+footer {
+  margin-top: -40px;
+  /* negative value of footer height */
+
+  height: 40px;
+  background: #5aa332;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #348d43), color-stop(1, #5aa332));
+  background: -ms-linear-gradient(bottom, #348d43, #5aa332);
+  background: -moz-linear-gradient(center bottom, #348d43 0%, #5aa332 100%);
+  background: -o-linear-gradient(#5aa332, #348d43);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5aa332', endColorstr='#348d43', GradientType=0);
+  -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
+  box-shadow: inset 0px 1px 0px 0px #98c230;
 }
 /*footer{
 margin-top: -@footerheight; // negative value of footer height //
