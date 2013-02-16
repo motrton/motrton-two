@@ -3542,9 +3542,16 @@ body {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.letterpress-line {
+.letterpress-line,
+.letterpress-line-fluid {
   margin-top: 0.7em;
   margin-bottom: 3em;
+  border-top-width: 0px;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.06));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.06));
 }
 #blog-title .depth {
   color: #00507e;
@@ -3591,6 +3598,10 @@ h2 {
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
   line-height: 150%;
+  font-weight: normal;
+}
+h2 a {
+  font-family: 'SourceSansProRegular', sans-serif;
   font-weight: normal;
 }
 h3 {
@@ -3667,9 +3678,8 @@ h5.widget-title {
   transition: all 0.2s ease-out;
 }
 #scrolltop-grid #scrolltop {
-  height: 40px;
   background-color: #5aa332;
-  padding: 0px 13px 0px 13px;
+  padding: 0px 13px 9px 13px;
   background: #5aa332;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #348d43), color-stop(1, #5aa332));
   background: -ms-linear-gradient(bottom, #348d43, #5aa332);
@@ -3694,7 +3704,8 @@ footer a {
   font-size: 1em;
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
-  line-height: 2.5em;
+  letter-spacing: 1px;
+  line-height: 2.4em;
   vertical-align: bottom;
   text-decoration: none;
   cursor: auto;
@@ -3714,7 +3725,7 @@ footer a a:hover {
 }
 .icon-signin {
   vertical-align: top;
-  padding-top: 0.6em;
+  padding-top: 0.75em;
 }
 footer {
   margin-top: -40px;

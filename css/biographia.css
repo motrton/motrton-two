@@ -1,3 +1,11 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    https://github.com/dmitryf
+    More info at: http://lesselements.com
+    License: This work is dedicated to the public domain and is free for all uses, commercial or otherwise. No form of credit required.
+  ---------------------------------------------------*/
 div#hello-word {
   color: red;
 }

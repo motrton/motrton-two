@@ -20,9 +20,15 @@
 
 @letterpress_pad: 60px;
 
-.letterpress-line {
+.letterpress-line, .letterpress-line-fluid {
 	margin-top: 0.7em;
 	margin-bottom: 3em;
+	border-top-width: 0px;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.06), rgba(0,0,0,0.15), rgba(0,0,0,0.06));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0.06), rgba(0,0,0,0.15), rgba(0,0,0,0.06));
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0.06), rgba(0,0,0,0.15), rgba(0,0,0,0.06));
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0.06), rgba(0,0,0,0.15), rgba(0,0,0,0.06)); 
 }
 
 #blog-title .depth {
@@ -78,6 +84,10 @@ h2 {
 	font-size-adjust: 0.0;
 	line-height: 150%;
 	font-weight: normal;
+	a{
+	font-family: 'SourceSansProRegular', sans-serif;
+	font-weight: normal;
+	}
 }
 
 h3 {
@@ -162,18 +172,24 @@ h5.widget-title {
 }
 
 // --- Scroll-Up
-#scrolltop-grid #scrolltop {
-	height: 40px;
+#scrolltop-grid {
+#scrolltop {
+	//height: 40px;
 	background-color: @greenmid;
-	padding: 0px 13px 0px 13px;
-	.e_gradient (@greenmid, @greendark, @greenmid); 
+	@ptop:0px;
+	@pright:13px;
+	@pbottom:9px;
+	@pleft:13px;
+    padding:@ptop @pright @pbottom @pleft;
+	.e_gradient (@greenmid, @greendark, @greenmid);
 	-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	box-shadow: inset 0px 1px 0px 0px @greenlight;
 	i, cite, em, var, address, dfn {
 		font-size: 1.2em;
-		padding-top: 0.5em;	
+		padding-top: 0.5em;
 	}
+}
 }
 
 footer a {
@@ -181,7 +197,8 @@ footer a {
 	font-size: 1em;
 	font-family: 'SourceSansProSemibold', sans-serif;
 	font-size-adjust: 0.0;
-	line-height: 2.5em;
+	letter-spacing: 1px;
+	line-height: 2.4em;
 	vertical-align: bottom;
 	text-decoration: none;
 	cursor: auto;
@@ -198,7 +215,7 @@ footer a {
 }
 .icon-signin {
 	vertical-align: top;
-	padding-top: 0.6em;
+	padding-top: 0.75em;
 }
 
 @footerheight: 40px;
