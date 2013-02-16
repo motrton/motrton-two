@@ -21,13 +21,28 @@
 @letterpress_pad: 60px;
 
 .letterpress-line {
-	margin-top: 0.9em;
+	margin-top: 0.7em;
 	margin-bottom: 3em;
 }
 
 #blog-title .depth {
 	color: (@blue - #111);
 }
+
+section#blog-head #blog-title {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+section#blog-head #blog-logo {
+	margin-top: 2.7em;
+}
+
+#blog-logo {
+	text-align: center;
+}
+
+
 
 // --- Liste Aufzaehlungen Nummern und Bullet 
 .entry-content ol li {
@@ -155,11 +170,10 @@ h5.widget-title {
 	-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	box-shadow: inset 0px 1px 0px 0px @greenlight;
-}
-
-i, cite, em, var, address, dfn {
-	font-size: 1.2em;
-	padding-top: 0.5em;	
+	i, cite, em, var, address, dfn {
+		font-size: 1.2em;
+		padding-top: 0.5em;	
+	}
 }
 
 footer a {
@@ -205,12 +219,12 @@ height: @footerheight; // sticky-footer!
 
 // --- Navi
 .sf-menu {
-	line-height: 0.6em;
+	line-height: 0.7em;
 }
 
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-	top:			2.2em; /* match top ul list item height */
+	top: 2.2em; /* match top ul list item height */
 	line-height: 0.7em;
 }
 
@@ -274,9 +288,13 @@ height: @footerheight; // sticky-footer!
 
 // --- Lupe
 ul#desktop-search {
+	margin-top: 0.45em;
+	margin-right: 0em;
+	margin-left: 0em;
+	margin-bottom: 0em;
 	position: absolute;
-	top: -10px;
-	right: 50px;
+	top: 0em;
+	right: 5em;
 	li i {
 		color: @chamois;
 		font-size: 1.2em;
@@ -311,6 +329,7 @@ ul#desktop-search {
 	color: (@chamois - #444);
 	padding-left: 0.7em;
 }
+
 
 /*.ui-widget{
 	form#searchform{
@@ -358,7 +377,4 @@ ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
 
 
 
-/*.wp-biographia-container-none{
-    background-color: red !important;
-}*/
 
