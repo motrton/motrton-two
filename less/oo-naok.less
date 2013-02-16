@@ -19,33 +19,14 @@ a:hover {
 
 @letterpress_pad: 60px;
 
-// #site-title {
-// 	#blogtitle {
-// 		img#logo {
-// 			padding-top: 30px;
-// 		}
-// 		span#blogname {
-// 			padding-top: @letterpress_pad;
-// 			padding-bottom: @letterpress_pad;
-//   			font-size: 3em;
-// 		}
-// 	}
-// }
-// .depth:before, .depth:after {
-// 	padding-top: @letterpress_pad;
-// 	padding-bottom: @letterpress_pad;
-// }
-
 .letterpress-line {
 	margin-top: 0.9em;
 	margin-bottom: 3em;
 }
 
-// --- Letterpress
-// .depth {
-// 	color: (@blue - #222);
-// 	letter-spacing: -1px;
-// }
+#blog-title .depth {
+	color: (@blue - #111);
+}
 
 // --- Liste Aufzaehlungen Nummern und Bullet 
 .entry-content ol li {
@@ -68,6 +49,7 @@ h1, h2, h3, h4, h5 {
 h1 {
 	font-size: 1.75em;
 	font-family: 'SourceSansProSemibold', sans-serif;
+	font-weight: normal;
 	font-size-adjust: 0.0;
 	line-height: 120%;
 	letter-spacing: -1px;
@@ -76,6 +58,7 @@ h1 {
 h2 {
 	font-size: 1.25em;
 	font-family: 'SourceSansProSemibold', sans-serif;
+	font-weight: normal;
 	font-size-adjust: 0.0;
 	line-height: 150%;
 	font-weight: normal;
@@ -84,6 +67,7 @@ h2 {
 h3 {
 	font-size: 1.25em;
 	font-family: 'SourceSansProSemibold', sans-serif;
+	font-weight: normal;
 	font-size-adjust: 0.0;
 	line-height: 150%;
 }
@@ -91,31 +75,43 @@ h3 {
 h4 {
 	font-size: 1.25em;
 	font-family: 'SourceSansProLight', sans-serif;
+	font-weight: normal;
 	line-height: 150%;
 }
 
 p {
 	color: @90grey;
 	font-family: 'SourceSansProLight', sans-serif;
+	font-weight: normal;
 	font-size: 1.25em;
 	line-height: 150%;
 	a {
 		text-decoration: none;
 		font-family: 'SourceSansProRegular', sans-serif;
+		font-weight: normal;
 		cursor: auto;
 	}
 	strong {
 		font-family: 'SourceSansProRegular', sans-serif;
+		font-weight: normal;
 		color: @black;
 	}
 	em {
 		font-family: 'SourceSansProLightItalic', sans-serif;
-		font-style: italic;
+		font-weight: normal;
 	}
 }
 
 code {
 	font-family: 'Source Code Pro', sans-serif;
+		font-size: 1em;
+}
+
+.comments-area {
+	code {
+	font-family: 'Source Code Pro', sans-serif;
+	font-size: 0.9em;
+	}
 }
 
 // -- Sidebar
@@ -158,6 +154,12 @@ footer a {
 	text-decoration: none;
 	cursor: auto;
 }
+
+/*footer{
+margin-top: -@footerheight; // negative value of footer height //
+height: @footerheight; // sticky-footer!
+}*/
+
 
 // --- Navi
 .sf-menu {
@@ -228,41 +230,45 @@ footer a {
 	box-shadow: inset 0px 1px 0px 0px @greenlight;
 }
 
-#desktop-search {
-	right: 5em;
+// --- Lupe
+ul#desktop-search {
+	position: absolute;
+	top: -10px;
+	right: 50px;
+	li i {
+		color: @chamois;
+		font-size: 1.2em;
+	}
+}
+// --- Placehoder text styling
+::-webkit-input-placeholder {
+	font-family: 'SourceSansProSemibold', sans-serif;
+	color: (@chamois - #444);
 }
 
-/*/ --- Lupe
-ul#desktop-search {
-	list-style-type: none;
-	position: absolute;
-	float: right;
-	top: -10px ;
-	right: 50px;
-	li {
-		float: right;
-	i {
-		float: right;
-		color: @chamois;
-		font-size: 1.4em;
-		text-align: right;
-		margin-top: 0em;
-	}
-	}
-	li#searchfield {
-		display: none;
-  	}
-}*/
+:-moz-placeholder { /* Firefox 18- */
+	font-family: 'SourceSansProSemibold', sans-serif;
+	color: (@chamois - #444);
+}
 
+::-moz-placeholder {  /* Firefox 19+ */
+	font-family: 'SourceSansProSemibold', sans-serif;
+	color: (@chamois - #444);
+}
+
+:-ms-input-placeholder {
+	font-family: 'SourceSansProSemibold', sans-serif;
+	color: (@chamois - #444);
+}
 
 // --- Searchform 1. Instanz
-/*.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
 	font-size: 0.6em;
 	font-family: 'SourceSansProBold', sans-serif;
 	font-size-adjust: 0.0;
 	color: (@chamois - #444);
 	padding-left: 0.7em;
-}*/
+}
 
 /*.ui-widget{
 	form#searchform{
@@ -306,5 +312,11 @@ ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
 		a.ui-corner-all:hover {
 		}
   	}
+}*/
+
+
+
+/*.wp-biographia-container-none{
+    background-color: red !important;
 }*/
 
