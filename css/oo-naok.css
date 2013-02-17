@@ -3566,18 +3566,18 @@ section#blog-head #blog-logo {
 #blog-logo {
   text-align: center;
 }
-.entry-content ol li {
-  color: #3c3c3b;
-  font-size: 1.25em;
-  font-family: 'SourceSansProLight', sans-serif;
-  line-height: 1.5em;
+/*.entry-content ol li {
+	color: @90grey;
+	font-size: 1.25em;
+	font-family: 'SourceSansProLight', sans-serif;
+	line-height: 1.5em;
 }
 .entry-content ul li {
-  color: #3c3c3b;
-  font-size: 1.25em;
-  font-family: 'SourceSansProLight', sans-serif;
-  line-height: 1.5em;
-}
+	color: @90grey;
+	font-size: 1.25em;
+	font-family: 'SourceSansProLight', sans-serif;
+	line-height: 1.5em;
+}*/
 h1,
 h2,
 h3,
@@ -3591,7 +3591,6 @@ h1 {
   font-weight: normal;
   font-size-adjust: 0.0;
   line-height: 120%;
-  letter-spacing: -1px;
 }
 h2 {
   font-size: 1.25em;
@@ -3617,40 +3616,74 @@ h4 {
   font-weight: normal;
   line-height: 150%;
 }
-p {
+.entry-content p {
   color: #3c3c3b;
   font-family: 'SourceSansProLight', sans-serif;
   font-weight: normal;
   font-size: 1.25em;
   line-height: 150%;
 }
-p a {
+.entry-content p a {
   text-decoration: none;
+  color: #5aa332;
   font-family: 'SourceSansProRegular', sans-serif;
   font-weight: normal;
   cursor: auto;
 }
-p strong {
+.entry-content p strong {
   font-family: 'SourceSansProRegular', sans-serif;
   font-weight: normal;
   color: #000000;
 }
-p em {
+.entry-content p em {
   font-family: 'SourceSansProLightItalic', sans-serif;
   font-weight: normal;
 }
-code {
-  font-family: 'Source Code Pro', sans-serif;
+.nav-single {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-style: normal;
+  font-size: 1em;
+}
+.comments-area {
+  font-family: 'SourceSansProLight', sans-serif;
+  color: #3c3c3b;
+  font-size: 1.0em;
+  font-weight: normal;
+}
+.comments-area p {
+  color: #3c3c3b;
+  font-family: 'SourceSansProLightItalic', sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+  line-height: 150%;
+}
+.comments-area a {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-style: normal;
   font-size: 1em;
 }
 .comments-area code {
   font-family: 'Source Code Pro', sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
 }
-h5.widget-title {
-  font-size: 1.75em;
-  font-family: 'SourceSansProSemibold', sans-serif;
+.comments-area #comment-notes-before {
+  color: #3c3c3b;
+  font-family: 'SourceSansProLight', sans-serif;
   font-weight: normal;
+  font-size: 1.25em;
+  line-height: 150%;
+}
+.comments-area .icon-asterisk {
+  font-size: 0.5em;
+  vertical-align: super;
+  color: #5aa332;
+}
+.comments-area #author {
+  font-family: 'SourceSansProLight', sans-serif !important;
+}
+code {
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 1em;
 }
 .widget-area a,
 .widget-area ul,
@@ -3658,6 +3691,7 @@ h5.widget-title {
   line-height: 175%;
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size-adjust: 0.0;
+  font-size: inherit;
   color: #5aa332;
   text-decoration: none;
   list-style-type: none;
@@ -3676,6 +3710,28 @@ h5.widget-title {
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+.widget-area h5.widget-title {
+  font-size: 1.75em;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
+}
+section#author-page {
+  font-family: 'SourceSansProLight', sans-serif;
+  font-size: 1.25em;
+  color: #3c3c3b;
+}
+section#author-page p,
+section#author-page li {
+  font-size: 1em;
+}
+section#author-page a {
+  font-family: 'SourceSansProRegular', sans-serif;
+}
+section#author-page ul {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0px;
 }
 #scrolltop-grid #scrolltop {
   background-color: #5aa332;
@@ -3723,7 +3779,15 @@ footer a a:hover {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+.icon-wrench {
+  vertical-align: top;
+  padding-top: 0.75em;
+}
 .icon-signin {
+  vertical-align: top;
+  padding-top: 0.75em;
+}
+.icon-signout {
   vertical-align: top;
   padding-top: 0.75em;
 }
@@ -3742,10 +3806,6 @@ footer {
   -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
   box-shadow: inset 0px 1px 0px 0px #98c230;
 }
-/*footer{
-margin-top: -@footerheight; // negative value of footer height //
-height: @footerheight; // sticky-footer!
-}*/
 .sf-menu {
   line-height: 0.7em;
 }
@@ -3837,33 +3897,46 @@ ul#desktop-search li i {
 }
 ::-webkit-input-placeholder {
   font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 0.4em;
   color: #a89b87;
 }
 :-moz-placeholder {
   /* Firefox 18- */
 
   font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 0.4em;
   color: #a89b87;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
 
   font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 0.4em;
   color: #a89b87;
 }
 :-ms-input-placeholder {
   font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 0.4em;
   color: #a89b87;
 }
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-  font-size: 0.6em;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 0.4em;
   font-family: 'SourceSansProBold', sans-serif;
   font-size-adjust: 0.0;
   color: #a89b87;
-  padding-left: 0.7em;
 }
 /*.ui-widget{
 	form#searchform{
