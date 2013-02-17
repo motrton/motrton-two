@@ -3566,18 +3566,6 @@ section#blog-head #blog-logo {
 #blog-logo {
   text-align: center;
 }
-/*.entry-content ol li {
-	color: @90grey;
-	font-size: 1.25em;
-	font-family: 'SourceSansProLight', sans-serif;
-	line-height: 1.5em;
-}
-.entry-content ul li {
-	color: @90grey;
-	font-size: 1.25em;
-	font-family: 'SourceSansProLight', sans-serif;
-	line-height: 1.5em;
-}*/
 h1,
 h2,
 h3,
@@ -3639,6 +3627,18 @@ h4 {
   font-family: 'SourceSansProLightItalic', sans-serif;
   font-weight: normal;
 }
+.entry-content ol li {
+  color: #3c3c3b;
+  font-size: 1.25em;
+  font-family: 'SourceSansProLight', sans-serif;
+  line-height: 1.5em;
+}
+.entry-content ul li {
+  color: #3c3c3b;
+  font-size: 1.25em;
+  font-family: 'SourceSansProLight', sans-serif;
+  line-height: 1.5em;
+}
 code {
   font-family: 'Source Code Pro', sans-serif;
   font-size: 1em;
@@ -3652,6 +3652,7 @@ code {
   font-family: 'SourceSansProLight', sans-serif;
   color: #3c3c3b;
   font-size: 1.0em;
+  line-height: 150%;
   font-weight: normal;
 }
 .comments-area p {
@@ -3668,7 +3669,8 @@ code {
 }
 .comments-area code {
   font-family: 'Source Code Pro', sans-serif;
-  font-size: 1em;
+  font-size: 0.75em;
+  line-height: 150%;
 }
 .comments-area #comment-notes-before {
   color: #3c3c3b;
@@ -3682,7 +3684,7 @@ code {
   vertical-align: super;
   color: #5aa332;
 }
-input {
+.inputfeldstyle {
   border: 0px;
   height: 30px;
   -webkit-border-radius: 30px;
@@ -3694,6 +3696,61 @@ input {
   -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 1em;
+}
+p.comment-form-author input {
+  border: 0px;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 1em;
+}
+p.comment-form-email input {
+  border: 0px;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 1em;
+}
+p.comment-form-url input {
+  border: 0px;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 1em;
 }
 textarea {
   margin-top: 0.5em;
@@ -3707,6 +3764,10 @@ textarea {
   -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
 }
 .widget-area a,
 .widget-area ul,
@@ -3917,38 +3978,6 @@ ul#desktop-search {
 ul#desktop-search li i {
   color: #ecdfcb;
   font-size: 1.2em;
-}
-::-webkit-input-placeholder {
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.25em;
-  padding-left: 0.9em;
-  color: #a89b87;
-}
-:-moz-placeholder {
-  /* Firefox 18- */
-
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 0.9em;
-  color: #a89b87;
-}
-::-moz-placeholder {
-  /* Firefox 19+ */
-
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 0.9em;
-  color: #a89b87;
-}
-:-ms-input-placeholder {
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 0.9em;
-  color: #a89b87;
 }
 .ui-widget input,
 .ui-widget select,
