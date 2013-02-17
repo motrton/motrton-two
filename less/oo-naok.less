@@ -14,7 +14,7 @@
 	}
 	a:hover {
 		color: @greendark; 
-		.e_transition(0.2s, ease-out);
+		.e_transition (0.2s, ease-out);
 	}
 }
 
@@ -127,6 +127,11 @@ h4 {
 	}
 }
 
+code {
+	font-family: 'Source Code Pro', sans-serif;
+		font-size: 1em;
+}
+
 // --- Vor- und Zurück-Navigation
 .nav-single {
 	font-family: 'SourceSansProSemibold', sans-serif;
@@ -168,16 +173,24 @@ h4 {
 		vertical-align: super;
 		color: @greenmid;
 	}
-	#author {
-		font-family: 'SourceSansProLight', sans-serif !important;
-	}
 }
 
-
-code {
-	font-family: 'Source Code Pro', sans-serif;
-		font-size: 1em;
+input {
+	border: 0px;
+	height: 30px;
+	.e_rounded (@radius: 30px);
+	//background-color: (@chamois + #333);
+	.e_inner-shadow (@horizontal:1px, @vertical:1px, @blur:1px, @alpha: 0.15);
 }
+
+textarea {
+	margin-top: 0.5em;
+	border: 0px;
+	.e_rounded (@radius: 10px);
+	//background-color: (@chamois + #333);
+	.e_inner-shadow (@horizontal:1px, @vertical:1px, @blur:1px, @alpha: 0.15);
+}
+
 
 
 // -- Sidebar
@@ -202,7 +215,7 @@ code {
 	}
 	a:hover {
 		color: @greendark;
-		.e_transition(0.2s, ease-out);
+		.e_transition (0.2s, ease-out);
 	}
 h5.widget-title {
 	font-size: 1.75em;
@@ -270,7 +283,7 @@ footer a {
 	}
 	a:hover {
 		color: @chamois;
-		.e_transition(0.2s, ease-out);
+		.e_transition (0.2s, ease-out);
 	}	
 }
 .icon-wrench {
@@ -386,8 +399,8 @@ ul#desktop-search {
 ::-webkit-input-placeholder {
 	font-family: 'SourceSansProSemibold', sans-serif;
 	font-size: 0.7em;
-	padding-top: 0.2em;
-	padding-left: 0.4em;
+	padding-top: 0.25em;
+	padding-left: 0.9em;
 	color: (@chamois - #444);
 }
 
@@ -395,7 +408,7 @@ ul#desktop-search {
 	font-family: 'SourceSansProSemibold', sans-serif;
 	font-size: 0.7em;
 	padding-top: 0.2em;
-	padding-left: 0.4em;
+	padding-left: 0.9em;
 	color: (@chamois - #444);
 }
 
@@ -403,7 +416,7 @@ ul#desktop-search {
 	font-family: 'SourceSansProSemibold', sans-serif;
 	font-size: 0.7em;
 	padding-top: 0.2em;
-	padding-left: 0.4em;
+	padding-left: 0.9em;
 	color: (@chamois - #444);
 }
 
@@ -411,7 +424,7 @@ ul#desktop-search {
 	font-family: 'SourceSansProSemibold', sans-serif;
 	font-size: 0.7em;
 	padding-top: 0.2em;
-	padding-left: 0.4em;
+	padding-left: 0.9em;
 	color: (@chamois - #444);
 }
 
@@ -419,7 +432,7 @@ ul#desktop-search {
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
 	font-size: 0.7em;
 	padding-top: 0.2em;
-	padding-left: 0.4em;
+	padding-left: 0.9em;
 	font-family: 'SourceSansProBold', sans-serif;
 	font-size-adjust: 0.0;
 	color: (@chamois - #444);

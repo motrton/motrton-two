@@ -3639,6 +3639,10 @@ h4 {
   font-family: 'SourceSansProLightItalic', sans-serif;
   font-weight: normal;
 }
+code {
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 1em;
+}
 .nav-single {
   font-family: 'SourceSansProSemibold', sans-serif;
   font-style: normal;
@@ -3678,12 +3682,31 @@ h4 {
   vertical-align: super;
   color: #5aa332;
 }
-.comments-area #author {
-  font-family: 'SourceSansProLight', sans-serif !important;
+input {
+  border: 0px;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
-code {
-  font-family: 'Source Code Pro', sans-serif;
-  font-size: 1em;
+textarea {
+  margin-top: 0.5em;
+  border: 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 .widget-area a,
 .widget-area ul,
@@ -3898,8 +3921,8 @@ ul#desktop-search li i {
 ::-webkit-input-placeholder {
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 0.4em;
+  padding-top: 0.25em;
+  padding-left: 0.9em;
   color: #a89b87;
 }
 :-moz-placeholder {
@@ -3908,7 +3931,7 @@ ul#desktop-search li i {
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size: 0.7em;
   padding-top: 0.2em;
-  padding-left: 0.4em;
+  padding-left: 0.9em;
   color: #a89b87;
 }
 ::-moz-placeholder {
@@ -3917,14 +3940,14 @@ ul#desktop-search li i {
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size: 0.7em;
   padding-top: 0.2em;
-  padding-left: 0.4em;
+  padding-left: 0.9em;
   color: #a89b87;
 }
 :-ms-input-placeholder {
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size: 0.7em;
   padding-top: 0.2em;
-  padding-left: 0.4em;
+  padding-left: 0.9em;
   color: #a89b87;
 }
 .ui-widget input,
@@ -3933,7 +3956,7 @@ ul#desktop-search li i {
 .ui-widget button {
   font-size: 0.7em;
   padding-top: 0.2em;
-  padding-left: 0.4em;
+  padding-left: 0.9em;
   font-family: 'SourceSansProBold', sans-serif;
   font-size-adjust: 0.0;
   color: #a89b87;
