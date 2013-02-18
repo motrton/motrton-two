@@ -15,31 +15,31 @@
              * Get the images thumbnails
              */
             
-             $argsThumb = array(
-                  'order'          => 'ASC',
-                  'post_type'      => 'attachment',
-                  'post_parent'    => $post->ID,
-                  'post_mime_type' => 'image',
-                  'post_status'    => null
-                  );
-            $attachments = get_posts($argsThumb);
-            if ($attachments) {
-            // http://wordpress.org/support/topic/getting-thumbnails-of-images-attached-to-a-post  
-            $images =& get_children( 'post_type=attachment&post_mime_type=image&post_parent=' . $post->ID );
-              $firstImageSrc = wp_get_attachment_image_src(
-                                array_shift(
-                                  array_keys($images)
-                                  )
-                                );
+            //  $argsThumb = array(
+            //       'order'          => 'ASC',
+            //       'post_type'      => 'attachment',
+            //       'post_parent'    => $post->ID,
+            //       'post_mime_type' => 'image',
+            //       'post_status'    => null
+            //       );
+            // $attachments = get_posts($argsThumb);
+            // if ($attachments) {
+            // // http://wordpress.org/support/topic/getting-thumbnails-of-images-attached-to-a-post  
+            // $images =& get_children( 'post_type=attachment&post_mime_type=image&post_parent=' . $post->ID );
+            //   $firstImageSrc = wp_get_attachment_image_src(
+            //                     array_shift(
+            //                       array_keys($images)
+            //                       )
+            //                     );
 
-              echo "<img class=\"thumbnail\" src=\"{$firstImageSrc[0]}\" alt=\"\" />"; 
+            //   echo "<img class=\"thumbnail\" src=\"{$firstImageSrc[0]}\" alt=\"\" />"; 
               // echo "</div>"; // close span2 image-container-inner-home
               //}
-            }else{
-            $logourl = get_template_directory_uri() . "/img/logo_swblr.png";
-          echo  "<img class=\"thumbnail\" src=\"". $logourl ."\" alt=\"\">";
-;
-          }
+            // }else{
+            // $logourl = get_template_directory_uri() . "/img/logo_swblr.png";
+          // echo  "<img class=\"thumbnail\" src=\"". $logourl ."\" alt=\"\">";
+
+          // }
       ?>
 
         </div>
