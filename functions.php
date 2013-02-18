@@ -43,10 +43,10 @@ add_action('init', 'my_styles');
 // custom filter around content to get the link icon
 // add_filter( 'the_content', 'mytheme_content_ad' );
 // add my personal debugger
-add_action('wp_footer', 'show_template');
+// add_action('wp_footer', 'show_template');
 
 //add placeholder text to comment forms
-add_filter('comment_form_default_fields','motrton_two_comment_placeholders');
+ // add_filter('comment_form_default_fields','motrton_two_comment_placeholders');
 // add_action( 'init', 'my_autocomplete' );
 
 }
@@ -237,7 +237,7 @@ function motrton_two_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'motrton_two' ),
 		'id' => 'sidebar-1',
-		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'motrton_two' ),
+		'description' => __( 'Standard Sidebar', 'motrton_two' ),
 		// 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		// 'after_widget' => '</aside>',
 		'before_title' => '<h5 class="widget-title">',
@@ -378,73 +378,59 @@ function motrton_two_comment_placeholders( $fields ){
 }
 
 
-/********************************************
- * COMMETNS CALLBACK
- ********************************************/
 if ( ! function_exists( 'motrton_two_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
+ * To override this walker in a child theme without modifying the comments template
+ * simply create your own motrton_two_comment(), and that function will be used instead.
+ *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since motrton-two 1.0
+ * @since Twenty Ten 1.0
  */
 function motrton_two_comment( $comment, $args, $depth ) {
-    
-    echo "<!-- THIS IS FUNTIONS.PHP COMMNENTS CALLBACK -->";
     $GLOBALS['comment'] = $comment;
     switch ( $comment->comment_type ) :
-        case 'pingback' :
-        case 'trackback' :
-    ?>
-
-    <li class="post pingback">
-        <p><?php _e( 'Pingback:', 'motrton_two' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Editieren)', 'motrton_two' ), ' ' ); ?></p>
-    <?php
-            break;
-        default :
+        case '' :
     ?>
     <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-        <article id="comment-<?php comment_ID(); ?>" class="comment">
-            <div class="comment-sourround">
-                <span class="comment-author vcard">
-                    <?php echo get_avatar( $comment, 40 ); ?>
-                    <?php printf( __( '%s <span class="says">sagt am</span> ', 'motrton_two' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
-                </span><!-- .comment-author .vcard -->
-                <?php if ( $comment->comment_approved == '0' ) : ?>
-                    <em><?php _e( 'Dein Kommentar wartet auf Moderation.', 'motrton_two' ); ?></em>
-                    <br />
-                <?php endif; ?>
+        <div id="comment-<?php comment_ID(); ?>">
+        <div class="comment-author vcard">
+            <?php echo get_avatar( $comment, 40 ); ?>
+            <?php printf( __( '%s <span class="says">says:</span>', 'twentyten' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+        </div><!-- .comment-author .vcard -->
+        <?php if ( $comment->comment_approved == '0' ) : ?>
+            <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twentyten' ); ?></em>
+            <br />
+        <?php endif; ?>
 
-                <span class="comment-meta commentmetadata">
-                    <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>">
-                    <?php
-                        /* translators: 1: date, 2: time */
-                        printf( __( '%1$s um %2$s', 'motrton_two' ), get_comment_date(), get_comment_time() ); ?>
-                    </time></a><span class="olios-extra-special-white-space">&emsp;&emsp;</span>
-                    <?php edit_comment_link( '<i class="icon-edit"></i>' .__( '(Editieren)', 'motrton_two' ), ' ' );
-                    ?>
-                </span><!-- .comment-meta .commentmetadata -->
-            </div> <!-- close class="comment-sourround" -->
+        <div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+            <?php
+                /* translators: 1: date, 2: time */
+                printf( __( '%1$s at %2$s', 'twentyten' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'twentyten' ), ' ' );
+            ?>
+        </div><!-- .comment-meta .commentmetadata -->
 
-            <div class="comment-content"><?php comment_text(); ?></div>
+        <div class="comment-body"><?php comment_text(); ?></div>
 
-            <div class="reply">
-                <?php comment_reply_link( array_merge( $args,
-                array( 'depth' => $depth,
-                'max_depth' => $args['max_depth'],
-                'reply_text' => '<i class="icon-comment"></i>'. __('antworten','motrton_two')
-                // 'before' => ,
-                // 'after' => '</i>'
-                ) ) ); ?>
-            </div><!-- .reply -->
-        </article><!-- #comment-## -->
-            <?php get_template_part( 'snippets','letterpresslinefluid'); ?>
+        <div class="reply">
+            <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+        </div><!-- .reply -->
+    </div><!-- #comment-##  -->
 
     <?php
-        echo "<!-- END FUNTIONS.PHP COMMNENTS CALLBACK -->";
-        break;
+            break;
+        case 'pingback'  :
+        case 'trackback' :
+    ?>
+    <li class="post pingback">
+        <p><?php _e( 'Pingback:', 'twentyten' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'twentyten' ), ' ' ); ?></p>
+    <?php
+            break;
     endswitch;
 }
-endif; // ends check for motrton_two_comment()
+endif;
+
+
 ?>
