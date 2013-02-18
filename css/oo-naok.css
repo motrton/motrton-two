@@ -3972,10 +3972,6 @@ footer a a:hover {
   padding-top: 0.75em;
 }
 footer {
-  margin-top: -40px;
-  /* negative value of footer height */
-
-  height: 40px;
   background: #5aa332;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #348d43), color-stop(1, #5aa332));
   background: -ms-linear-gradient(bottom, #348d43, #5aa332);
