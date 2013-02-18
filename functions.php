@@ -387,7 +387,7 @@ if ( ! function_exists( 'motrton_two_comment' ) ) :
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since Twenty Ten 1.0
+ * @since motrton_two 1.0
  */
 function motrton_two_comment( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
