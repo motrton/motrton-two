@@ -3529,9 +3529,6 @@ body {
   -o-animation-duration: 0.75s;
   animation-duration: 0.75s;
 }
-.post-title {
-  display: none;
-}
 .container a:link {
   color: #5aa332;
 }
@@ -3607,27 +3604,31 @@ h4 {
   font-weight: normal;
   line-height: 150%;
 }
-.entry-content p {
+.entry-content p,
+.post-excerpt p {
   color: #3c3c3b;
   font-family: 'SourceSansProLight', sans-serif;
   font-weight: normal;
   font-size: 1.25em;
   line-height: 150%;
 }
-.entry-content p a {
+.entry-content p a,
+.post-excerpt p a {
   text-decoration: none;
   color: #5aa332;
   font-family: 'SourceSansProRegular', sans-serif;
   font-weight: normal;
   cursor: auto;
 }
-.entry-content p strong {
+.entry-content p strong,
+.post-excerpt p strong {
   font-family: 'SourceSansProRegular', sans-serif;
   font-weight: normal;
   color: #000000;
   font-style: normal;
 }
-.entry-content p em {
+.entry-content p em,
+.post-excerpt p em {
   font-family: 'SourceSansProLightItalic', sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -3697,9 +3698,6 @@ code {
 }
 .comments-area li.comment {
   padding-bottom: 0em;
-}
-.comments-area img.avatar {
-  display: none;
 }
 .inputfeldstyle {
   border: 0px;
