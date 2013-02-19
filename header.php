@@ -2,6 +2,7 @@
 <html lang="de">
 <!-- This is HEADER.PHP -->
 <head>
+<meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title> <?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?> </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
