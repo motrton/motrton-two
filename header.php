@@ -5,12 +5,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title> <?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?> </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--  <meta name="description" content="<?php bloginfo('description'); ?>" /> -->
+<meta name="description" content="<?php bloginfo('description'); ?>" />
 <meta name="author" content="XXX" />
-<meta name="Title" content="Jahrbuch der Nachhaltigen Oekonomie" />
+<meta name="Title" content="<?php bloginfo('name'); ?>" />
 <meta name="Subject" content="Oekonomie" />
 
-<meta name="Description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+<!-- <meta name="Description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." /> -->
 <meta name="Keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
 <meta http-equiv="Content-Language" content="de" />
 <meta name="Abstract" content="Some Text" />
