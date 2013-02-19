@@ -3738,73 +3738,14 @@ ol.commentlist .comment-body .comment-awaiting-moderation {
   color: #5aa332;
   line-height: 150%;
 }
-/*
-.commentlist {
-	font-family: 'SourceSansProSemibold', sans-serif;
-	color: @blue;
-	font-size: 1.25em;
-	line-height: 150%;
-	font-weight: normal;
-	p {
-		color: @90grey;
-		font-family: 'SourceSansProLightItalic', sans-serif;
-		font-weight: normal;
-		font-size: 1.25em;
-		line-height: 150%;
-	}
-	strong {
-		font-family: 'SourceSansProRegular', sans-serif;
-		font-weight: normal;
-		color: @black;
-		font-style: normal;
-	}
-	em {
-		font-family: 'SourceSansProLight', sans-serif;
-		font-weight: normal;
-		font-style: normal;
-	}
-	cite.fn {
-		font-family: 'SourceSansProSemibold', sans-serif;
-		font-style: normal;
-		font-size: 1em;
-		color: @blue;
-	}
-	#comment-notes-before {
-		color: @90grey;
-		font-family: 'SourceSansProLight', sans-serif;
-		font-weight: normal;
-		font-size: 1.25em;
-		line-height: 150%;
-	}
-	.icon-asterisk {
-		font-size: 0.5em;
-		vertical-align: super;
-		color: @greenmid;
-	}
-	li.comment {
-		padding-bottom: 0em;
-	}
-	ol li {
-	color: @90grey;
-	font-size: 1.25em;
-	font-family: 'SourceSansProLightItalic', sans-serif;
-	line-height: 1.5em;
-	}
-	ul li {
-	color: @90grey;
-	font-size: 1.25em;
-	font-family: 'SourceSansProLightItalic', sans-serif;
-	line-height: 1.5em;
-	}
+#respond #cancel-comment-reply a {
+  font-size: 0.5em;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #5aa332;
+  line-height: 150%;
 }
-
-
-	a {
-		color: @blue;
-		font-family: 'SourceSansProRegular', sans-serif;
-		font-style: normal;
-	}
-*/
 #respond p {
   color: #3c3c3b;
   font-family: 'SourceSansProLight', sans-serif;
