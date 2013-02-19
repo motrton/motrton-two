@@ -12,54 +12,48 @@
 <?php get_template_part( 'header','blogtitle'); ?>
 <!-- START PAGE-TWOCOLUMN.PHP -->
 <div class="container">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
     <section id="two-column">
         <div id="column-img">
         <?php
-            $argsThumb = array(
-            'order'          => 'ASC',
-            'post_type'      => 'attachment',
-            'post_parent'    => $post->ID,
-            'post_mime_type' => 'image',
-            'post_status'    => 'publish'
-            );
-        $attachments = get_posts($argsThumb);
-        if ($attachments) {
-            for ($i = count($attachments); $i >= 0;$i--) {
-            //echo apply_filters('the_title', $attachment->post_title);
-            echo '<img src="'.wp_get_attachment_url($attachments[$i]->ID, 'thumbnail', false, false).'" alt="" />';
-            }
+        $dom = new DOMDocument;
+        $dom->loadHTML(get_the_content());
+        // echo get_the_content();
+        // echo 'hello world';
+        // $xpath = new DOMXPath($dom);
+        // $nodes = $xpath->query('//img|//a[img]');
+        $dom->preserveWhiteSpace = false;
+        $images = $dom->getElementsByTagName('img');
+        foreach ($images as $image) {
+            echo '<img src="' . $image->getAttribute('src') . '" alt="" />';
         }
         ?>
-
         </div>
-       
         <!-- content -->
     
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article id="column-content" class="entry-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <h2 class="entry-title"><span class="post-title">"<?php the_title(); ?>"</span> </h2>
+        <h2 class="entry-title">
+            <span class="post-title">"
+                <?php the_title(); ?>
+                "</span>
+            </h2>
 
   <?php
 
     $dom = new DOMDocument;
     $dom->loadHTML(get_the_content());
     $xpath = new DOMXPath($dom);
-    $nodes = $xpath->query('//img|//a[img]'); 
+    $nodes = $xpath->query('//img|//a[img]');
 foreach($nodes as $node) {
     $node->parentNode->removeChild($node);
     }
+
     $no_image_content = $dom->saveHTML();
     $no_image_content = apply_filters('the_content', $no_image_content);
     $no_image_content = str_replace(']]>', ']]&gt;', $no_image_content);
     echo $no_image_content;
 
-    // $content = get_the_content();
-    // $postOutput = preg_replace(array('{<a[^>]*><img[^>]+.}','{></a>}'),'', $content);
-    // // echo '<p>';
-    // echo $postOutput;
-    // echo '</p>';
-    // 
-    // 
   ?>
 
 </article>
