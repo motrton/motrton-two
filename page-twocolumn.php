@@ -40,16 +40,24 @@
             </h2>
 
   <?php
+    function innerHTML($node){
+    $doc = new DOMDocument();
+    foreach ($node->childNodes as $child)
+        $doc->appendChild($doc->importNode($child, true));
 
-    $dom = new DOMDocument;
+    return $doc->saveHTML();
+    }
+
+    $dom = new DOMDocument();
     $dom->loadHTML(get_the_content());
     $xpath = new DOMXPath($dom);
     $nodes = $xpath->query('//img|//a[img]');
-foreach($nodes as $node) {
-    $node->parentNode->removeChild($node);
+    foreach($nodes as $node) {
+        $node->parentNode->removeChild($node);
     }
+    $no_image_content = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $dom->saveHTML()));
 
-    $no_image_content = $dom->saveHTML();
+    // $no_image_content = $dom->saveHTML();
     $no_image_content = apply_filters('the_content', $no_image_content);
     $no_image_content = str_replace(']]>', ']]&gt;', $no_image_content);
     echo $no_image_content;
