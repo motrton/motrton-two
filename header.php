@@ -2,13 +2,22 @@
 <html lang="de">
 <!-- This is HEADER.PHP -->
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title> <?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?> </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--  <meta name="description" content="<?php bloginfo('description'); ?>" /> -->
-<meta name="author" content="fabiantheblind" />
-<!--    <meta name="description" content="">
-<meta name="author" content=""> -->
+<meta name="author" content="XXX" />
+<meta name="Title" content="Jahrbuch der Nachhaltigen Oekonomie" />
+<meta name="Subject" content="Oekonomie" />
+
+<meta name="Description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+<meta name="Keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+<meta http-equiv="Content-Language" content="de" />
+<meta name="Abstract" content="Some Text" />
+<meta name="Copyright" content="© 2013" />
+<meta name="Designer" content="fabiantheblind" />
+<meta name="Publisher" content="XX" />
+
 <!-- Le styles -->
 <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'> -->
 
