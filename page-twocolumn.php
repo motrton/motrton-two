@@ -20,7 +20,7 @@
             'post_type'      => 'attachment',
             'post_parent'    => $post->ID,
             'post_mime_type' => 'image',
-            'post_status'    => null
+            'post_status'    => 'publish'
             );
         $attachments = get_posts($argsThumb);
         if ($attachments) {
