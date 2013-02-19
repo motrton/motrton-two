@@ -228,6 +228,7 @@ ol.commentlist {
 	color: @90grey;
 	font-family: 'SourceSansProLight', sans-serif;
 	font-weight: normal;
+	font-style: normal;
 	font-size: 1.25em;
 	line-height: 150%;
 	}
@@ -236,8 +237,20 @@ ol.commentlist {
 		font-style: normal;
 		font-size: 1em;
 	}
+	small {
+		font-size: 0.7em;
+		font-family: 'SourceSansProRegular', sans-serif;
+	}
+	textarea#comment {
+	margin-top: 1em;
+	border: 0px;
+	.e_rounded (10px);
+	.e_inner-shadow (1px, 1px, 1px, 0.15);
+	font-family: 'SourceSansProSemibold', sans-serif;
+	font-size: 0.7em;
+	padding: 2em;
+	}
 }
-
 
 .inputfeldstyle {
 	border: 0px;
@@ -256,18 +269,50 @@ input#author, input#email, input#url {
 	.inputfeldstyle
 }
 
-.BigContact-input {
-	.inputfeldstyle
+#submit {
+	border: 1px solid (@35grey + #222);
+	height: 30px;
+	.e_rounded (30px);
+	font-family: 'SourceSansProSemibold', sans-serif;
+	font-size: 0.7em;
+	color: (@90grey);
+	padding-left: 1em;
+	padding-right: 1em;
+	text-shadow: 1px 1px 0px white;
+	.e_gradient (white, (@35grey + #444), white); 
+	-moz-box-shadow: inset 0px 1px 0px 0px white;
+	-webkit-box-shadow: inset 0px 1px 0px 0px white;
+	box-shadow: inset 0px 1px 0px 0px white;
+	height: 2.2em;
 }
 
-textarea#comment {
-	margin-top: 1em;
+
+// --- Kontaktformular
+.bigContact {
+	.BigContact-input {
+		.inputfeldstyle
+	}	
+	#bigContact-form {
+		label {
+			font-size: 0.7em;
+			font-family: 'SourceSansProRegular', sans-serif;
+		}
+	}
+	textarea {
 	border: 0px;
 	.e_rounded (10px);
 	.e_inner-shadow (1px, 1px, 1px, 0.15);
 	font-family: 'SourceSansProSemibold', sans-serif;
 	font-size: 0.7em;
 	padding: 2em;
+	margin-bottom: 1em;
+	}
+	.bigContact-fullSize {
+		margin-bottom: 3em !important;
+		#bigContact-submit {
+			#submit;
+		}
+	}
 }
 
 
@@ -285,22 +330,6 @@ textarea#comment {
 	margin-bottom: 6em;
 }*/
 
-#submit {
-	border: 1px solid (@35grey + #222);
-	height: 30px;
-	.e_rounded (30px);
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-size: 0.7em;
-	color: (@90grey);
-	padding-left: 1em;
-	padding-right: 1em;
-	text-shadow: 1px 1px 0px white;
-	.e_gradient (white, (@35grey + #444), white); 
-	-moz-box-shadow: inset 0px 1px 0px 0px white;
-	-webkit-box-shadow: inset 0px 1px 0px 0px white;
-	box-shadow: inset 0px 1px 0px 0px white;
-	height: 2.2em;
-}
 
 // -- Sidebar
 .widget-area {

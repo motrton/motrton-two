@@ -3750,6 +3750,7 @@ ol.commentlist .comment-body .comment-awaiting-moderation {
   color: #3c3c3b;
   font-family: 'SourceSansProLight', sans-serif;
   font-weight: normal;
+  font-style: normal;
   font-size: 1.25em;
   line-height: 150%;
 }
@@ -3757,6 +3758,26 @@ ol.commentlist .comment-body .comment-awaiting-moderation {
   font-family: 'SourceSansProRegular', sans-serif;
   font-style: normal;
   font-size: 1em;
+}
+#respond small {
+  font-size: 0.7em;
+  font-family: 'SourceSansProRegular', sans-serif;
+}
+#respond textarea#comment {
+  margin-top: 1em;
+  border: 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding: 2em;
 }
 .inputfeldstyle {
   border: 0px;
@@ -3796,49 +3817,6 @@ input#url {
   padding-top: 0.2em;
   padding-left: 1em;
 }
-.BigContact-input {
-  border: 0px;
-  height: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 1em;
-}
-textarea#comment {
-  margin-top: 1em;
-  border: 0px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding: 2em;
-}
-/*.comment-form-author {
-	margin-top: 2em;	
-}
-
-.comment-form-comment {
-	margin-top: 2.4em;	
-}*/
-/*.form-submit {
-	margin-bottom: 6em;
-}*/
 #submit {
   border: 1px solid #c8c8c8;
   height: 30px;
@@ -3865,6 +3843,82 @@ textarea#comment {
   box-shadow: inset 0px 1px 0px 0px white;
   height: 2.2em;
 }
+.bigContact .BigContact-input {
+  border: 0px;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding-top: 0.2em;
+  padding-left: 1em;
+}
+.bigContact #bigContact-form label {
+  font-size: 0.7em;
+  font-family: 'SourceSansProRegular', sans-serif;
+}
+.bigContact textarea {
+  border: 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+.bigContact .bigContact-fullSize {
+  margin-bottom: 3em !important;
+}
+.bigContact .bigContact-fullSize #bigContact-submit {
+  border: 1px solid #c8c8c8;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.7em;
+  color: #3c3c3b;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-shadow: 1px 1px 0px white;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eaeaea), color-stop(1, #ffffff));
+  background: -ms-linear-gradient(bottom, #eaeaea, #ffffff);
+  background: -moz-linear-gradient(center bottom, #eaeaea 0%, #ffffff 100%);
+  background: -o-linear-gradient(#ffffff, #eaeaea);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eaeaea', GradientType=0);
+  -moz-box-shadow: inset 0px 1px 0px 0px white;
+  -webkit-box-shadow: inset 0px 1px 0px 0px white;
+  box-shadow: inset 0px 1px 0px 0px white;
+  height: 2.2em;
+}
+/*.comment-form-author {
+	margin-top: 2em;	
+}
+
+.comment-form-comment {
+	margin-top: 2.4em;	
+}*/
+/*.form-submit {
+	margin-bottom: 6em;
+}*/
 .widget-area a,
 .widget-area ul,
 .widget-area li {
