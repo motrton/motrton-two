@@ -3529,6 +3529,11 @@ body {
   -o-animation-duration: 0.75s;
   animation-duration: 0.75s;
 }
+.blockquote {
+  font-family: 'SourceSansProRegular', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+}
 .container a:link {
   color: #5aa332;
 }
@@ -3654,50 +3659,163 @@ code {
   font-style: normal;
   font-size: 1em;
 }
-.comments-area {
-  font-family: 'SourceSansProLight', sans-serif;
-  color: #3c3c3b;
-  font-size: 1.0em;
-  line-height: 150%;
-  font-weight: normal;
-}
-.comments-area p {
-  color: #3c3c3b;
+#comli-light-125 {
+  font-size: 0.75em;
   font-family: 'SourceSansProLightItalic', sans-serif;
   font-weight: normal;
-  font-size: 1.25em;
+  font-style: normal;
+  color: #3c3c3b;
   line-height: 150%;
 }
-.comments-area a {
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-style: normal;
-  font-size: 1em;
-}
-.comments-area code {
-  font-family: 'Source Code Pro', sans-serif;
+#comli-semi-125-blue {
   font-size: 0.75em;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #08618f;
   line-height: 150%;
 }
-.comments-area cite.fn {
+#comli-semi-100-green {
+  font-size: 0.5em;
   font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
   font-style: normal;
-  font-size: 1em;
   color: #5aa332;
+  line-height: 150%;
 }
-.comments-area #comment-notes-before {
+#comli-semi-125-green {
+  font-size: 0.75em;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #5aa332;
+  line-height: 150%;
+}
+ol.commentlist {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  color: #08618f;
+  font-size: 1.75em;
+  line-height: 150%;
+  font-weight: normal;
+}
+ol.commentlist .comment-body .comment-author .fn {
+  font-size: 0.75em;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #08618f;
+  line-height: 150%;
+}
+ol.commentlist .comment-body .comment-meta a {
+  font-size: 0.75em;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #08618f;
+  line-height: 150%;
+}
+ol.commentlist .comment-body p {
+  font-size: 0.75em;
+  font-family: 'SourceSansProLightItalic', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #3c3c3b;
+  line-height: 150%;
+}
+ol.commentlist .comment-body .reply .comment-reply-link {
+  font-size: 0.75em;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #5aa332;
+  line-height: 150%;
+}
+ol.commentlist .comment-body .comment-awaiting-moderation {
+  font-size: 0.5em;
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #5aa332;
+  line-height: 150%;
+}
+/*
+.commentlist {
+	font-family: 'SourceSansProSemibold', sans-serif;
+	color: @blue;
+	font-size: 1.25em;
+	line-height: 150%;
+	font-weight: normal;
+	p {
+		color: @90grey;
+		font-family: 'SourceSansProLightItalic', sans-serif;
+		font-weight: normal;
+		font-size: 1.25em;
+		line-height: 150%;
+	}
+	strong {
+		font-family: 'SourceSansProRegular', sans-serif;
+		font-weight: normal;
+		color: @black;
+		font-style: normal;
+	}
+	em {
+		font-family: 'SourceSansProLight', sans-serif;
+		font-weight: normal;
+		font-style: normal;
+	}
+	cite.fn {
+		font-family: 'SourceSansProSemibold', sans-serif;
+		font-style: normal;
+		font-size: 1em;
+		color: @blue;
+	}
+	#comment-notes-before {
+		color: @90grey;
+		font-family: 'SourceSansProLight', sans-serif;
+		font-weight: normal;
+		font-size: 1.25em;
+		line-height: 150%;
+	}
+	.icon-asterisk {
+		font-size: 0.5em;
+		vertical-align: super;
+		color: @greenmid;
+	}
+	li.comment {
+		padding-bottom: 0em;
+	}
+	ol li {
+	color: @90grey;
+	font-size: 1.25em;
+	font-family: 'SourceSansProLightItalic', sans-serif;
+	line-height: 1.5em;
+	}
+	ul li {
+	color: @90grey;
+	font-size: 1.25em;
+	font-family: 'SourceSansProLightItalic', sans-serif;
+	line-height: 1.5em;
+	}
+}
+
+
+	a {
+		color: @blue;
+		font-family: 'SourceSansProRegular', sans-serif;
+		font-style: normal;
+	}
+*/
+#respond p {
   color: #3c3c3b;
   font-family: 'SourceSansProLight', sans-serif;
   font-weight: normal;
   font-size: 1.25em;
   line-height: 150%;
 }
-.comments-area .icon-asterisk {
-  font-size: 0.5em;
-  vertical-align: super;
-  color: #5aa332;
-}
-.comments-area li.comment {
-  padding-bottom: 0em;
+#respond a {
+  font-family: 'SourceSansProRegular', sans-serif;
+  font-style: normal;
+  font-size: 1em;
 }
 .inputfeldstyle {
   border: 0px;
@@ -3716,41 +3834,11 @@ code {
   padding-top: 0.2em;
   padding-left: 1em;
 }
-p.comment-form-author input {
-  border: 0px;
-  height: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 1em;
-}
-p.comment-form-email input {
-  border: 0px;
-  height: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 1em;
-}
-p.comment-form-url input {
+input#author,
+input#email,
+input#url {
+  width: 40%;
+  margin-right: 2em;
   border: 0px;
   height: 30px;
   -webkit-border-radius: 30px;
@@ -3796,24 +3884,20 @@ textarea#comment {
   -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-}
-.comment-form-comment textarea {
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size: 0.7em;
-  padding-top: 1.5em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  line-height: 150%;
+  padding: 2em;
 }
-.comment-form-author {
-  margin-top: 2em;
+/*.comment-form-author {
+	margin-top: 2em;	
 }
+
 .comment-form-comment {
-  margin-top: 2.4em;
-}
-.form-submit {
-  margin-bottom: 3em;
-}
+	margin-top: 2.4em;	
+}*/
+/*.form-submit {
+	margin-bottom: 6em;
+}*/
 #submit {
   border: 1px solid #c8c8c8;
   height: 30px;
@@ -3840,25 +3924,6 @@ textarea#comment {
   box-shadow: inset 0px 1px 0px 0px white;
   height: 2.2em;
 }
-/* This imageless css button was generated by CSSButtonGenerator.com 
-.submit {
-	border: 1px solid #dcdcdc;
-	display: inline-block;
-	color: #777777;
-	padding: 6px 24px;
-	text-decoration: none;
-	text-shadow: 1px 1px 0px #ffffff;
-}
-.submit:hover {
-	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
-	background: -moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-	background-color: #dfdfdf;
-}
-.submit:active {
-	position: relative;
-	top: 1px;
-}*/
 .widget-area a,
 .widget-area ul,
 .widget-area li {
@@ -3905,12 +3970,24 @@ section#author-page li {
   font-size: 1em;
 }
 section#author-page a {
-  font-family: 'SourceSansProRegular', sans-serif;
+  font-family: 'SourceSansProSemibold', sans-serif;
 }
 section#author-page ul {
   text-decoration: none;
   list-style-type: none;
   padding: 0px;
+}
+.wp-biographia-text h3 {
+  margin-top: 0em;
+}
+.wp-biographia-text a {
+  font-family: 'SourceSansProSemibold', sans-serif;
+}
+.wp-biographia-text ul {
+  color: #3c3c3b;
+  font-family: 'SourceSansProLight', sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
 }
 #scrolltop-grid #scrolltop {
   background-color: #5aa332;
@@ -3987,12 +4064,13 @@ footer {
 }
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-  top: 2.2em;
+  top: 2.25em;
   /* match top ul list item height */
 
   line-height: 0.7em;
 }
 .sf-navbar {
+  border: 1px solid #8d1a1e;
   background: #e11714;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b81714), color-stop(1, #e11714));
   background: -ms-linear-gradient(bottom, #b81714, #e11714);
