@@ -82,6 +82,8 @@ function superfish ($) {
 /**
  * ADDING <i> to every link in specific container
  */
+
+
 function linkIcons ($) {
 // thanks to
 // http://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
