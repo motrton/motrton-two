@@ -24,42 +24,42 @@
 
 
 
-function mediaqueries($){
-  var ww = $(window).width();
-  var sz1 = 480;/* Landscape phones and down*/
-  var sz2 = 768; /* Landscape phone to portrait tablet */
-  var sz3 = 1024; /*Portrait tablet to landscape and desktop*/
-  var sz4 = 1600; /* Large desktop*/
+// function mediaqueries($){
+//   var ww = $(window).width();
+//   var sz1 = 480;/* Landscape phones and down*/
+//   var sz2 = 768; /* Landscape phone to portrait tablet */
+//   var sz3 = 1024; /*Portrait tablet to landscape and desktop*/
+//   var sz4 = 1600; /* Large desktop*/
   
-  if(ww < sz1 ){
-    /* Landscape phones and down*/
-    // $("#getSize1").removeClass().addClass("row-fluid");
-    // $("#getSize2").removeClass().addClass("span11");
+//   if(ww < sz1 ){
+//     /* Landscape phones and down*/
+//     // $("#getSize1").removeClass().addClass("row-fluid");
+//     // $("#getSize2").removeClass().addClass("span11");
 
-  }else if(ww > sz1 && ww <  sz2){
-    /* Landscape phone to portrait tablet */
-    // $("#getSize1").removeClass().addClass("row-fluid");
-    // $("#getSize2").removeClass().addClass("span11");
+//   }else if(ww > sz1 && ww <  sz2){
+//     /* Landscape phone to portrait tablet */
+//     // $("#getSize1").removeClass().addClass("row-fluid");
+//     // $("#getSize2").removeClass().addClass("span11");
 
-  }else if(ww > sz2 && ww < sz3 ){
-    /*Portrait tablet to landscape*/
-    // $("#getSize1").removeClass().addClass("row");
-    // $("#getSize2").removeClass().addClass("span11 offset1");
+//   }else if(ww > sz2 && ww < sz3 ){
+//     /*Portrait tablet to landscape*/
+//     // $("#getSize1").removeClass().addClass("row");
+//     // $("#getSize2").removeClass().addClass("span11 offset1");
 
-  }else if(ww > sz3 && ww < sz4 ){
+//   }else if(ww > sz3 && ww < sz4 ){
 
-    /* tablet landscape to desktop*/
-    // $("#getSize1").removeClass().addClass("row");
-    //  $("#getSize2").removeClass().addClass("span8");
+//     /* tablet landscape to desktop*/
+//     // $("#getSize1").removeClass().addClass("row");
+//     //  $("#getSize2").removeClass().addClass("span8");
 
-  }else if(ww > sz4){
-     /* Large desktop*/
-    // $("#getSize1").removeClass().addClass("row");
-    // $("#getSize2").removeClass().addClass("span8");
+//   }else if(ww > sz4){
+//      /* Large desktop*/
+//     // $("#getSize1").removeClass().addClass("row");
+//     // $("#getSize2").removeClass().addClass("span8");
 
-  }
+//   }
     
-  }
+//   }
 
 /**
 * using superfish plugin
@@ -85,6 +85,17 @@ function superfish ($) {
 function linkIcons ($) {
 // thanks to
 // http://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
+
+$('.entry-content').find('a[title]').prepend(function(){
+// return 'hellow';
+  return '<i class="' + $(this).attr('title') + '"></i> ';
+});
+  // var link = $('.entry-content a[title]');
+  // if(link.attr('title')){
+  //     var title = link.attr('title');
+  //   link.prepend('<i class="' + title+ '"></i> ');
+  // }
+
  $('.entry-content').find('a:not(:has(>img, i))').prepend('<i class="icon-hand-right"></i> ');
     // }
 }
