@@ -390,8 +390,20 @@ function motrton_two_comment_placeholders( $fields ){
 function motrton_two_comment( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
     switch ( $comment->comment_type ) :
+            case 'pingback' :
+            case 'trackback' :
+
         case '' :
     ?>
+        <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+        <p><?php _e( 'Pingback:', 'twentytwelve' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?></p>
+    <?php
+            break;
+        default :
+        // Proceed with normal comments.
+        global $post;
+    ?>
+
     <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
         <div id="comment-<?php comment_ID(); ?>">
         <div class="comment-author vcard">
@@ -424,16 +436,9 @@ function motrton_two_comment( $comment, $args, $depth ) {
         </div>
     </div><!-- #comment-##  -->
 
-
+ 
     <?php
-            break;
-        case 'pingback'  :
-        case 'trackback' :
-    ?>
-    <li class="post pingback">
-        <p><?php _e( 'Pingback:', 'motrton_two' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'motrton_two' ), ' ' ); ?></p>
-    <?php
-            break;
+        break;
     endswitch;
 }
 
