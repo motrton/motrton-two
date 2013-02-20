@@ -26,18 +26,17 @@ $page_ids =  array();
 <!-- this is PAGE-CAROUSEL.PHP -->
 <script type="text/javascript">
 jQuery(document).ready(function($){
+                $('#slider').tinycarousel({pager:true});
+//     var divs = $('div[id^="carousel-item-"]').hide(),
+//     i = 0;
+// (function cycle() { 
+//     divs.eq(i).fadeIn(400)
+//               .delay(5000)
+//               .fadeOut(400, cycle);
 
-    var divs = $('div[id^="carousel-item-"]').hide(),
-    i = 0;
-
-(function cycle() { 
-    divs.eq(i).fadeIn(400)
-              .delay(5000)
-              .fadeOut(400, cycle);
-
-    i = ++i % divs.length; // increment i, 
-                           //   and reset to 0 when it equals divs.length
-})();
+//     i = ++i % divs.length; // increment i, 
+//                            //   and reset to 0 when it equals divs.length
+// })();
 });
 </script>
 
@@ -48,24 +47,34 @@ jQuery(document).ready(function($){
 <!-- <div class="carousel" data-jkit="[carousel]"> -->
 <!-- http://stackoverflow.com/questions/8965651/cycle-through-divs -->
     <div class="carousel">
+        <div id="slider">
+        <a class="buttons prev" href="#">left</a>
+        <div class="viewport">
+            <ul class="overview">
     <?php
     
     for($j = 0; $j < count($page_ids); $j++){
     $post = get_page($page_ids[$j]);
     $title = apply_filters('post_title', $post->post_title);
     $content = apply_filters('the_content', $post->post_content);
-    // $excerpt = apply_filters('post_excerpt', $post->post_excerpt);
 
-
-    
     echo "<!-- This is ID ".$page_ids[$j] ." -->";
-    echo "<div class=\"carousel-item\" id=\"carousel-item-" . $j ."\">";
+    echo "<li class=\"carousel-item\" id=\"carousel-item-" . $j ."\">";
     // echo "<h2>" .$title . "</h2>";
     echo $content;
-    echo "</div>";
-
+    echo "</li>";
     }
+    echo "</ul> <!-- close ul overview -->";
+    echo "</div> <!-- close div viewport -->";
+    echo "<ul class=\"pager\">";
+      for($k = 0; $k < count($page_ids); $k++){
+        echo "<li><a rel=\"". $k ."\" class=\"pagenum\" href=\"#\">". $k."</a></li>";
+      }
+    echo "</ul> <!-- close ul pager -->";
     ?>
+
+
+</div> <!-- end slider -->
 </div> <!-- end carousel -->
 </section>
 </div> <!-- end container -->

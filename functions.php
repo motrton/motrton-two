@@ -29,7 +29,7 @@ add_action('wp_enqueue_scripts','superfish_script_with_jquery');
 
 add_action('wp_enqueue_scripts','combobox_with_jqueryui');
 
-// add_action('wp_enqueue_scripts','jkit_script_with_jquery');
+add_action('wp_enqueue_scripts','carousel_script_with_jquery');
 // 
 // add main JS
 // 
@@ -172,9 +172,9 @@ wp_enqueue_script( 'fittext-script' );
  * This adds the jkit
  *
  */
-function jkit_script_with_jquery(){
-wp_register_script( 'jkit', get_template_directory_uri() . '/js/jquery.jkit.1.1.15.min.js', array( 'jquery' ) );
-wp_enqueue_script( 'jkit' );
+function carousel_script_with_jquery(){
+wp_register_script( 'carousel', get_template_directory_uri() . '/js/jquery.tinycarousel.js', array( 'jquery' ) );
+wp_enqueue_script( 'carousel' );
 
 }
 /**
@@ -207,7 +207,11 @@ function my_styles() {
         // wp_register_style( 'jkit', get_template_directory_uri() . '/css/jkit.css');
      // }
     wp_register_style( 'mediaqueries', get_template_directory_uri() . '/css/mediaqueries.css',array('overwrite','oo-naok-style'));
+     // if(is_page('page-carousel.php')){
+      wp_register_style( 'carousel', get_template_directory_uri() . '/css/carousel.css',array('overwrite','oo-naok-style'));
 
+
+     // }
 if( !is_admin() ){
     wp_enqueue_style( 'superfish' );
     wp_enqueue_style( 'superfish-navbar' );
@@ -216,6 +220,9 @@ if( !is_admin() ){
     wp_enqueue_style( 'oo-naok-style' );
     wp_enqueue_style( 'combobox' );
     wp_enqueue_style( 'mediaqueries' );
+    wp_enqueue_style('carousel');
+
+
 
      // wp_enqueue_style( 'jkit' );
     }
