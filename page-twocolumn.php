@@ -17,7 +17,7 @@
     <section id="two-column">
         <div id="column-img">
         <?php
-        $dom = new DOMDocument;
+        $dom = new DOMDocument('1.0', 'UTF-8');
         $dom->loadHTML(get_the_content());
         // echo get_the_content();
         // echo 'hello world';
@@ -40,16 +40,12 @@
             </h2>
 
   <?php
-    function innerHTML($node){
-    $doc = new DOMDocument();
-    foreach ($node->childNodes as $child)
-        $doc->appendChild($doc->importNode($child, true));
 
-    return $doc->saveHTML();
-    }
+    $dom = new DOMDocument('1.0', 'UTF-8');
+    $string = get_the_content();
+    $string = mb_convert_encoding($string, 'HTML-ENTITIES', "UTF-8");
 
-    $dom = new DOMDocument();
-    $dom->loadHTML(get_the_content());
+    $dom->loadHTML($string);
     $xpath = new DOMXPath($dom);
     $nodes = $xpath->query('//img|//a[img]');
     foreach($nodes as $node) {

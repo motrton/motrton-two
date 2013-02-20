@@ -29,7 +29,7 @@ add_action('wp_enqueue_scripts','superfish_script_with_jquery');
 
 add_action('wp_enqueue_scripts','combobox_with_jqueryui');
 
-// add_action('wp_enqueue_scripts','jkit_script_with_jquery');
+add_action('wp_enqueue_scripts','carousel_script_with_jquery');
 // 
 // add main JS
 // 
@@ -172,9 +172,9 @@ wp_enqueue_script( 'fittext-script' );
  * This adds the jkit
  *
  */
-function jkit_script_with_jquery(){
-wp_register_script( 'jkit', get_template_directory_uri() . '/js/jquery.jkit.1.1.15.min.js', array( 'jquery' ) );
-wp_enqueue_script( 'jkit' );
+function carousel_script_with_jquery(){
+wp_register_script( 'carousel', get_template_directory_uri() . '/js/jquery.tinycarousel.js', array( 'jquery' ) );
+wp_enqueue_script( 'carousel' );
 
 }
 /**
@@ -207,7 +207,11 @@ function my_styles() {
         // wp_register_style( 'jkit', get_template_directory_uri() . '/css/jkit.css');
      // }
     wp_register_style( 'mediaqueries', get_template_directory_uri() . '/css/mediaqueries.css',array('overwrite','oo-naok-style'));
+     // if(is_page('page-carousel.php')){
+      wp_register_style( 'carousel', get_template_directory_uri() . '/css/carousel.css',array('overwrite','oo-naok-style'));
 
+
+     // }
 if( !is_admin() ){
     wp_enqueue_style( 'superfish' );
     wp_enqueue_style( 'superfish-navbar' );
@@ -216,6 +220,9 @@ if( !is_admin() ){
     wp_enqueue_style( 'oo-naok-style' );
     wp_enqueue_style( 'combobox' );
     wp_enqueue_style( 'mediaqueries' );
+    wp_enqueue_style('carousel');
+
+
 
      // wp_enqueue_style( 'jkit' );
     }
@@ -377,8 +384,6 @@ function motrton_two_comment_placeholders( $fields ){
     return $fields;
 }
 
-
-if ( ! function_exists( 'motrton_two_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
@@ -392,26 +397,41 @@ if ( ! function_exists( 'motrton_two_comment' ) ) :
 function motrton_two_comment( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
     switch ( $comment->comment_type ) :
-        case '' :
+            case 'pingback' :
+            case 'trackback' :
+
+       
     ?>
+        <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+        <p><?php _e( 'Pingback:', 'twentytwelve' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?></p>
+    <?php
+            break;
+        default :
+        // Proceed with normal comments.
+        global $post;
+    ?>
+
     <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
         <div id="comment-<?php comment_ID(); ?>">
         <div class="comment-author vcard">
+
             <?php 
             // echo get_avatar( $comment, 40 );
             ?>
-            <?php printf( __( '%s <span class="says">says:</span>', 'motrton_two' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+            <?php printf( sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+            <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+            <?php
+                /* translators: 1: date, 2: time */
+                printf( __( '%1$s at %2$s', 'motrton_two' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'motrton_two' ), ' ' );
+            ?>
         </div><!-- .comment-author .vcard -->
         <?php if ( $comment->comment_approved == '0' ) : ?>
             <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'motrton_two' ); ?></em>
             <br />
         <?php endif; ?>
 
-        <div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-            <?php
-                /* translators: 1: date, 2: time */
-                printf( __( '%1$s at %2$s', 'motrton_two' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'motrton_two' ), ' ' );
-            ?>
+        <div class="comment-meta commentmetadata">
+
         </div><!-- .comment-meta .commentmetadata -->
 
         <div class="comment-body"><?php comment_text(); ?></div>
@@ -419,20 +439,15 @@ function motrton_two_comment( $comment, $args, $depth ) {
         <div class="reply">
             <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
         </div><!-- .reply -->
+        <div class="letterpress-line-fluid">
+        </div>
     </div><!-- #comment-##  -->
 
+ 
     <?php
-            break;
-        case 'pingback'  :
-        case 'trackback' :
-    ?>
-    <li class="post pingback">
-        <p><?php _e( 'Pingback:', 'motrton_two' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'motrton_two' ), ' ' ); ?></p>
-    <?php
-            break;
+        break;
     endswitch;
 }
-endif;
 
 
 ?>
