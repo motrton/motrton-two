@@ -377,8 +377,6 @@ function motrton_two_comment_placeholders( $fields ){
     return $fields;
 }
 
-
-if ( ! function_exists( 'motrton_two_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
@@ -438,7 +436,6 @@ function motrton_two_comment( $comment, $args, $depth ) {
             break;
     endswitch;
 }
-endif;
 
 
 ?>
