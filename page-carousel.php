@@ -25,8 +25,13 @@ $page_ids =  array();
 <?php get_template_part( 'header','blogtitle'); ?>
 <!-- this is PAGE-CAROUSEL.PHP -->
 <script type="text/javascript">
-jQuery(document).ready(function($){
-                $('#slider').tinycarousel({pager:true});
+jQuery(document).ready(
+    function($){
+     $('#carousel').slidesjs({
+        width: 800,
+        height: 400
+      });
+
 //     var divs = $('div[id^="carousel-item-"]').hide(),
 //     i = 0;
 // (function cycle() { 
@@ -41,16 +46,10 @@ jQuery(document).ready(function($){
 </script>
 
 <div class="container">
-<section id="carousel">
+<section id="carousel-sec">
 
     <!-- This is the carousel part -->
-<!-- <div class="carousel" data-jkit="[carousel]"> -->
-<!-- http://stackoverflow.com/questions/8965651/cycle-through-divs -->
-    <div class="carousel">
-        <div id="slider">
-        <a class="buttons prev" href="#">left</a>
-        <div class="viewport">
-            <ul class="overview">
+    <div id="carousel">
     <?php
     
     for($j = 0; $j < count($page_ids); $j++){
@@ -58,23 +57,13 @@ jQuery(document).ready(function($){
     $title = apply_filters('post_title', $post->post_title);
     $content = apply_filters('the_content', $post->post_content);
 
-    echo "<!-- This is ID ".$page_ids[$j] ." -->";
-    echo "<li class=\"carousel-item\" id=\"carousel-item-" . $j ."\">";
-    // echo "<h2>" .$title . "</h2>";
+    echo "<!-- This is Page ID ".$page_ids[$j] ." -->";
+    echo "<div class=\"carousel-item\" id=\"carousel-item-" . $j ."\">";
     echo $content;
-    echo "</li>";
+    echo "</div>";
     }
-    echo "</ul> <!-- close ul overview -->";
-    echo "</div> <!-- close div viewport -->";
-    echo "<ul class=\"pager\">";
-      for($k = 0; $k < count($page_ids); $k++){
-        echo "<li><a rel=\"". $k ."\" class=\"pagenum\" href=\"#\">". $k."</a></li>";
-      }
-    echo "</ul> <!-- close ul pager -->";
     ?>
 
-
-</div> <!-- end slider -->
 </div> <!-- end carousel -->
 </section>
 </div> <!-- end container -->

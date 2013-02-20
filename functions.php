@@ -173,7 +173,7 @@ wp_enqueue_script( 'fittext-script' );
  *
  */
 function carousel_script_with_jquery(){
-wp_register_script( 'carousel', get_template_directory_uri() . '/js/jquery.tinycarousel.js', array( 'jquery' ) );
+wp_register_script( 'carousel', get_template_directory_uri() . '/js/jquery.slides.min.js', array( 'jquery' ) );
 wp_enqueue_script( 'carousel' );
 
 }
