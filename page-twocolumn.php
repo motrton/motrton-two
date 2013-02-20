@@ -45,8 +45,6 @@
     $string = get_the_content();
     $string = mb_convert_encoding($string, 'HTML-ENTITIES', "UTF-8");
 
-    // $string = mb_convert_encoding($string, 'utf-8', mb_detect_encoding($string));
-
     $dom->loadHTML($string);
     $xpath = new DOMXPath($dom);
     $nodes = $xpath->query('//img|//a[img]');
