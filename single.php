@@ -10,10 +10,6 @@
     <?php get_template_part( 'content'); ?>
     <?php get_template_part( 'nav','single'); ?>
     <?php get_template_part( 'snippets','letterpresslinefluid'); ?>
-
-    <!-- END LOOP -->
-    <?php endwhile; ?>
-
    <!-- COMMENTS TEMPLATE LOAD -->
           <?php
           // If comments are open or we have at least one comment, load up the comment template
@@ -23,6 +19,11 @@
           }
         ?>
     <!-- END COMMENTS TEMPLATE -->
+        <!-- END LOOP -->
+
+    <?php endwhile; ?>
+
+
     <?php else: ?>
     <p>
     <?php __('Leider gibt es keinen Post.','motrton_two'); ?>
