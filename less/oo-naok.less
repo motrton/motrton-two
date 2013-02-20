@@ -5,12 +5,6 @@
 @import url('variables.less');
 @import url('animate.less');
 
-.blockquote {
-	font-family: 'SourceSansProRegular', sans-serif;
-	font-weight: normal;
-	font-size: 1em;
-}
-
 .container {
 	a:link {
 		color: @greenmid;
@@ -402,23 +396,23 @@ section#author-page {
 
 // --- Scroll-Up
 #scrolltop-grid {
-#scrolltop {
-	//height: 40px;
-	background-color: @greenmid;
-	@ptop:0px;
-	@pright:13px;
-	@pbottom:9px;
-	@pleft:13px;
-    padding:@ptop @pright @pbottom @pleft;
-	.e_gradient (@greenmid, @greendark, @greenmid);
-	-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
-	-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
-	box-shadow: inset 0px 1px 0px 0px @greenlight;
-	i, cite, em, var, address, dfn {
-		font-size: 1.2em;
-		padding-top: 0.5em;
+	#scrolltop {
+		//height: 40px;
+		background-color: @greenmid;
+		@ptop:0px;
+		@pright:13px;
+		@pbottom:9px;
+		@pleft:13px;
+	    padding:@ptop @pright @pbottom @pleft;
+		.e_gradient (@greenmid, @greendark, @greenmid);
+		-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
+		-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
+		box-shadow: inset 0px 1px 0px 0px @greenlight;
+		i, cite, em, var, address, dfn {
+			font-size: 1.2em;
+			padding-top: 0.5em;
+		}
 	}
-}
 }
 
 // --- Fuss
@@ -479,7 +473,6 @@ footer{
 
 
 .sf-navbar {
-	border: 1px solid @redshadow;
 	.e_gradient (@redmid, @reddark, @redmid);
 	-moz-box-shadow: inset 0px 1px 0px 0px @redlight;
 	-webkit-box-shadow: inset 0px 1px 0px 0px @redlight;

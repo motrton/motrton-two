@@ -3529,11 +3529,6 @@ body {
   -o-animation-duration: 0.75s;
   animation-duration: 0.75s;
 }
-.blockquote {
-  font-family: 'SourceSansProRegular', sans-serif;
-  font-weight: normal;
-  font-size: 1em;
-}
 .container a:link {
   color: #5aa332;
 }
@@ -4065,7 +4060,6 @@ footer {
   line-height: 0.7em;
 }
 .sf-navbar {
-  border: 1px solid #8d1a1e;
   background: #e11714;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b81714), color-stop(1, #e11714));
   background: -ms-linear-gradient(bottom, #b81714, #e11714);
