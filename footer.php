@@ -15,11 +15,11 @@
                 $registerlink = get_page_link(220);
 
                 if ( is_user_logged_in() ) {
-                    echo ' <a href="' . $dashboardlink . '"> Dashboard <i class="icon-wrench"></i></a><span class="olios-extra-special-white-space">&emsp;&emsp;</span><a href="' . $logoutlink . '">Ausloggen <i class="icon-signout"></i></a>' ; 
+                    echo ' <a href="' . $dashboardlink . '"> <span class="footer-workitems-text">Dashboard</span> <i class="icon-wrench"></i></a><span class="olios-extra-special-white-space">&emsp;&emsp;</span><a href="' . $logoutlink . '"><span class="footer-workitems-text">Ausloggen</span> <i class="icon-signout"></i></a>' ; 
                  }else{
-                    echo '<span class="olios-extra-special-white-space">&emsp;&emsp;</span><a href="' . $loginlink . '"> Einloggen <i class="icon-signin"></i></a>';
+                    echo '<span class="olios-extra-special-white-space">&emsp;&emsp;</span><a href="' . $loginlink . '"> <span class="footer-workitems-text">Einloggen</span> <i class="icon-signin"></i></a>';
                     if(get_option('users_can_register')) { 
-                    echo '<span class="olios-extra-special-white-space">&emsp;&emsp;</span><a href="' . $registerlink . '"> Registrieren <i class="icon-user"></i></a>'; 
+                    echo '<span class="olios-extra-special-white-space">&emsp;&emsp;</span><a href="' . $registerlink . '"> <span class="footer-workitems-text">Registrieren</span> <i class="icon-user"></i></a>'; 
                     }
                  }
                  ?>
