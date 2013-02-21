@@ -36,20 +36,20 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     $uyim = $curauth->yim;
 
     echo '<h1>TEST START</h1>';
-echo '<p><h2>User ID</h2><br>:' . $userid . '</p>';
-echo '<p><h2>User AIM</h2><br>:' . $aim . '</p>';
-echo '<p><h2>USER Desc</h2><br>:' . $descr . '</p>';
-echo '<p><h2>USER Display Name</h2><br>:' . $disname . '</p>';
-echo '<p><h2>User First Name</h2><br>:' . $fn . '</p>';
-echo '<p><h2>User Jabber</h2><br>:' . $jabber . '</p>';
-echo '<p><h2>USER Last Name</h2><br>:' . $uln . '</p>';
-echo '<p><h2>User Nice Name</h2><br>:' . $unn . '</p>';
-echo '<p><h2>User email</h2><br>:' . $uem . '</p>';
-echo '<p><h2>User Login</h2><br>:' . $ulog . '</p>';
-echo '<p><h2>User nice name</h2><br>:' . $unn . '</p>';
-echo '<p><h2>User Registered???</h2><br>:' . $ureg . '</p>';
-echo '<p><h2>User Url</h2><br>:' . $uurl . '</p>';
-echo '<p><h2>User Yim???</h2><br>:' . $uyim . '</p>';
+echo '<p><h2>User ID:</h2><br>' . $userid . '</p>';
+echo '<p><h2>User AIM:</h2><br>' . $aim . '</p>';
+echo '<p><h2>USER Desc:</h2><br>' . $descr . '</p>';
+echo '<p><h2>USER Display Name:</h2><br>' . $disname . '</p>';
+echo '<p><h2>User First Name:</h2><br>' . $fn . '</p>';
+echo '<p><h2>User Jabber:</h2><br>' . $jabber . '</p>';
+echo '<p><h2>USER Last Name:</h2><br>' . $uln . '</p>';
+echo '<p><h2>User Nice Name:</h2><br>' . $unn . '</p>';
+echo '<p><h2>User email:</h2><br>' . $uem . '</p>';
+echo '<p><h2>User Login:</h2><br>' . $ulog . '</p>';
+echo '<p><h2>User nice name:</h2><br>' . $unn . '</p>';
+echo '<p><h2>User Registered???:</h2><br>' . $ureg . '</p>';
+echo '<p><h2>User Url:</h2><br>' . $uurl . '</p>';
+echo '<p><h2>User Yim???:</h2><br>' . $uyim . '</p>';
 
    echo '<h1>TEST END</h1>';
 
