@@ -11,6 +11,21 @@
 <div class="thetopnav" id="topbar">
 <ul class="sf-menu sf-navbar" id="desktop-navbar">
 <!-- wp_list_pages start -->
+<?php
+                $dashboardlink = admin_url();
+                $loginlink = wp_login_url( get_permalink() );
+                $logoutlink =  wp_logout_url( get_permalink() );
+
+ if ( is_user_logged_in() ) {
+                echo '<li class="page-item" id="dashboard" ><a href="' . $dashboardlink . '"><i class="icon-wrench"></i></a></li>' ;
+
+                echo '<li class="page-item" id="logout" ><a href="' . $logoutlink . '"><i class="icon-signout"></i></a></li>';
+                 }else{
+                echo '<li class="page-item" id="logout" ><a href="' . $loginlink . '"><i class="icon-signin"></i></a></li>';
+                 }
+ ?>
+
+
 <li class="page-item" id="en-de" ><a href="#">EN|DE</a>
 </li>
         <?php
