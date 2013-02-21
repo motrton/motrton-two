@@ -24,66 +24,7 @@ $page_ids =  array();
 <?php get_header(); ?>
 <?php get_template_part( 'header','blogtitle'); ?>
 <!-- this is PAGE-CAROUSEL.PHP -->
-<script type="text/javascript">
-jQuery(document).ready(
-    function($){
-     $('#carousel').slidesjs({
-         width: 960,
-         height: 500,
-         responsive: true, // [Boolean] slideshow will scale to its container
-        preload: true,
-        preloadImage: '../img/loading.gif',
-        // play: 5000,
-        // pause: 2500,
-        // slideSpeed: 450,
-        // hoverPause: true,
-        play:{
-            active:true,
-            auto:false,
-            interval:4000,
-            swap:true
-        },
-          pagination: {
-      active: true,
-        // # [boolean] Create pagination items.
-        // # You cannot use your own pagination.
-      effect: "slide"
-        // # [string] Can be either "slide" or "fade".
-    },
-         navigation: {
-         },
-effect: {
-      slide: {
-        // # Slide effect settings.
-        speed: 700,
-          // # [number] Speed in milliseconds of the slide animation.
-        easing: ""
-          // # easing plug-in required: http://gsgd.co.uk/sandbox/jquery/easing/
-      }
-      // ,
-      // fade: {
-      //   speed: 300,
-      //     // # [number] Speed in milliseconds of the fade animation.
-      //   easing: "",
-      //     // # easing plug-in required: http://gsgd.co.uk/sandbox/jquery/easing/
-      //   crossfade: true
-      //     // # [boolean] Cross-fade the transition.
-      // }
-    }
-      });
 
-//     var divs = $('div[id^="carousel-item-"]').hide(),
-//     i = 0;
-// (function cycle() { 
-//     divs.eq(i).fadeIn(400)
-//               .delay(5000)
-//               .fadeOut(400, cycle);
-
-//     i = ++i % divs.length; // increment i, 
-//                            //   and reset to 0 when it equals divs.length
-// })();
-});
-</script>
 
 <div class="container">
 <section id="carousel-sec">
@@ -162,5 +103,36 @@ effect: {
     <?php  endif; ?>
 </section>
 </div>
+<script type="text/javascript">
+jQuery(document).ready(
+    function($){
+     $('#carousel').slidesjs({
+         width: 960,
+         height: 500,
+         responsive: true, // [Boolean] slideshow will scale to its container
+        preload: true,
+        preloadImage: '../img/loading.gif',
+        play:{
+            active:true,
+            auto:true,
+            interval:4000,
+            swap:true
+        },
+          pagination: {
+      active: true,
+      effect: "slide"
+    },
+         navigation: {
+         },
+effect: {
+      slide: {
+        // # Slide effect settings.
+        speed: 700,
+      }
+    }
+      });
+
+});
+</script>
 <!-- END PAGE-CAROUSEL.PHP -->
 <?php get_footer(); ?>
