@@ -4224,7 +4224,7 @@ ul#desktop-search li i {
   color: #ffffff;
   text-align: right;
 }
-ul#desktop-search li#searchfield {
+li#searchfield {
   display: none;
 }
 /************************************************************

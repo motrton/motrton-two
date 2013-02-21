@@ -107,11 +107,9 @@ jQuery(document).ready(function($){
 superfish($);
 linkIcons($);
 
-
 $(window).resize(function() {
         superfish($);
     });
-
 
 $(window).scroll(function() {
     if ($(this).scrollTop()) {
@@ -137,9 +135,11 @@ $('label > span.required').replaceWith('<span class="required"><i class="icon-as
 // callback
 // Function Optional
 //
-$('i#revealsearch').click(function(){
-    $('li#searchfield').toggle('slide', {direction: 'right'}, 500);
+$('i#revealsearch').click(
+  function(){
+    $('li#searchfield').fadeToggle(400,'linear');
 });
+
 
 $("a[href='#top']").click(function() {
   $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -147,7 +147,4 @@ $("a[href='#top']").click(function() {
 });
 
 
-// $('ul#desktop-search>li').last().css('background-color', 'red');
-// // depthLetterpress($);
-// mobileDropdown($);
 });

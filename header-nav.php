@@ -18,11 +18,11 @@
                 $logoutlink =  wp_logout_url( get_permalink() );
 
  if ( is_user_logged_in() ) {
-                echo '<li class="page-item" id="dashboard" ><a href="' . $dashboardlink . '"><i class="icon-wrench"></i></a></li>' ;
+                echo '<li class="page_item" id="dashboard" ><a href="' . $dashboardlink . '"><i class="icon-wrench"></i></a></li>' ;
                 echo '<li><span class="olios-extra-special-white-space">&emsp;&emsp;</span></li>';
-                echo '<li class="page-item" id="logout" ><a href="' . $logoutlink . '"><i class="icon-signout"></i></a></li>';
+                echo '<li class="page_item" id="logout" ><a href="' . $logoutlink . '"><i class="icon-signout"></i></a></li>';
                  }else{
-                echo '<li class="page-item" id="login" ><a href="' . $loginlink . '"><i class="icon-signin"></i></a></li>';
+                echo '<li class="page_item" id="login" ><a href="' . $loginlink . '"><i class="icon-signin"></i></a></li>';
                  }
  ?>
 </ul>
@@ -31,7 +31,7 @@
 <!-- wp_list_pages start -->
 
 
-<li class="page-item" id="en-de" ><a href="#">EN|DE</a>
+<li class="page_item" id="en-de" ><a href="#">EN|DE</a>
 </li>
         <?php
         
@@ -61,12 +61,23 @@ Searchform
 found here:
 http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
 -->
+<!-- <li class="page_item"> -->
+    <!-- <i id="revealsearch" class="icon-search"></i> -->
+<!-- <ul class="children"> -->
+        <!-- <li id="searchfield"> -->
+                <?php //get_search_form(); ?>
+        <!-- </li> -->
+    <!-- </ul> -->
+<!-- </li> -->
+
 </ul>
 
 <ul id="desktop-search">
 <li><i id="revealsearch" class="icon-search"></i></li>
  <li id="searchfield"> 
-<?php get_search_form(); ?>
+<?php
+get_search_form(); 
+?>
 </li>
 </ul>
 </div>
