@@ -15,6 +15,7 @@
             <?php the_title(); ?></a>,
             <?php the_time(get_option('date_format')); ?> in <?php the_category(', ');?>
         </li>
+        <?php the_excerpt(); ?>
         <?php get_template_part( 'content','edit'); ?>
 </article>
 <!-- END CONTENT.PHP -->
