@@ -4164,19 +4164,28 @@ div#scrolltop-grid {
 /************************************************************
 ************************HEADER-NAV.PHP***********************
 ************************************************************/
+ul#work-items {
+  z-index: 2345;
+  position: absolute;
+  top: -16px;
+  list-style-type: none;
+}
+ul#work-items li {
+  float: left;
+}
+ul#work-items li i {
+  color: #ecdfcb;
+}
 ul#desktop-search {
   position: absolute;
   top: -10px;
   list-style-type: none;
-  float: right;
 }
 ul#desktop-search li {
   float: right;
 }
 ul#desktop-search li i {
-  float: right;
   color: #ffffff;
-  font-size: 1.5em;
   text-align: right;
 }
 ul#desktop-search li#searchfield {

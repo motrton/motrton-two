@@ -9,8 +9,9 @@
 ?>
 <!-- START HEADER-NAV.PHP -->
 <div class="thetopnav" id="topbar">
-<ul class="sf-menu sf-navbar" id="desktop-navbar">
-<!-- wp_list_pages start -->
+<ul id="work-items">
+
+
 <?php
                 $dashboardlink = admin_url();
                 $loginlink = wp_login_url( get_permalink() );
@@ -18,12 +19,16 @@
 
  if ( is_user_logged_in() ) {
                 echo '<li class="page-item" id="dashboard" ><a href="' . $dashboardlink . '"><i class="icon-wrench"></i></a></li>' ;
-
+                echo '<li><span class="olios-extra-special-white-space">&emsp;&emsp;</span></li>';
                 echo '<li class="page-item" id="logout" ><a href="' . $logoutlink . '"><i class="icon-signout"></i></a></li>';
                  }else{
-                echo '<li class="page-item" id="logout" ><a href="' . $loginlink . '"><i class="icon-signin"></i></a></li>';
+                echo '<li class="page-item" id="login" ><a href="' . $loginlink . '"><i class="icon-signin"></i></a></li>';
                  }
  ?>
+</ul>
+
+<ul class="sf-menu sf-navbar" id="desktop-navbar">
+<!-- wp_list_pages start -->
 
 
 <li class="page-item" id="en-de" ><a href="#">EN|DE</a>
@@ -59,7 +64,7 @@ http://wordpress.org/support/topic/adding-the-searchform-to-the-navbar
 </ul>
 
 <ul id="desktop-search">
-<li><i id="revealsearch" class=" icon-search"></i></li>
+<li><i id="revealsearch" class="icon-search"></i></li>
  <li id="searchfield"> 
 <?php get_search_form(); ?>
 </li>

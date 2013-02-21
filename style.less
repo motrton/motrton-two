@@ -217,18 +217,31 @@ ul#desktop-navbar{
 /************************************************************
 ************************HEADER-NAV.PHP***********************
 ************************************************************/
+ul#work-items{
+    z-index: 2345;
+    position:absolute;
+  top:-16px;
+  list-style-type: none;
+
+  li{
+    float:left;
+    i{
+      color:@chamois;
+
+      // text-align: left;
+    }
+  }
+}
+
 
 ul#desktop-search{
   position:absolute;
   top:-10px;
   list-style-type: none;
-  float:right;
   li{
       float:right;
     i{
-      float:right;
       color:@white;
-      font-size: 1.5em;
       text-align: right;
     }
   }
