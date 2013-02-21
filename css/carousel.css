@@ -3,6 +3,10 @@
 #carousel {
   display: none;
 }
+#carousel .slidesjs-container {
+  height: 500px !important;
+  padding-bottom: 10px;
+}
 /* Show active item in the pagination */
 ul.slidesjs-pagination {
   margin: 6px 0 0;
