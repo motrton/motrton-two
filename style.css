@@ -4044,14 +4044,13 @@ div#column-img {
 div#carousel-img {
   display: inline;
   float: left;
-  width: 22.916666666666664%;
+  width: 31.25%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
 }
 article#carousel-content {
   display: inline;
   float: left;
-  width: 56.25%;
+  width: 64.58333333333334%;
   margin: 0 1.0416666666666665%;
 }
 article#column-content {
@@ -4184,7 +4183,6 @@ div#scrolltop-grid {
     float: left;
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
-    height: 100%;
   }
 }
 /************************************************************

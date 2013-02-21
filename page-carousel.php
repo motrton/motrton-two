@@ -28,9 +28,10 @@ $page_ids =  array();
 jQuery(document).ready(
     function($){
      $('#carousel').slidesjs({
-         width: 800,
-         height: 400,
-        // preload: true,
+         width: 960,
+         height: 500,
+         responsive: true, // [Boolean] slideshow will scale to its container
+        preload: true,
         preloadImage: '../img/loading.gif',
         // play: 5000,
         // pause: 2500,
