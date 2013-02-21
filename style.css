@@ -4017,9 +4017,8 @@ section#post {
 section#carousel-sec {
   display: inline;
   float: left;
-  width: 81.25%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
 }
 section#page {
   display: inline;
@@ -4041,6 +4040,19 @@ div#column-img {
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
+}
+div#carousel-img {
+  display: inline;
+  float: left;
+  width: 22.916666666666664%;
+  margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
+}
+article#carousel-content {
+  display: inline;
+  float: left;
+  width: 56.25%;
+  margin: 0 1.0416666666666665%;
 }
 article#column-content {
   display: inline;
@@ -4166,6 +4178,13 @@ div#scrolltop-grid {
     float: left;
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
+  }
+  article#carousel-content {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+    height: 100%;
   }
 }
 /************************************************************

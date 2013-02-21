@@ -103,69 +103,6 @@ $('.entry-content').find('a[title]').prepend(function(){
 }
 
 
-/**
- * Add better letterpress to elements
- * Looks better nut links get unclickable
- *
- */
-// function depthLetterpress ($) {
-// $('h1, h2, h3, h4').addClass('depth');
-// $('h1, h2, h3').attr('title',function(){
-//     return $(this).text();
-// });
-// }
-//
-// make the dropdown phone only
-// function mobileDropdown ($) {
-
-
-// if($('.navbar, .navbar-fixed-top, .visible-phone').css('display') !== 'none !important'){
-// $('.nav').children('li').addClass('dropdown');
-// $('ul.nav > li.dropdown').children('a').addClass('dropdown-toggle');
-// $('.dropdown-toggle').attr('data-toggle','dropdown');
-// $('a.dropdown-toggle').append(' <b class="caret"></b>');
-// $('li.dropdown > ul.children').addClass('dropdown-menu');
-
-// // remove the caret on the blog tab
-// $('ul.nav > li').last().children('a').children('b').removeClass('caret');
-
-// // we have to open the current item
-// $('li.current_page_item').addClass('open');
-
-// $('li.dropdown > a.dropdown-toggle').click(
-//     function(){
-//             var a_href = $(this).attr('href');
-//             window.location = a_href;
-//             }
-//         );
-//     }
-// }
-
-function helper ($) {
-// get previous url
-var cameFrom =  document.referrer;
-$('div#debuginfo').append('This is where you came from' + cameFrom+ '<br>');
-var res = "<?php echo get_bloginfo('wpurl'); ?>/wp-admin/admin-ajax.php?action=search";
-$('div#debuginfo').append('<br>' + res);
-}
-
-// function scrolltop_pos ($) {
-  // var position = $('aside').position();
-  // $('#scrolltop').css('right',position.right);
-  //   $('#scrolltop').css('left',position.right -100);
-
-// }
-
-// jQuery(function($) {
-//     $( ".combobox" ).combobox();
-//     $( ".toggle" ).click(function() {
-//       $( ".combobox" ).toggle();
-//     });
-//  });
-
-// jQuery(window).resize(mediaqueries($));
-
-
 jQuery(document).ready(function($){
 superfish($);
 linkIcons($);
@@ -185,6 +122,7 @@ $(window).scroll(function() {
 });
 
 $('label > span.required').replaceWith('<span class="required"><i class="icon-asterisk"></i></span>');
+
 //http://docs.jquery.com/UI/Effects/toggle
 //effect String
 // The effect to be used. Possible values:
@@ -212,5 +150,4 @@ $("a[href='#top']").click(function() {
 // $('ul#desktop-search>li').last().css('background-color', 'red');
 // // depthLetterpress($);
 // mobileDropdown($);
-helper($);
 });

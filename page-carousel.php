@@ -28,8 +28,47 @@ $page_ids =  array();
 jQuery(document).ready(
     function($){
      $('#carousel').slidesjs({
-        width: 800,
-        height: 400
+         width: 800,
+         height: 400,
+        // preload: true,
+        preloadImage: '../img/loading.gif',
+        // play: 5000,
+        // pause: 2500,
+        // slideSpeed: 450,
+        // hoverPause: true,
+        play:{
+            active:true,
+            auto:false,
+            interval:4000,
+            swap:true
+        },
+          pagination: {
+      active: true,
+        // # [boolean] Create pagination items.
+        // # You cannot use your own pagination.
+      effect: "slide"
+        // # [string] Can be either "slide" or "fade".
+    },
+         navigation: {
+         },
+effect: {
+      slide: {
+        // # Slide effect settings.
+        speed: 700,
+          // # [number] Speed in milliseconds of the slide animation.
+        easing: ""
+          // # easing plug-in required: http://gsgd.co.uk/sandbox/jquery/easing/
+      }
+      // ,
+      // fade: {
+      //   speed: 300,
+      //     // # [number] Speed in milliseconds of the fade animation.
+      //   easing: "",
+      //     // # easing plug-in required: http://gsgd.co.uk/sandbox/jquery/easing/
+      //   crossfade: true
+      //     // # [boolean] Cross-fade the transition.
+      // }
+    }
       });
 
 //     var divs = $('div[id^="carousel-item-"]').hide(),
@@ -55,11 +94,55 @@ jQuery(document).ready(
     for($j = 0; $j < count($page_ids); $j++){
     $post = get_page($page_ids[$j]);
     $title = apply_filters('post_title', $post->post_title);
-    $content = apply_filters('the_content', $post->post_content);
+    $content = apply_filters('get_the_content', $post->post_content);
 
     echo "<!-- This is Page ID ".$page_ids[$j] ." -->";
     echo "<div class=\"carousel-item\" id=\"carousel-item-" . $j ."\">";
-    echo $content;
+    ?>
+    <div id="carousel-img">
+        <?php
+        $dom = new DOMDocument('1.0', 'UTF-8');
+        $dom->loadHTML($content);
+        // echo get_the_content();
+        // echo 'hello world';
+        // $xpath = new DOMXPath($dom);
+        // $nodes = $xpath->query('//img|//a[img]');
+        $dom->preserveWhiteSpace = false;
+        $images = $dom->getElementsByTagName('img');
+        foreach ($images as $image) {
+            echo '<img src="' . $image->getAttribute('src') . '" alt="" />';
+        }
+        ?>
+ </div>
+  <article id="carousel-content" class="entry-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+  <?php
+
+    $dom = new DOMDocument('1.0', 'UTF-8');
+    $string = $content;
+    $string = mb_convert_encoding($string, 'HTML-ENTITIES', "UTF-8");
+
+    $dom->loadHTML($string);
+    $xpath = new DOMXPath($dom);
+    $nodes = $xpath->query('//img|//a[img]');
+    foreach($nodes as $node) {
+        $node->parentNode->removeChild($node);
+    }
+    $no_image_content = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $dom->saveHTML()));
+
+    // $no_image_content = $dom->saveHTML();
+    $no_image_content = apply_filters('the_content', $no_image_content);
+    $no_image_content = str_replace(']]>', ']]&gt;', $no_image_content);
+    echo $no_image_content;
+
+  ?>
+
+</article>
+
+    <!-- echo $content; -->
+
+    <?php
+
     echo "</div>";
     }
     ?>
