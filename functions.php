@@ -25,7 +25,8 @@ if( !is_admin() ){
 // add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
 //superfish scripts js
 add_action('wp_enqueue_scripts','superfish_script_with_jquery');
-// add_action('wp_enqueue_scripts','fittext_script_with_jquery');
+
+add_action('wp_enqueue_scripts','inset_shadow_script_with_jquery');
 
 add_action('wp_enqueue_scripts','combobox_with_jqueryui');
 
@@ -167,9 +168,16 @@ wp_register_script( 'fittext-script', get_template_directory_uri() . '/js/jquery
 wp_enqueue_script( 'fittext-script' );
 }
 
+function inset_shadow_script_with_jquery(){
+
+wp_register_script( 'insetshadow-script', get_template_directory_uri() . '/js/jquery.img-inset-shadow.js', array( 'jquery' ) );
+wp_enqueue_script( 'insetshadow-script' );
+}
+
+
 
 /**
- * This adds the jkit
+ * This adds the carousel
  *
  */
 function carousel_script_with_jquery(){
