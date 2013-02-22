@@ -84,6 +84,22 @@ echo '<p><h2>User Yim???:</h2><br>' . $uyim . '</p>';
     <?php } ?>
     </ul>
 
+<?php 
+query_posts(
+array('post_type' => 'page'));
+?>
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    
+    
+
+
+    <?php
+    endwhile;
+    endif;
+     wp_reset_query();  // Restore global post data ?>
+    ?>
+
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <h3> <?php _e('Posts von','motrton_two') ?> <?php echo $curauth->nickname; ?>:</h3>
@@ -94,10 +110,12 @@ echo '<p><h2>User Yim???:</h2><br>' . $uyim . '</p>';
 
    </ul>
 
-    <?php endwhile; else: ?>
-    <p>
-    <?php __('Leider gibt es keine Posts von diesem Autor.','motrton_two'); ?>
-    </p>
+    <?php endwhile; ?>
+    <!-- <p> -->
+    <?php 
+    // __('Leider gibt es keine Posts von diesem Autor.','motrton_two');
+    ?>
+    <!-- </p> -->
     <?php endif; ?>
 </section>
 
