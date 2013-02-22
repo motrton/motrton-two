@@ -83,22 +83,6 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     </p>
     <?php } ?>
 
-<!-- loop posts -->
-  <?php
-     if(have_posts())
-         echo '<h3 id="posts-by">'.  __('Beiträge von','motrton_two') . ' '. $display_name . '</h3>';
-    
-    if ( have_posts() ) : while ( have_posts() ) : the_post();
-
-   
-   echo '<ul>';
-          get_template_part( 'content','author');
-   echo '</ul>';
-     endwhile; 
-     endif;
-    ?>
-
-
 <?php
 
  $specialpages = get_the_author_meta( 'specialpages', $userid );
@@ -125,6 +109,22 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 
     }
  ?>
+
+<!-- loop posts -->
+  <?php
+     if(have_posts())
+         echo '<h3 id="posts-by">'.  __('Beiträge von','motrton_two') . ' '. $display_name . '</h3>';
+    
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+   
+   echo '<ul>';
+          get_template_part( 'content','author');
+   echo '</ul>';
+     endwhile; 
+     endif;
+    ?>
+
 
 <?php 
 $comment_author = $userid;
