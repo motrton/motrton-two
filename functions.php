@@ -457,5 +457,54 @@ function motrton_two_comment( $comment, $args, $depth ) {
     endswitch;
 }
 
+/************************************************************************************
+ * Add to x-tra fields to user profile
+ * http://justintadlock.com/archives/2009/09/10/adding-and-using-custom-user-profile-fields
+ *************************************************************************************/
+
+add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
+add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
+
+function my_show_extra_profile_fields( $user ) { ?>
+
+    <h3>Extra profile information</h3>
+
+    <table class="form-table">
+
+        <tr>
+            <th><label for="userrole">userrole</label></th>
+
+            <td>
+                <input type="text" name="userrole" id="userrole" value="<?php echo esc_attr( get_the_author_meta( 'userrole', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description">Please enter your userrole.</span>
+            </td>
+        </tr>
+
+        <tr>
+            <th><label for="specialpages">specialpages</label></th>
+
+            <td>
+                <input type="text" name="specialpages" id="specialpages" value="<?php echo esc_attr( get_the_author_meta( 'specialpages', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description">Please enter your specialpages.</span>
+            </td>
+        </tr>
+    </table>
+<?php
+}
+
+add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
+
+function my_save_extra_profile_fields( $user_id ) {
+
+    if ( !current_user_can( 'edit_user', $user_id ) )
+        return false;
+
+    /* Copy and paste this line for additional fields. Make sure to change 'userrole' to the field ID. */
+    update_usermeta( $user_id, 'userrole', $_POST['userrole'] );
+        update_usermeta( $user_id, 'specialpages', $_POST['specialpages'] );
+
+}
+
 
 ?>
