@@ -476,7 +476,7 @@ function my_show_extra_profile_fields( $user ) { ?>
 
             <td>
                 <input type="text" name="userrole" id="userrole" value="<?php echo esc_attr( get_the_author_meta( 'userrole', $user->ID ) ); ?>" class="regular-text" /><br />
-                <span class="description">Please enter your userrole.</span>
+                <span class="description"><?php _e('Bitte gib deine Rolle im Team hier ein','motrton_two') ?>.</span>
             </td>
         </tr>
 
@@ -485,7 +485,7 @@ function my_show_extra_profile_fields( $user ) { ?>
 
             <td>
                 <input type="text" name="specialpages" id="specialpages" value="<?php echo esc_attr( get_the_author_meta( 'specialpages', $user->ID ) ); ?>" class="regular-text" /><br />
-                <span class="description">Please enter your specialpages.</span>
+                <span class="description"><?php _e('Bitte gib hier alle Seiten IDs an die auf den Autoren Seiten mit gelistet werden sollen. ACHTUNG falsche IDs führen zu Fehlern in der Darstellung','motrton_two') ?></span>
             </td>
         </tr>
     </table>
