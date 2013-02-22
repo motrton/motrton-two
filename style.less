@@ -86,8 +86,8 @@ margin-top:-32767px;/* thank you Erik J - negate effect of float*/
 a{text-decoration: none;}
 
 img.avatar{
-  max-width:100px;
-  max-height:100px;
+  // max-width:100px;
+  // max-height:100px;
 }
 
 // p a img {
@@ -143,12 +143,14 @@ section#page{
 }
 
 section#two-column{
+
   .column(12);
+  // .push(1);
 }
 
 section#author-page{
-      .column(8);
-    .push(2);
+      .column(12);
+    // .push(2);
 }
 
 section#fourofour{
@@ -156,7 +158,7 @@ section#fourofour{
 }
   div#column-img{
     .column(3);
-    // .push(1);
+    .push(1);
   }
 
 #two-column-extra-gutter{
@@ -164,10 +166,10 @@ section#fourofour{
 visibility:hidden;
 // background-image: url(img/pusher.png);
 }
-article#column-content{
+#column-content{
 
-  .column(6);
-  .push(1);
+  .column(5);
+  // .push(1);
 }
   div#carousel-img{
     .column(4);

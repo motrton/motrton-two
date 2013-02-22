@@ -3964,10 +3964,6 @@ body:before {
 a {
   text-decoration: none;
 }
-img.avatar {
-  max-width: 100px;
-  max-height: 100px;
-}
 /**
  * This is for some jquery goodness to add an inset shadow onto all images.
  * Lets see how this works.
@@ -4036,9 +4032,8 @@ section#two-column {
 section#author-page {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
-  margin-left: 17.708333333333332%;
 }
 section#fourofour {
   display: inline;
@@ -4051,6 +4046,7 @@ div#column-img {
   float: left;
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
+  margin-left: 9.374999999999998%;
 }
 #two-column-extra-gutter {
   display: inline;
@@ -4059,12 +4055,11 @@ div#column-img {
   margin: 0 1.0416666666666665%;
   visibility: hidden;
 }
-article#column-content {
+#column-content {
   display: inline;
   float: left;
-  width: 47.91666666666667%;
+  width: 39.58333333333333%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
 }
 div#carousel-img {
   display: inline;
