@@ -132,11 +132,17 @@ $comments = get_comments(array('user_id'=>$comment_author));
 if(count($comments) > 0){
 echo  '<h3 id="user-comments">' . __('Kommentare von','motrton_two') . " " . $display_name . '</h3>';
 
-foreach($comments as $comment) :
-$c_url = '<a href="' . get_permalink($comment->comment_post_ID) . '">' . get_the_title($comment->comment_post_ID) . '</a>';
+for ($i=0; $i < count($comments); $i++) { 
+    $comment = $comments[$i];
+    $c_url = '<a href="' . get_permalink($comment->comment_post_ID) . '">' . get_the_title($comment->comment_post_ID) . '</a>';
 echo '<p class="user-comments-link">' .__('Kommentar zu','motrton_two') .' ' . $c_url . __(' am ','motrton_two')  . get_comment_date() . '</p>';
-// echo ('"' . $comment->comment_content . '" <br> –( posted on ' . get_comment_date('M j, Y') . ', commenting on the post ' . $c_url . ' )<br /> <br>');
-endforeach;
+if($i == 4){break;}
+}
+// foreach($comments as $comment) :
+// // $c_url = '<a href="' . get_permalink($comment->comment_post_ID) . '">' . get_the_title($comment->comment_post_ID) . '</a>';
+
+// // echo ('"' . $comment->comment_content . '" <br> –( posted on ' . get_comment_date('M j, Y') . ', commenting on the post ' . $c_url . ' )<br /> <br>');
+// endforeach;
 }
  ?>
 
