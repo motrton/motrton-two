@@ -31,7 +31,9 @@
         ?>
         </div>
         <!-- content -->
-    
+    <div id="two-column-extra-gutter">
+         <img src="<?php get_template_directory() . '/img/pusher.png' ?>" alt="buffer" id="buffer">
+</div>
     <article id="column-content" class="entry-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <h2 class="entry-title">
             <span class="post-title">"

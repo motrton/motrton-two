@@ -6,7 +6,7 @@
 
 
 jQuery(document).ready(function($){
-    $('img:not(#logo, .wp-biographia-avatar)').addClass('inset-shadow');
+    $('img:not(#logo, .wp-biographia-avatar,#buffer)').addClass('inset-shadow');
     $('img.inset-shadow').each(function(){
         var $img = $(this);
         $img.load(function(){

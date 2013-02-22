@@ -4027,6 +4027,12 @@ section#page {
   margin: 0 1.0416666666666665%;
   margin-left: 17.708333333333332%;
 }
+section#two-column {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+}
 section#author-page {
   display: inline;
   float: left;
@@ -4044,6 +4050,19 @@ div#column-img {
   display: inline;
   float: left;
   width: 22.916666666666664%;
+  margin: 0 1.0416666666666665%;
+}
+#two-column-extra-gutter {
+  display: inline;
+  float: left;
+  width: 6.25%;
+  margin: 0 1.0416666666666665%;
+  visibility: hidden;
+}
+article#column-content {
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
