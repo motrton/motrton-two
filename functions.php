@@ -485,7 +485,7 @@ function my_show_extra_profile_fields( $user ) { ?>
 
             <td>
                 <input type="text" name="specialpages" id="specialpages" value="<?php echo esc_attr( get_the_author_meta( 'specialpages', $user->ID ) ); ?>" class="regular-text" /><br />
-                <span class="description"><?php _e('Bitte gib hier alle Seiten IDs an die auf den Autoren Seiten mit gelistet werden sollen. ACHTUNG falsche IDs führen zu Fehlern in der Darstellung. Die Seiten IDs MÜSSEN kommagetrennt sein. Zum Beispiel so:"4, 8, 15, 16, 23, 42"','motrton_two') ?></span>
+                <span class="description"><?php _e('Bitte gib hier alle Seiten IDs an die auf den Autoren Seiten mit gelistet werden sollen. ACHTUNG falsche IDs führen zu Fehlern in der Darstellung. Die Seiten IDs MÜSSEN kommagetrennt sein.<br>Zum Beispiel so:"4, 8, 15, 16, 23, 42"','motrton_two') ?></span>
             </td>
         </tr>
     </table>
