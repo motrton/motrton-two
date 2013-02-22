@@ -83,37 +83,21 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     </p>
     <?php } ?>
 
-<!-- loop pages -->
-<?php
-query_posts(array(
-'post_type' => 'page',
-'author' => $userid ));?>
-
-    <?php 
-    if(have_posts())
-    echo '<h3 id="pages-by">' .  __('Seiten von','motrton_two') . " ".  $display_name . '</h3>';
-     ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <h4 class="pages-by-title">
-        <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
-            <?php the_title(); ?></a>
-    </h4>
-    <?php the_excerpt() ?>
-    <?php endwhile; ?>
-    <?php endif; ?>
-    <?php wp_reset_query();  // Restore global post data ?>
-    <!-- loop posts -->
-    <?php if(have_posts())
+<!-- loop posts -->
+  <?php
+     if(have_posts())
          echo '<h3 id="posts-by">'.  __('Beiträge von','motrton_two') . ' '. $display_name . '</h3>';
-     ?>
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
+
    
-   <!-- include content.php -->
-   <ul>
-          <?php get_template_part( 'content','author'); ?>
-   </ul>
-    <?php endwhile; ?>
-    <?php endif; ?>
+   echo '<ul>';
+          get_template_part( 'content','author');
+   echo '</ul>';
+     endwhile; 
+     endif;
+    ?>
+
 
 <?php
 
@@ -142,6 +126,19 @@ query_posts(array(
     }
  ?>
 
+<?php 
+$comment_author = $userid;
+$comments = get_comments(array('user_id'=>$comment_author));
+if(count($comments) > 0){
+echo  '<h3 id="user-comments">' . __('Kommentare von','motrton_two') . " " . $display_name . '</h3>';
+
+foreach($comments as $comment) :
+$c_url = '<a href="' . get_permalink($comment->comment_post_ID) . '">' . get_the_title($comment->comment_post_ID) . '</a>';
+echo '<p class="user-comments-link">' .__('Kommentar zu','motrton_two') .' ' . $c_url . __(' am ','motrton_two')  . get_comment_date() . '</p>';
+// echo ('"' . $comment->comment_content . '" <br> –( posted on ' . get_comment_date('M j, Y') . ', commenting on the post ' . $c_url . ' )<br /> <br>');
+endforeach;
+}
+ ?>
 
 </article>
 </section>
