@@ -9,9 +9,7 @@
 ?>
 <!-- this is SEARCHFORM.PHP -->
 
-<div class="ui-widget">
-      <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-         <input type="text" name="s" id="s" class="input-medium search-query" data-provide="typeahead" placeholder="<?php esc_attr_e( 'Suche', 'motrton-one' ); ?>" />
+      <form role="search" method="get" id="searchform" action="<?php echo  home_url( '/' ) ; ?>">
+         <input type="text" name="s" id="s" data-provide="typeahead" placeholder="<?php esc_attr_e( 'Suche', 'motrton-one' ); ?>" />
        </form>
-</div>
 <!-- END SEARCHFORM.PHP -->

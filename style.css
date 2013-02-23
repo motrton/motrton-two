@@ -3964,9 +3964,15 @@ body:before {
 a {
   text-decoration: none;
 }
-img.avatar {
-  max-width: 100px;
-  max-height: 100px;
+/**
+ * This is for some jquery goodness to add an inset shadow onto all images.
+ * Lets see how this works.
+ * 
+ */
+.inset-shadow {
+  -moz-box-shadow: 1px 1px 5px grey inset;
+  -webkit-box-shadow: 1px 1px 5px grey inset;
+  box-shadow: 1px 1px 5px grey inset;
 }
 /************************************
 // GRIDS!
@@ -4004,12 +4010,11 @@ section#post {
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
 }
-section#carousel {
+section#carousel-sec {
   display: inline;
   float: left;
-  width: 81.25%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
-  margin-left: 9.374999999999998%;
 }
 section#page {
   display: inline;
@@ -4018,12 +4023,23 @@ section#page {
   margin: 0 1.0416666666666665%;
   margin-left: 17.708333333333332%;
 }
+section#two-column {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+}
 section#author-page {
   display: inline;
   float: left;
-  width: 64.58333333333334%;
+  width: 97.91666666666666%;
   margin: 0 1.0416666666666665%;
-  margin-left: 17.708333333333332%;
+}
+section#fourofour {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
 }
 div#column-img {
   display: inline;
@@ -4031,6 +4047,31 @@ div#column-img {
   width: 22.916666666666664%;
   margin: 0 1.0416666666666665%;
   margin-left: 9.374999999999998%;
+}
+#two-column-extra-gutter {
+  display: inline;
+  float: left;
+  width: 6.25%;
+  margin: 0 1.0416666666666665%;
+  visibility: hidden;
+}
+#column-content {
+  display: inline;
+  float: left;
+  width: 39.58333333333333%;
+  margin: 0 1.0416666666666665%;
+}
+div#carousel-img {
+  display: inline;
+  float: left;
+  width: 31.25%;
+  margin: 0 1.0416666666666665%;
+}
+article#carousel-content {
+  display: inline;
+  float: left;
+  width: 64.58333333333334%;
+  margin: 0 1.0416666666666665%;
 }
 article#column-content {
   display: inline;
@@ -4157,6 +4198,15 @@ div#scrolltop-grid {
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
+  div#carousel-img {
+    display: none !important;
+  }
+  article#carousel-content {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
 }
 /************************************************************
 *************************HEADER.PHP**************************
@@ -4164,22 +4214,31 @@ div#scrolltop-grid {
 /************************************************************
 ************************HEADER-NAV.PHP***********************
 ************************************************************/
+ul#work-items {
+  z-index: 2345;
+  position: absolute;
+  top: -16px;
+  list-style-type: none;
+}
+ul#work-items li {
+  float: left;
+}
+ul#work-items li i {
+  color: #ecdfcb;
+}
 ul#desktop-search {
   position: absolute;
   top: -10px;
   list-style-type: none;
-  float: right;
 }
 ul#desktop-search li {
   float: right;
 }
 ul#desktop-search li i {
-  float: right;
   color: #ffffff;
-  font-size: 1.5em;
   text-align: right;
 }
-ul#desktop-search li#searchfield {
+li#searchfield {
   display: none;
 }
 /************************************************************
@@ -4262,6 +4321,16 @@ ul#desktop-search li#searchfield {
 /************************************************************
 *************************SINGLE.PHP**************************
 ************************************************************/
+/************************************************************
+*************************404.PHP**************************
+************************************************************/
+#fourofour-head {
+  font-size: 10em;
+  text-align: center;
+}
+#fourofour-text {
+  font-size: 2em;
+}
 /************************************************************
 *********************NAV-SINGLE.PHP**************************
 ************************************************************/

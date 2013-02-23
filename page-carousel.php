@@ -24,48 +24,71 @@ $page_ids =  array();
 <?php get_header(); ?>
 <?php get_template_part( 'header','blogtitle'); ?>
 <!-- this is PAGE-CAROUSEL.PHP -->
-<script type="text/javascript">
-jQuery(document).ready(function($){
 
-    var divs = $('div[id^="carousel-item-"]').hide(),
-    i = 0;
-
-(function cycle() { 
-    divs.eq(i).fadeIn(400)
-              .delay(5000)
-              .fadeOut(400, cycle);
-
-    i = ++i % divs.length; // increment i, 
-                           //   and reset to 0 when it equals divs.length
-})();
-});
-</script>
 
 <div class="container">
-<section id="carousel">
+<section id="carousel-sec">
 
     <!-- This is the carousel part -->
-<!-- <div class="carousel" data-jkit="[carousel]"> -->
-<!-- http://stackoverflow.com/questions/8965651/cycle-through-divs -->
-    <div class="carousel">
+    <div id="carousel">
     <?php
     
     for($j = 0; $j < count($page_ids); $j++){
     $post = get_page($page_ids[$j]);
     $title = apply_filters('post_title', $post->post_title);
-    $content = apply_filters('the_content', $post->post_content);
-    // $excerpt = apply_filters('post_excerpt', $post->post_excerpt);
+    $content = apply_filters('get_the_content', $post->post_content);
 
-
-    
-    echo "<!-- This is ID ".$page_ids[$j] ." -->";
+    echo "<!-- This is Page ID ".$page_ids[$j] ." -->";
     echo "<div class=\"carousel-item\" id=\"carousel-item-" . $j ."\">";
-    // echo "<h2>" .$title . "</h2>";
-    echo $content;
-    echo "</div>";
+    ?>
+    <div id="carousel-img">
+        <?php
+        $dom = new DOMDocument('1.0', 'UTF-8');
+        $dom->loadHTML($content);
+        // echo get_the_content();
+        // echo 'hello world';
+        // $xpath = new DOMXPath($dom);
+        // $nodes = $xpath->query('//img|//a[img]');
+        $dom->preserveWhiteSpace = false;
+        $images = $dom->getElementsByTagName('img');
+        foreach ($images as $image) {
+            echo '<img src="' . $image->getAttribute('src') . '" alt="" />';
+        }
+        ?>
+ </div>
+  <article id="carousel-content" class="entry-content" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+  <?php
+
+    $dom = new DOMDocument('1.0', 'UTF-8');
+    $string = $content;
+    $string = mb_convert_encoding($string, 'HTML-ENTITIES', "UTF-8");
+
+    $dom->loadHTML($string);
+    $xpath = new DOMXPath($dom);
+    $nodes = $xpath->query('//img|//a[img]');
+    foreach($nodes as $node) {
+        $node->parentNode->removeChild($node);
+    }
+    $no_image_content = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $dom->saveHTML()));
+
+    // $no_image_content = $dom->saveHTML();
+    $no_image_content = apply_filters('the_content', $no_image_content);
+    $no_image_content = str_replace(']]>', ']]&gt;', $no_image_content);
+    echo $no_image_content;
+
+  ?>
+
+</article>
+
+    <!-- echo $content; -->
+
+    <?php
+
+    echo "</div>";
     }
     ?>
+
 </div> <!-- end carousel -->
 </section>
 </div> <!-- end container -->
@@ -74,11 +97,42 @@ jQuery(document).ready(function($){
     <section id="page">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
    <!-- include content.php -->
-   <?php get_template_part( 'content','carousel'); ?>
+   <?php get_template_part( 'content','belowcarousel'); ?>
     <?php  endwhile; else:  ?>
     <p><?php    __('Leider gibt es keine Seite.','motrton_two'); ?> </p>
     <?php  endif; ?>
 </section>
 </div>
+<script type="text/javascript">
+jQuery(document).ready(
+    function($){
+     $('#carousel').slidesjs({
+         width: 960,
+         height: 500,
+         responsive: true, // [Boolean] slideshow will scale to its container
+        preload: true,
+        preloadImage: '../img/loading.gif',
+        play:{
+            active:true,
+            auto:true,
+            interval:4000,
+            swap:true
+        },
+          pagination: {
+      active: true,
+      effect: "slide"
+    },
+         navigation: {
+         },
+effect: {
+      slide: {
+        // # Slide effect settings.
+        speed: 700,
+      }
+    }
+      });
+
+});
+</script>
 <!-- END PAGE-CAROUSEL.PHP -->
 <?php get_footer(); ?>
