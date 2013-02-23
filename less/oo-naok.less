@@ -5,24 +5,80 @@
 @import url('variables.less');
 @import url('animate.less');
 
+
 .rows {
 	margin-top: 0.9em;
 }
 
+textarea {
+padding-top: 2em;
+padding-left: 2em;
+margin-bottom: 1em;
+border: 0px;
+.e_rounded (10px);
+.e_inner-shadow (1px, 1px, 1px, 0.15);
+.Semibold (1em, 150%, @90grey);
+}
+
+
+/* --- Message Successfuly delivered
+.bigContact #bigContact-results {
+    border-radius: 3px 3px 3px 3px;
+    text-align: left;
+}
+.bigContact .success {
+    background: none repeat scroll 0 0 #E0FFE0;
+    border-color: #55E655;
+    border-style: solid;
+    border-width: 1px;
+    margin: 10px 0;
+    padding: 0;
+    width: 99%;
+}
+/*/ 
+
 // --- Bildschatten
 .inset-shadow{
-    -moz-box-shadow: 1px 1px 5px grey inset;
-    -webkit-box-shadow: 1px 1px 5px grey inset;
-    box-shadow: 1px 1px 5px grey inset;
+	border: 1px solid (@35grey + #333);
+    -moz-box-shadow: 0px 0px 0px (@35grey + #333) inset;
+    -webkit-box-shadow: 0px 0px 0px (@35grey + #333) inset;
+    box-shadow: 0px 0px 0px (@35grey + #333) inset;
+		-moz-box-shadow: 1px 1px white;
+		-webkit-box-shadow: 1px 1px white;
+		box-shadow: 1px 1px white;
 }
-// ---
 
-#login {
+// --- 404
+#fourofour-head {
+	.Semibold (1.75em, 150%, @blue);
+	font-size: 1.75em;
+}
+#fourofour-text {
+	text-align: center;
+	.Semibold (0.75em)
+}
+// --- Bilder
+.container {
+	div#column-img {
+		margin-right: 0%;
+	}
+}
+
+#work-items {
+	.icon-wrench {
+	vertical-align: top;
+	padding-top: 0.5em;
+	}
 	.icon-signin {
 		vertical-align: top;
 		padding-top: 0.5em;
 	}
+	.icon-signout {
+		vertical-align: top;
+		padding-top: 0.5em;
+	}
 }
+
 
 
 
@@ -131,7 +187,7 @@ h4 {
 }
 
 h5 {
-	.Semibold (0.75em, 150%, @90grey);
+	.Semibold (1em, 150%, @35grey);
 }
 
 h6 {
@@ -208,6 +264,7 @@ code {
 		.comment-meta {
 			a {
 				.Semibold;
+				vertical-align: bottom;
 			}
 			.comment-edit-link {
 				}	
@@ -231,7 +288,7 @@ code {
 }
 
 small {
-	.Regular (1em, 150%, @90grey);
+	.Regular (0.75em, 150%, @90grey);
 }
 
 #respond {
@@ -240,13 +297,6 @@ small {
 	}
 	textarea#comment {
 	margin-top: 1em;
-	padding-top: 2em;
-	padding-left: 2em;
-	padding-bottom: 2em;
-	border: 0px;
-	.e_rounded (10px);
-	.e_inner-shadow (1px, 1px, 1px, 0.15);
-	.Semibold (1em, 150%, @90grey);
 	}
 }
 
@@ -263,24 +313,22 @@ small {
 input#author, input#email, input#url {
 	width: 40%;
 	margin-right: 2em;
-	.inputfeldstyle
+	.inputfeldstyle;
 }
 
 #submit {
 	border: 1px solid (@35grey + #222);
-	height: 30px;
 	.e_rounded (30px);
 	.Semibold (0.7em, 150%, @90grey);
 	color: (@90grey);
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
 	text-shadow: 1px 1px 0px white;
 	.e_gradient (white, (@35grey + #444), white); 
 	-moz-box-shadow: inset 0px 1px 0px 0px white;
 	-webkit-box-shadow: inset 0px 1px 0px 0px white;
 	box-shadow: inset 0px 1px 0px 0px white;
-	height: 2.2em;
-	margin-bottom: 3em;
+	height: 3em;
 }
 
 // --- Vor- und Zurück-Navigation
@@ -288,26 +336,36 @@ input#author, input#email, input#url {
 	.Semibold (1em, 150%, @greenmid);
 }
 
+// --- Newsletter
+input#form-wysija-nl-1361281032-firstname, input#form-wysija-nl-1361281032-lastname, input#form-wysija-nl-1361281032-wysija-to {
+	.inputfeldstyle;
+	font-size: 0.75em;
+}
+.wysija-submit {
+	#submit;
+}
+.allmsgs {
+	.updated {
+	background: none;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	color: none;
+	ul {
+	.Semibold (1.5em);
+	}
+	}
+}
 
 // --- Kontaktformular
 .bigContact {
 	.BigContact-input {
-		.inputfeldstyle
+		.inputfeldstyle;
 	}	
 	#bigContact-form {
 		label {
-			font-size: 0.7em;
-			font-family: 'SourceSansProRegular', sans-serif;
+			.Regular (0.75em, 150%, @90grey);
 		}
-	}
-	textarea {
-	border: 0px;
-	.e_rounded (10px);
-	.e_inner-shadow (1px, 1px, 1px, 0.15);
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-size: 0.7em;
-	padding: 2em;
-	margin-bottom: 1em;
 	}
 	.bigContact-fullSize {
 		margin-bottom: 3em !important;
@@ -375,6 +433,7 @@ input#author, input#email, input#url {
 
 // --- Fuss
 footer {
+	margin-top: 5em;
 	height: 40px;
 	line-height: 2.5em;
 	vertical-align: bottom;
@@ -474,8 +533,39 @@ footer {
 	background: @greendark;
 	-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
-	box-shadow: inset 0px 1px 0px 0px @greenlight;
+	box-shadow: inset 0px 1px 0px 0px @greenlight
+}
 
+// --- Imagegallery
+.ngg-gallery-thumbnail {
+	margin-top: 1em;
+	margin-bottom: 1em;	
+}
+
+.ngg-slideshow {
+	margin-top: 2em;
+	margin-bottom: 2em;	
+}
+
+.ngg-imagebrowser {
+	margin-top: 2em;
+	.counter {
+		.Semibold;
+		margin-top: 0.25em;
+	}
+	.ngg-imagebrowser-nav {
+		margin: 0px;
+		.back {
+			border: 0px;
+		}
+
+		.next {
+			border: 0px;
+		}
+	}	
+	img {
+		padding: 0px;
+	}
 }
 
 // --- Suche Lupe
