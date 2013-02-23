@@ -5,25 +5,25 @@
 @import url('variables.less');
 @import url('animate.less');
 
-.container {
-	a:link {
-		color: @greenmid;
-	}
-	a:visited {
-		color: @greenlight;
-	}
-	a:hover {
-		color: @greendark; 
-		.e_transition (0.2s, ease-out);
-	}
+.rows {
+	margin-top: 0.9em;
 }
+
+// --- Bildschatten
+.inset-shadow{
+    -moz-box-shadow: 1px 1px 5px grey inset;
+    -webkit-box-shadow: 1px 1px 5px grey inset;
+    box-shadow: 1px 1px 5px grey inset;
+}
+// ---
+
 
 // --- Seitenkopf und Titel
 @letterpress_pad: 60px;
 
 .letterpress-line, .letterpress-line-fluid {
 	margin-top: 1em;
-	margin-bottom: 1.5em;
+	margin-bottom: 3.25em;
 	border-top-width: 0px;
 	height: 1px;
 	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.06), rgba(0,0,0,0.15), rgba(0,0,0,0.06));
@@ -49,85 +49,124 @@ section#blog-head #blog-logo {
 	text-align: center;
 }
 
-// --- Liste Aufzaehlungen Nummern und Bullet 
+// --- F O N T S definition
 
-h1, h2, h3, h4, h5 {
-	color: @blue;
+.fontweightstyle {
+	font-weight: normal;
+	font-style: normal;
 }
 
-h1 {
-	font-size: 1.75em;
+.Light (@size: 1em, @height: 150%, @color: @90grey) {
+	font-family: 'SourceSansProLight', sans-serif;
+	font-size: @size;
+	line-height: @height;
+	color: @color;
+	.fontweightstyle;
+}
+
+.LightItalic (@size: 1em, @height: 150%, @color: @90grey) {
+	font-family: 'SourceSansProLightItalic', sans-serif;
+	font-size: @size;
+	line-height: @height;
+	color: @color;
+	.fontweightstyle;
+}
+
+.Regular (@size: 1em, @height: 150%, @color: @90grey) {
+	font-family: 'SourceSansProRegular', sans-serif;
+	font-size: @size;
+	line-height: @height;
+	color: @color;
+	.fontweightstyle;
+}
+
+.Italic (@size: 1em, @height: 150%, @color: @90grey) {
+	font-family: 'SourceSansProItalic', sans-serif;
+	font-size: @size;
+	line-height: @height;
+	color: @color;
+	.fontweightstyle;
+}
+
+.Semibold (@size: 1em, @height: 150%, @color: @blue) {
 	font-family: 'SourceSansProSemibold', sans-serif;
-	font-weight: normal;
-	font-size-adjust: 0.0;
-	line-height: 120%;
+	font-size: @size;
+	line-height: @height;
+	color: @color;
+	.fontweightstyle;
+}
+
+.Bold (@size: 1em, @height: 150%, @color: @90grey) {
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size: @size;
+	line-height: @height;
+	color: @color;
+	.fontweightstyle;
+}
+
+
+
+h1 {
+	.Semibold (1.75em, 140%);
 }
 
 h2 {
-	font-size: 1.25em;
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-weight: normal;
-	font-size-adjust: 0.0;
-	line-height: 150%;
-	font-weight: normal;
-	a{
-	font-family: 'SourceSansProRegular', sans-serif;
-	font-weight: normal;
-	}
+	.Semibold (1.25em);	
 }
 
 h3 {
-	font-size: 1.25em;
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-weight: normal;
-	font-size-adjust: 0.0;
-	line-height: 150%;
+	.Light (1.25em, 150%, @blue);
 }
 
 h4 {
-	font-size: 1.25em;
-	font-family: 'SourceSansProLight', sans-serif;
-	font-weight: normal;
-	line-height: 150%;
+	.Regular (1em);
 }
 
-.entry-content p, .post-excerpt p {
-	color: @90grey;
-	font-family: 'SourceSansProLight', sans-serif;
-	font-weight: normal;
-	font-size: 1.25em;
-	line-height: 150%;
-	a {
-		text-decoration: none;
-		color: @greenmid;
-		font-family: 'SourceSansProRegular', sans-serif;
-		font-weight: normal;
-		cursor: auto;
-	}
-	strong {
-		font-family: 'SourceSansProRegular', sans-serif;
-		font-weight: normal;
-		color: @black;
-		font-style: normal;
-	}
-	em {
-		font-family: 'SourceSansProLightItalic', sans-serif;
-		font-weight: normal;
-		font-style: normal;
-	}
+h5 {
+	.Semibold (0.75em, 150%, @90grey);
 }
 
-.entry-content ol li {
-	color: @90grey;
-	font-size: 1.25em;
-	font-family: 'SourceSansProLight', sans-serif;
-	line-height: 1.5em;
+h6 {
+	.Bold (0.75em);
 }
-.entry-content ul li {
-	color: @90grey;
-	font-size: 1.25em;
-	font-family: 'SourceSansProLight', sans-serif;
-	line-height: 1.5em;
+
+p {
+	.Light (1.25em);
+}
+
+blockquote p {
+	.Italic;
+}
+
+a {
+	.Semibold (1.25em, 150%, @greenmid);
+}
+
+a:link {
+	.Semibold (1em, 150%, @greenlight);
+}
+a:visited {
+	.Semibold (1em, 150%, @greenlight);
+}
+a:hover {
+	.Semibold (1em, 150%, @greendark);
+	.e_transition (0.2s, ease-out);
+}
+
+strong {
+	.Regular;
+}
+
+em {
+	.LightItalic;
+}
+
+ol {
+	.Regular;
+}
+
+ul {
+	.Regular;
 }
 
 code {
@@ -135,126 +174,82 @@ code {
 	font-size: 1em;
 }
 
-// --- Vor- und Zurück-Navigation
-.nav-single {
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-style: normal;
-	font-size: 1em;
-}
 
 // --- Kommentare
 
-#comli-light-125 {
-	font-size: 0.75em;
-	font-family: 'SourceSansProLightItalic', sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	color: @90grey;	
-	line-height: 150%;
-}
-#comli-semi-125-blue {
-	font-size: 0.75em;
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	color: @blue;	
-	line-height: 150%;
-}
-#comli-semi-100-green {
-	font-size: 0.5em;
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	color: @greenmid;	
-	line-height: 150%;
-}
-#comli-semi-125-green {
-	font-size: 0.75em;
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	color: @greenmid;	
-	line-height: 150%;
-}
 
-ol.commentlist {
-	font-family: 'SourceSansProSemibold', sans-serif;
+.commentlist {	 
 	color: @blue;
-	font-size: 1.75em;
-	line-height: 150%;
-	font-weight: normal;
 	.comment-body {
+		p {
+			.LightItalic;
+		}
 		.comment-author {
-			.fn {
-				#comli-semi-125-blue;
-			}
+			float: left;
+				.fn {
+					.Semibold;
+					margin-right: 0.5em;
+				}
+				img {
+					display: none;
+				}
+				.says {
+					display: none;
+				}
 		}
 		.comment-meta {
 			a {
-				#comli-semi-125-blue;
+				.Semibold;
 			}
 			.comment-edit-link {
-			}
-		}
-		p {
-			#comli-light-125;
+				}	
 		}
 		.reply {
-			.comment-reply-link {
-				#comli-semi-125-green
-			}
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			-moz-box-shadow: 0px 1px white;
+			-webkit-box-shadow: 0px 1px white;
+			box-shadow: 0px 1px white;
 		}
-		.comment-awaiting-moderation {
-			#comli-semi-100-green;
-		}
+			//.comment-awaiting-moderation {
+				
+			//}
 	}
-	ul.children {
+	.children {
+		color: @blue;
+	}
+	.comment-awaiting-moderation {
+	.LightItalic (1em, 150%, @greenmid);
 	}
 }
 
+small {
+	.Regular (1em, 150%, @90grey);
+}
+
 #respond {
-	#cancel-comment-reply {
-		a {
-			#comli-semi-100-green;
-		}
-	}
 	p {
-	color: @90grey;
-	font-family: 'SourceSansProLight', sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 1.25em;
-	line-height: 150%;
-	}
-	a {
-		font-family: 'SourceSansProRegular', sans-serif;
-		font-style: normal;
-		font-size: 1em;
-	}
-	small {
-		font-size: 0.7em;
-		font-family: 'SourceSansProRegular', sans-serif;
+		.Regular;
 	}
 	textarea#comment {
 	margin-top: 1em;
+	padding-top: 2em;
+	padding-left: 2em;
+	padding-bottom: 2em;
 	border: 0px;
 	.e_rounded (10px);
 	.e_inner-shadow (1px, 1px, 1px, 0.15);
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-size: 0.7em;
-	padding: 2em;
+	.Semibold (1em, 150%, @90grey);
 	}
 }
 
 .inputfeldstyle {
 	border: 0px;
 	height: 30px;
-	.e_rounded (30px);
-	.e_inner-shadow (1px, 1px, 1px, 0.15);
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-size: 0.7em;
 	padding-top: 0.2em;
 	padding-left: 1em;
+	.e_rounded (30px);
+	.e_inner-shadow (1px, 1px, 1px, 0.15);
+	.Semibold (1em, 150%, @90grey);
 }
 
 input#author, input#email, input#url {
@@ -267,8 +262,7 @@ input#author, input#email, input#url {
 	border: 1px solid (@35grey + #222);
 	height: 30px;
 	.e_rounded (30px);
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-size: 0.7em;
+	.Semibold (0.7em, 150%, @90grey);
 	color: (@90grey);
 	padding-left: 1em;
 	padding-right: 1em;
@@ -278,6 +272,12 @@ input#author, input#email, input#url {
 	-webkit-box-shadow: inset 0px 1px 0px 0px white;
 	box-shadow: inset 0px 1px 0px 0px white;
 	height: 2.2em;
+	margin-bottom: 3em;
+}
+
+// --- Vor- und Zurück-Navigation
+.nav-single {
+	.Semibold (1em, 150%, @greenmid);
 }
 
 
@@ -310,58 +310,24 @@ input#author, input#email, input#url {
 }
 
 
-
-/*.comment-form-author {
-	margin-top: 2em;	
-}
-
-.comment-form-comment {
-	margin-top: 2.4em;	
-}*/
-
-// --- Button
-/*.form-submit {
-	margin-bottom: 6em;
-}*/
-
-
 // -- Sidebar
 .widget-area {
-	a, ul, li {
-		line-height: 175%;
-		font-family: 'SourceSansProSemibold', sans-serif;
-		font-size-adjust: 0.0;
-		font-size: inherit;
-		color: @greenmid;
+	ul {
+		color: @90grey;
 		text-decoration: none;
 		list-style-type: none;
-		text-align: left;
 		padding: 0px;
-	}
-	a:link {
-		color: @greenmid;
-	}
-	a:visited {
-		color: @greenlight;
-	}
-	a:hover {
-		color: @greendark;
-		.e_transition (0.2s, ease-out);
+		margin-top: 1.5em;
+		margin-bottom: 3em;	
 	}
 	h5.widget-title {
-	font-size: 1.75em;
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-weight: normal;
+	.Semibold (1.75em, 140%, @blue);
 	margin-top: 0em;
-	}
-	ul {
-		margin-top: 1.5em;
-		margin-bottom: 3em;
 	}
 }
 
 // --- Autorenseite eingeloggt
-section#author-page {
+/*section#author-page {
 	font-family: 'SourceSansProLight', sans-serif;
 	font-size: 1.25em;
 	color: @90grey;
@@ -376,39 +342,23 @@ section#author-page {
 	list-style-type: none;
 	padding: 0px;
 	}
-}
-
-.wp-biographia-text {
-	h3 {
-		margin-top: 0em;
-	}
-	a {
-		font-family: 'SourceSansProSemibold', sans-serif;
-	}
-	ul {
-	color: @90grey;
-	font-family: 'SourceSansProLight', sans-serif;
-	font-weight: normal;
-	font-size: 1.25em;
-	//line-height: 150%;
-	}
-}
+}*/
 
 // --- Scroll-Up
 #scrolltop-grid {
 	#scrolltop {
-		//height: 40px;
+		height: 40px;
 		background-color: @greenmid;
 		@ptop:0px;
 		@pright:13px;
-		@pbottom:9px;
+		@pbottom:0px;
 		@pleft:13px;
 	    padding:@ptop @pright @pbottom @pleft;
 		.e_gradient (@greenmid, @greendark, @greenmid);
 		-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
 		-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
 		box-shadow: inset 0px 1px 0px 0px @greenlight;
-		i, cite, em, var, address, dfn {
+		.icon-circle-arrow-up {
 			font-size: 1.2em;
 			padding-top: 0.5em;
 		}
@@ -416,28 +366,31 @@ section#author-page {
 }
 
 // --- Fuss
-footer a {
-	color: @chamois;
-	font-size: 1em;
-	font-family: 'SourceSansProSemibold', sans-serif;
-	font-size-adjust: 0.0;
-	letter-spacing: 1px;
-	line-height: 2.4em;
+footer {
+	height: 40px;
+	line-height: 2.5em;
 	vertical-align: bottom;
-	text-decoration: none;
-	cursor: auto;
 	text-shadow: 1px 1px 0px (@greendark - #222);
+	.e_gradient (@greenmid, @greendark, @greenmid);
+	-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
+	-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
+	box-shadow: inset 0px 1px 0px 0px @greenlight;
 	a:link {
-		color: @chamois;
+		.Semibold (1em, 150%, @chamois);
 	}
 	a:visited {
-		color: @chamois;
+		.Semibold (1em, 150%, @chamois);
 	}
 	a:hover {
-		color: @chamois;
+		.Semibold (1em, 150%, (@chamois + #999));
 		.e_transition (0.2s, ease-out);
-	}	
+	}
+	.olios-extra-special-white-space {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
 }
+
 .icon-wrench {
 	vertical-align: top;
 	padding-top: 0.75em;
@@ -453,24 +406,12 @@ footer a {
 	padding-top: 0.75em;
 }
 
-footer{
-	.e_gradient (@greenmid, @greendark, @greenmid); 
-	-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
-	-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
-	box-shadow: inset 0px 1px 0px 0px @greenlight;	
-} 
-
 // --- Navi
-.sf-menu {
-	line-height: 0.7em;
-}
 
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-	top: 2.25em; /* match top ul list item height */
-	line-height: 0.7em;
+	top: 2.2em; /* match top ul list item height */
 }
-
 
 .sf-navbar {
 	.e_gradient (@redmid, @reddark, @redmid);
@@ -485,10 +426,10 @@ footer{
 	color: @chamois;
 	text-shadow: 0px 1px 0px @redshadow;
 	font-family: 'SourceSansProSemibold', sans-serif;
-	font-size-adjust: 0.0;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	text-decoration: none;		
+	text-decoration: none;	
+	line-height: 0.65em;
 }
 .sf-navbar a, .sf-navbar a:visited {
 	color:	@chamois;
@@ -516,7 +457,7 @@ footer{
 	font-size-adjust: 0.0;
 	text-transform: capitalize;
 	letter-spacing: 1px;
-	text-decoration: none;		
+	text-decoration: none;
 }
 .sf-navbar ul li a, .sf-navbar ul li a:visited {
 	color: @chamois;
@@ -527,11 +468,12 @@ footer{
 	-moz-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	-webkit-box-shadow: inset 0px 1px 0px 0px @greenlight;
 	box-shadow: inset 0px 1px 0px 0px @greenlight;
+
 }
 
 // --- Suche Lupe
 ul#desktop-search {
-	margin-top: 0.45em;
+	margin-top: 0.4em;
 	margin-right: 0em;
 	margin-left: 0em;
 	margin-bottom: 0em;
@@ -546,9 +488,8 @@ ul#desktop-search {
 
 
 // --- Searchform 1. Instanz
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+/*.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
 	font-size: 0.7em;
-	padding-top: 0.2em;
 	padding-left: 0.9em;
 	font-family: 'SourceSansProBold', sans-serif;
 	font-size-adjust: 0.0;

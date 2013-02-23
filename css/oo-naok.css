@@ -3529,23 +3529,18 @@ body {
   -o-animation-duration: 0.75s;
   animation-duration: 0.75s;
 }
-.container a:link {
-  color: #5aa332;
+.rows {
+  margin-top: 0.9em;
 }
-.container a:visited {
-  color: #98c230;
-}
-.container a:hover {
-  color: #348d43;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+.inset-shadow {
+  -moz-box-shadow: 1px 1px 5px grey inset;
+  -webkit-box-shadow: 1px 1px 5px grey inset;
+  box-shadow: 1px 1px 5px grey inset;
 }
 .letterpress-line,
 .letterpress-line-fluid {
   margin-top: 1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 3.25em;
   border-top-width: 0px;
   height: 1px;
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.06));
@@ -3566,200 +3561,221 @@ section#blog-head #blog-logo {
 #blog-logo {
   text-align: center;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: #08618f;
+.fontweightstyle {
+  font-weight: normal;
+  font-style: normal;
 }
 h1 {
-  font-size: 1.75em;
   font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1.75em;
+  line-height: 140%;
+  color: #08618f;
   font-weight: normal;
-  font-size-adjust: 0.0;
-  line-height: 120%;
+  font-style: normal;
 }
 h2 {
-  font-size: 1.25em;
   font-family: 'SourceSansProSemibold', sans-serif;
-  font-size-adjust: 0.0;
+  font-size: 1.25em;
   line-height: 150%;
+  color: #08618f;
   font-weight: normal;
-}
-h2 a {
-  font-family: 'SourceSansProRegular', sans-serif;
-  font-weight: normal;
+  font-style: normal;
 }
 h3 {
+  font-family: 'SourceSansProLight', sans-serif;
   font-size: 1.25em;
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-weight: normal;
-  font-size-adjust: 0.0;
   line-height: 150%;
+  color: #08618f;
+  font-weight: normal;
+  font-style: normal;
 }
 h4 {
-  font-size: 1.25em;
-  font-family: 'SourceSansProLight', sans-serif;
-  font-weight: normal;
+  font-family: 'SourceSansProRegular', sans-serif;
+  font-size: 1em;
   line-height: 150%;
-}
-.entry-content p,
-.post-excerpt p {
   color: #3c3c3b;
-  font-family: 'SourceSansProLight', sans-serif;
   font-weight: normal;
+  font-style: normal;
+}
+h5 {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 0.75em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
+}
+h6 {
+  font-family: 'SourceSansProBold', sans-serif;
+  font-size: 0.75em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
+}
+p {
+  font-family: 'SourceSansProLight', sans-serif;
   font-size: 1.25em;
   line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
 }
-.entry-content p a,
-.post-excerpt p a {
-  text-decoration: none;
+blockquote p {
+  font-family: 'SourceSansProItalic', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
+}
+a {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1.25em;
+  line-height: 150%;
   color: #5aa332;
-  font-family: 'SourceSansProRegular', sans-serif;
   font-weight: normal;
-  cursor: auto;
-}
-.entry-content p strong,
-.post-excerpt p strong {
-  font-family: 'SourceSansProRegular', sans-serif;
-  font-weight: normal;
-  color: #000000;
   font-style: normal;
 }
-.entry-content p em,
-.post-excerpt p em {
+a:link {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #98c230;
+  font-weight: normal;
+  font-style: normal;
+}
+a:visited {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #98c230;
+  font-weight: normal;
+  font-style: normal;
+}
+a:hover {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #348d43;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+strong {
+  font-family: 'SourceSansProRegular', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
+}
+em {
   font-family: 'SourceSansProLightItalic', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #3c3c3b;
   font-weight: normal;
   font-style: normal;
 }
-.entry-content ol li {
+ol {
+  font-family: 'SourceSansProRegular', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
   color: #3c3c3b;
-  font-size: 1.25em;
-  font-family: 'SourceSansProLight', sans-serif;
-  line-height: 1.5em;
+  font-weight: normal;
+  font-style: normal;
 }
-.entry-content ul li {
+ul {
+  font-family: 'SourceSansProRegular', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
   color: #3c3c3b;
-  font-size: 1.25em;
-  font-family: 'SourceSansProLight', sans-serif;
-  line-height: 1.5em;
+  font-weight: normal;
+  font-style: normal;
 }
 code {
   font-family: 'Source Code Pro', sans-serif;
   font-size: 1em;
 }
-.nav-single {
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-style: normal;
+.commentlist {
+  color: #08618f;
+}
+.commentlist .comment-body p {
+  font-family: 'SourceSansProLightItalic', sans-serif;
   font-size: 1em;
-}
-#comli-light-125 {
-  font-size: 0.75em;
-  font-family: 'SourceSansProLightItalic', sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  line-height: 150%;
   color: #3c3c3b;
-  line-height: 150%;
-}
-#comli-semi-125-blue {
-  font-size: 0.75em;
-  font-family: 'SourceSansProSemibold', sans-serif;
   font-weight: normal;
   font-style: normal;
+}
+.commentlist .comment-body .comment-author {
+  float: left;
+}
+.commentlist .comment-body .comment-author .fn {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
   color: #08618f;
-  line-height: 150%;
-}
-#comli-semi-100-green {
-  font-size: 0.5em;
-  font-family: 'SourceSansProSemibold', sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #5aa332;
-  line-height: 150%;
+  margin-right: 0.5em;
 }
-#comli-semi-125-green {
-  font-size: 0.75em;
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #5aa332;
-  line-height: 150%;
+.commentlist .comment-body .comment-author img {
+  display: none;
 }
-ol.commentlist {
+.commentlist .comment-body .comment-author .says {
+  display: none;
+}
+.commentlist .comment-body .comment-meta a {
   font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
   color: #08618f;
-  font-size: 1.75em;
-  line-height: 150%;
-  font-weight: normal;
-}
-ol.commentlist .comment-body .comment-author .fn {
-  font-size: 0.75em;
-  font-family: 'SourceSansProSemibold', sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #08618f;
-  line-height: 150%;
 }
-ol.commentlist .comment-body .comment-meta a {
-  font-size: 0.75em;
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #08618f;
-  line-height: 150%;
+.commentlist .comment-body .reply {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px white;
+  -webkit-box-shadow: 0px 1px white;
+  box-shadow: 0px 1px white;
 }
-ol.commentlist .comment-body p {
-  font-size: 0.75em;
+.commentlist .children {
+  color: #08618f;
+}
+.commentlist .comment-awaiting-moderation {
   font-family: 'SourceSansProLightItalic', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #5aa332;
   font-weight: normal;
   font-style: normal;
+}
+small {
+  font-family: 'SourceSansProRegular', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
   color: #3c3c3b;
-  line-height: 150%;
-}
-ol.commentlist .comment-body .reply .comment-reply-link {
-  font-size: 0.75em;
-  font-family: 'SourceSansProSemibold', sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #5aa332;
-  line-height: 150%;
-}
-ol.commentlist .comment-body .comment-awaiting-moderation {
-  font-size: 0.5em;
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #5aa332;
-  line-height: 150%;
-}
-#respond #cancel-comment-reply a {
-  font-size: 0.5em;
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #5aa332;
-  line-height: 150%;
 }
 #respond p {
+  font-family: 'SourceSansProRegular', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
   color: #3c3c3b;
-  font-family: 'SourceSansProLight', sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 1.25em;
-  line-height: 150%;
-}
-#respond a {
-  font-family: 'SourceSansProRegular', sans-serif;
-  font-style: normal;
-  font-size: 1em;
-}
-#respond small {
-  font-size: 0.7em;
-  font-family: 'SourceSansProRegular', sans-serif;
 }
 #respond textarea#comment {
   margin-top: 1em;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
   border: 0px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -3771,12 +3787,17 @@ ol.commentlist .comment-body .comment-awaiting-moderation {
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding: 2em;
+  font-size: 1em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
 }
 .inputfeldstyle {
   border: 0px;
   height: 30px;
+  padding-top: 0.2em;
+  padding-left: 1em;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -3787,9 +3808,11 @@ ol.commentlist .comment-body .comment-awaiting-moderation {
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 1em;
+  font-size: 1em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
 }
 input#author,
 input#email,
@@ -3798,6 +3821,8 @@ input#url {
   margin-right: 2em;
   border: 0px;
   height: 30px;
+  padding-top: 0.2em;
+  padding-left: 1em;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -3808,9 +3833,11 @@ input#url {
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 1em;
+  font-size: 1em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
 }
 #submit {
   border: 1px solid #c8c8c8;
@@ -3823,6 +3850,9 @@ input#url {
   background-clip: padding-box;
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size: 0.7em;
+  line-height: 150%;
+  font-weight: normal;
+  font-style: normal;
   color: #3c3c3b;
   padding-left: 1em;
   padding-right: 1em;
@@ -3837,10 +3867,21 @@ input#url {
   -webkit-box-shadow: inset 0px 1px 0px 0px white;
   box-shadow: inset 0px 1px 0px 0px white;
   height: 2.2em;
+  margin-bottom: 3em;
+}
+.nav-single {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #5aa332;
+  font-weight: normal;
+  font-style: normal;
 }
 .bigContact .BigContact-input {
   border: 0px;
   height: 30px;
+  padding-top: 0.2em;
+  padding-left: 1em;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -3851,9 +3892,11 @@ input#url {
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 1em;
+  font-size: 1em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
 }
 .bigContact #bigContact-form label {
   font-size: 0.7em;
@@ -3889,6 +3932,9 @@ input#url {
   background-clip: padding-box;
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size: 0.7em;
+  line-height: 150%;
+  font-weight: normal;
+  font-style: normal;
   color: #3c3c3b;
   padding-left: 1em;
   padding-right: 1em;
@@ -3903,85 +3949,45 @@ input#url {
   -webkit-box-shadow: inset 0px 1px 0px 0px white;
   box-shadow: inset 0px 1px 0px 0px white;
   height: 2.2em;
-}
-/*.comment-form-author {
-	margin-top: 2em;	
-}
-
-.comment-form-comment {
-	margin-top: 2.4em;	
-}*/
-/*.form-submit {
-	margin-bottom: 6em;
-}*/
-.widget-area a,
-.widget-area ul,
-.widget-area li {
-  line-height: 175%;
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size-adjust: 0.0;
-  font-size: inherit;
-  color: #5aa332;
-  text-decoration: none;
-  list-style-type: none;
-  text-align: left;
-  padding: 0px;
-}
-.widget-area a:link {
-  color: #5aa332;
-}
-.widget-area a:visited {
-  color: #98c230;
-}
-.widget-area a:hover {
-  color: #348d43;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.widget-area h5.widget-title {
-  font-size: 1.75em;
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-weight: normal;
-  margin-top: 0em;
+  margin-bottom: 3em;
 }
 .widget-area ul {
+  color: #3c3c3b;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0px;
   margin-top: 1.5em;
   margin-bottom: 3em;
 }
-section#author-page {
-  font-family: 'SourceSansProLight', sans-serif;
-  font-size: 1.25em;
-  color: #3c3c3b;
-}
-section#author-page p,
-section#author-page li {
-  font-size: 1em;
-}
-section#author-page a {
+.widget-area h5.widget-title {
   font-family: 'SourceSansProSemibold', sans-serif;
-}
-section#author-page ul {
-  text-decoration: none;
-  list-style-type: none;
-  padding: 0px;
-}
-.wp-biographia-text h3 {
+  font-size: 1.75em;
+  line-height: 140%;
+  color: #08618f;
+  font-weight: normal;
+  font-style: normal;
   margin-top: 0em;
 }
-.wp-biographia-text a {
-  font-family: 'SourceSansProSemibold', sans-serif;
-}
-.wp-biographia-text ul {
-  color: #3c3c3b;
-  font-family: 'SourceSansProLight', sans-serif;
-  font-weight: normal;
-  font-size: 1.25em;
-}
+/*section#author-page {
+	font-family: 'SourceSansProLight', sans-serif;
+	font-size: 1.25em;
+	color: @90grey;
+	p, li{
+		font-size: 1em;
+	}
+	a {
+		font-family: 'SourceSansProSemibold', sans-serif;
+	}
+	ul {
+	text-decoration: none;
+	list-style-type: none;
+	padding: 0px;
+	}
+}*/
 #scrolltop-grid #scrolltop {
+  height: 40px;
   background-color: #5aa332;
-  padding: 0px 13px 9px 13px;
+  padding: 0px 13px 0px 13px;
   background: #5aa332;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #348d43), color-stop(1, #5aa332));
   background: -ms-linear-gradient(bottom, #348d43, #5aa332);
@@ -3992,39 +3998,56 @@ section#author-page ul {
   -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
   box-shadow: inset 0px 1px 0px 0px #98c230;
 }
-#scrolltop-grid #scrolltop i,
-#scrolltop-grid #scrolltop cite,
-#scrolltop-grid #scrolltop em,
-#scrolltop-grid #scrolltop var,
-#scrolltop-grid #scrolltop address,
-#scrolltop-grid #scrolltop dfn {
+#scrolltop-grid #scrolltop .icon-circle-arrow-up {
   font-size: 1.2em;
   padding-top: 0.5em;
 }
-footer a {
-  color: #ecdfcb;
-  font-size: 1em;
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size-adjust: 0.0;
-  letter-spacing: 1px;
-  line-height: 2.4em;
+footer {
+  height: 40px;
+  line-height: 2.5em;
   vertical-align: bottom;
-  text-decoration: none;
-  cursor: auto;
   text-shadow: 1px 1px 0px #126b21;
+  background: #5aa332;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #348d43), color-stop(1, #5aa332));
+  background: -ms-linear-gradient(bottom, #348d43, #5aa332);
+  background: -moz-linear-gradient(center bottom, #348d43 0%, #5aa332 100%);
+  background: -o-linear-gradient(#5aa332, #348d43);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5aa332', endColorstr='#348d43', GradientType=0);
+  -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
+  box-shadow: inset 0px 1px 0px 0px #98c230;
 }
-footer a a:link {
+footer a:link {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
   color: #ecdfcb;
+  font-weight: normal;
+  font-style: normal;
 }
-footer a a:visited {
+footer a:visited {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
   color: #ecdfcb;
+  font-weight: normal;
+  font-style: normal;
 }
-footer a a:hover {
-  color: #ecdfcb;
+footer a:hover {
+  font-family: 'SourceSansProSemibold', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #ffffff;
+  font-weight: normal;
+  font-style: normal;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+footer .olios-extra-special-white-space {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 .icon-wrench {
   vertical-align: top;
@@ -4038,26 +4061,11 @@ footer a a:hover {
   vertical-align: top;
   padding-top: 0.75em;
 }
-footer {
-  background: #5aa332;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #348d43), color-stop(1, #5aa332));
-  background: -ms-linear-gradient(bottom, #348d43, #5aa332);
-  background: -moz-linear-gradient(center bottom, #348d43 0%, #5aa332 100%);
-  background: -o-linear-gradient(#5aa332, #348d43);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5aa332', endColorstr='#348d43', GradientType=0);
-  -moz-box-shadow: inset 0px 1px 0px 0px #98c230;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #98c230;
-  box-shadow: inset 0px 1px 0px 0px #98c230;
-}
-.sf-menu {
-  line-height: 0.7em;
-}
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-  top: 2.25em;
+  top: 2.2em;
   /* match top ul list item height */
 
-  line-height: 0.7em;
 }
 .sf-navbar {
   background: #e11714;
@@ -4076,10 +4084,10 @@ footer {
   color: #ecdfcb;
   text-shadow: 0px 1px 0px #8d1a1e;
   font-family: 'SourceSansProSemibold', sans-serif;
-  font-size-adjust: 0.0;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-decoration: none;
+  line-height: 0.65em;
 }
 .sf-navbar a,
 .sf-navbar a:visited {
@@ -4126,7 +4134,7 @@ footer {
   box-shadow: inset 0px 1px 0px 0px #98c230;
 }
 ul#desktop-search {
-  margin-top: 0.45em;
+  margin-top: 0.4em;
   margin-right: 0em;
   margin-left: 0em;
   margin-bottom: 0em;
@@ -4138,17 +4146,15 @@ ul#desktop-search li i {
   color: #ecdfcb;
   font-size: 1.2em;
 }
-.ui-widget input,
-.ui-widget select,
-.ui-widget textarea,
-.ui-widget button {
-  font-size: 0.7em;
-  padding-top: 0.2em;
-  padding-left: 0.9em;
-  font-family: 'SourceSansProBold', sans-serif;
-  font-size-adjust: 0.0;
-  color: #a89b87;
+/*.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+	font-size: 0.7em;
+	padding-left: 0.9em;
+	font-family: 'SourceSansProBold', sans-serif;
+	font-size-adjust: 0.0;
+	color: (@chamois - #444);
 }
+
+
 /*.ui-widget{
 	form#searchform{
 		font-size: 0.8em;
