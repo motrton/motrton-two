@@ -3537,6 +3537,10 @@ body {
   -webkit-box-shadow: 1px 1px 5px grey inset;
   box-shadow: 1px 1px 5px grey inset;
 }
+#login .icon-signin {
+  vertical-align: top;
+  padding-top: 0.5em;
+}
 .letterpress-line,
 .letterpress-line-fluid {
   margin-top: 1em;
@@ -4049,15 +4053,15 @@ footer .olios-extra-special-white-space {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-.icon-wrench {
+footer .icon-wrench {
   vertical-align: top;
   padding-top: 0.75em;
 }
-.icon-signin {
+footer .icon-signin {
   vertical-align: top;
   padding-top: 0.75em;
 }
-.icon-signout {
+footer .icon-signout {
   vertical-align: top;
   padding-top: 0.75em;
 }
