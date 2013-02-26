@@ -11,13 +11,13 @@
 }
 
 textarea {
-padding-top: 2em;
-padding-left: 2em;
+padding-top: 1.5em;
+padding-left: 1.5em;
 margin-bottom: 1em;
 border: 0px;
 .e_rounded (10px);
 .e_inner-shadow (1px, 1px, 1px, 0.15);
-.Semibold (1em, 150%, @90grey);
+.Light (1em, 150%, @90grey);
 }
 
 
@@ -307,7 +307,7 @@ small {
 	padding-left: 1em;
 	.e_rounded (30px);
 	.e_inner-shadow (1px, 1px, 1px, 0.15);
-	.Semibold (1em, 150%, @90grey);
+	.Light (1em, 150%, @90grey);
 }
 
 input#author, input#email, input#url {
@@ -340,6 +340,7 @@ input#author, input#email, input#url {
 input#form-wysija-nl-1361281032-firstname, input#form-wysija-nl-1361281032-lastname, input#form-wysija-nl-1361281032-wysija-to {
 	.inputfeldstyle;
 	font-size: 0.75em;
+	width: 40%;
 }
 .wysija-submit {
 	#submit;
@@ -373,8 +374,17 @@ input#form-wysija-nl-1361281032-firstname, input#form-wysija-nl-1361281032-lastn
 			#submit;
 		}
 	}
+	h3 {
+		margin-top: 2em;
+	}
+	.bigContact-value {
+    	float: left;
+    	margin-left: 1em;
+	}
+	ul {
+		.Light;
+	}
 }
-
 
 // -- Sidebar
 .widget-area {

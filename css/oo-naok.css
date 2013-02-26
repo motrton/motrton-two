@@ -3533,8 +3533,8 @@ body {
   margin-top: 0.9em;
 }
 textarea {
-  padding-top: 2em;
-  padding-left: 2em;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
   margin-bottom: 1em;
   border: 0px;
   -webkit-border-radius: 10px;
@@ -3546,7 +3546,7 @@ textarea {
   -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-family: 'SourceSansProSemibold', sans-serif;
+  font-family: 'SourceSansProLight', sans-serif;
   font-size: 1em;
   line-height: 150%;
   color: #3c3c3b;
@@ -3860,7 +3860,7 @@ small {
   -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-family: 'SourceSansProSemibold', sans-serif;
+  font-family: 'SourceSansProLight', sans-serif;
   font-size: 1em;
   line-height: 150%;
   color: #3c3c3b;
@@ -3885,7 +3885,7 @@ input#url {
   -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-family: 'SourceSansProSemibold', sans-serif;
+  font-family: 'SourceSansProLight', sans-serif;
   font-size: 1em;
   line-height: 150%;
   color: #3c3c3b;
@@ -3944,13 +3944,14 @@ input#form-wysija-nl-1361281032-wysija-to {
   -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-family: 'SourceSansProSemibold', sans-serif;
+  font-family: 'SourceSansProLight', sans-serif;
   font-size: 1em;
   line-height: 150%;
   color: #3c3c3b;
   font-weight: normal;
   font-style: normal;
   font-size: 0.75em;
+  width: 40%;
 }
 .wysija-submit {
   border: 1px solid #c8c8c8;
@@ -4009,7 +4010,7 @@ input#form-wysija-nl-1361281032-wysija-to {
   -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-family: 'SourceSansProSemibold', sans-serif;
+  font-family: 'SourceSansProLight', sans-serif;
   font-size: 1em;
   line-height: 150%;
   color: #3c3c3b;
@@ -4054,6 +4055,21 @@ input#form-wysija-nl-1361281032-wysija-to {
   -webkit-box-shadow: inset 0px 1px 0px 0px white;
   box-shadow: inset 0px 1px 0px 0px white;
   height: 3em;
+}
+.bigContact h3 {
+  margin-top: 2em;
+}
+.bigContact .bigContact-value {
+  float: left;
+  margin-left: 1em;
+}
+.bigContact ul {
+  font-family: 'SourceSansProLight', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
 }
 .widget-area ul {
   color: #3c3c3b;
