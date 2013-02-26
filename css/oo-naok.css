@@ -3835,6 +3835,9 @@ small {
   font-weight: normal;
   font-style: normal;
 }
+.wp-biographia-list a:link {
+  font-size: 1.25em;
+}
 #respond p {
   font-family: 'SourceSansProRegular', sans-serif;
   font-size: 1em;
