@@ -3553,21 +3553,7 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
-/* --- Message Successfuly delivered
-.bigContact #bigContact-results {
-    border-radius: 3px 3px 3px 3px;
-    text-align: left;
-}
-.bigContact .success {
-    background: none repeat scroll 0 0 #E0FFE0;
-    border-color: #55E655;
-    border-style: solid;
-    border-width: 1px;
-    margin: 10px 0;
-    padding: 0;
-    width: 99%;
-}
-/*/.inset-shadow {
+.inset-shadow {
   border: 1px solid #d9d9d9;
   -moz-box-shadow: 0px 0px 0px #d9d9d9 inset;
   -webkit-box-shadow: 0px 0px 0px #d9d9d9 inset;
@@ -4261,33 +4247,38 @@ footer .icon-signout {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+.ngg-gallery-thumbnail img {
+  background-color: #FFFFFF;
+  border: 1px solid #a6a6a6;
+  display: block;
+  margin: 2px 0 2px 3px;
+  padding: 1px;
+  position: relative;
+}
 .ngg-slideshow {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-.ngg-imagebrowser {
-  margin-top: 2em;
+.slidesjs-control {
+  top: -20px;
 }
-.ngg-imagebrowser .counter {
-  font-family: 'SourceSansProSemibold', sans-serif;
-  font-size: 1em;
-  line-height: 150%;
-  color: #08618f;
-  font-weight: normal;
-  font-style: normal;
-  margin-top: 0.25em;
+.slidesjs-control #carousel-img {
+  width: 250px;
+  margin-right: 2em;
+  margin-top: 1.5em;
 }
-.ngg-imagebrowser .ngg-imagebrowser-nav {
-  margin: 0px;
+.slidesjs-container {
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px white;
+  -webkit-box-shadow: 0px 1px white;
+  box-shadow: 0px 1px white;
 }
-.ngg-imagebrowser .ngg-imagebrowser-nav .back {
-  border: 0px;
+.slidesjs-next {
+  float: right;
 }
-.ngg-imagebrowser .ngg-imagebrowser-nav .next {
-  border: 0px;
-}
-.ngg-imagebrowser img {
-  padding: 0px;
+#carousel {
+  margin-bottom: 2em;
 }
 ul#desktop-search {
   margin-top: 0.4em;
@@ -4302,6 +4293,30 @@ ul#desktop-search li i {
   color: #ecdfcb;
   font-size: 1.2em;
 }
+/*.ngg-imagebrowser {
+	margin-top: 2em;
+	.counter {
+		.Semibold;
+		margin-top: 0.25em;
+	}
+	.ngg-imagebrowser-nav {
+		margin: 0px;
+		.back {
+			border: 0px;
+		}
+
+		.next {
+			border: 0px;
+		}
+	/	
+	img {
+		padding: 0px;
+	}
+}}*
+
+
+
+// --- Searchform 1. Instanz
 /*.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
 	font-size: 0.7em;
 	padding-left: 0.9em;

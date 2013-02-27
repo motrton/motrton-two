@@ -21,22 +21,6 @@ border: 0px;
 }
 
 
-/* --- Message Successfuly delivered
-.bigContact #bigContact-results {
-    border-radius: 3px 3px 3px 3px;
-    text-align: left;
-}
-.bigContact .success {
-    background: none repeat scroll 0 0 #E0FFE0;
-    border-color: #55E655;
-    border-style: solid;
-    border-width: 1px;
-    margin: 10px 0;
-    padding: 0;
-    width: 99%;
-}
-/*/ 
-
 // --- Bildschatten
 .inset-shadow{
 	border: 1px solid (@35grey + #333);
@@ -558,30 +542,47 @@ footer {
 	margin-bottom: 1em;	
 }
 
+.ngg-gallery-thumbnail img {
+    background-color: #FFFFFF;
+    border: 1px solid @35grey;
+    display: block;
+    margin: 2px 0 2px 3px;
+    padding: 1px;
+    position: relative;
+}
+
 .ngg-slideshow {
 	margin-top: 2em;
 	margin-bottom: 2em;	
 }
 
-.ngg-imagebrowser {
-	margin-top: 2em;
-	.counter {
-		.Semibold;
-		margin-top: 0.25em;
-	}
-	.ngg-imagebrowser-nav {
-		margin: 0px;
-		.back {
-			border: 0px;
-		}
+// --- Carousel
 
-		.next {
-			border: 0px;
-		}
-	}	
-	img {
-		padding: 0px;
+.slidesjs-control {
+	top: -20px;
+
+	#carousel-img {
+		//height: 250px;
+		width: 250px;
+		margin-right: 2em;
+		margin-top: 1.5em;
 	}
+}
+
+.slidesjs-container {
+	margin-bottom: 1em;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 1px white;
+	-webkit-box-shadow: 0px 1px white;
+	box-shadow: 0px 1px white;
+}
+
+.slidesjs-next {
+	float: right;
+}
+
+#carousel {
+	margin-bottom: 2em;
 }
 
 // --- Suche Lupe
@@ -598,6 +599,29 @@ ul#desktop-search {
 		font-size: 1.2em;
 	}
 }
+
+
+/*.ngg-imagebrowser {
+	margin-top: 2em;
+	.counter {
+		.Semibold;
+		margin-top: 0.25em;
+	}
+	.ngg-imagebrowser-nav {
+		margin: 0px;
+		.back {
+			border: 0px;
+		}
+
+		.next {
+			border: 0px;
+		}
+	/	
+	img {
+		padding: 0px;
+	}
+}}*
+
 
 
 // --- Searchform 1. Instanz

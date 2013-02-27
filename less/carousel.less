@@ -10,7 +10,7 @@
     transition: background-position @time linear;
 }
 
-@fixedHeight:500px;
+@fixedHeight:375px; // oli
 
     /* Prevent the slideshow from flashing on load */
     #carousel {
@@ -19,23 +19,24 @@
          
       .slidesjs-container{
       height:@fixedHeight !important;
-      padding-bottom: 10px;
+      padding-bottom: 15px; //oli
         
       }
     }
     section#carousel-sec{
-      // display:inline-block;
-      // 
+      display:inline-block;
     }
 
     /* Show active item in the pagination */
     ul.slidesjs-pagination {
       margin: 6px 0 0;
-    float: right;
-    list-style: none;
+      //float: right; // oli
+      list-style: none;
+      display: inline; // oli
+
 
       li{
-        display:inline;
+        display: inline-block; // oli
         a {
           display: block;
           width: 13px;
