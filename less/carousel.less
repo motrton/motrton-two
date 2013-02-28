@@ -12,11 +12,15 @@
 
 @fixedHeight:375px; // oli
 
+
+    #carousel-content{
+      text-align: left; // need to keep this left and get the pagination centered
+    }
+
+
     /* Prevent the slideshow from flashing on load */
     #carousel {
-      text-align: center; // ! this makes the contents centered
       display: none;
-      // display: inline;
       width:100%;
          
       .slidesjs-container{
@@ -32,12 +36,15 @@
       a.slidesjs-next{
         float:right; // !this pulls the prev to the left
       }
+
+
     }
 
     section#carousel-sec{
       display:inline-block;
     }
-
+#carousel {
+        text-align: center; // ! this makes the contents centered
     /* Show active item in the pagination */
     ul.slidesjs-pagination {
        display: inline-block; // centering pagination
@@ -77,7 +84,7 @@
         }
       }
     }
-
+}
 
     ul.slidesjs-pagination .active {
 

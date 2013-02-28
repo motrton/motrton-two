@@ -109,7 +109,11 @@ $page_ids =  array();
 </div>
 <script type="text/javascript">
 jQuery(document).ready(
+ 
     function($){
+   
+      // if(windowWidth > slideMinWidth){
+
      $('#carousel').slidesjs({
          width: 960,
          height: 500,
@@ -144,7 +148,9 @@ effect: {
     }
       });
 
-});
+// }
+}
+);
 </script>
 <!-- END PAGE-CAROUSEL.PHP -->
 <?php get_footer(); ?>
