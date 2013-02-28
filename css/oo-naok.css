@@ -3788,6 +3788,7 @@ code {
   display: none;
 }
 .commentlist .comment-body .comment-meta a {
+  display: inline-block;
   font-family: 'SourceSansProSemibold', sans-serif;
   font-size: 1em;
   line-height: 150%;
