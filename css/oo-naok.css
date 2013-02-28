@@ -3529,6 +3529,15 @@ body {
   -o-animation-duration: 0.75s;
   animation-duration: 0.75s;
 }
+/*.letterPressShadow (@color) {
+    text-shadow: 0px -1px 0.5px darken(@color, 50%);
+    text-shadow: 0px 1px 0.5px lighten(@color, 100%);
+}
+
+.letterPressShadowControlled (@topcolor, @bottomcolor) {
+    text-shadow: 0px -1px 0px @topcolor;
+    text-shadow: 0px 1px 0px  @bottomcolor;
+}*/
 .rows {
   margin-top: 0.9em;
 }
@@ -3607,7 +3616,7 @@ textarea {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.06));
 }
 #blog-title .depth {
-  color: #00507e;
+  text-shadow: 0px -1px 0px #003f6d, 0px 2px 0px #ffffff;
 }
 section#blog-head #blog-title {
   margin-top: 2em;

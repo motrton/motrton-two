@@ -5,6 +5,16 @@
 @import url('variables.less');
 @import url('animate.less');
 
+/*.letterPressShadow (@color) {
+    text-shadow: 0px -1px 0.5px darken(@color, 50%);
+    text-shadow: 0px 1px 0.5px lighten(@color, 100%);
+}
+
+.letterPressShadowControlled (@topcolor, @bottomcolor) {
+    text-shadow: 0px -1px 0px @topcolor;
+    text-shadow: 0px 1px 0px  @bottomcolor;
+}*/
+
 
 
 .rows {
@@ -23,14 +33,14 @@ border: 0px;
 
 
 // --- Bildschatten
-.inset-shadow{
+.inset-shadow {
 	border: 1px solid (@35grey + #333);
     -moz-box-shadow: 0px 0px 0px (@35grey + #333) inset;
     -webkit-box-shadow: 0px 0px 0px (@35grey + #333) inset;
     box-shadow: 0px 0px 0px (@35grey + #333) inset;
-		-moz-box-shadow: 1px 1px white;
-		-webkit-box-shadow: 1px 1px white;
-		box-shadow: 1px 1px white;
+	-moz-box-shadow: 1px 1px white;
+	-webkit-box-shadow: 1px 1px white;
+	box-shadow: 1px 1px white;
 }
 
 // --- 404
@@ -83,7 +93,7 @@ border: 0px;
 }
 
 #blog-title .depth {
-	color: (@blue - #111);
+  text-shadow: -0px -1px 0px (@blue - #222), 0px 2px 0px white;
 }
 
 section#blog-head #blog-title {
@@ -100,6 +110,7 @@ section#blog-head #blog-logo {
 }
 
 // --- F O N T S definition
+
 
 .fontweightstyle {
 	font-weight: normal;
@@ -158,7 +169,7 @@ section#blog-head #blog-logo {
 
 h1 {
 	.Semibold (1.75em, 140%);
-}
+}	
 
 h2 {
 	.Semibold (1.25em);	
