@@ -4274,10 +4274,37 @@ ul#desktop-search {
   position: absolute;
   top: 0em;
   right: 5em;
+  cursor: pointer;
 }
 ul#desktop-search li i {
   color: #ecdfcb;
   font-size: 1.2em;
+}
+li#searchfield {
+  margin-top: 2.15em;
+  margin-right: -2em;
+}
+input#s {
+  border: 3px solid #5aa332;
+  height: 1.3em;
+  padding-top: 0.15em;
+  padding-left: 0.75em;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.33);
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.33);
+  font-family: 'SourceSansProRegular', sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  color: #3c3c3b;
+  font-weight: normal;
+  font-style: normal;
+  width: 130px;
 }
 /*.ngg-imagebrowser {
 	margin-top: 2em;

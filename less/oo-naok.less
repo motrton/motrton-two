@@ -577,11 +577,29 @@ ul#desktop-search {
 	position: absolute;
 	top: 0em;
 	right: 5em;
+	cursor: pointer;
 	li i {
 		color: @chamois;
 		font-size: 1.2em;
 	}
 }
+
+li#searchfield {
+	margin-top: 2.15em;
+	margin-right: -2em;
+}
+
+input#s {
+	border: 3px solid @greenmid;
+	height: 1.3em;
+	padding-top: 0.15em;
+	padding-left: 0.75em;
+	.e_rounded (30px);
+	.e_inner-shadow (1px, 1px, 1px, 0.33);
+	.Regular (1em, 150%, @90grey);
+	width: 130px;
+}
+
 
 
 /*.ngg-imagebrowser {
