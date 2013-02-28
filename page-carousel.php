@@ -90,7 +90,6 @@ $page_ids =  array();
     ?>
   <a class="slidesjs-previous slidesjs-navigation" href="#"><i class="icon-hand-left"></i> Prev</a>
   <a class="slidesjs-next slidesjs-navigation" href="#">Next <i class="icon-hand-right"></i></a>
-
 </div> <!-- end carousel -->
 
 
@@ -110,7 +109,11 @@ $page_ids =  array();
 </div>
 <script type="text/javascript">
 jQuery(document).ready(
+ 
     function($){
+   
+      // if(windowWidth > slideMinWidth){
+
      $('#carousel').slidesjs({
          width: 960,
          height: 500,
@@ -145,7 +148,9 @@ effect: {
     }
       });
 
-});
+// }
+}
+);
 </script>
 <!-- END PAGE-CAROUSEL.PHP -->
 <?php get_footer(); ?>

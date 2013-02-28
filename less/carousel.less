@@ -12,46 +12,67 @@
 
 @fixedHeight:375px; // oli
 
+
+    #carousel-content{
+      text-align: left; // need to keep this left and get the pagination centered
+    }
+
+
     /* Prevent the slideshow from flashing on load */
     #carousel {
       display: none;
-      // display: inline;
+      width:100%;
          
       .slidesjs-container{
       height:@fixedHeight !important;
       padding-bottom: 15px; //oli
         
       }
+
+
+      a.slidesjs-previous{
+        float:left; // !this pulls the prev to the left
+      }
+      a.slidesjs-next{
+        float:right; // !this pulls the prev to the left
+      }
+
+
     }
+
     section#carousel-sec{
       display:inline-block;
     }
-
+#carousel {
+        text-align: center; // ! this makes the contents centered
     /* Show active item in the pagination */
     ul.slidesjs-pagination {
-      margin: 6px 0 0;
-      //float: right; // oli
+       display: inline-block; // centering pagination
+        margin: 0;// centering pagination
+        padding: 0;// centering pagination
+        /* For IE, the outcast */
+        zoom:1;
+        *display: inline;// centering pagination
       list-style: none;
-      display: inline; // oli
-
-
       li{
-        display: inline-block; // oli
-        a {
-          display: block;
-          width: 13px;
-          height: 0;
-          padding-top: 13px;
-          background-image: url(../img/pagination.png);
-          background-position: 0 0;
-          float: left;
-          overflow: hidden;
-        }
+        float: left; // make the pagination horizontal
+         a {
+          // this is image positioning stuff
+           width: 13px;
+           height: 0;
+           padding-top: 13px;
+           background-image: url(../img/pagination.png);
+           background-position: 0 0;
+           float: left; // makes the image thingy work
+           overflow: hidden;
+         }
       }
 
       li.slidesjs-pagination-item{
+        
         a{
           .the-transition(0);
+
         }
         a.active{
           background-position: 0 -13px;
@@ -63,7 +84,7 @@
         }
       }
     }
-
+}
 
     ul.slidesjs-pagination .active {
 
