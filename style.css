@@ -4186,8 +4186,13 @@ div#scrolltop-grid {
     width: 97.91666666666666%;
     margin: 0 1.0416666666666665%;
   }
+}
+@media screen and (max-width: 767px) {
   div#carousel-img {
-    display: none !important;
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
   }
   article#carousel-content {
     display: inline;

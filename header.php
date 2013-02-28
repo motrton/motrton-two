@@ -35,6 +35,10 @@
 $templateurl = get_template_directory_uri();
 echo "<link rel=\"stylesheet\" href=\"" . $templateurl ."/css/biographia.css\" type=\"text/css\" />";
  ?>
+<?php
+$templateurl = get_template_directory_uri();
+echo "<link rel=\"stylesheet\" href=\"" . $templateurl ."/css/gallery.css\" type=\"text/css\" />";
+ ?>
 </head>
 <body>
 <header>

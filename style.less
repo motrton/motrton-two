@@ -86,16 +86,6 @@ margin-top:-32767px;/* thank you Erik J - negate effect of float*/
 
 a{text-decoration: none;}
 
-img.avatar{
-  // max-width:100px;
-  // max-height:100px;
-}
-
-// p a img {
-//   max-width: 80% !important;
-//   height: auto;
-// }
-
 /**
  * This is for some jquery goodness to add an inset shadow onto all images.
  * Lets see how this works.
@@ -234,9 +224,12 @@ section#blog-head{
     #site-title{.column(12);}
     div#column-img{ .column(12); }
     article#column-content{ .column(12);}
+
+}
+@media screen and (max-width: 767px) {
     div#carousel-img{ 
-     // .column(12);
-     display:none !important;
+     .column(12);
+     // display:none !important;
        }
     article#carousel-content{ 
       .column(12);
@@ -244,7 +237,6 @@ section#blog-head{
       // display:none;
     }
 }
-
 /************************************************************
 *************************HEADER.PHP**************************
 ************************************************************/

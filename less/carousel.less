@@ -12,6 +12,7 @@
 
 @fixedHeight:375px; // oli
 
+    @media (min-width: 768px) {
 
     #carousel-content{
       text-align: left; // need to keep this left and get the pagination centered
@@ -147,43 +148,47 @@
       // background-position: -41px -18px;
     }
 
+}
     /* Media quires for a responsive layout */
 
     /* For tablets & smart phones */
     @media (max-width: 767px) {
    
-      #carousel-sec {
-        width: auto;
-      }
-      #carousel{
-        .slidesjs-container{
-          height:@fixedHeight !important;
-        }
+      // #carousel-sec {
+      //   width: auto;
+      // }
+      // #carousel{
+      //   .slidesjs-container{
+      //     height:@fixedHeight !important;
+      //   }
+      // }
+      a.slidesjs-navigation{
+        display:none !important;
       }
     }
 
     /* For smartphones */
     @media (max-width: 480px) {
-      #carousel-sec {
-        width: auto;
-      }
-            #carousel{
-        .slidesjs-container{
-          height:@fixedHeight !important;
-        }
-      }
+      // #carousel-sec {
+      //   width: auto;
+      // }
+      //       #carousel{
+      //   .slidesjs-container{
+      //     height:@fixedHeight !important;
+      //   }
+      // }
     }
 
     /* For smaller displays like laptops */
     @media (min-width: 768px) and (max-width: 979px) {
-      #carousel-sec {
-        width: 724px;
-      }
-            #carousel{
-        .slidesjs-container{
-          height:@fixedHeight !important;
-        }
-      }
+      // #carousel-sec {
+      //   // width: 724px;
+      // }
+      //       #carousel{
+      //   // .slidesjs-container{
+      //   //   height:@fixedHeight !important;
+      //   // }
+      // }
     }
 
     /* For larger displays */

@@ -108,12 +108,17 @@ $page_ids =  array();
 </section>
 </div>
 <script type="text/javascript">
-jQuery(document).ready(
- 
-    function($){
-   
-      // if(windowWidth > slideMinWidth){
 
+jQuery(document).ready(function($){
+
+  runslider($);
+    $(window).resize(function() {
+        runslider($);
+
+    });
+  function runslider ($) {
+
+           if($(window).width() > 767){
      $('#carousel').slidesjs({
          width: 960,
          height: 500,
@@ -148,7 +153,9 @@ effect: {
     }
       });
 
-// }
+}
+  }
+
 }
 );
 </script>
