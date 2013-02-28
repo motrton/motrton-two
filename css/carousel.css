@@ -1,122 +1,111 @@
 /*carousel*/
-#carousel-content {
-  text-align: left;
-}
-/* Prevent the slideshow from flashing on load */
-#carousel {
-  display: none;
-  width: 100%;
-}
-#carousel .slidesjs-container {
-  height: 375px !important;
-  padding-bottom: 15px;
-}
-#carousel a.slidesjs-previous {
-  float: left;
-}
-#carousel a.slidesjs-next {
-  float: right;
-}
-section#carousel-sec {
-  display: inline-block;
-}
-#carousel {
-  text-align: center;
-  /* Show active item in the pagination */
-
-}
-#carousel ul.slidesjs-pagination {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  /* For IE, the outcast */
-
-  zoom: 1;
-  *display: inline;
-  list-style: none;
-}
-#carousel ul.slidesjs-pagination li {
-  float: left;
-}
-#carousel ul.slidesjs-pagination li a {
-  width: 13px;
-  height: 0;
-  padding-top: 13px;
-  background-image: url(../img/pagination.png);
-  background-position: 0 0;
-  float: left;
-  overflow: hidden;
-}
-#carousel ul.slidesjs-pagination li.slidesjs-pagination-item a {
-  -webkit-transition: background-position 0 linear;
-  -moz-transition: background-position 0 linear;
-  -o-transition: background-position 0 linear;
-  -ms-transition: background-position 0 linear;
-  transition: background-position 0 linear;
-}
-#carousel ul.slidesjs-pagination li.slidesjs-pagination-item a.active {
-  background-position: 0 -13px;
-  -webkit-transition: background-position 0 linear;
-  -moz-transition: background-position 0 linear;
-  -o-transition: background-position 0 linear;
-  -ms-transition: background-position 0 linear;
-  transition: background-position 0 linear;
-}
-#carousel ul.slidesjs-pagination li.slidesjs-pagination-item a:hover {
-  background-position: 0 -26px;
-  -webkit-transition: background-position 0 linear;
-  -moz-transition: background-position 0 linear;
-  -o-transition: background-position 0 linear;
-  -ms-transition: background-position 0 linear;
-  transition: background-position 0 linear;
-}
-a.slidesjs-next,
-a.slidesjs-previous,
-a.slidesjs-play,
-a.slidesjs-stop {
-  -webkit-transition: background-position 0 linear;
-  -moz-transition: background-position 0 linear;
-  -o-transition: background-position 0 linear;
-  -ms-transition: background-position 0 linear;
-  transition: background-position 0 linear;
-}
-a:hover.slidesjs-next,
-a:hover.slidesjs-previous,
-a:hover.slidesjs-play,
-a:hover.slidesjs-stop {
-  -webkit-transition: background-position 0 linear;
-  -moz-transition: background-position 0 linear;
-  -o-transition: background-position 0 linear;
-  -ms-transition: background-position 0 linear;
-  transition: background-position 0 linear;
+@media (min-width: 768px) {
+  #carousel-content {
+    text-align: left;
+  }
+  /* Prevent the slideshow from flashing on load */
+  #carousel {
+    display: none;
+    width: 100%;
+  }
+  #carousel .slidesjs-container {
+    height: 375px !important;
+    padding-bottom: 15px;
+  }
+  #carousel a.slidesjs-previous {
+    float: left;
+  }
+  #carousel a.slidesjs-next {
+    float: right;
+  }
+  section#carousel-sec {
+    display: inline-block;
+  }
+  #carousel {
+    text-align: center;
+    /* Show active item in the pagination */
+  
+  }
+  #carousel ul.slidesjs-pagination {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    /* For IE, the outcast */
+  
+    zoom: 1;
+    *display: inline;
+    list-style: none;
+  }
+  #carousel ul.slidesjs-pagination li {
+    float: left;
+  }
+  #carousel ul.slidesjs-pagination li a {
+    width: 13px;
+    height: 0;
+    padding-top: 13px;
+    background-image: url(../img/pagination.png);
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
+  }
+  #carousel ul.slidesjs-pagination li.slidesjs-pagination-item a {
+    -webkit-transition: background-position 0 linear;
+    -moz-transition: background-position 0 linear;
+    -o-transition: background-position 0 linear;
+    -ms-transition: background-position 0 linear;
+    transition: background-position 0 linear;
+  }
+  #carousel ul.slidesjs-pagination li.slidesjs-pagination-item a.active {
+    background-position: 0 -13px;
+    -webkit-transition: background-position 0 linear;
+    -moz-transition: background-position 0 linear;
+    -o-transition: background-position 0 linear;
+    -ms-transition: background-position 0 linear;
+    transition: background-position 0 linear;
+  }
+  #carousel ul.slidesjs-pagination li.slidesjs-pagination-item a:hover {
+    background-position: 0 -26px;
+    -webkit-transition: background-position 0 linear;
+    -moz-transition: background-position 0 linear;
+    -o-transition: background-position 0 linear;
+    -ms-transition: background-position 0 linear;
+    transition: background-position 0 linear;
+  }
+  a.slidesjs-next,
+  a.slidesjs-previous,
+  a.slidesjs-play,
+  a.slidesjs-stop {
+    -webkit-transition: background-position 0 linear;
+    -moz-transition: background-position 0 linear;
+    -o-transition: background-position 0 linear;
+    -ms-transition: background-position 0 linear;
+    transition: background-position 0 linear;
+  }
+  a:hover.slidesjs-next,
+  a:hover.slidesjs-previous,
+  a:hover.slidesjs-play,
+  a:hover.slidesjs-stop {
+    -webkit-transition: background-position 0 linear;
+    -moz-transition: background-position 0 linear;
+    -o-transition: background-position 0 linear;
+    -ms-transition: background-position 0 linear;
+    transition: background-position 0 linear;
+  }
 }
 /* Media quires for a responsive layout */
 /* For tablets & smart phones */
 @media (max-width: 767px) {
-  #carousel-sec {
-    width: auto;
-  }
-  #carousel .slidesjs-container {
-    height: 375px !important;
+  a.slidesjs-navigation {
+    display: none !important;
   }
 }
 /* For smartphones */
 @media (max-width: 480px) {
-  #carousel-sec {
-    width: auto;
-  }
-  #carousel .slidesjs-container {
-    height: 375px !important;
-  }
+  
 }
 /* For smaller displays like laptops */
 @media (min-width: 768px) and (max-width: 979px) {
-  #carousel-sec {
-    width: 724px;
-  }
-  #carousel .slidesjs-container {
-    height: 375px !important;
-  }
+  
 }
 /* For larger displays */
 @media (min-width: 1200px) {
