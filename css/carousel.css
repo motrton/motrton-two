@@ -1,26 +1,38 @@
 /*carousel*/
 /* Prevent the slideshow from flashing on load */
 #carousel {
+  text-align: center;
   display: none;
+  width: 100%;
 }
 #carousel .slidesjs-container {
   height: 375px !important;
   padding-bottom: 15px;
+}
+#carousel a.slidesjs-previous {
+  float: left;
+}
+#carousel a.slidesjs-next {
+  float: right;
 }
 section#carousel-sec {
   display: inline-block;
 }
 /* Show active item in the pagination */
 ul.slidesjs-pagination {
-  margin: 6px 0 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  /* For IE, the outcast */
+
+  zoom: 1;
+  *display: inline;
   list-style: none;
-  display: inline;
 }
 ul.slidesjs-pagination li {
-  display: inline-block;
+  float: left;
 }
 ul.slidesjs-pagination li a {
-  display: block;
   width: 13px;
   height: 0;
   padding-top: 13px;

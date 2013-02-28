@@ -90,7 +90,6 @@ $page_ids =  array();
     ?>
   <a class="slidesjs-previous slidesjs-navigation" href="#"><i class="icon-hand-left"></i> Prev</a>
   <a class="slidesjs-next slidesjs-navigation" href="#">Next <i class="icon-hand-right"></i></a>
-
 </div> <!-- end carousel -->
 
 
