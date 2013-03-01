@@ -1,5 +1,5 @@
 /*carousel*/
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   #carousel-content {
     text-align: left;
   }
