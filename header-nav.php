@@ -30,9 +30,11 @@
 <ul class="sf-menu sf-navbar" id="desktop-navbar">
 <!-- wp_list_pages start -->
 
-
+<!--
+Maybe someday it will be multi lingual. Until then thes stays hidden
 <li class="page_item" id="en-de" ><a href="#">EN|DE</a>
 </li>
+-->
         <?php
         
         $options = get_option('motrton-two_options');
