@@ -26,7 +26,7 @@ if( !is_admin() ){
 //superfish scripts js
 add_action('wp_enqueue_scripts','superfish_script_with_jquery');
 
-// add_action('wp_enqueue_scripts','inset_shadow_script_with_jquery');
+add_action('wp_enqueue_scripts','inset_shadow_script_with_jquery');
 
 add_action('wp_enqueue_scripts','combobox_with_jqueryui');
 
