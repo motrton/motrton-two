@@ -26,7 +26,7 @@ if( !is_admin() ){
 //superfish scripts js
 add_action('wp_enqueue_scripts','superfish_script_with_jquery');
 
-add_action('wp_enqueue_scripts','inset_shadow_script_with_jquery');
+// add_action('wp_enqueue_scripts','inset_shadow_script_with_jquery');
 
 add_action('wp_enqueue_scripts','combobox_with_jqueryui');
 
@@ -51,6 +51,8 @@ add_action('init', 'my_styles');
 // add_action( 'init', 'my_autocomplete' );
 
 }
+
+add_theme_support( 'post-thumbnails' );
 
 add_action('after_setup_theme', 'my_theme_setup');
 

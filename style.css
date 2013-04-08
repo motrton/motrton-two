@@ -4291,12 +4291,13 @@ li#searchfield {
 ************************************************************/
 .rows article.rowitem {
   margin-bottom: 1.5em;
-  min-height: 150px;
+  min-height: 220px;
 }
 .rows article.rowitem .thumb {
   float: left;
+  margin-right: 20px;
 }
-.rows article.rowitem .thumb img.thumbnail {
+.rows article.rowitem .thumb img.blogroll-thumbnail {
   width: 100px;
   height: 100px;
   padding: 20px;
