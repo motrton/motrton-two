@@ -88,13 +88,11 @@ $page_ids =  array();
     echo "</div>";
     }
     ?>
-  <a class="slidesjs-previous slidesjs-navigation" href="#"><i class="icon-hand-left"></i> Prev</a>
-  <a class="slidesjs-next slidesjs-navigation" href="#">Next <i class="icon-hand-right"></i></a>
 </div> <!-- end carousel -->
 
-
-
 </section>
+  <a class="slidesjs-previous slidesjs-navigation" href="#"><i class="icon-hand-left"></i> Prev</a>
+  <a class="slidesjs-next slidesjs-navigation" href="#">Next <i class="icon-hand-right"></i></a>
 </div> <!-- end container -->
 
 <div class="container">
@@ -120,29 +118,29 @@ jQuery(document).ready(function($){
 
            if($(window).width() > 767){
      $('#carousel').slidesjs({
-         width: 960,
-         height: 500,
-         responsive: true, // [Boolean] slideshow will scale to its container
+        width: 960,
+        height: 500,
+        responsive: true, // [Boolean] slideshow will scale to its container
         preload: true,
         preloadImage: '../img/loading.gif',
         play:{
-            active:false,
-            auto:false,
-            interval:4000,
+            active:true,
+            auto:true,
+            interval:10000,
             swap:true
         },
-          pagination: {
-      active: true,
-      effect: "slide"
-    },
-         navigation: {
-           active: false,
+        pagination: {
+          active: true,
+          effect: "slide"
+        },
+        navigation: {
+          active: false,
         // # [boolean] Create next and previous buttons.
         // # You can set to false and use your own next/prev buttons.
         // # User defined next/prev buttons must have the following:
         // # previous: class="slidesjs-previous slidesjs-navigation"
         // # next: class="slidesjs-next slidesjs-navigation"
-      effect: "slide"
+          effect: "slide"
         // # [string] Can be either "slide" or "fade".
          },
 effect: {

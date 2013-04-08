@@ -71,10 +71,17 @@
     -ms-transition: background-position 0 linear;
     transition: background-position 0 linear;
   }
-  a.slidesjs-next,
-  a.slidesjs-previous,
   a.slidesjs-play,
   a.slidesjs-stop {
+    background-image: url(../img/btns-next-prev.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 12px;
+    height: 18px;
+    overflow: hidden;
+    text-indent: -9999px;
+    float: left;
+    margin-right: 5px;
     -webkit-transition: background-position 0 linear;
     -moz-transition: background-position 0 linear;
     -o-transition: background-position 0 linear;
@@ -90,6 +97,20 @@
     -o-transition: background-position 0 linear;
     -ms-transition: background-position 0 linear;
     transition: background-position 0 linear;
+  }
+  a.slidesjs-play {
+    width: 15px;
+    background-position: -25px 0;
+  }
+  a:hover.slidesjs-play {
+    background-position: -25px -18px;
+  }
+  a.slidesjs-stop {
+    width: 18px;
+    background-position: -41px 0;
+  }
+  a:hover.slidesjs-stop {
+    background-position: -41px -18px;
   }
 }
 /* Media quires for a responsive layout */
