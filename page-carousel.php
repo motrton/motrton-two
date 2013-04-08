@@ -31,6 +31,8 @@ $page_ids =  array();
 
     <!-- This is the carousel part -->
     <div id="carousel">
+  <a class="slidesjs-previous slidesjs-navigation" href="#"><i class="icon-hand-left"></i> Prev</a>
+  <a class="slidesjs-next slidesjs-navigation" href="#">Next <i class="icon-hand-right"></i></a>
     <?php
     
     for($j = 0; $j < count($page_ids); $j++){
@@ -91,8 +93,6 @@ $page_ids =  array();
 </div> <!-- end carousel -->
 
 </section>
-  <a class="slidesjs-previous slidesjs-navigation" href="#"><i class="icon-hand-left"></i> Prev</a>
-  <a class="slidesjs-next slidesjs-navigation" href="#">Next <i class="icon-hand-right"></i></a>
 </div> <!-- end container -->
 
 <div class="container">
