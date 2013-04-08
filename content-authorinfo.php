@@ -9,10 +9,12 @@
 ?>
 
 <h5>
+          <?php get_template_part( 'content','date'); ?>
+
     <?php
-        $dt = get_the_date();
-         $t = get_the_time();
-         echo __('gepostet am','motrton_two')." <span id=\"date\">". $dt . "</span><span class=\"olios-extra-special-white-space\">&emsp;&emsp;</span>" . __('um','motrton_two') ." <span id=\"time\">" .$t . "</span><span class=\"olios-extra-special-white-space\">&emsp;&emsp;</span>";
+        // $dt = get_the_date();
+        //  $t = get_the_time();
+        //  echo __('gepostet am','motrton_two')." <span id=\"date\">". $dt . "</span><span class=\"olios-extra-special-white-space\">&emsp;&emsp;</span>" . __('um','motrton_two') ." <span id=\"time\">" .$t . "</span><span class=\"olios-extra-special-white-space\">&emsp;&emsp;</span>";
            ?>
            <span class="post-author-link"><?php _e('von','motrton_two'); ?>
            <?php

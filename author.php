@@ -62,9 +62,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     <ul id="user-links">
         <!-- check for user_url -->
     <?php if ( ($curauth->user_email ) !='' ) { ?>
-        <li>
-        <a href="<?php echo "mailto:" . $curauth->user_email; ?>"><?php echo $curauth->user_email; ?></a>
-        </li>
+
     <?php } ?>
     <!-- check for user_url -->
     <?php if ( ($curauth->user_url ) !='' ) { ?>
@@ -76,7 +74,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
         <!-- Check for description -->
     <?php if ( ($curauth->description ) !='' ) { ?>
     <h3 id="user-description-title">
-        zur Person
+        Zur Person
     </h3>
     <p>
         <?php echo $curauth->description; ?>
