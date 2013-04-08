@@ -1,0 +1,3 @@
+- erstes item in blogroll ggf mit bild über die spalte ??
+- slider soll durchlaufen
+- slider play/pause
