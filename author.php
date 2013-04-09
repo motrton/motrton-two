@@ -15,7 +15,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     
     <?php
     // get the gravatar
-    $default = get_template_directory_uri() . "/img/logo.png";
+    $default = get_template_directory_uri() . "/img/default-user400x400.png";
     $alt = $curauth->nickname;
     $size = 400;
     $userid = $curauth->ID;
