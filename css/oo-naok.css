@@ -3606,7 +3606,7 @@ textarea {
 .letterpress-line,
 .letterpress-line-fluid {
   margin-top: 1em;
-  margin-bottom: 3.25em;
+  margin-bottom: 1.5em;
   border-top-width: 0px;
   height: 1px;
   width: 100%;
@@ -3671,6 +3671,9 @@ h5 {
   color: #a6a6a6;
   font-weight: normal;
   font-style: normal;
+}
+h5 .olios-extra-special-white-space {
+  margin-right: -10px;
 }
 h6 {
   font-family: 'SourceSansProBold', sans-serif;
@@ -4269,9 +4272,9 @@ footer .icon-signout {
   -webkit-box-shadow: 0px 1px white;
   box-shadow: 0px 1px white;
 }
-.slidesjs-next {
-  float: right;
-}
+/*.slidesjs-next {
+	float: right;
+}*/
 #carousel {
   margin-bottom: 2em;
 }

@@ -14,9 +14,11 @@
   }
   #carousel a.slidesjs-previous {
     float: left;
+    margin-bottom: 1.55em;
   }
   #carousel a.slidesjs-next {
     float: right;
+    margin-bottom: 1.55em;
   }
   section#carousel-sec {
     display: inline-block;
