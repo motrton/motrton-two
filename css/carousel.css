@@ -3,6 +3,9 @@
   #carousel-content {
     text-align: left;
   }
+  img.carousel-images {
+    max-height: 375px;
+  }
   /* Prevent the slideshow from flashing on load */
   #carousel {
     display: none;

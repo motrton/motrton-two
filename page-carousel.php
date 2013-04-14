@@ -54,7 +54,7 @@ $page_ids =  array();
         $dom->preserveWhiteSpace = false;
         $images = $dom->getElementsByTagName('img');
         foreach ($images as $image) {
-            echo '<img src="' . $image->getAttribute('src') . '" alt="" />';
+            echo '<img class="carousel-images" src="' . $image->getAttribute('src') . '" alt="" />';
         }
         ?>
  </div>
