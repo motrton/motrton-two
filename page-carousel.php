@@ -5,6 +5,7 @@
  * @package WordPress
  * @subpackage motrton-two
  * @since motrton-two 0.1
+ * using http://slidesjs.com/
 */
 ?>
 <?php
@@ -124,7 +125,7 @@ jQuery(document).ready(function($){
         preload: true,
         preloadImage: '../img/loading.gif',
         play:{
-            active:true,
+            active:false,
             auto:true,
             interval:10000,
             swap:true
