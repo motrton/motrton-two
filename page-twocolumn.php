@@ -26,7 +26,7 @@
         $dom->preserveWhiteSpace = false;
         $images = $dom->getElementsByTagName('img');
         foreach ($images as $image) {
-            echo '<img src="' . $image->getAttribute('src') . '" alt="" />';
+            echo '<img class="two-column-images" src="' . $image->getAttribute('src') . '" alt="" />';
         }
         ?>
         </div>
